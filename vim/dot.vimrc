@@ -232,6 +232,109 @@ endif
 "===============================================================================
 " Edit: "{{{1
 
+" tmp directory.
+if !exists('g:vim_tmp_directory')
+  let g:vim_tmp_directory = $HOME."/.vimtmp"
+endif
+
+" Create tmp directory.
+if !isdirectory(g:vim_tmp_directory)
+  call mkdir(g:vim_tmp_directory)
+endif
+if !isdirectory(g:vim_tmp_directory.'/backup')
+  call mkdir(g:vim_tmp_directory.'/backup')
+endif
+if !isdirectory(g:vim_tmp_directory.'/swap')
+  call mkdir(g:vim_tmp_directory.'/swap')
+endif
+if !isdirectory(g:vim_tmp_directory.'/undo')
+  call mkdir(g:vim_tmp_directory.'/undo')
+endif
+
+" Create backup files.
+set backup
+set nowritebackup
+let &backupdir=g:vim_tmp_directory.'/backup'
+
+" Create swap files.
+set swapfile
+" Set swapfile save directory.
+let &directory=g:vim_tmp_directory.'/swap'
+
+if v:version >= 703
+  " Set undo file.
+  set undofile
+  let &undodir=&directory.'undo'
+endif
+
+" CursorHold time.
+" If 2.5sec stop cursor then save swapfile.
+set updatetime=2500
+
+" Keymapping timeout.
+set timeout timeoutlen=750 ttimeoutlen=200
+
+" Enable backspace delete indent and newline.
+set backspace=indent,eol,start
+
+" Use clipboard register.
+set clipboard& clipboard+=unnamed
+
+" Auto read if file is changed.
+set autoread
+
+" Substitue <tab> with blanks.
+set tabstop=2
+" Spaces instead <tab>.
+set softtabstop=2
+"Autoindent width.
+set shiftwidth=2
+" "Round indent by shiftwidth.
+set shiftround
+
+" Smart insert tab setting.
+set smarttab
+
+" Exchange tab to spaces.
+set expandtab
+
+" Enable modeline.
+set modeline
+
+" Enable folding.
+set foldenable
+" Syntax highlighting items specify folds.
+set foldmethod=syntax
+" Always start editing with all no folds closed.
+set foldlevelstart=99
+" Show folding level.
+set foldcolumn=1
+
+" Use vimgrep.
+set grepprg=internal
+" Use grep.
+" set grepprg=grep\ -nH
+" default-mac: grep -n $* /dev/null
+" default-win: findstr /n
+
+" Set tags file.
+set tags=./tags,tags
+if v:version < 7.3 || (v:version == 7.3 && has('patch336'))
+  " Vim's bug.
+  set notagbsearch
+endif
+
+" Enable virtualedit in visual block mode.
+set virtualedit=block
+
+" Set keyword help. (K)
+set keywordprg=:help
+" default: set keywordprg=man\ -s
+" will use unite.vim or ref.vim if can
+
+" Increase history amount.
+set history=10000
+
 " }}}1
 "===============================================================================
 
