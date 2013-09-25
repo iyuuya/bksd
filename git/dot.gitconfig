@@ -1,0 +1,54 @@
+[core]
+  editor        = vim
+  pager         = less
+  excludesfiles = ~/.gitignore.global
+  autocrlf      = false
+  filemode      = true
+  quotepath     = false
+[include]
+  path          = ~/.gitconfig.local
+[color]
+  ui            = true
+  diff          = true
+  branch        = true
+  interactive   = true
+[help]
+  autocorrect   = 1
+[push]
+  default       = upstream
+[alias]
+  a       = add
+  b       = branch
+  cl      = clone
+  cm      = commit
+  cmt     = commit --verbose
+  cma     = commit --all --verbose
+  cnt     = shortlog -s -n
+  co      = checkout
+  d       = diff
+  dc      = diff --cached
+  dg      = diff --stat
+  dp      = diff --stat -p
+  dw      = diff --color-words -C
+# df      = diff-files
+# di      = diff-index
+# ds      = diff-stages
+# dt      = diff-tree
+  f       = fetch
+  filelog = log -u
+  l       = log --graph --pretty=fomrat:'%Cblue%h%Cred%d%Creset %Cgreen%an%Creset: %s %Cblue%ar%Creset'
+  m       = merge
+  pl      = pull
+  ps      = push
+  re      = remote
+  sb      = submodule
+  sh      = show
+  s       = status
+  ss      = stash
+  sl      = stash list
+  sa      = stash apply
+  sd      = stash drop
+  uncmt   = reset --soft HEAD^
+  unstage = reset HEAD
+
+# vim: ft=gitconfig ts=2 sts=2 sw=2 et
