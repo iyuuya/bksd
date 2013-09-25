@@ -66,6 +66,35 @@ augroup END
 " }}}2
 "-------------------------------------------------------------------------------
 
+"-------------------------------------------------------------------------------
+" NeoBundle: "{{{2
+
+if has('vim_starting')
+  set runtimepath+=$MYVIMFILES/bundle/neobundle.vim
+endif
+
+if globpath(&rtp, 'bundle/neobundle.vim') != ''
+  filetype off
+  call neobundle#rc('$MYVIMFILES/bundle/')
+
+  " Ultimate Vim package manager
+  NeoBundleFetch 'Shougo/neobundle.vim'
+
+  " Interactive command execution in Vim.
+  NeoBundle 'Shougo/vimproc', {
+        \ 'build' : {
+        \   'win64' : 'nmake -f make_msvc32.mak',
+        \   'win32' : 'nmake -f make_msvc64.mak',
+        \   'mac'   : 'make -f make_mac.mak',
+        \   'unix'  : 'make -f make_unix.mak',
+        \   },
+        \ }
+endif
+
+
+" }}}2
+"-------------------------------------------------------------------------------
+
 filetype indent on
 filetype plugin on
 
