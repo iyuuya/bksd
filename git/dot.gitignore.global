@@ -1,0 +1,63 @@
+# Common
+*.log
+
+# Windows
+Thumbs.db
+ethumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Mac OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+.*
+!.gitignore
+*~
+
+# Dropbox
+.dropbox
+Icon
+
+# Vim
+*.s[a-w][a-z]
+*.un~
+.netrwhist
+*~
+
+# tags
+TAGS
+!TAGS/
+tags
+!tags/
+tags-ja
+
+# Archives
+*.7z
+*.jar
+*.rar
+*.zip
+*.gz
+*.bzip
+*.bz2
+*.xz
+*.lzma
+*.iso
+*.tar
+*.dmg
+*.xpi
+*.gem
+*.egg
+*.deb
+*.rpm
+
+# Vagrant
+.vagrant
+
+# vim: ft=conf ts=2 sts=2 sw=2 et
