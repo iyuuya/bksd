@@ -475,11 +475,93 @@ set smartindent
 "===============================================================================
 " Key Mapping: "{{{1
 
+nnoremap <space> :
+vnoremap <space> :
+
+inoremap <c-f> <esc>
+
+cmap <c-h> <left>
+cmap <c-l> <right>
+cmap <c-e> <end>
+cmap <c-a> <home>
+
+nnoremap vv <c-v>
+
+nnoremap M `
+
+" Fix Current buffer indent.
+nnoremap <Tab>= ggvG=2<C-o>
+
+" Switch buffer.
+nnoremap <C-q> <C-^>
+
+" Switch wrap.
+nnoremap <silent>,tw
+      \ :<C-u>setlocal wrap!
+      \ \|    setlocal wrap?<CR>
+
+if exists('$MYVIMRC')
+  nnoremap <silent> ,v :<C-u>e $MYVIMRC<CR>
+  nnoremap ,V :<C-u>source $MYVIMRC<CR>
+endif
+if exists('$MYGVIMRC')
+  nnoremap <silent> ,gv :<C-u>e $MYGVIMRC<CR>
+  nnoremap ,gV :<C-u>source $MYGVIMRC<CR>
+endif
+
+" Change current window and size.
+nnoremap <silent> <C-e>h <c-w>h:call GoodWinWidth()<cr>
+nnoremap <silent> <C-e>j <c-w>j:call GoodWinHeight()<cr>
+nnoremap <silent> <C-e>k <c-w>k:call GoodWinHeight()<cr>
+nnoremap <silent> <C-e>l <c-w>l:call GoodWinWidth()<cr>
+
+nnoremap <silent> <C-e>eu :<C-u>set fenc=utf-8<CR>
+nnoremap <silent> <C-e>ee :<C-u>set fenc=euc-jp<CR>
+nnoremap <silent> <C-e>es :<C-u>set fenc=cp932<CR>
+nnoremap <silent> <C-e>eU :<C-u>e ++enc=utf-8 %<CR>
+nnoremap <silent> <C-e>eE :<C-u>e ++enc=euc-jp %<CR>
+nnoremap <silent> <C-e>eS :<C-u>e ++enc=cp932 %<CR>
+
+nnoremap <silent> <C-e>el :<C-u>set fileformat=unix<CR>
+nnoremap <silent> <C-e>em :<C-u>set fileformat=mac<CR>
+nnoremap <silent> <C-e>ed :<C-u>set fileformat=dos<CR>
+nnoremap <silent> <C-e>eL :<C-u>e ++fileformat=unix %<CR>
+nnoremap <silent> <C-e>eM :<C-u>e ++fileformat=mac %<CR>
+nnoremap <silent> <C-e>eD :<C-u>e ++fileformat=dos %<CR>
+
+nnoremap <silent> <C-e>fm :<C-u>set foldmethod=marker<CR>
+nnoremap <silent> <C-e>fi :<C-u>set foldmethod=indent<CR>
+nnoremap <silent> <C-e>fs :<C-u>set foldmethod=syntax<CR>
+
+nnoremap <silent> <C-e>cc :<C-u>let &colorcolumn = &colorcolumn == 0 ? 80 : 0<CR>
+
 " }}}1
 "===============================================================================
 
 "===============================================================================
 " Function: "{{{1
+
+"-------------------------------------------------------------------------------
+" WindowResize: "{{{2
+
+function! GoodWinWidth()
+  let s:w = float2nr((2.0 / 3.0) * &columns)
+  if winwidth(0) < s:w
+    execute "vertical resize " . s:w
+  endif
+  unlet s:w
+endfunction
+
+function! GoodWinHeight()
+  let s:h = float2nr((2.0 / 3.0) * &lines)
+  if winheight(0) < s:h
+    execute "botright resize " . s:h
+  endif
+  unlet s:h
+endfunction
+
+" }}}2
+"-------------------------------------------------------------------------------
 
 " }}}1
 "===============================================================================
