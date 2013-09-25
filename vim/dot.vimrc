@@ -456,6 +456,13 @@ set lazyredraw
 "===============================================================================
 " Syntax: "{{{1
 
+" Enable syntax color.
+syntax enable
+
+" Enable smart indent.
+set autoindent
+set smartindent
+
 " }}}1
 "===============================================================================
 
