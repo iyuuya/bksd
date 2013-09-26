@@ -1,7 +1,7 @@
 [core]
   editor        = vim
   pager         = less
-  excludesfiles = ~/.gitignore.global
+  excludesfile  = ~/.gitignore.global
   autocrlf      = false
   filemode      = true
   quotepath     = false
