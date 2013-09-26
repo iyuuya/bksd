@@ -93,8 +93,65 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
 
   " Unite and create user interfaces
   NeoBundle 'Shougo/unite.vim'
-endif
+  " Utility
+  NeoBundle 'h1mesuke/unite-outline' " outline source for unite.vim
 
+  if 0
+    NeoBundle 'daisuzu/unite-gtags' " GNU GLOBAL(gtags) source for unite.vim
+    " Vim
+    NeoBundle 'zhaocai/unite-scriptnames'        " unite.vim extension for runtime scriptnames
+    NeoBundle 'ujihisa/unite-colorscheme' " A unite.vim plugin
+    " Ruby/Rails
+    NeoBundle 'basyura/unite-rails' " a unite.vim plugin for rails
+    NeoBundle 'ujihisa/unite-rake'               " A Unite.vim plugin to run tasks or to view descriptions easily, using rake command
+    " Dictionary
+    NeoBundle 'pasela/unite-webcolorname' " A unite source plugin which provides Web Color Names.
+    NeoBundle 'mackee/unite-httpstatus'
+    " VCS
+    NeoBundle 'kmnk/vim-unite-giti' " unite source for using git
+    " Fun
+    NeoBundle 'osyo-manga/unite-banban'
+    NeoBundle 'mattn/unite-nyancat'
+    NeoBundle 'osyo-manga/unite-moo'
+    NeoBundle 'osyo-manga/unite-homo'
+
+    " NeoBundle 'mattn/unite-gist' " unite source gist
+    " NeoBundle 'eagletmt/unite-haddock' " unite.vim source for haddock
+    " NeoBundle 'basyura/unite-twitter' " twitter plugin for unite
+    " NeoBundle 'yomi322/unite-tweetvim'           " unite source for tweetvim
+    " NeoBundle 'mopp/unite-rss'
+
+    " NeoBundle 'mattn/unite-remotefile'           " unite source for remote file                                                                         
+    " NeoBundle 'moro/unite-stepdefs'              " unite-vim source for completing Cucumber step definition.                                            
+    " NeoBundle 'nise-nabe/unite-openpne'          "                                                                                                      
+    " NeoBundle 'osyo-manga/unite-qfixhowm'        "                                                                                                      
+    " NeoBundle 'osyo-manga/unite-quickfix'        "                                                                                                      
+    " NeoBundle 'osyo-manga/unite-rofi'            "                                                                                                      
+    " NeoBundle 'osyo-manga/unite-sl'              "                                                                                                      
+    " NeoBundle 'pocket7878/unite-hyperspec'       " unite source for lookup hyperspec contents.                                                          
+    " NeoBundle 'raomito/unite-memolist'           "                                                                                                      
+    " NeoBundle 'ryotakato/unite-gradle'           " vim plugin. unite source for using Gradle.                                                           
+    " NeoBundle 'ryotakato/unite-mongodb'          " vim plugin. unite source for using MongoDB.                                                          
+    " NeoBundle 'ryotakato/unite-sqlserver'        " vim plugin. unite source for using SQL Server                                                        
+    " NeoBundle 'sgur/unite-everything'            " A source which uses result of everything (http://www.voidtools.com/) for unite.vim                   
+    " NeoBundle 'sgur/unite-git_grep'              " git-grep source for unite.vim inspired by http://subtech.g.hatena.ne.jp/secondlife/20080606/121272942
+    " NeoBundle 'shiena/unite-path'                " Enumerate the PATH environment variable by unite.                                                    
+    " NeoBundle 'Shougo/unite-session'             " unite.vim session source                                                                             
+    " NeoBundle 'Shougo/unite-ssh'                 " unite.vim for SSH source                                                                             
+    " NeoBundle 'Shougo/unite-sudo'                " sudo source for unite.vim                                                                            
+    " NeoBundle 'smackesey/my_unite'               " Unite Sources for Vim                                                                                
+    " NeoBundle 'soh335/unite-hatenabookmark'      "                                                                                                      
+    " NeoBundle 'soh335/unite-qflist'              " unite-qflist                                                                                         
+    " NeoBundle 'soh335/unite-quickhl'             "                                                                                                      
+    " NeoBundle 'tacroe/unite-mark'                "                                                                                                      
+    " NeoBundle 'termoshtt/unite-nozbe'            " unite.vim source for Nozbe                                                                           
+    " NeoBundle 'tsukkee/unite-help'               " help source for unite.vim                                                                            
+    " NeoBundle 'tsukkee/unite-tag'                " tags soruce for unite.vim                                                                            
+    " NeoBundle 'ujihisa/unite-font'               " A unite plugin                                                                                       
+    " NeoBundle 'ujihisa/unite-haskellimport'      "                                                                                                      
+    " NeoBundle 'ujihisa/unite-locate'             "                                                                                                      
+  endif
+endif
 
 " }}}2
 "-------------------------------------------------------------------------------
@@ -476,15 +533,42 @@ set smartindent
 " Unite: "{{{2
 
 if globpath(&rtp, 'bundle/unite.vim') != ''
-  let g:unite_enable_start_insert = 1
-  let g:unite_enable_split_vertically = 1
+  let g:unite_enable_start_insert = 0
+  let g:unite_enable_split_vertically = 0
   let g:unite_source_history_yank_enable = 1
   let g:unite_data_directory = g:vim_tmp_directory."/unite"
 
   nnoremap <S-Space> :<C-u>Unite -start-insert source<CR>
+  " unite.vim
   nnoremap [unite] <nop>
   nmap <C-k> [unite]
-  nnoremap [unite] :<C-u>Unite 
+  nnoremap [unite]   :<C-u>Unite 
+  nnoremap [unite]uf :<C-u>Unite file_point file buffer file_mru file_rec/async directory directory_mru directory_rec/async<CR>
+  nnoremap [unite]ub :<C-u>Unite bookmark<CR>
+  nnoremap [unite]us :<C-u>Unite source<CR>
+  nnoremap [unite]ui :<C-u>Unite find<CR>
+  nnoremap [unite]un :<C-u>Unite function<CR>
+  nnoremap [unite]uy :<C-u>Unite history/yank<CR>
+  nnoremap [unite]ug :<C-u>Unite grep<CR>
+  nnoremap [unite]uj :<C-u>Unite -start-insert jump<CR>
+  nnoremap [unite]uc :<C-u>Unite -start-insert launcher<CR>
+  nnoremap [unite]ul :<C-u>Unite -start-insert line/fast<CR>
+  nnoremap [unite]uk :<C-u>Unite -start-insert mapping<CR>
+  nnoremap [unite]uo :<C-u>Unite output<CR>
+  nnoremap [unite]ur :<C-u>Unite -start-insert register<CR>
+  nnoremap [unite]up :<C-u>Unite -start-insert -no-split process<CR>
+  nnoremap [unite]ut :<C-u>Unite tab<CR>
+  nnoremap [unite]uu :<C-u>Unite undo<CR>
+  nnoremap [unite]uw :<C-u>Unite window<CR>
+  " neobundle.vim
+  nnoremap [unite]n  :<C-u>Unite neobundle<CR>
+  nnoremap [unite]ni :<C-u>Unite neobundle/install<CR>
+  nnoremap [unite]na :<C-u>Unite neobundle/lazy<CR>
+  nnoremap [unite]nl :<C-u>Unite neobundle/log<CR>
+  nnoremap [unite]ns :<C-u>Unite neobundle/search<CR>
+  nnoremap [unite]nu :<C-u>Unite neobundle/update<CR>
+  " unite-outline
+  nnoremap [unite]o  :<C-u>Unite -vertical -winwidth=36 outline<CR>
 endif
 
 " }}}2
@@ -509,7 +593,6 @@ cmap <c-a> <home>
 nnoremap vv <c-v>
 
 nnoremap M `
-
 " Fix Current buffer indent.
 nnoremap <Tab>= ggvG=2<C-o>
 
@@ -530,31 +613,34 @@ if exists('$MYGVIMRC')
   nnoremap ,gV :<C-u>source $MYGVIMRC<CR>
 endif
 
+nnoremap [mybind] Nop
+nmap <C-e> [mybind]
+
 " Change current window and size.
-nnoremap <silent> <C-e>h <c-w>h:call GoodWinWidth()<cr>
-nnoremap <silent> <C-e>j <c-w>j:call GoodWinHeight()<cr>
-nnoremap <silent> <C-e>k <c-w>k:call GoodWinHeight()<cr>
-nnoremap <silent> <C-e>l <c-w>l:call GoodWinWidth()<cr>
+nnoremap <silent> [mybind]h <c-w>h:call GoodWinWidth()<cr>
+nnoremap <silent> [mybind]j <c-w>j:call GoodWinHeight()<cr>
+nnoremap <silent> [mybind]k <c-w>k:call GoodWinHeight()<cr>
+nnoremap <silent> [mybind]l <c-w>l:call GoodWinWidth()<cr>
 
-nnoremap <silent> <C-e>eu :<C-u>set fenc=utf-8<CR>
-nnoremap <silent> <C-e>ee :<C-u>set fenc=euc-jp<CR>
-nnoremap <silent> <C-e>es :<C-u>set fenc=cp932<CR>
-nnoremap <silent> <C-e>eU :<C-u>e ++enc=utf-8 %<CR>
-nnoremap <silent> <C-e>eE :<C-u>e ++enc=euc-jp %<CR>
-nnoremap <silent> <C-e>eS :<C-u>e ++enc=cp932 %<CR>
+nnoremap <silent> [mybind]eu :<C-u>set fenc=utf-8<CR>
+nnoremap <silent> [mybind]ee :<C-u>set fenc=euc-jp<CR>
+nnoremap <silent> [mybind]es :<C-u>set fenc=cp932<CR>
+nnoremap <silent> [mybind]eU :<C-u>e ++enc=utf-8 %<CR>
+nnoremap <silent> [mybind]eE :<C-u>e ++enc=euc-jp %<CR>
+nnoremap <silent> [mybind]eS :<C-u>e ++enc=cp932 %<CR>
 
-nnoremap <silent> <C-e>el :<C-u>set fileformat=unix<CR>
-nnoremap <silent> <C-e>em :<C-u>set fileformat=mac<CR>
-nnoremap <silent> <C-e>ed :<C-u>set fileformat=dos<CR>
-nnoremap <silent> <C-e>eL :<C-u>e ++fileformat=unix %<CR>
-nnoremap <silent> <C-e>eM :<C-u>e ++fileformat=mac %<CR>
-nnoremap <silent> <C-e>eD :<C-u>e ++fileformat=dos %<CR>
+nnoremap <silent> [mybind]el :<C-u>set fileformat=unix<CR>
+nnoremap <silent> [mybind]em :<C-u>set fileformat=mac<CR>
+nnoremap <silent> [mybind]ed :<C-u>set fileformat=dos<CR>
+nnoremap <silent> [mybind]eL :<C-u>e ++fileformat=unix %<CR>
+nnoremap <silent> [mybind]eM :<C-u>e ++fileformat=mac %<CR>
+nnoremap <silent> [mybind]eD :<C-u>e ++fileformat=dos %<CR>
 
-nnoremap <silent> <C-e>fm :<C-u>set foldmethod=marker<CR>
-nnoremap <silent> <C-e>fi :<C-u>set foldmethod=indent<CR>
-nnoremap <silent> <C-e>fs :<C-u>set foldmethod=syntax<CR>
+nnoremap <silent> [mybind]fm :<C-u>set foldmethod=marker<CR>
+nnoremap <silent> [mybind]fi :<C-u>set foldmethod=indent<CR>
+nnoremap <silent> [mybind]fs :<C-u>set foldmethod=syntax<CR>
 
-nnoremap <silent> <C-e>cc :<C-u>let &colorcolumn = &colorcolumn == 0 ? 80 : 0<CR>
+nnoremap <silent> [mybind]cc :<C-u>let &colorcolumn = &colorcolumn == 0 ? 80 : 0<CR>
 
 " }}}1
 "===============================================================================
