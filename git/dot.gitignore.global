@@ -8,13 +8,13 @@ Desktop.ini
 $RECYCLE.BIN/
 
 # Mac OS X
-.DS_Store
-.AppleDouble
-.LSOverride
+# .DS_Store
+# .AppleDouble
+# .LSOverride
 Icon
-._*
-.Spotlight-V100
-.Trashes
+# ._*
+# .Spotlight-V100
+# .Trashes
 
 # Linux
 .*
@@ -22,13 +22,13 @@ Icon
 *~
 
 # Dropbox
-.dropbox
+# .dropbox
 Icon
 
 # Vim
 *.s[a-w][a-z]
 *.un~
-.netrwhist
+# .netrwhist
 *~
 
 # tags
@@ -58,6 +58,6 @@ tags-ja
 *.rpm
 
 # Vagrant
-.vagrant
+# .vagrant
 
 # vim: ft=conf ts=2 sts=2 sw=2 et
