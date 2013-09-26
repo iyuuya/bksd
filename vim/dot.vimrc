@@ -90,6 +90,9 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
         \   'unix'  : 'make -f make_unix.mak',
         \   },
         \ }
+
+  " Unite and create user interfaces
+  NeoBundle 'Shougo/unite.vim'
 endif
 
 
@@ -469,6 +472,24 @@ set smartindent
 "===============================================================================
 " Plugin: "{{{1
 
+"-------------------------------------------------------------------------------
+" Unite: "{{{2
+
+if globpath(&rtp, 'bundle/unite.vim') != ''
+  let g:unite_enable_start_insert = 1
+  let g:unite_enable_split_vertically = 1
+  let g:unite_source_history_yank_enable = 1
+  let g:unite_data_directory = g:vim_tmp_directory."/unite"
+
+  nnoremap <S-Space> :<C-u>Unite -start-insert source<CR>
+  nnoremap [unite] <nop>
+  nmap <C-k> [unite]
+  nnoremap [unite] :<C-u>Unite 
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
 " }}}1
 "===============================================================================
 
@@ -593,4 +614,4 @@ set secure
 " }}}1
 "===============================================================================
 
-" vim: foldmethod=marker
+" vim: foldmethod=marker foldlevel=0
