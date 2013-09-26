@@ -95,12 +95,12 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
   NeoBundle 'Shougo/unite.vim'
   " Utility
   NeoBundle 'h1mesuke/unite-outline' " outline source for unite.vim
+  " Vim
+  NeoBundle 'zhaocai/unite-scriptnames' " unite.vim extension for runtime scriptnames
+  NeoBundle 'ujihisa/unite-colorscheme' " A unite.vim plugin
 
   if 0
     NeoBundle 'daisuzu/unite-gtags' " GNU GLOBAL(gtags) source for unite.vim
-    " Vim
-    NeoBundle 'zhaocai/unite-scriptnames'        " unite.vim extension for runtime scriptnames
-    NeoBundle 'ujihisa/unite-colorscheme' " A unite.vim plugin
     " Ruby/Rails
     NeoBundle 'basyura/unite-rails' " a unite.vim plugin for rails
     NeoBundle 'ujihisa/unite-rake'               " A Unite.vim plugin to run tasks or to view descriptions easily, using rake command
@@ -115,41 +115,184 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
     NeoBundle 'osyo-manga/unite-moo'
     NeoBundle 'osyo-manga/unite-homo'
 
-    " NeoBundle 'mattn/unite-gist' " unite source gist
-    " NeoBundle 'eagletmt/unite-haddock' " unite.vim source for haddock
-    " NeoBundle 'basyura/unite-twitter' " twitter plugin for unite
-    " NeoBundle 'yomi322/unite-tweetvim'           " unite source for tweetvim
-    " NeoBundle 'mopp/unite-rss'
+    NeoBundle 'mattn/unite-gist' " unite source gist
+    NeoBundle 'eagletmt/unite-haddock' " unite.vim source for haddock
+    NeoBundle 'basyura/unite-twitter' " twitter plugin for unite
+    NeoBundle 'yomi322/unite-tweetvim'           " unite source for tweetvim
+    NeoBundle 'mopp/unite-rss'
 
-    " NeoBundle 'mattn/unite-remotefile'           " unite source for remote file                                                                         
-    " NeoBundle 'moro/unite-stepdefs'              " unite-vim source for completing Cucumber step definition.                                            
-    " NeoBundle 'nise-nabe/unite-openpne'          "                                                                                                      
-    " NeoBundle 'osyo-manga/unite-qfixhowm'        "                                                                                                      
-    " NeoBundle 'osyo-manga/unite-quickfix'        "                                                                                                      
-    " NeoBundle 'osyo-manga/unite-rofi'            "                                                                                                      
-    " NeoBundle 'osyo-manga/unite-sl'              "                                                                                                      
-    " NeoBundle 'pocket7878/unite-hyperspec'       " unite source for lookup hyperspec contents.                                                          
-    " NeoBundle 'raomito/unite-memolist'           "                                                                                                      
-    " NeoBundle 'ryotakato/unite-gradle'           " vim plugin. unite source for using Gradle.                                                           
-    " NeoBundle 'ryotakato/unite-mongodb'          " vim plugin. unite source for using MongoDB.                                                          
-    " NeoBundle 'ryotakato/unite-sqlserver'        " vim plugin. unite source for using SQL Server                                                        
-    " NeoBundle 'sgur/unite-everything'            " A source which uses result of everything (http://www.voidtools.com/) for unite.vim                   
-    " NeoBundle 'sgur/unite-git_grep'              " git-grep source for unite.vim inspired by http://subtech.g.hatena.ne.jp/secondlife/20080606/121272942
-    " NeoBundle 'shiena/unite-path'                " Enumerate the PATH environment variable by unite.                                                    
-    " NeoBundle 'Shougo/unite-session'             " unite.vim session source                                                                             
-    " NeoBundle 'Shougo/unite-ssh'                 " unite.vim for SSH source                                                                             
-    " NeoBundle 'Shougo/unite-sudo'                " sudo source for unite.vim                                                                            
-    " NeoBundle 'smackesey/my_unite'               " Unite Sources for Vim                                                                                
-    " NeoBundle 'soh335/unite-hatenabookmark'      "                                                                                                      
-    " NeoBundle 'soh335/unite-qflist'              " unite-qflist                                                                                         
-    " NeoBundle 'soh335/unite-quickhl'             "                                                                                                      
-    " NeoBundle 'tacroe/unite-mark'                "                                                                                                      
-    " NeoBundle 'termoshtt/unite-nozbe'            " unite.vim source for Nozbe                                                                           
-    " NeoBundle 'tsukkee/unite-help'               " help source for unite.vim                                                                            
-    " NeoBundle 'tsukkee/unite-tag'                " tags soruce for unite.vim                                                                            
-    " NeoBundle 'ujihisa/unite-font'               " A unite plugin                                                                                       
-    " NeoBundle 'ujihisa/unite-haskellimport'      "                                                                                                      
-    " NeoBundle 'ujihisa/unite-locate'             "                                                                                                      
+    NeoBundle 'mattn/unite-remotefile'           " unite source for remote file                                                                         
+    NeoBundle 'moro/unite-stepdefs'              " unite-vim source for completing Cucumber step definition.                                            
+    NeoBundle 'nise-nabe/unite-openpne'          "                                                                                                      
+    NeoBundle 'osyo-manga/unite-qfixhowm'        "                                                                                                      
+    NeoBundle 'osyo-manga/unite-quickfix'        "                                                                                                      
+    NeoBundle 'osyo-manga/unite-rofi'            "                                                                                                      
+    NeoBundle 'osyo-manga/unite-sl'              "                                                                                                      
+    NeoBundle 'pocket7878/unite-hyperspec'       " unite source for lookup hyperspec contents.                                                          
+    NeoBundle 'raomito/unite-memolist'           "                                                                                                      
+    NeoBundle 'ryotakato/unite-gradle'           " vim plugin. unite source for using Gradle.                                                           
+    NeoBundle 'ryotakato/unite-mongodb'          " vim plugin. unite source for using MongoDB.                                                          
+    NeoBundle 'ryotakato/unite-sqlserver'        " vim plugin. unite source for using SQL Server                                                        
+    NeoBundle 'sgur/unite-everything'            " A source which uses result of everything (http://www.voidtools.com/) for unite.vim                   
+    NeoBundle 'sgur/unite-git_grep'              " git-grep source for unite.vim inspired by http://subtech.g.hatena.ne.jp/secondlife/20080606/121272942
+    NeoBundle 'shiena/unite-path'                " Enumerate the PATH environment variable by unite.                                                    
+    NeoBundle 'Shougo/unite-session'             " unite.vim session source                                                                             
+    NeoBundle 'Shougo/unite-ssh'                 " unite.vim for SSH source                                                                             
+    NeoBundle 'Shougo/unite-sudo'                " sudo source for unite.vim                                                                            
+    NeoBundle 'smackesey/my_unite'               " Unite Sources for Vim                                                                                
+    NeoBundle 'soh335/unite-hatenabookmark'      "                                                                                                      
+    NeoBundle 'soh335/unite-qflist'              " unite-qflist                                                                                         
+    NeoBundle 'soh335/unite-quickhl'             "                                                                                                      
+    NeoBundle 'tacroe/unite-mark'                "                                                                                                      
+    NeoBundle 'termoshtt/unite-nozbe'            " unite.vim source for Nozbe                                                                           
+    NeoBundle 'tsukkee/unite-help'               " help source for unite.vim                                                                            
+    NeoBundle 'tsukkee/unite-tag'                " tags soruce for unite.vim                                                                            
+    NeoBundle 'ujihisa/unite-font'               " A unite plugin                                                                                       
+    NeoBundle 'ujihisa/unite-haskellimport'      "                                                                                                      
+    NeoBundle 'ujihisa/unite-locate'             "                                                                                                      
+  endif
+
+  NeoBundle 'thinca/vim-scouter' " Measures Battle Power of a vimmer.
+
+  if 0 " old bundles
+    " Ultimate Vim package manager
+    NeoBundleFetch 'Shougo/neobundle.vim'
+
+    " Interactive command execution in Vim.
+    NeoBundle 'Shougo/vimproc', {
+          \ 'build' : {
+          \   'win64' : 'nmake -f make_msvc32.mak',
+          \   'win32' : 'nmake -f make_msvc64.mak',
+          \   'mac'   : 'make -f make_mac.mak',
+          \   'unix'  : 'make -f make_unix.mak',
+          \   },
+          \ }
+
+    NeoBundle 'mattn/webapi-vim' " vim interface to Web API
+    NeoBundle 'tyru/open-browser.vim' " Open URI with your favorite browser from your favorite editor
+
+    " Unite and create user interfaces
+    NeoBundle 'Shougo/unite.vim'
+    NeoBundle 'tsukkee/unite-help'
+    NeoBundle 'tsukkee/unite-tag'
+    NeoBundle 'h1mesuke/unite-outline'
+    NeoBundle 'tacroe/unite-mark'
+    NeoBundle 'osyo-manga/unite-quickfix'
+    NeoBundle 'ujihisa/unite-colorscheme'
+    NeoBundle 'pasela/unite-webcolorname'
+
+    " a unite.vim plugin for rails
+    NeoBundle 'basyura/unite-rails', { 'depends' : 'Shougo/unite.vim' }
+    NeoBundle 'alpaca-tc/unite-rails_best_practices', {
+          \   'depends' : 'Shougo/unite.vim',
+          \   'build' : {
+          \      'mac' : 'gem install rails_best_practices',
+          \      'unix' : 'gem install rails_best_practices',
+          \   }
+          \ }
+    " A Unite.vim plugin to run tasks or to view descriptions easily, using rake command
+    NeoBundle 'ujihisa/unite-rake'
+    " A Unite plugin for RubyGems
+    NeoBundle 'ujihisa/unite-gem'
+    " A unite.vim source for searching gems to require
+    NeoBundle 'rhysd/unite-ruby-require.vim'
+
+    if s:iswin
+      NeoBundle 'raduwen/unite-peercast'
+    endif
+
+    NeoBundle 'mattn/unite-gist'
+    NeoBundle 'mattn/gist-vim'
+    NeoBundle 'basyura/TweetVim'
+    NeoBundle 'basyura/twibill.vim'
+    NeoBundle 'tpope/vim-fugitive' " fugitive.vim: a Git wrapper so awesome, it should be illegal
+
+    " Ultimate auto-completion system for Vim.
+    NeoBundle 'Shougo/neocomplcache'
+    " neo-snippet plugin contains neocomplcache snippets source
+    NeoBundle 'Shougo/neosnippet'
+    if !s:iswin
+      NeoBundle 'Shougo/neocomplcache-rsense' " The neocomplcache source for RSense
+      NeoBundle 'alpaca-tc/vim-rsense' " rsense/etc/vimrsense copy
+    endif
+
+    " Powerful file explorer implemented by Vim script
+    NeoBundle 'Shougo/vimfiler'
+
+    " Powerful shell implemented by vim.
+    NeoBundle 'Shougo/vimshell'
+    " the world first vimshell plugin that you can run "vim" command on ssh on vimshell
+    NeoBundle 'ujihisa/vimshell-ssh'
+
+    " The ultimate vim statusline utility.
+    NeoBundle 'Lokaltog/vim-powerline'
+
+    " Run commands quickly.
+    NeoBundle 'thinca/vim-quickrun'
+    " A quickrun plugin to show intermediate codes
+    NeoBundle 'ujihisa/quicklearn'
+
+    NeoBundle 'Align'
+    " zen-coding for vim: http://code.google.com/p/zen-coding/
+    NeoBundle 'mattn/zencoding-vim'
+    " surround.vim: quoting/parenthesizing made simple
+    NeoBundle 'tpope/vim-surround', {
+          \ 'autoload' : {
+          \   'mappings' : [
+          \     ['nx', '<Plug>Dsurround'], ['nx', '<Plug>Csurround'],
+          \     ['nx', '<Plug>Ysurround'], ['nx', '<Plug>YSurround'],
+          \     ['nx', '<Plug>Yssurround'], ['nx', '<Plug>YSsurround'],
+          \     ['vx', '<Plug>VgSurround'], ['vx', '<Plug>VSurround'],
+          \ ]}}
+    " conflict with neocomplcache#smart_close_popup
+    " NeoBundle 'alpaca-tc/vim-endwise'
+
+    NeoBundle 'othree/html5.vim' " HTML5 omnicomplete and syntax
+    " Add CSS3 syntax support to vim's built-in `syntax/css.vim`.
+    NeoBundleLazy 'hail2u/vim-css3-syntax', { 'autoload' : { 'filetypes' : ['scss', 'sass', 'less', 'css'] } }
+    NeoBundle 'skammer/vim-css-color' " Highlight colors in css files
+    " Vim syntax file for scss (Sassy CSS)
+    NeoBundleLazy 'cakebaker/scss-syntax.vim', { 'autoload' : { 'filetypes' : ['scss', 'sass', 'css'] } }
+    " vim syntax for LESS (dynamic CSS)
+    NeoBundleLazy 'groenewege/vim-less', { 'autoload' : { 'filetypes' : ['less', 'css'] } }
+    " Vim Jade template engine syntax highlighting and indention
+    NeoBundleLazy 'digitaltoad/vim-jade', { 'autoload' : { 'filetypes' : ['jade'] } }
+
+    " CoffeeScript support for vim
+    NeoBundleLazy 'kchmck/vim-coffee-script', { 'autoload' : { 'filetypes' : ['coffee', 'js'] } }
+
+    " Beautiful rspec output in vim. See also: https://github.com/skwp/vim-ruby-conque for non-blocking rspec through ConqueTerm
+    NeoBundle 'thinca/vim-ref' " Integrated reference viewer.
+    NeoBundleLazy 'yuku-t/vim-ref-ri', { 'autoload' : { 'filetypes' : ['ruby', 'eruby', 'haml', 'rspec', 'Gemfile'] } }
+
+    NeoBundle 'altercation/vim-colors-solarized' " precision colorscheme for the vim text editor
+    NeoBundleLazy 'rcyrus/snipmate-snippets-rubymotion', { 'autoload' : { 'filetypes' : ['rubymotion'] } }
+    NeoBundle 'thinca/vim-template'
+
+    " endwise.vim: wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
+    NeoBundleLazy 'alpaca-tc/vim-endwise', { 'autoload' : { 'insert' : 1 } }
+    " A git repository for a vim plugin called matchit
+    NeoBundleLazy 'edsono/vim-matchit', { 'autoload' : {
+          \ 'filetypes' : 'ruby',
+          \ 'mappings' : ['nx', '%'] } }
+    " Run Rspec specs from Vim
+    NeoBundle 'thoughtbot/vim-rspec'
+    " rails.vim: Ruby on Rails power tools
+    NeoBundle 'tpope/vim-rails', { 'autoload' : {
+          \ 'filetypes' : ['haml', 'ruby', 'eruby'] } }
+    " Provides database access to many DBMS (Oracle, Sybase, Microsoft, MySQL, DBI,..)
+    NeoBundle 'dbext.vim'
+
+    NeoBundle 'szw/vim-tags'
+    NeoBundle 'slim-template/vim-slim' " A clone of the slim vim plugin from stonean. For use with Pathogen.
+
+    NeoBundle 'koron/chalice' " Chalice for Vim - 2ch.net browser written in vim script.
+
+    NeoBundle 'dmitry-ilyashevich/vim-typescript' " Vim TypeScript syntax mirror for bundle
+    if has('mac')
+      NeoBundle 'vim-scripts/cocoa.vim' " Plugin for Cocoa/Objective-C development
+    endif
+    NeoBundle 'thinca/vim-scouter' " Measures Battle Power of a vimmer.
   endif
 endif
 
