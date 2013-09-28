@@ -1,9 +1,9 @@
 "===============================================================================
-" Note: "{{{1
+" Note: "{{{0
 " .vimrc
 "
 " Author: iyuuya <i.yuuya@gmail.com>
-" }}}1
+" }}}0
 "===============================================================================
 
 "===============================================================================
@@ -77,10 +77,10 @@ endif
 if globpath(&rtp, 'bundle/neobundle.vim') != ''
   filetype off
   call neobundle#rc('$MYVIMFILES/bundle/')
-
   " Ultimate Vim package manager
   NeoBundleFetch 'Shougo/neobundle.vim'
 
+  " Utility "{{{3
   " Interactive command execution in Vim.
   NeoBundle 'Shougo/vimproc', {
         \ 'build' : {
@@ -90,8 +90,174 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
         \   'unix'  : 'make -f make_unix.mak',
         \   },
         \ }
-endif
+  NeoBundle 'Shougo/unite.vim'       " Unite and create user interfaces
+  NeoBundle 'h1mesuke/unite-outline' " outline source for unite.vim
+  NeoBundle 'tacroe/unite-mark'
+  NeoBundle 'mattn/webapi-vim'       " vim interface to Web API
+  NeoBundle 'tyru/open-browser.vim'  " Open URI with your favorite browser from your favorite editor
+  NeoBundle 'Shougo/vimshell.vim'    " Powerful shell implemented by vim.
+  NeoBundle 'ujihisa/vimshell-ssh'   " the world first vimshell plugin that you can run 'vim' command on ssh on vimshell
+  NeoBundle 'Shougo/vimfiler.vim'    " Powerful file explorer implemented by Vim script
+  " }}}3
 
+  " View "{{{3
+  NeoBundle 'vim-scripts/molokai'     " A port of the monokai scheme for TextMate
+  NeoBundle 'Lokaltog/vim-powerline'  " The ultimate vim statusline utility.
+  " }}}3
+
+  " Edit "{{{3
+  if has('lua')
+    NeoBundle 'Shougo/neocomplete.vim' " Next generation completion framework after neocomplcache
+  endif
+  NeoBundle 'Shougo/neosnippet.vim' " neo-snippet plugin contains neocomplcache snippets source
+  NeoBundle 'agate/vim-align'
+  " endwise.vim: wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
+  NeoBundleLazy 'alpaca-tc/vim-endwise', { 'autoload' : { 'insert' : 1 } }
+  " A git repository for a vim plugin called matchit
+  NeoBundleLazy 'edsono/vim-matchit', { 'autoload' : {
+        \ 'filetypes' : 'ruby',
+        \ 'mappings' : ['nx', '%'] } }
+  " }}}3
+
+  " Vim "{{{3
+  NeoBundle 'thinca/vim-scouter'        " Measures Battle Power of a vimmer.
+  NeoBundle 'zhaocai/unite-scriptnames' " unite.vim extension for runtime scriptnames
+  NeoBundle 'ujihisa/unite-colorscheme' " A unite.vim plugin
+  NeoBundle 'tsukkee/unite-help' " help source for unite.vim
+  " }}}3
+
+  " FileType "{{{3
+  " Ruby/Rails "{{{4
+  NeoBundle 'ujihisa/unite-rake'  " A Unite.vim plugin to run tasks or to view descriptions easily, using rake command
+  NeoBundle 'basyura/unite-rails' " a unite.vim plugin for rails
+  " }}}4
+  " Web "{{{4
+  NeoBundle 'othree/html5.vim' " HTML5 omnicomplete and syntax
+  NeoBundleLazy 'hail2u/vim-css3-syntax', { 'autoload' : { 'filetypes' : ['scss', 'sass', 'less', 'css'] } } " Add CSS3 syntax support to vim's built-in `syntax/css.vim`.
+  NeoBundleLazy 'cakebaker/scss-syntax.vim', { 'autoload' : { 'filetypes' : ['scss', 'sass', 'css'] } } " Vim syntax file for scss (Sassy CSS)
+  NeoBundleLazy 'groenewege/vim-less', { 'autoload' : { 'filetypes' : ['less', 'css'] } } " vim syntax for LESS (dynamic CSS)
+  NeoBundleLazy 'digitaltoad/vim-jade', { 'autoload' : { 'filetypes' : ['jade'] } } " Vim Jade template engine syntax highlighting and indention
+  NeoBundleLazy 'kchmck/vim-coffee-script', { 'autoload' : { 'filetypes' : ['coffee', 'js'] } } " CoffeeScript support for vim
+  NeoBundle 'skammer/vim-css-color'     " Highlight colors in css files
+  " }}}4
+  if has('mac')
+    NeoBundle 'vim-scripts/cocoa.vim' " Plugin for Cocoa/Objective-C development
+  endif
+  " }}}3
+
+  " Dictionary "{{{3
+  NeoBundle 'pasela/unite-webcolorname' " A unite source plugin which provides Web Color Names.
+  NeoBundle 'mackee/unite-httpstatus'
+  " }}}3
+
+  " VCS "{{{3
+  NeoBundle 'tpope/vim-fugitive'  " fugitive.vim: a Git wrapper so awesome, it should be illegal
+  NeoBundle 'gregsexton/gitv'     " gitk for Vim.
+  NeoBundle 'mattn/gist-vim'      " vimscript for gist
+  NeoBundle 'kmnk/vim-unite-giti' " unite source for using git
+  NeoBundle 'mattn/unite-gist'    " unite source gist
+  " }}}3
+
+  " Fun "{{{3
+  NeoBundle 'osyo-manga/unite-banban'
+  NeoBundle 'mattn/unite-nyancat'
+  NeoBundle 'osyo-manga/unite-moo'
+  NeoBundle 'osyo-manga/unite-homo'
+  " }}}3
+
+  "{{{4
+  if 0 " old bundles
+    NeoBundle 'basyura/TweetVim'
+    NeoBundle 'basyura/twibill.vim'
+
+    if !s:iswin
+      NeoBundle 'Shougo/neocomplcache-rsense' " The neocomplcache source for RSense
+      NeoBundle 'alpaca-tc/vim-rsense' " rsense/etc/vimrsense copy
+    endif
+
+    " Run commands quickly.
+    NeoBundle 'thinca/vim-quickrun'
+    " A quickrun plugin to show intermediate codes
+    NeoBundle 'ujihisa/quicklearn'
+
+    " zen-coding for vim: http://code.google.com/p/zen-coding/
+    NeoBundle 'mattn/zencoding-vim'
+    " surround.vim: quoting/parenthesizing made simple
+    NeoBundle 'tpope/vim-surround', {
+          \ 'autoload' : {
+          \   'mappings' : [
+          \     ['nx', '<Plug>Dsurround'], ['nx', '<Plug>Csurround'],
+          \     ['nx', '<Plug>Ysurround'], ['nx', '<Plug>YSurround'],
+          \     ['nx', '<Plug>Yssurround'], ['nx', '<Plug>YSsurround'],
+          \     ['vx', '<Plug>VgSurround'], ['vx', '<Plug>VSurround'],
+          \ ]}}
+
+    " Beautiful rspec output in vim. See also: https://github.com/skwp/vim-ruby-conque for non-blocking rspec through ConqueTerm
+    NeoBundle 'thinca/vim-ref' " Integrated reference viewer.
+    NeoBundleLazy 'yuku-t/vim-ref-ri', { 'autoload' : { 'filetypes' : ['ruby', 'eruby', 'haml', 'rspec', 'Gemfile'] } }
+
+    NeoBundle 'altercation/vim-colors-solarized' " precision colorscheme for the vim text editor
+    NeoBundleLazy 'rcyrus/snipmate-snippets-rubymotion', { 'autoload' : { 'filetypes' : ['rubymotion'] } }
+    NeoBundle 'thinca/vim-template'
+
+    " Run Rspec specs from Vim
+    NeoBundle 'thoughtbot/vim-rspec'
+    " rails.vim: Ruby on Rails power tools
+    NeoBundle 'tpope/vim-rails', { 'autoload' : {
+          \ 'filetypes' : ['haml', 'ruby', 'eruby'] } }
+    " Provides database access to many DBMS (Oracle, Sybase, Microsoft, MySQL, DBI,..)
+    NeoBundle 'dbext.vim'
+
+    NeoBundle 'szw/vim-tags'
+    NeoBundle 'slim-template/vim-slim' " A clone of the slim vim plugin from stonean. For use with Pathogen.
+
+    NeoBundle 'koron/chalice' " Chalice for Vim - 2ch.net browser written in vim script.
+
+    NeoBundle 'dmitry-ilyashevich/vim-typescript' " Vim TypeScript syntax mirror for bundle
+  endif
+  "}}}4
+
+  if 0 "{{{4
+    NeoBundle 'tsukkee/unite-tag'
+    NeoBundle 'osyo-manga/unite-quickfix'
+    NeoBundle 'ujihisa/unite-gem'
+
+    NeoBundle 'rhysd/unite-ruby-require.vim'
+    NeoBundle 'eagletmt/unite-haddock' " unite.vim source for haddock
+    NeoBundle 'basyura/unite-twitter' " twitter plugin for unite
+    NeoBundle 'yomi322/unite-tweetvim'           " unite source for tweetvim
+    NeoBundle 'mopp/unite-rss'
+    NeoBundle 'mattn/unite-remotefile'           " unite source for remote file                                                                         
+    NeoBundle 'moro/unite-stepdefs'              " unite-vim source for completing Cucumber step definition.                                            
+    NeoBundle 'nise-nabe/unite-openpne'          "                                                                                                      
+    NeoBundle 'osyo-manga/unite-qfixhowm'        "                                                                                                      
+    NeoBundle 'osyo-manga/unite-quickfix'        "                                                                                                      
+    NeoBundle 'osyo-manga/unite-rofi'            "                                                                                                      
+    NeoBundle 'osyo-manga/unite-sl'              "                                                                                                      
+    NeoBundle 'pocket7878/unite-hyperspec'       " unite source for lookup hyperspec contents.                                                          
+    NeoBundle 'raomito/unite-memolist'           "                                                                                                      
+    NeoBundle 'ryotakato/unite-gradle'           " vim plugin. unite source for using Gradle.                                                           
+    NeoBundle 'ryotakato/unite-mongodb'          " vim plugin. unite source for using MongoDB.                                                          
+    NeoBundle 'ryotakato/unite-sqlserver'        " vim plugin. unite source for using SQL Server                                                        
+    NeoBundle 'sgur/unite-everything'            " A source which uses result of everything (http://www.voidtools.com/) for unite.vim                   
+    NeoBundle 'sgur/unite-git_grep'              " git-grep source for unite.vim inspired by http://subtech.g.hatena.ne.jp/secondlife/20080606/121272942
+    NeoBundle 'shiena/unite-path'                " Enumerate the PATH environment variable by unite.                                                    
+    NeoBundle 'Shougo/unite-session'             " unite.vim session source                                                                             
+    NeoBundle 'Shougo/unite-ssh'                 " unite.vim for SSH source                                                                             
+    NeoBundle 'Shougo/unite-sudo'                " sudo source for unite.vim                                                                            
+    NeoBundle 'smackesey/my_unite'               " Unite Sources for Vim                                                                                
+    NeoBundle 'soh335/unite-hatenabookmark'      "                                                                                                      
+    NeoBundle 'soh335/unite-qflist'              " unite-qflist                                                                                         
+    NeoBundle 'soh335/unite-quickhl'             "                                                                                                      
+    NeoBundle 'termoshtt/unite-nozbe'            " unite.vim source for Nozbe                                                                           
+    NeoBundle 'tsukkee/unite-tag'                " tags soruce for unite.vim                                                                            
+    NeoBundle 'ujihisa/unite-font'               " A unite plugin                                                                                       
+    NeoBundle 'ujihisa/unite-haskellimport'      "                                                                                                      
+    NeoBundle 'ujihisa/unite-locate'             "                                                                                                      
+  endif "}}}4
+
+  NeoBundleCheck
+endif
 
 " }}}2
 "-------------------------------------------------------------------------------
@@ -469,6 +635,190 @@ set smartindent
 "===============================================================================
 " Plugin: "{{{1
 
+"-------------------------------------------------------------------------------
+" Unite: "{{{2
+
+if globpath(&rtp, 'bundle/unite.vim') != ''
+  let g:unite_enable_start_insert = 0
+  let g:unite_enable_split_vertically = 0
+  let g:unite_source_history_yank_enable = 1
+  let g:unite_data_directory = g:vim_tmp_directory."/unite"
+
+  nnoremap <S-Space> :<C-u>Unite -start-insert source<CR>
+  " unite.vim
+  nnoremap [unite] <nop>
+  nmap <C-k> [unite]
+  nnoremap [unite]   :<C-u>Unite 
+  nnoremap [unite]uf :<C-u>Unite file_point file buffer file_mru file_rec/async directory directory_mru directory_rec/async<CR>
+  nnoremap [unite]ub :<C-u>Unite bookmark<CR>
+  nnoremap [unite]us :<C-u>Unite source<CR>
+  nnoremap [unite]ui :<C-u>Unite find<CR>
+  nnoremap [unite]un :<C-u>Unite function<CR>
+  nnoremap [unite]uy :<C-u>Unite history/yank<CR>
+  nnoremap [unite]ug :<C-u>Unite grep<CR>
+  nnoremap [unite]uj :<C-u>Unite -start-insert jump<CR>
+  nnoremap [unite]uc :<C-u>Unite -start-insert launcher<CR>
+  nnoremap [unite]ul :<C-u>Unite -start-insert line/fast<CR>
+  nnoremap [unite]uk :<C-u>Unite -start-insert mapping<CR>
+  nnoremap [unite]uo :<C-u>Unite output<CR>
+  nnoremap [unite]ur :<C-u>Unite -start-insert register<CR>
+  nnoremap [unite]up :<C-u>Unite -start-insert -no-split process<CR>
+  nnoremap [unite]ut :<C-u>Unite tab<CR>
+  nnoremap [unite]uu :<C-u>Unite undo<CR>
+  nnoremap [unite]uw :<C-u>Unite window<CR>
+  " unite-help
+  nnoremap [unite]uh :<C-u>Unite help<CR>
+  " neobundle.vim
+  nnoremap [unite]n  :<C-u>Unite neobundle<CR>
+  nnoremap [unite]ni :<C-u>Unite neobundle/install<CR>
+  nnoremap [unite]na :<C-u>Unite neobundle/lazy<CR>
+  nnoremap [unite]nl :<C-u>Unite neobundle/log<CR>
+  nnoremap [unite]ns :<C-u>Unite neobundle/search<CR>
+  nnoremap [unite]nu :<C-u>Unite neobundle/update<CR>
+  " unite-outline
+  nnoremap [unite]o  :<C-u>Unite -vertical -winwidth=36 outline<CR>
+  " unite-rake
+  nnoremap [unite]rk :<C-u>Unite rake<CR>
+  " unite-rails
+  nnoremap [unite]rf :<C-u>Unite rails/config<CR>
+  nnoremap [unite]rc :<C-u>Unite rails/controller<CR>
+  nnoremap [unite]rd :<C-u>Unite rails/db<CR>
+  nnoremap [unite]ry :<C-u>Unite rails/destroy<CR>
+  nnoremap [unite]rg :<C-u>Unite rails/generate<CR>
+  nnoremap [unite]rh :<C-u>Unite rails/helper<CR>
+  nnoremap [unite]ri :<C-u>Unite rails/initializer
+  nnoremap [unite]rj :<C-u>Unite rails/javascript<CR>
+  nnoremap [unite]rl :<C-u>Unite rails/lib<CR>
+  nnoremap [unite]ro :<C-u>Unite rails/log<CR>
+  nnoremap [unite]ra :<C-u>Unite rails/mailer<CR>
+  nnoremap [unite]rm :<C-u>Unite rails/model<CR>
+  nnoremap [unite]rr :<C-u>Unite rails/route<CR>
+  nnoremap [unite]rp :<C-u>Unite rails/spec<CR>
+  nnoremap [unite]rs :<C-u>Unite rails/stylesheet<CR>
+  nnoremap [unite]rv :<C-u>Unite rails/view<CR>
+  " Dictionaries
+  nnoremap [unite]dw :<C-u>Unite webcolornane<CR>
+  nnoremap [unite]dh :<C-u>Unite httpstatus<CR>
+  " unite-giti
+  nnoremap [unite]g  :<C-u>Unite giti<CR>
+  nnoremap [unite]gb :<C-u>Unite giti/branch_all<CR>
+  nnoremap [unite]gl :<C-u>Unite giti/log<CR>
+  nnoremap [unite]gr :<C-u>Unite giti/remote<CR>
+  nnoremap [unite]gs :<C-u>Unite giti/status<CR>
+  " unite-colorscheme
+  command! ColorScheme :Unite -auto-preview colorscheme
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" VimShell: "{{{2
+
+if globpath(&rtp, 'bundle/vimshell.vim') != ''
+  let g:vimshell_interactive_update_time = 10
+  let g:vimshell_temporary_directory = g:vim_tmp_directory."/vimshell"
+  let g:vimshell_max_command_history = 10000
+
+  let g:vimshell_prompt = '% '
+  let g:vimshell_user_prompt = "$USER.'@'.hostname().'('.strftime('%Y/%m/%d %H:%M:%S').')>>'"
+  let g:vimshell_secondary_prompt = '> '
+  let g:vimshell_right_prompt = "'['.fnamemodify(getcwd(), ':~').']'"
+
+  autocmd FileType vimshell call vimshell#hook#add('chpwd', 'my_chpwd', 'g:my_chpwd')
+
+  function! g:my_chpwd(args, context)
+    call vimshell#execute('ls')
+  endfunction
+
+  nnoremap ; :VimShellCurrentDir<CR>
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" VimFiler: "{{{2
+
+if globpath(&rtp, 'bundle/vimfiler.vim') != ''
+  let g:vimfiler_as_default_explorer = 1
+  let g:vimfiler_safe_mode_by_default = 0
+  let g:vimfiler_data_directory = g:vim_tmp_directory.'/vimfiler'
+  nnoremap : :VimFilerBufferDir -split -simple -no-quit -winwidth=32<CR>
+  nnoremap ,vf :VimFilerDouble<CR>
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" NeoComplete: "{{{2
+
+if globpath(&rtp, 'bundle/neocomplete.vim') != ''
+  let g:neocomplete#enable_at_startup = 1
+  let g:neocomplete#max_list = 100
+  let g:neocomplete#max_keyword_width = 40
+  let g:neocomplete#auto_completion_start_length = 2
+  let g:neocomplete#manual_completion_start_length = 1
+  let g:neocomplete#min_keyword_length = 3
+  let g:neocomplete#enable_ignore_case = 1
+  let g:neocomplete#enable_smart_case = 1
+  let g:neocomplete#force_overwrite_completefunc = 1 " 0でもいいかも
+  let g:neocomplete#use_vimproc = 0 " 1でもいいかも
+  let g:neocomplete#data_directory = g:vim_tmp_directory."/neocomplete"
+
+  nnoremap ,ne :<C-u>NeoCompleteEnable<CR>
+  nnoremap ,nd :<C-u>NeoCompleteDisable<CR>
+  nnoremap ,nt :<C-u>NeoCompleteToggle<CR>
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" NeoSnippet: "{{{2
+
+" SuperTab like snippets behavior.
+imap <expr><C-TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><C-TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" Vim PowerLine: "{{{2
+
+set background=light
+
+if globpath(&rtp, 'bundle/vim-powerline') != ''
+  let g:Powerline_symbols = 'fancy'
+  let g:Powerline_colorscheme = 'default'
+
+  let g:Powerline_mode_n = 'NR'
+  let g:Powerline_mode_i = 'IN'
+  let g:Powerline_mode_R = 'RE'
+  let g:Powerline_mode_v = 'VI'
+  let g:Powerline_mode_V = 'VL'
+  let g:Powerline_mode_cv = 'VB'
+  let g:Powerline_mode_s = 'SE'
+  let g:Powerline_mode_S = 'SL'
+  let g:Powerline_mode_cs = 'SB'
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" tmp: "{{{2
+
+" }}}2
+"-------------------------------------------------------------------------------
+
 " }}}1
 "===============================================================================
 
@@ -488,7 +838,6 @@ cmap <c-a> <home>
 nnoremap vv <c-v>
 
 nnoremap M `
-
 " Fix Current buffer indent.
 nnoremap <Tab>= ggvG=2<C-o>
 
@@ -509,31 +858,34 @@ if exists('$MYGVIMRC')
   nnoremap ,gV :<C-u>source $MYGVIMRC<CR>
 endif
 
+nnoremap [mybind] Nop
+nmap <C-e> [mybind]
+
 " Change current window and size.
-nnoremap <silent> <C-e>h <c-w>h:call GoodWinWidth()<cr>
-nnoremap <silent> <C-e>j <c-w>j:call GoodWinHeight()<cr>
-nnoremap <silent> <C-e>k <c-w>k:call GoodWinHeight()<cr>
-nnoremap <silent> <C-e>l <c-w>l:call GoodWinWidth()<cr>
+nnoremap <silent> [mybind]h <c-w>h:call GoodWinWidth()<cr>
+nnoremap <silent> [mybind]j <c-w>j:call GoodWinHeight()<cr>
+nnoremap <silent> [mybind]k <c-w>k:call GoodWinHeight()<cr>
+nnoremap <silent> [mybind]l <c-w>l:call GoodWinWidth()<cr>
 
-nnoremap <silent> <C-e>eu :<C-u>set fenc=utf-8<CR>
-nnoremap <silent> <C-e>ee :<C-u>set fenc=euc-jp<CR>
-nnoremap <silent> <C-e>es :<C-u>set fenc=cp932<CR>
-nnoremap <silent> <C-e>eU :<C-u>e ++enc=utf-8 %<CR>
-nnoremap <silent> <C-e>eE :<C-u>e ++enc=euc-jp %<CR>
-nnoremap <silent> <C-e>eS :<C-u>e ++enc=cp932 %<CR>
+nnoremap <silent> [mybind]eu :<C-u>set fenc=utf-8<CR>
+nnoremap <silent> [mybind]ee :<C-u>set fenc=euc-jp<CR>
+nnoremap <silent> [mybind]es :<C-u>set fenc=cp932<CR>
+nnoremap <silent> [mybind]eU :<C-u>e ++enc=utf-8 %<CR>
+nnoremap <silent> [mybind]eE :<C-u>e ++enc=euc-jp %<CR>
+nnoremap <silent> [mybind]eS :<C-u>e ++enc=cp932 %<CR>
 
-nnoremap <silent> <C-e>el :<C-u>set fileformat=unix<CR>
-nnoremap <silent> <C-e>em :<C-u>set fileformat=mac<CR>
-nnoremap <silent> <C-e>ed :<C-u>set fileformat=dos<CR>
-nnoremap <silent> <C-e>eL :<C-u>e ++fileformat=unix %<CR>
-nnoremap <silent> <C-e>eM :<C-u>e ++fileformat=mac %<CR>
-nnoremap <silent> <C-e>eD :<C-u>e ++fileformat=dos %<CR>
+nnoremap <silent> [mybind]el :<C-u>set fileformat=unix<CR>
+nnoremap <silent> [mybind]em :<C-u>set fileformat=mac<CR>
+nnoremap <silent> [mybind]ed :<C-u>set fileformat=dos<CR>
+nnoremap <silent> [mybind]eL :<C-u>e ++fileformat=unix %<CR>
+nnoremap <silent> [mybind]eM :<C-u>e ++fileformat=mac %<CR>
+nnoremap <silent> [mybind]eD :<C-u>e ++fileformat=dos %<CR>
 
-nnoremap <silent> <C-e>fm :<C-u>set foldmethod=marker<CR>
-nnoremap <silent> <C-e>fi :<C-u>set foldmethod=indent<CR>
-nnoremap <silent> <C-e>fs :<C-u>set foldmethod=syntax<CR>
+nnoremap <silent> [mybind]fm :<C-u>set foldmethod=marker<CR>
+nnoremap <silent> [mybind]fi :<C-u>set foldmethod=indent<CR>
+nnoremap <silent> [mybind]fs :<C-u>set foldmethod=syntax<CR>
 
-nnoremap <silent> <C-e>cc :<C-u>let &colorcolumn = &colorcolumn == 0 ? 80 : 0<CR>
+nnoremap <silent> [mybind]cc :<C-u>let &colorcolumn = &colorcolumn == 0 ? 80 : 0<CR>
 
 " }}}1
 "===============================================================================
@@ -593,4 +945,4 @@ set secure
 " }}}1
 "===============================================================================
 
-" vim: foldmethod=marker
+" vim: foldmethod=marker foldlevel=0
