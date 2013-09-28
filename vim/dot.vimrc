@@ -130,6 +130,18 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
   NeoBundle 'ujihisa/unite-rake'  " A Unite.vim plugin to run tasks or to view descriptions easily, using rake command
   NeoBundle 'basyura/unite-rails' " a unite.vim plugin for rails
   " }}}4
+  " Web "{{{4
+  NeoBundle 'othree/html5.vim' " HTML5 omnicomplete and syntax
+  NeoBundleLazy 'hail2u/vim-css3-syntax', { 'autoload' : { 'filetypes' : ['scss', 'sass', 'less', 'css'] } } " Add CSS3 syntax support to vim's built-in `syntax/css.vim`.
+  NeoBundleLazy 'cakebaker/scss-syntax.vim', { 'autoload' : { 'filetypes' : ['scss', 'sass', 'css'] } } " Vim syntax file for scss (Sassy CSS)
+  NeoBundleLazy 'groenewege/vim-less', { 'autoload' : { 'filetypes' : ['less', 'css'] } } " vim syntax for LESS (dynamic CSS)
+  NeoBundleLazy 'digitaltoad/vim-jade', { 'autoload' : { 'filetypes' : ['jade'] } } " Vim Jade template engine syntax highlighting and indention
+  NeoBundleLazy 'kchmck/vim-coffee-script', { 'autoload' : { 'filetypes' : ['coffee', 'js'] } } " CoffeeScript support for vim
+  NeoBundle 'skammer/vim-css-color'     " Highlight colors in css files
+  " }}}4
+  if has('mac')
+    NeoBundle 'vim-scripts/cocoa.vim' " Plugin for Cocoa/Objective-C development
+  endif
   " }}}3
 
   " Dictionary "{{{3
@@ -182,22 +194,6 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
           \     ['nx', '<Plug>Yssurround'], ['nx', '<Plug>YSsurround'],
           \     ['vx', '<Plug>VgSurround'], ['vx', '<Plug>VSurround'],
           \ ]}}
-    " conflict with neocomplcache#smart_close_popup
-    " NeoBundle 'alpaca-tc/vim-endwise'
-
-    NeoBundle 'othree/html5.vim' " HTML5 omnicomplete and syntax
-    " Add CSS3 syntax support to vim's built-in `syntax/css.vim`.
-    NeoBundleLazy 'hail2u/vim-css3-syntax', { 'autoload' : { 'filetypes' : ['scss', 'sass', 'less', 'css'] } }
-    NeoBundle 'skammer/vim-css-color' " Highlight colors in css files
-    " Vim syntax file for scss (Sassy CSS)
-    NeoBundleLazy 'cakebaker/scss-syntax.vim', { 'autoload' : { 'filetypes' : ['scss', 'sass', 'css'] } }
-    " vim syntax for LESS (dynamic CSS)
-    NeoBundleLazy 'groenewege/vim-less', { 'autoload' : { 'filetypes' : ['less', 'css'] } }
-    " Vim Jade template engine syntax highlighting and indention
-    NeoBundleLazy 'digitaltoad/vim-jade', { 'autoload' : { 'filetypes' : ['jade'] } }
-
-    " CoffeeScript support for vim
-    NeoBundleLazy 'kchmck/vim-coffee-script', { 'autoload' : { 'filetypes' : ['coffee', 'js'] } }
 
     " Beautiful rspec output in vim. See also: https://github.com/skwp/vim-ruby-conque for non-blocking rspec through ConqueTerm
     NeoBundle 'thinca/vim-ref' " Integrated reference viewer.
@@ -207,12 +203,6 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
     NeoBundleLazy 'rcyrus/snipmate-snippets-rubymotion', { 'autoload' : { 'filetypes' : ['rubymotion'] } }
     NeoBundle 'thinca/vim-template'
 
-    " endwise.vim: wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
-    NeoBundleLazy 'alpaca-tc/vim-endwise', { 'autoload' : { 'insert' : 1 } }
-    " A git repository for a vim plugin called matchit
-    NeoBundleLazy 'edsono/vim-matchit', { 'autoload' : {
-          \ 'filetypes' : 'ruby',
-          \ 'mappings' : ['nx', '%'] } }
     " Run Rspec specs from Vim
     NeoBundle 'thoughtbot/vim-rspec'
     " rails.vim: Ruby on Rails power tools
@@ -227,9 +217,6 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
     NeoBundle 'koron/chalice' " Chalice for Vim - 2ch.net browser written in vim script.
 
     NeoBundle 'dmitry-ilyashevich/vim-typescript' " Vim TypeScript syntax mirror for bundle
-    if has('mac')
-      NeoBundle 'vim-scripts/cocoa.vim' " Plugin for Cocoa/Objective-C development
-    endif
   endif
   "}}}4
 
@@ -701,7 +688,6 @@ if globpath(&rtp, 'bundle/unite.vim') != ''
   nnoremap [unite]rd :<C-u>Unite rails/db<CR>
   nnoremap [unite]ry :<C-u>Unite rails/destroy<CR>
   nnoremap [unite]rg :<C-u>Unite rails/generate<CR>
-" nnoremap [unite]rt :<C-u>Unite rails/git<CR>
   nnoremap [unite]rh :<C-u>Unite rails/helper<CR>
   nnoremap [unite]ri :<C-u>Unite rails/initializer
   nnoremap [unite]rj :<C-u>Unite rails/javascript<CR>
