@@ -940,6 +940,8 @@ set mouse=a
 " 真のVimmerはen
 set helplang& helplang=ja,en
 
+colorscheme molokai
+
 set secure
 
 " }}}1
