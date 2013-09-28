@@ -109,6 +109,7 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
   if has('lua')
     NeoBundle 'Shougo/neocomplete.vim' " Next generation completion framework after neocomplcache
   endif
+  NeoBundle 'Shougo/neosnippet.vim' " neo-snippet plugin contains neocomplcache snippets source
   NeoBundle 'agate/vim-align'
   " endwise.vim: wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
   NeoBundleLazy 'alpaca-tc/vim-endwise', { 'autoload' : { 'insert' : 1 } }
@@ -169,10 +170,6 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
     NeoBundle 'basyura/TweetVim'
     NeoBundle 'basyura/twibill.vim'
 
-    " Ultimate auto-completion system for Vim.
-    NeoBundle 'Shougo/neocomplcache'
-    " neo-snippet plugin contains neocomplcache snippets source
-    NeoBundle 'Shougo/neosnippet'
     if !s:iswin
       NeoBundle 'Shougo/neocomplcache-rsense' " The neocomplcache source for RSense
       NeoBundle 'alpaca-tc/vim-rsense' " rsense/etc/vimrsense copy
@@ -773,6 +770,21 @@ if globpath(&rtp, 'bundle/neocomplete.vim') != ''
   nnoremap ,ne :<C-u>NeoCompleteEnable<CR>
   nnoremap ,nd :<C-u>NeoCompleteDisable<CR>
   nnoremap ,nt :<C-u>NeoCompleteToggle<CR>
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" NeoSnippet: "{{{2
+
+" SuperTab like snippets behavior.
+imap <expr><C-TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><C-TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
 endif
 
 " }}}2
