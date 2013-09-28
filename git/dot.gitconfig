@@ -41,9 +41,12 @@
   pl      = pull
   ps      = push
   re      = remote
+  rb      = rebase
+  rr      = rebase -i --root
   sb      = submodule
   sh      = show
   s       = status
+  st      = status
   ss      = stash
   sl      = stash list
   sa      = stash apply
