@@ -98,7 +98,6 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
   NeoBundle 'Shougo/vimshell.vim'    " Powerful shell implemented by vim.
   NeoBundle 'ujihisa/vimshell-ssh'   " the world first vimshell plugin that you can run 'vim' command on ssh on vimshell
   NeoBundle 'Shougo/vimfiler.vim'    " Powerful file explorer implemented by Vim script
-
   " }}}3
 
   " View "{{{3
@@ -110,6 +109,13 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
   if has('lua')
     NeoBundle 'Shougo/neocomplete.vim' " Next generation completion framework after neocomplcache
   endif
+  NeoBundle 'agate/vim-align'
+  " endwise.vim: wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
+  NeoBundleLazy 'alpaca-tc/vim-endwise', { 'autoload' : { 'insert' : 1 } }
+  " A git repository for a vim plugin called matchit
+  NeoBundleLazy 'edsono/vim-matchit', { 'autoload' : {
+        \ 'filetypes' : 'ruby',
+        \ 'mappings' : ['nx', '%'] } }
   " }}}3
 
   " Vim "{{{3
@@ -160,16 +166,11 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
       NeoBundle 'alpaca-tc/vim-rsense' " rsense/etc/vimrsense copy
     endif
 
-    " Powerful file explorer implemented by Vim script
-    NeoBundle 'Shougo/vimfiler'
-
-
     " Run commands quickly.
     NeoBundle 'thinca/vim-quickrun'
     " A quickrun plugin to show intermediate codes
     NeoBundle 'ujihisa/quicklearn'
 
-    NeoBundle 'Align'
     " zen-coding for vim: http://code.google.com/p/zen-coding/
     NeoBundle 'mattn/zencoding-vim'
     " surround.vim: quoting/parenthesizing made simple
