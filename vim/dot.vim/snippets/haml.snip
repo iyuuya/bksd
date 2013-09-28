@@ -1,0 +1,12 @@
+snippet ph
+abbr    hoge_path
+  ${1}_path${0}
+snippet tbl
+abbr table>((thead>tr>td)+(tbody>tr>td))
+  %table
+    %thead
+      %tr
+        %td${0}
+    %tbody
+      %tr
+        %td

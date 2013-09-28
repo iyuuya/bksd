@@ -1,0 +1,27 @@
+snippet bcm
+abbr " Title: "{{{1 ... "}}}1
+  " ${1}: "{{{${2}
+  
+  " }}}$2
+
+snippet if
+abbr if condition endif
+  if ${1:condition}
+    ${0}
+  endif
+
+snippet func
+abbr function! func_name() endfunction
+  function! ${1:function_name}()
+  endfunction
+
+snippet funcg
+abbr function! g:func_name() endfunction
+  function! g:${1:function_name}()
+  endfunction
+
+snippet ag
+abbr autogroup MyGroup autocmd! augroup END
+  augroup ${1:MyGroup}
+    autocmd!
+  autogroup END

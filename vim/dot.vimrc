@@ -668,6 +668,8 @@ if globpath(&rtp, 'bundle/unite.vim') != ''
   nnoremap [unite]uw :<C-u>Unite window<CR>
   " unite-help
   nnoremap [unite]uh :<C-u>Unite help<CR>
+  " unite-snippet
+  nnoremap [unite]pt :<C-u>Unite snippet<CR>
   " neobundle.vim
   nnoremap [unite]n  :<C-u>Unite neobundle<CR>
   nnoremap [unite]ni :<C-u>Unite neobundle/install<CR>
@@ -778,6 +780,8 @@ endif
 "-------------------------------------------------------------------------------
 " NeoSnippet: "{{{2
 
+let g:neosnippet#snippets_directory = $MYVIMFILES."/snippets"
+
 " SuperTab like snippets behavior.
 imap <expr><C-TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 smap <expr><C-TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
@@ -786,6 +790,8 @@ smap <expr><C-TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
+
+nnoremap <silent>,nse :<C-u>NeoSnippetEdit -split<CR>
 
 " }}}2
 "-------------------------------------------------------------------------------
