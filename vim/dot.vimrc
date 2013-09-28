@@ -97,6 +97,7 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
   NeoBundle 'tyru/open-browser.vim'  " Open URI with your favorite browser from your favorite editor
   NeoBundle 'Shougo/vimshell.vim'    " Powerful shell implemented by vim.
   NeoBundle 'ujihisa/vimshell-ssh'   " the world first vimshell plugin that you can run 'vim' command on ssh on vimshell
+  NeoBundle 'Shougo/vimfiler.vim'    " Powerful file explorer implemented by Vim script
 
   " }}}3
 
@@ -747,6 +748,20 @@ if globpath(&rtp, 'bundle/vimshell.vim') != ''
   endfunction
 
   nnoremap ; :VimShellCurrentDir<CR>
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" VimFiler: "{{{2
+
+if globpath(&rtp, 'bundle/vimfiler.vim') != ''
+  let g:vimfiler_as_default_explorer = 1
+  let g:vimfiler_safe_mode_by_default = 0
+  let g:vimfiler_data_directory = g:vim_tmp_directory.'/vimfiler'
+  nnoremap : :VimFilerBufferDir -split -simple -no-quit -winwidth=32<CR>
+  nnoremap ,vf :VimFilerDouble<CR>
 endif
 
 " }}}2
