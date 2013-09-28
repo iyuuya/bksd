@@ -95,6 +95,9 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
   NeoBundle 'tacroe/unite-mark'
   NeoBundle 'mattn/webapi-vim'       " vim interface to Web API
   NeoBundle 'tyru/open-browser.vim'  " Open URI with your favorite browser from your favorite editor
+  NeoBundle 'Shougo/vimshell.vim'    " Powerful shell implemented by vim.
+  NeoBundle 'ujihisa/vimshell-ssh'   " the world first vimshell plugin that you can run 'vim' command on ssh on vimshell
+
   " }}}3
 
   " View "{{{3
@@ -158,11 +161,6 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
 
     " Powerful file explorer implemented by Vim script
     NeoBundle 'Shougo/vimfiler'
-
-    " Powerful shell implemented by vim.
-    NeoBundle 'Shougo/vimshell'
-    " the world first vimshell plugin that you can run "vim" command on ssh on vimshell
-    NeoBundle 'ujihisa/vimshell-ssh'
 
 
     " Run commands quickly.
@@ -730,23 +728,25 @@ endif
 "-------------------------------------------------------------------------------
 
 "-------------------------------------------------------------------------------
-" Vim PowerLine: "{{{2
+" VimShell: "{{{2
 
-set background=light
+if globpath(&rtp, 'bundle/vimshell.vim') != ''
+  let g:vimshell_interactive_update_time = 10
+  let g:vimshell_temporary_directory = g:vim_tmp_directory."/vimshell"
+  let g:vimshell_max_command_history = 10000
 
-if globpath(&rtp, 'bundle/vim-powerline') != ''
-  let g:Powerline_symbols = 'fancy'
-  let g:Powerline_colorscheme = 'default'
+  let g:vimshell_prompt = '% '
+  let g:vimshell_user_prompt = "$USER.'@'.hostname().'('.strftime('%Y/%m/%d %H:%M:%S').')>>'"
+  let g:vimshell_secondary_prompt = '> '
+  let g:vimshell_right_prompt = "'['.fnamemodify(getcwd(), ':~').']'"
 
-  let g:Powerline_mode_n = 'NR'
-  let g:Powerline_mode_i = 'IN'
-  let g:Powerline_mode_R = 'RE'
-  let g:Powerline_mode_v = 'VI'
-  let g:Powerline_mode_V = 'VL'
-  let g:Powerline_mode_cv = 'VB'
-  let g:Powerline_mode_s = 'SE'
-  let g:Powerline_mode_S = 'SL'
-  let g:Powerline_mode_cs = 'SB'
+  autocmd FileType vimshell call vimshell#hook#add('chpwd', 'my_chpwd', 'g:my_chpwd')
+
+  function! g:my_chpwd(args, context)
+    call vimshell#execute('ls')
+  endfunction
+
+  nnoremap ; :VimShellCurrentDir<CR>
 endif
 
 " }}}2
@@ -771,6 +771,29 @@ if globpath(&rtp, 'bundle/neocomplete.vim') != ''
   nnoremap ,ne :<C-u>NeoCompleteEnable<CR>
   nnoremap ,nd :<C-u>NeoCompleteDisable<CR>
   nnoremap ,nt :<C-u>NeoCompleteToggle<CR>
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" Vim PowerLine: "{{{2
+
+set background=light
+
+if globpath(&rtp, 'bundle/vim-powerline') != ''
+  let g:Powerline_symbols = 'fancy'
+  let g:Powerline_colorscheme = 'default'
+
+  let g:Powerline_mode_n = 'NR'
+  let g:Powerline_mode_i = 'IN'
+  let g:Powerline_mode_R = 'RE'
+  let g:Powerline_mode_v = 'VI'
+  let g:Powerline_mode_V = 'VL'
+  let g:Powerline_mode_cv = 'VB'
+  let g:Powerline_mode_s = 'SE'
+  let g:Powerline_mode_S = 'SL'
+  let g:Powerline_mode_cs = 'SB'
 endif
 
 " }}}2
