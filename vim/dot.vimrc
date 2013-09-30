@@ -129,8 +129,10 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
 
   " FileType "{{{3
   " Ruby/Rails "{{{4
-  NeoBundle 'ujihisa/unite-rake'  " A Unite.vim plugin to run tasks or to view descriptions easily, using rake command
-  NeoBundle 'basyura/unite-rails' " a unite.vim plugin for rails
+  NeoBundle 'ujihisa/unite-rake'    " A Unite.vim plugin to run tasks or to view descriptions easily, using rake command
+  NeoBundle 'basyura/unite-rails'   " a unite.vim plugin for rails
+  NeoBundle 'tpope/vim-rails', { 'autoload' : { 'filetypes' : ['haml', 'ruby', 'eruby'] } } " rails.vim: Ruby on Rails power tools
+  NeoBundle 'thoughtbot/vim-rspec'  " Run Rspec specs from Vim
   " }}}4
   " Web "{{{4
   NeoBundle 'othree/html5.vim' " HTML5 omnicomplete and syntax
@@ -201,11 +203,6 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
     NeoBundleLazy 'rcyrus/snipmate-snippets-rubymotion', { 'autoload' : { 'filetypes' : ['rubymotion'] } }
     NeoBundle 'thinca/vim-template'
 
-    " Run Rspec specs from Vim
-    NeoBundle 'thoughtbot/vim-rspec'
-    " rails.vim: Ruby on Rails power tools
-    NeoBundle 'tpope/vim-rails', { 'autoload' : {
-          \ 'filetypes' : ['haml', 'ruby', 'eruby'] } }
     " Provides database access to many DBMS (Oracle, Sybase, Microsoft, MySQL, DBI,..)
     NeoBundle 'dbext.vim'
 
