@@ -117,7 +117,7 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
   " A git repository for a vim plugin called matchit
   NeoBundleLazy 'edsono/vim-matchit', { 'autoload' : {
         \ 'filetypes' : 'ruby',
-        \ 'mappings' : ['nx', '%'] } }
+        \ 'mappings' : [',nx', '%'] } }
   " }}}3
 
   " Vim "{{{3
@@ -779,6 +779,7 @@ endif
 " NeoSnippet: "{{{2
 
 let g:neosnippet#snippets_directory = $MYVIMFILES."/snippets"
+let g:neosnippet#enable_snipmate_compatibility = 1
 
 " SuperTab like snippets behavior.
 imap <expr><C-TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -790,6 +791,16 @@ if has('conceal')
 endif
 
 nnoremap <silent>,nse :<C-u>NeoSnippetEdit -split<CR>
+
+augroup MyAutoCmd
+  autocmd BufEnter,BufRead,BufNew app/views/*          NeoSnippetSource ~/.vim/snippets/ruby.rails.view.snip
+  autocmd BufEnter,BufRead,BufNew app/controllers/*.rb NeoSnippetSource ~/.vim/snippets/ruby.rails.controller.snip
+  autocmd BufEnter,BufRead,BufNew app/models/*.rb      NeoSnippetSource ~/.vim/snippets/ruby.rails.model.snip
+  autocmd BufEnter,BufRead,BufNew app/db/migrate/*     NeoSnippetSource ~/.vim/snippets/ruby.rails.migrate.snip
+  autocmd BufEnter,BufRead,BufNew app/config/routes.rb NeoSnippetSource ~/.vim/snippets/ruby.rails.route.snip
+  autocmd BufEnter,BufRead,BufNew spec/**/*.rb         NeoSnippetSource ~/.vim/snippets/ruby.rails.rspec.snip
+  " autocmd BufEnter,BufRead,BufNew spec/**/*.rb    NeoSnippetSource ~/.vim/snippets/ruby.rspec.snip
+augroup End
 
 " }}}2
 "-------------------------------------------------------------------------------
