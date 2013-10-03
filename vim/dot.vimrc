@@ -97,7 +97,7 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
   NeoBundle 'tyru/open-browser.vim'  " Open URI with your favorite browser from your favorite editor
   NeoBundle 'Shougo/vimshell.vim'    " Powerful shell implemented by vim.
   NeoBundle 'ujihisa/vimshell-ssh'   " the world first vimshell plugin that you can run 'vim' command on ssh on vimshell
-NeoBundle 'vim-scripts/open-terminal-filemanager' " Open native terminal , file manager app for various platforms
+  NeoBundle 'vim-scripts/open-terminal-filemanager' " Open native terminal , file manager app for various platforms
   NeoBundle 'Shougo/vimfiler.vim'    " Powerful file explorer implemented by Vim script
   NeoBundle 'AndrewRadev/switch.vim' " A simple Vim plugin to switch segments of text with predefined replacements
   " }}}3
