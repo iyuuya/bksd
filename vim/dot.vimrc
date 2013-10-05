@@ -1,9 +1,9 @@
 "===============================================================================
-" Note: "{{{0
+" Note: "{{{1
 " .vimrc
 "
 " Author: iyuuya <i.yuuya@gmail.com>
-" }}}0
+" }}}1
 "===============================================================================
 
 "===============================================================================
@@ -147,6 +147,7 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
   if has('mac')
     NeoBundle 'vim-scripts/cocoa.vim' " Plugin for Cocoa/Objective-C development
   endif
+  NeoBundle 'nelstrom/vim-markdown-folding'
   " }}}3
 
   " Dictionary "{{{3
@@ -791,7 +792,7 @@ if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
 
-nnoremap <silent>,nse :<C-u>NeoSnippetEdit -split<CR>
+nnoremap <silent><Leader>nse :<C-u>NeoSnippetEdit -split<CR>
 
 augroup MyAutoCmd
   autocmd BufEnter,BufRead,BufNew app/views/*          NeoSnippetSource ~/.vim/snippets/ruby.rails.view.snip
@@ -1018,17 +1019,17 @@ nnoremap <Tab>= ggvG=2<C-o>
 nnoremap <C-q> <C-^>
 
 " Switch wrap.
-nnoremap <silent>,tw
+nnoremap <silent><C-e>tw
       \ :<C-u>setlocal wrap!
       \ \|    setlocal wrap?<CR>
 
 if exists('$MYVIMRC')
-  nnoremap <silent> ,v :<C-u>e $MYVIMRC<CR>
-  nnoremap ,V :<C-u>source $MYVIMRC<CR>
+  nnoremap <silent> <C-e>v :<C-u>e $MYVIMRC<CR>
+  nnoremap <C-e>V :<C-u>source $MYVIMRC<CR>
 endif
 if exists('$MYGVIMRC')
-  nnoremap <silent> ,gv :<C-u>e $MYGVIMRC<CR>
-  nnoremap ,gV :<C-u>source $MYGVIMRC<CR>
+  nnoremap <silent> <C-e>gv :<C-u>e $MYGVIMRC<CR>
+  nnoremap <C-e>gV :<C-u>source $MYGVIMRC<CR>
 endif
 
 nnoremap [mybind] Nop
