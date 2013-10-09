@@ -38,5 +38,18 @@ alias rkt='rake -T'
 
 # git TODO: merge
 alias g='git'
+alias gl="git log --graph --pretty=format:'%Cblue%h%Creset%d %Cgreen%an%Creset: %s %Cblue%ar%Creset'"
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gco='git checkout'
+alias grs='git reset'
+alias gd='git diff'
+alias ga='git add'
+alias gs='git status'
+alias gpl='git pull'
+alias gps='git push'
+alias gsb='git submodule'
+alias gsu="git submodule foreach 'git checkout master; git pull'"
+alias grmal='git ls-files -z --deleted | xargs -0 git rm'
 
 # vim: ft=vimshrc
