@@ -34,14 +34,14 @@ language time C
 let mapleader = ','
 let maplocalleader = 'm'
 
-nnoremap m <Nop>
-xnoremap m <Nop>
-nnoremap , <Nop>
-xnoremap , <Nop>
+nnoremap <LocalLeader> <Nop>
+xnoremap <LocalLeader> <Nop>
+nnoremap <leader> <Nop>
+xnoremap <leader> <Nop>
 
-if s:iswin
-  set shellslash
-endif
+" if s:iswin
+"   set shellslash
+" endif
 
 " environment variables.
 if !exists("$MYVIMRC")
@@ -91,7 +91,7 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
         \   },
         \ }
   NeoBundle 'Shougo/unite.vim'       " Unite and create user interfaces
-  NeoBundle 'h1mesuke/unite-outline' " outline source for unite.vim
+  NeoBundle 'Shougo/unite-outline'   " outline source for unite.vim
   NeoBundle 'tacroe/unite-mark'
   NeoBundle 'mattn/webapi-vim'       " vim interface to Web API
   NeoBundle 'tyru/open-browser.vim'  " Open URI with your favorite browser from your favorite editor
@@ -112,7 +112,7 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
     NeoBundle 'Shougo/neocomplete.vim' " Next generation completion framework after neocomplcache
   endif
   NeoBundle 'Shougo/neosnippet.vim' " neo-snippet plugin contains neocomplcache snippets source
-  NeoBundle 'agate/vim-align'
+  NeoBundle 'h1mesuke/vim-alignta' " Align Them All!
   " endwise.vim: wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
   NeoBundleLazy 'alpaca-tc/vim-endwise', { 'autoload' : { 'insert' : 1 } }
   " A git repository for a vim plugin called matchit
@@ -233,33 +233,33 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
     NeoBundle 'basyura/unite-twitter' " twitter plugin for unite
     NeoBundle 'yomi322/unite-tweetvim'           " unite source for tweetvim
     NeoBundle 'mopp/unite-rss'
-    NeoBundle 'mattn/unite-remotefile'           " unite source for remote file                                                                         
-    NeoBundle 'moro/unite-stepdefs'              " unite-vim source for completing Cucumber step definition.                                            
-    NeoBundle 'nise-nabe/unite-openpne'          "                                                                                                      
-    NeoBundle 'osyo-manga/unite-qfixhowm'        "                                                                                                      
-    NeoBundle 'osyo-manga/unite-quickfix'        "                                                                                                      
-    NeoBundle 'osyo-manga/unite-rofi'            "                                                                                                      
-    NeoBundle 'osyo-manga/unite-sl'              "                                                                                                      
-    NeoBundle 'pocket7878/unite-hyperspec'       " unite source for lookup hyperspec contents.                                                          
-    NeoBundle 'raomito/unite-memolist'           "                                                                                                      
-    NeoBundle 'ryotakato/unite-gradle'           " vim plugin. unite source for using Gradle.                                                           
-    NeoBundle 'ryotakato/unite-mongodb'          " vim plugin. unite source for using MongoDB.                                                          
-    NeoBundle 'ryotakato/unite-sqlserver'        " vim plugin. unite source for using SQL Server                                                        
-    NeoBundle 'sgur/unite-everything'            " A source which uses result of everything (http://www.voidtools.com/) for unite.vim                   
+    NeoBundle 'mattn/unite-remotefile'           " unite source for remote file
+    NeoBundle 'moro/unite-stepdefs'              " unite-vim source for completing Cucumber step definition.
+    NeoBundle 'nise-nabe/unite-openpne'          "
+    NeoBundle 'osyo-manga/unite-qfixhowm'        "
+    NeoBundle 'osyo-manga/unite-quickfix'        "
+    NeoBundle 'osyo-manga/unite-rofi'            "
+    NeoBundle 'osyo-manga/unite-sl'              "
+    NeoBundle 'pocket7878/unite-hyperspec'       " unite source for lookup hyperspec contents.
+    NeoBundle 'raomito/unite-memolist'           "
+    NeoBundle 'ryotakato/unite-gradle'           " vim plugin. unite source for using Gradle.
+    NeoBundle 'ryotakato/unite-mongodb'          " vim plugin. unite source for using MongoDB.
+    NeoBundle 'ryotakato/unite-sqlserver'        " vim plugin. unite source for using SQL Server
+    NeoBundle 'sgur/unite-everything'            " A source which uses result of everything (http://www.voidtools.com/) for unite.vim
     NeoBundle 'sgur/unite-git_grep'              " git-grep source for unite.vim inspired by http://subtech.g.hatena.ne.jp/secondlife/20080606/121272942
-    NeoBundle 'shiena/unite-path'                " Enumerate the PATH environment variable by unite.                                                    
-    NeoBundle 'Shougo/unite-session'             " unite.vim session source                                                                             
-    NeoBundle 'Shougo/unite-ssh'                 " unite.vim for SSH source                                                                             
-    NeoBundle 'Shougo/unite-sudo'                " sudo source for unite.vim                                                                            
-    NeoBundle 'smackesey/my_unite'               " Unite Sources for Vim                                                                                
-    NeoBundle 'soh335/unite-hatenabookmark'      "                                                                                                      
-    NeoBundle 'soh335/unite-qflist'              " unite-qflist                                                                                         
-    NeoBundle 'soh335/unite-quickhl'             "                                                                                                      
-    NeoBundle 'termoshtt/unite-nozbe'            " unite.vim source for Nozbe                                                                           
-    NeoBundle 'tsukkee/unite-tag'                " tags soruce for unite.vim                                                                            
-    NeoBundle 'ujihisa/unite-font'               " A unite plugin                                                                                       
-    NeoBundle 'ujihisa/unite-haskellimport'      "                                                                                                      
-    NeoBundle 'ujihisa/unite-locate'             "                                                                                                      
+    NeoBundle 'shiena/unite-path'                " Enumerate the PATH environment variable by unite.
+    NeoBundle 'Shougo/unite-session'             " unite.vim session source
+    NeoBundle 'Shougo/unite-ssh'                 " unite.vim for SSH source
+    NeoBundle 'Shougo/unite-sudo'                " sudo source for unite.vim
+    NeoBundle 'smackesey/my_unite'               " Unite Sources for Vim
+    NeoBundle 'soh335/unite-hatenabookmark'      "
+    NeoBundle 'soh335/unite-qflist'              " unite-qflist
+    NeoBundle 'soh335/unite-quickhl'             "
+    NeoBundle 'termoshtt/unite-nozbe'            " unite.vim source for Nozbe
+    NeoBundle 'tsukkee/unite-tag'                " tags soruce for unite.vim
+    NeoBundle 'ujihisa/unite-font'               " A unite plugin
+    NeoBundle 'ujihisa/unite-haskellimport'      "
+    NeoBundle 'ujihisa/unite-locate'             "
   endif "}}}4
 
   NeoBundleCheck
@@ -322,23 +322,23 @@ if !exists('did_encoding_settings') && has('iconv')
   " Build encodings.
   let &fileencodings = 'ucs-bom'
   if &encoding !=# 'utf-8'
-    let &fileencodings = &fileencodings . ',' . 'ucs-2le'
-    let &fileencodings = &fileencodings . ',' . 'ucs-2'
+    let &fileencodings .= ',' . 'ucs-2le'
+    let &fileencodings .= ',' . 'ucs-2'
   endif
-  let &fileencodings = &fileencodings . ',' . s:enc_jis
+  let &fileencodings .= ',' . s:enc_jis
 
   if &encoding ==# 'utf-8'
-    let &fileencodings = &fileencodings . ',' . s:enc_euc
-    let &fileencodings = &fileencodings . ',' . 'cp932'
+    let &fileencodings .= ',' . s:enc_euc
+    let &fileencodings .= ',' . 'cp932'
   elseif &encoding =~# '^euc-\%(jp\|jisx0213\)$'
     let &encoding = s:enc_euc
-    let &fileencodings = &fileencodings . ',' . 'utf-8'
-    let &fileencodings = &fileencodings . ',' . 'cp932'
+    let &fileencodings .= ',' . 'utf-8'
+    let &fileencodings .= ',' . 'cp932'
   else  " cp932
-    let &fileencodings = &fileencodings . ',' . 'utf-8'
-    let &fileencodings = &fileencodings . ',' . s:enc_euc
+    let &fileencodings .= ',' . 'utf-8'
+    let &fileencodings .= ',' . s:enc_euc
   endif
-  let &fileencodings = &fileencodings . ',' . &encoding
+  let &fileencodings .= ',' . &encoding
 
   unlet s:enc_euc
   unlet s:enc_jis
@@ -436,7 +436,7 @@ let &directory=g:vim_tmp_directory.'/swap'
 if v:version >= 703
   " Set undo file.
   set undofile
-  let &undodir=&directory.'undo'
+  let &undodir=g:vim_tmp_directory.'/undo'
 endif
 
 " CursorHold time.
@@ -644,7 +644,7 @@ set smartindent
 "-------------------------------------------------------------------------------
 " Unite: "{{{2
 
-if globpath(&rtp, 'bundle/unite.vim') != ''
+if neobundle#is_installed('unite.vim')
   let g:unite_enable_start_insert = 0
   let g:unite_enable_split_vertically = 0
   let g:unite_source_history_yank_enable = 1
@@ -654,7 +654,7 @@ if globpath(&rtp, 'bundle/unite.vim') != ''
   " unite.vim
   nnoremap [unite] <nop>
   nmap <C-k> [unite]
-  nnoremap [unite]   :<C-u>Unite 
+  nnoremap [unite]   :<C-u>Unite<Space>
   nnoremap [unite]uf :<C-u>Unite file_point file buffer file_mru file_rec/async directory directory_mru directory_rec/async<CR>
   nnoremap [unite]ub :<C-u>Unite bookmark<CR>
   nnoremap [unite]us :<C-u>Unite source<CR>
@@ -694,7 +694,7 @@ if globpath(&rtp, 'bundle/unite.vim') != ''
   nnoremap [unite]ry :<C-u>Unite rails/destroy<CR>
   nnoremap [unite]rg :<C-u>Unite rails/generate<CR>
   nnoremap [unite]rh :<C-u>Unite rails/helper<CR>
-  nnoremap [unite]ri :<C-u>Unite rails/initializer
+  nnoremap [unite]ri :<C-u>Unite rails/initializer<CR>
   nnoremap [unite]rj :<C-u>Unite rails/javascript<CR>
   nnoremap [unite]rl :<C-u>Unite rails/lib<CR>
   nnoremap [unite]ro :<C-u>Unite rails/log<CR>
@@ -723,7 +723,7 @@ endif
 "-------------------------------------------------------------------------------
 " VimShell: "{{{2
 
-if globpath(&rtp, 'bundle/vimshell.vim') != ''
+if neobundle#is_installed('vimshell.vim')
   let g:vimshell_interactive_update_time = 10
   let g:vimshell_temporary_directory = g:vim_tmp_directory."/vimshell"
   let g:vimshell_max_command_history = 10000
@@ -733,7 +733,10 @@ if globpath(&rtp, 'bundle/vimshell.vim') != ''
   let g:vimshell_secondary_prompt = '> '
   let g:vimshell_right_prompt = "'['.fnamemodify(getcwd(), ':~').']'"
 
-  autocmd FileType vimshell call vimshell#hook#add('chpwd', 'my_chpwd', 'g:my_chpwd')
+  augroup MyVimShellGrp
+    autocmd FileType vimshell call vimshell#hook#add('chpwd', 'my_chpwd', 'g:my_chpwd')
+  augroup END
+
 
   function! g:my_chpwd(args, context)
     call vimshell#execute('ls')
@@ -748,7 +751,7 @@ endif
 "-------------------------------------------------------------------------------
 " VimFiler: "{{{2
 
-if globpath(&rtp, 'bundle/vimfiler.vim') != ''
+if neobundle#is_installed('vimsfiler.vim')
   let g:vimfiler_as_default_explorer = 1
   let g:vimfiler_safe_mode_by_default = 0
   let g:vimfiler_data_directory = g:vim_tmp_directory.'/vimfiler'
@@ -762,7 +765,7 @@ endif
 "-------------------------------------------------------------------------------
 " NeoComplete: "{{{2
 
-if globpath(&rtp, 'bundle/neocomplete.vim') != ''
+if neobundle#is_installed('neocomplete.vim')
   let g:neocomplete#enable_at_startup = 1
   let g:neocomplete#max_list = 100
   let g:neocomplete#max_keyword_width = 40
@@ -775,9 +778,9 @@ if globpath(&rtp, 'bundle/neocomplete.vim') != ''
   let g:neocomplete#use_vimproc = 0 " 1でもいいかも
   let g:neocomplete#data_directory = g:vim_tmp_directory."/neocomplete"
 
-  nnoremap ,ne :<C-u>NeoCompleteEnable<CR>
-  nnoremap ,nd :<C-u>NeoCompleteDisable<CR>
-  nnoremap ,nt :<C-u>NeoCompleteToggle<CR>
+  nnoremap <Leader>ne :<C-u>NeoCompleteEnable<CR>
+  nnoremap <Leader>nd :<C-u>NeoCompleteDisable<CR>
+  nnoremap <Leader>nt :<C-u>NeoCompleteToggle<CR>
 endif
 
 " }}}2
@@ -786,29 +789,31 @@ endif
 "-------------------------------------------------------------------------------
 " NeoSnippet: "{{{2
 
-let g:neosnippet#snippets_directory = $MYVIMFILES."/snippets"
-let g:neosnippet#enable_snipmate_compatibility = 1
+if neobundle#is_installed('neosnippet.vim')
+  let g:neosnippet#snippets_directory = $MYVIMFILES."/snippets"
+  let g:neosnippet#enable_snipmate_compatibility = 1
 
-" SuperTab like snippets behavior.
-imap <expr><C-TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><C-TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+  " SuperTab like snippets behavior.
+  imap <expr><C-TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+  smap <expr><C-TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
-" For snippet_complete marker.
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
+  " For snippet_complete marker.
+  if has('conceal')
+    set conceallevel=2 concealcursor=i
+  endif
 
-nnoremap <silent><Leader>nse :<C-u>NeoSnippetEdit -split<CR>
+  nnoremap <silent><Leader>nse :<C-u>NeoSnippetEdit -split<CR>
 
-augroup MyAutoCmd
-  autocmd BufEnter,BufRead,BufNew app/views/*          NeoSnippetSource ~/.vim/snippets/ruby.rails.view.snip
-  autocmd BufEnter,BufRead,BufNew app/controllers/*.rb NeoSnippetSource ~/.vim/snippets/ruby.rails.controller.snip
-  autocmd BufEnter,BufRead,BufNew app/models/*.rb      NeoSnippetSource ~/.vim/snippets/ruby.rails.model.snip
-  autocmd BufEnter,BufRead,BufNew app/db/migrate/*     NeoSnippetSource ~/.vim/snippets/ruby.rails.migrate.snip
-  autocmd BufEnter,BufRead,BufNew app/config/routes.rb NeoSnippetSource ~/.vim/snippets/ruby.rails.route.snip
-  autocmd BufEnter,BufRead,BufNew spec/**/*.rb         NeoSnippetSource ~/.vim/snippets/ruby.rails.rspec.snip
-  " autocmd BufEnter,BufRead,BufNew spec/**/*.rb    NeoSnippetSource ~/.vim/snippets/ruby.rspec.snip
-augroup End
+  augroup MyAutoCmd
+    autocmd BufEnter,BufRead,BufNew app/views/*          NeoSnippetSource ~/.vim/snippets/ruby.rails.view.snip
+    autocmd BufEnter,BufRead,BufNew app/controllers/*.rb NeoSnippetSource ~/.vim/snippets/ruby.rails.controller.snip
+    autocmd BufEnter,BufRead,BufNew app/models/*.rb      NeoSnippetSource ~/.vim/snippets/ruby.rails.model.snip
+    autocmd BufEnter,BufRead,BufNew app/db/migrate/*     NeoSnippetSource ~/.vim/snippets/ruby.rails.migrate.snip
+    autocmd BufEnter,BufRead,BufNew app/config/routes.rb NeoSnippetSource ~/.vim/snippets/ruby.rails.route.snip
+    autocmd BufEnter,BufRead,BufNew spec/**/*.rb         NeoSnippetSource ~/.vim/snippets/ruby.rails.rspec.snip
+    " autocmd BufEnter,BufRead,BufNew spec/**/*.rb    NeoSnippetSource ~/.vim/snippets/ruby.rspec.snip
+  augroup End
+end
 
 " }}}2
 "-------------------------------------------------------------------------------
@@ -818,7 +823,7 @@ augroup End
 
 set background=light
 
-if globpath(&rtp, 'bundle/vim-powerline') != ''
+if neobundle#is_installed('vim-powerline.vim')
   let g:Powerline_symbols = 'fancy'
   let g:Powerline_colorscheme = 'default'
 
@@ -839,156 +844,157 @@ endif
 "-------------------------------------------------------------------------------
 " Switch: "{{{2
 
-function! s:separate_defenition_to_each_filetypes(ft_dictionary) "{{{
-  let result = {}
+if neobundle#is_installed('switch.vim')
+  function! s:separate_defenition_to_each_filetypes(ft_dictionary) "{{{
+    let result = {}
 
-  for [filetypes, value] in items(a:ft_dictionary)
-    for ft in split(filetypes, ",")
-      if !has_key(result, ft)
-        let result[ft] = []
-      endif
+    for [filetypes, value] in items(a:ft_dictionary)
+      for ft in split(filetypes, ",")
+        if !has_key(result, ft)
+          let result[ft] = []
+        endif
 
-      call extend(result[ft], copy(value))
+        call extend(result[ft], copy(value))
+      endfor
     endfor
-  endfor
 
-  return result
-endfunction "}}}
+    return result
+  endfunction "}}}
 
-nnoremap ! :Switch<CR>
-let s:switch_definition = {
-      \ '*': [
-      \   ['is', 'are']
-      \ ],
-      \ 'ruby,eruby,haml' : [
-      \   ['if', 'unless'],
-      \   ['while', 'until'],
-      \   ['.blank?', '.present?'],
-      \   ['include', 'extend'],
-      \   ['class', 'module'],
-      \   ['.inject', '.delete_if'],
-      \   ['.map', '.map!'],
-      \   ['attr_accessor', 'attr_reader', 'attr_writer'],
-      \ ],
-      \ 'Gemfile,Berksfile' : [
-      \   ['=', '<', '<=', '>', '>=', '~>'],
-      \ ],
-      \ 'ruby.application_template' : [
-      \   ['yes?', 'no?'],
-      \   ['lib', 'initializer', 'file', 'vendor', 'rakefile'],
-      \   ['controller', 'model', 'view', 'migration', 'scaffold'],
-      \ ],
-      \ 'erb,html,php' : [
-      \   { '<!--\([a-zA-Z0-9 /]\+\)--></\(div\|ul\|li\|a\)>' : '</\2><!--\1-->' },
-      \ ],
-      \ 'rails' : [
-      \   [100, ':continue', ':information'],
-      \   [101, ':switching_protocols'],
-      \   [102, ':processing'],
-      \   [200, ':ok', ':success'],
-      \   [201, ':created'],
-      \   [202, ':accepted'],
-      \   [203, ':non_authoritative_information'],
-      \   [204, ':no_content'],
-      \   [205, ':reset_content'],
-      \   [206, ':partial_content'],
-      \   [207, ':multi_status'],
-      \   [208, ':already_reported'],
-      \   [226, ':im_used'],
-      \   [300, ':multiple_choices'],
-      \   [301, ':moved_permanently'],
-      \   [302, ':found'],
-      \   [303, ':see_other'],
-      \   [304, ':not_modified'],
-      \   [305, ':use_proxy'],
-      \   [306, ':reserved'],
-      \   [307, ':temporary_redirect'],
-      \   [308, ':permanent_redirect'],
-      \   [400, ':bad_request'],
-      \   [401, ':unauthorized'],
-      \   [402, ':payment_required'],
-      \   [403, ':forbidden'],
-      \   [404, ':not_found'],
-      \   [405, ':method_not_allowed'],
-      \   [406, ':not_acceptable'],
-      \   [407, ':proxy_authentication_required'],
-      \   [408, ':request_timeout'],
-      \   [409, ':conflict'],
-      \   [410, ':gone'],
-      \   [411, ':length_required'],
-      \   [412, ':precondition_failed'],
-      \   [413, ':request_entity_too_large'],
-      \   [414, ':request_uri_too_long'],
-      \   [415, ':unsupported_media_type'],
-      \   [416, ':requested_range_not_satisfiable'],
-      \   [417, ':expectation_failed'],
-      \   [422, ':unprocessable_entity'],
-      \   [423, ':precondition_required'],
-      \   [424, ':too_many_requests'],
-      \   [426, ':request_header_fields_too_large'],
-      \   [500, ':internal_server_error'],
-      \   [501, ':not_implemented'],
-      \   [502, ':bad_gateway'],
-      \   [503, ':service_unavailable'],
-      \   [504, ':gateway_timeout'],
-      \   [505, ':http_version_not_supported'],
-      \   [506, ':variant_also_negotiates'],
-      \   [507, ':insufficient_storage'],
-      \   [508, ':loop_detected'],
-      \   [510, ':not_extended'],
-      \   [511, ':network_authentication_required'],
-      \ ],
-      \ 'rspec': [
-      \   ['describe', 'context', 'specific', 'example'],
-      \   ['before', 'after'],
-      \   ['be_true', 'be_false'],
-      \   ['get', 'post', 'put', 'delete'],
-      \   ['==', 'eql', 'equal'],
-      \   { '\.should_not': '\.should' },
-      \   ['\.to_not', '\.to'],
-      \   { '\([^. ]\+\)\.should\(_not\|\)': 'expect(\1)\.to\2' },
-      \   { 'expect(\([^. ]\+\))\.to\(_not\|\)': '\1.should\2' },
-      \ ],
-      \ 'markdown' : [
-      \   ['[ ]', '[x]']
-      \ ],
-      \ }
+  nnoremap ! :Switch<CR>
+  let s:switch_definition = {
+        \ '*': [
+        \   ['is', 'are']
+        \ ],
+        \ 'ruby,eruby,haml' : [
+        \   ['if', 'unless'],
+        \   ['while', 'until'],
+        \   ['.blank?', '.present?'],
+        \   ['include', 'extend'],
+        \   ['class', 'module'],
+        \   ['.inject', '.delete_if'],
+        \   ['.map', '.map!'],
+        \   ['attr_accessor', 'attr_reader', 'attr_writer'],
+        \ ],
+        \ 'Gemfile,Berksfile' : [
+        \   ['=', '<', '<=', '>', '>=', '~>'],
+        \ ],
+        \ 'ruby.application_template' : [
+        \   ['yes?', 'no?'],
+        \   ['lib', 'initializer', 'file', 'vendor', 'rakefile'],
+        \   ['controller', 'model', 'view', 'migration', 'scaffold'],
+        \ ],
+        \ 'erb,html,php' : [
+        \   { '<!--\([a-zA-Z0-9 /]\+\)--></\(div\|ul\|li\|a\)>' : '</\2><!--\1-->' },
+        \ ],
+        \ 'rails' : [
+        \   [100, ':continue', ':information'],
+        \   [101, ':switching_protocols'],
+        \   [102, ':processing'],
+        \   [200, ':ok', ':success'],
+        \   [201, ':created'],
+        \   [202, ':accepted'],
+        \   [203, ':non_authoritative_information'],
+        \   [204, ':no_content'],
+        \   [205, ':reset_content'],
+        \   [206, ':partial_content'],
+        \   [207, ':multi_status'],
+        \   [208, ':already_reported'],
+        \   [226, ':im_used'],
+        \   [300, ':multiple_choices'],
+        \   [301, ':moved_permanently'],
+        \   [302, ':found'],
+        \   [303, ':see_other'],
+        \   [304, ':not_modified'],
+        \   [305, ':use_proxy'],
+        \   [306, ':reserved'],
+        \   [307, ':temporary_redirect'],
+        \   [308, ':permanent_redirect'],
+        \   [400, ':bad_request'],
+        \   [401, ':unauthorized'],
+        \   [402, ':payment_required'],
+        \   [403, ':forbidden'],
+        \   [404, ':not_found'],
+        \   [405, ':method_not_allowed'],
+        \   [406, ':not_acceptable'],
+        \   [407, ':proxy_authentication_required'],
+        \   [408, ':request_timeout'],
+        \   [409, ':conflict'],
+        \   [410, ':gone'],
+        \   [411, ':length_required'],
+        \   [412, ':precondition_failed'],
+        \   [413, ':request_entity_too_large'],
+        \   [414, ':request_uri_too_long'],
+        \   [415, ':unsupported_media_type'],
+        \   [416, ':requested_range_not_satisfiable'],
+        \   [417, ':expectation_failed'],
+        \   [422, ':unprocessable_entity'],
+        \   [423, ':precondition_required'],
+        \   [424, ':too_many_requests'],
+        \   [426, ':request_header_fields_too_large'],
+        \   [500, ':internal_server_error'],
+        \   [501, ':not_implemented'],
+        \   [502, ':bad_gateway'],
+        \   [503, ':service_unavailable'],
+        \   [504, ':gateway_timeout'],
+        \   [505, ':http_version_not_supported'],
+        \   [506, ':variant_also_negotiates'],
+        \   [507, ':insufficient_storage'],
+        \   [508, ':loop_detected'],
+        \   [510, ':not_extended'],
+        \   [511, ':network_authentication_required'],
+        \ ],
+        \ 'rspec': [
+        \   ['describe', 'context', 'specific', 'example'],
+        \   ['before', 'after'],
+        \   ['be_true', 'be_false'],
+        \   ['get', 'post', 'put', 'delete'],
+        \   ['==', 'eql', 'equal'],
+        \   { '\.should_not': '\.should' },
+        \   ['\.to_not', '\.to'],
+        \   { '\([^. ]\+\)\.should\(_not\|\)': 'expect(\1)\.to\2' },
+        \   { 'expect(\([^. ]\+\))\.to\(_not\|\)': '\1.should\2' },
+        \ ],
+        \ 'markdown' : [
+        \   ['[ ]', '[x]']
+        \ ],
+        \ }
 
-let s:switch_definition = s:separate_defenition_to_each_filetypes(s:switch_definition)
-function! s:define_switch_mappings() "{{{
-  if exists('b:switch_custom_definitions')
-    unlet b:switch_custom_definitions
-  endif
-
-  let dictionary = []
-  for filetype in split(&ft, '\.')
-    if has_key(s:switch_definition, filetype)
-      let dictionary = extend(dictionary, s:switch_definition[filetype])
+  let s:switch_definition = s:separate_defenition_to_each_filetypes(s:switch_definition)
+  function! s:define_switch_mappings() "{{{
+    if exists('b:switch_custom_definitions')
+      unlet b:switch_custom_definitions
     endif
-  endfor
 
-  if exists('b:rails_root')
-    let dictionary = extend(dictionary, s:switch_definition['rails'])
-  endif
+    let dictionary = []
+    for filetype in split(&ft, '\.')
+      if has_key(s:switch_definition, filetype)
+        let dictionary = extend(dictionary, s:switch_definition[filetype])
+      endif
+    endfor
 
-  if has_key(s:switch_definition, '*')
-    let dictionary = extend(dictionary, s:switch_definition['*'])
-  endif
-
-  if !empty('dictionary')
-    let s:gvn = 'b:switch_custom_definitions'
-    if !exists(s:gvn)
-      let cmd = 'let ' . s:gvn . ' = ' . string(dictionary)
-      exe cmd
+    if exists('b:rails_root')
+      let dictionary = extend(dictionary, s:switch_definition['rails'])
     endif
-  endif
-endfunction"}}}
 
-augroup SwitchSetting
-  autocmd!
-  autocmd filetype * if !empty(split(&ft, '\.')) | call <SID>define_switch_mappings() | endif
-augroup END
+    if has_key(s:switch_definition, '*')
+      let dictionary = extend(dictionary, s:switch_definition['*'])
+    endif
 
+    if !empty('dictionary')
+      let gvn = 'b:switch_custom_definitions'
+      if !exists(gvn)
+        let cmd = 'let ' . gvn . ' = ' . string(dictionary)
+        exe cmd
+      endif
+    endif
+  endfunction"}}}
+
+  augroup SwitchSetting
+    autocmd!
+    autocmd filetype * if !empty(split(&ft, '\.')) | call <SID>define_switch_mappings() | endif
+  augroup END
+end
 
 " }}}2
 "-------------------------------------------------------------------------------
@@ -1008,7 +1014,7 @@ augroup END
 nnoremap <space> :
 vnoremap <space> :
 
-inoremap <c-f> <esc>
+" inoremap <c-f> <esc>
 
 cmap <c-h> <left>
 cmap <c-l> <right>
@@ -1025,9 +1031,7 @@ nnoremap <Tab>= ggvG=2<C-o>
 nnoremap <C-q> <C-^>
 
 " Switch wrap.
-nnoremap <silent><C-e>tw
-      \ :<C-u>setlocal wrap!
-      \ \|    setlocal wrap?<CR>
+nnoremap <silent><C-e>tw :<C-u>setlocal wrap! wrap?<CR>
 
 if exists('$MYVIMRC')
   nnoremap <silent> <C-e>v :<C-u>e $MYVIMRC<CR>
@@ -1047,23 +1051,23 @@ nnoremap <silent> [mybind]j <c-w>j:call GoodWinHeight()<cr>
 nnoremap <silent> [mybind]k <c-w>k:call GoodWinHeight()<cr>
 nnoremap <silent> [mybind]l <c-w>l:call GoodWinWidth()<cr>
 
-nnoremap <silent> [mybind]eu :<C-u>set fenc=utf-8<CR>
-nnoremap <silent> [mybind]ee :<C-u>set fenc=euc-jp<CR>
-nnoremap <silent> [mybind]es :<C-u>set fenc=cp932<CR>
+nnoremap <silent> [mybind]eu :<C-u>setlocal fenc=utf-8<CR>
+nnoremap <silent> [mybind]ee :<C-u>setlocal fenc=euc-jp<CR>
+nnoremap <silent> [mybind]es :<C-u>setlocal fenc=cp932<CR>
 nnoremap <silent> [mybind]eU :<C-u>e ++enc=utf-8 %<CR>
 nnoremap <silent> [mybind]eE :<C-u>e ++enc=euc-jp %<CR>
 nnoremap <silent> [mybind]eS :<C-u>e ++enc=cp932 %<CR>
 
-nnoremap <silent> [mybind]el :<C-u>set fileformat=unix<CR>
-nnoremap <silent> [mybind]em :<C-u>set fileformat=mac<CR>
-nnoremap <silent> [mybind]ed :<C-u>set fileformat=dos<CR>
+nnoremap <silent> [mybind]el :<C-u>setlocal fileformat=unix<CR>
+nnoremap <silent> [mybind]em :<C-u>setlocal fileformat=mac<CR>
+nnoremap <silent> [mybind]ed :<C-u>setlocal fileformat=dos<CR>
 nnoremap <silent> [mybind]eL :<C-u>e ++fileformat=unix %<CR>
 nnoremap <silent> [mybind]eM :<C-u>e ++fileformat=mac %<CR>
 nnoremap <silent> [mybind]eD :<C-u>e ++fileformat=dos %<CR>
 
-nnoremap <silent> [mybind]fm :<C-u>set foldmethod=marker<CR>
-nnoremap <silent> [mybind]fi :<C-u>set foldmethod=indent<CR>
-nnoremap <silent> [mybind]fs :<C-u>set foldmethod=syntax<CR>
+nnoremap <silent> [mybind]fm :<C-u>setlocal foldmethod=marker<CR>
+nnoremap <silent> [mybind]fi :<C-u>setlocal foldmethod=indent<CR>
+nnoremap <silent> [mybind]fs :<C-u>setlocal foldmethod=syntax<CR>
 
 nnoremap <silent> [mybind]cc :<C-u>let &colorcolumn = &colorcolumn == 0 ? 80 : 0<CR>
 
@@ -1077,19 +1081,19 @@ nnoremap <silent> [mybind]cc :<C-u>let &colorcolumn = &colorcolumn == 0 ? 80 : 0
 " WindowResize: "{{{2
 
 function! GoodWinWidth()
-  let s:w = float2nr((2.0 / 3.0) * &columns)
-  if winwidth(0) < s:w
-    execute "vertical resize " . s:w
+  let w = float2nr((2.0 / 3.0) * &columns)
+  if winwidth(0) < w
+    execute "vertical resize " . w
   endif
-  unlet s:w
+  unlet w
 endfunction
 
 function! GoodWinHeight()
-  let s:h = float2nr((2.0 / 3.0) * &lines)
-  if winheight(0) < s:h
-    execute "botright resize " . s:h
+  let h = float2nr((2.0 / 3.0) * &lines)
+  if winheight(0) < h
+    execute "botright resize " . h
   endif
-  unlet s:h
+  unlet h
 endfunction
 
 " }}}2
@@ -1101,10 +1105,10 @@ endfunction
 "===============================================================================
 " Platform: "{{{1
 
-if !s:iswin
-  set shell=zsh
-else
+if s:iswin
   set shell=bash
+else
+  set shell=zsh
 endif
 
 source $HOME/.vimrc.local
