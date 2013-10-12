@@ -13,7 +13,9 @@
 " Initialize Options: "{{{2
 
 " Enable no Vi compatible commands.
-set nocompatible
+if has('vim_starting')
+  set nocompatible
+endif
 
 " Check platform "{{{3
 let s:iswin = has('win32') || has('win64') || has('win95') || has('win16')
@@ -737,7 +739,6 @@ if neobundle#is_installed('vimshell.vim')
     autocmd FileType vimshell call vimshell#hook#add('chpwd', 'my_chpwd', 'g:my_chpwd')
   augroup END
 
-
   function! g:my_chpwd(args, context)
     call vimshell#execute('ls')
   endfunction
@@ -812,8 +813,8 @@ if neobundle#is_installed('neosnippet.vim')
     autocmd BufEnter,BufRead,BufNew app/config/routes.rb NeoSnippetSource ~/.vim/snippets/ruby.rails.route.snip
     autocmd BufEnter,BufRead,BufNew spec/**/*.rb         NeoSnippetSource ~/.vim/snippets/ruby.rails.rspec.snip
     " autocmd BufEnter,BufRead,BufNew spec/**/*.rb    NeoSnippetSource ~/.vim/snippets/ruby.rspec.snip
-  augroup End
-end
+  augroup END
+endif
 
 " }}}2
 "-------------------------------------------------------------------------------
@@ -994,7 +995,7 @@ if neobundle#is_installed('switch.vim')
     autocmd!
     autocmd filetype * if !empty(split(&ft, '\.')) | call <SID>define_switch_mappings() | endif
   augroup END
-end
+endif
 
 " }}}2
 "-------------------------------------------------------------------------------
