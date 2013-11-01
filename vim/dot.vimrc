@@ -95,6 +95,8 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
   NeoBundle 'Shougo/unite.vim'       " Unite and create user interfaces
   NeoBundle 'Shougo/unite-outline'   " outline source for unite.vim
   NeoBundle 'tacroe/unite-mark'
+  NeoBundle 'alpaca-tc/alpaca_tags'
+
   NeoBundle 'mattn/webapi-vim'       " vim interface to Web API
   NeoBundle 'tyru/open-browser.vim'  " Open URI with your favorite browser from your favorite editor
   NeoBundle 'Shougo/vimshell.vim'    " Powerful shell implemented by vim.
@@ -102,6 +104,7 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
   NeoBundle 'vim-scripts/open-terminal-filemanager' " Open native terminal , file manager app for various platforms
   NeoBundle 'Shougo/vimfiler.vim'    " Powerful file explorer implemented by Vim script
   NeoBundle 'AndrewRadev/switch.vim' " A simple Vim plugin to switch segments of text with predefined replacements
+  NeoBundle 'kana/vim-metarw' " Vim plugin: A framework to read/write fake:path
   " }}}3
 
   " View "{{{3
@@ -134,7 +137,7 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
   " Ruby/Rails "{{{4
   NeoBundle 'ujihisa/unite-rake'    " A Unite.vim plugin to run tasks or to view descriptions easily, using rake command
   NeoBundle 'basyura/unite-rails'   " a unite.vim plugin for rails
-  NeoBundle 'tpope/vim-rails', { 'autoload' : { 'filetypes' : ['haml', 'ruby', 'eruby'] } } " rails.vim: Ruby on Rails power tools
+  NeoBundle 'tpope/vim-rails', { 'autoload' : { 'filetypes' : ['haml', 'ruby', 'eruby', 'arb'] } } " rails.vim: Ruby on Rails power tools
   NeoBundle 'thoughtbot/vim-rspec'  " Run Rspec specs from Vim
   " }}}4
   " Web "{{{4
@@ -152,9 +155,11 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
   NeoBundle 'nelstrom/vim-markdown-folding'
   " }}}3
 
-  " Dictionary "{{{3
+  " Dictionary / Reference "{{{3
   NeoBundle 'pasela/unite-webcolorname' " A unite source plugin which provides Web Color Names.
   NeoBundle 'mackee/unite-httpstatus'
+  NeoBundle 'thinca/vim-ref' " Integrated reference viewer.
+  NeoBundleLazy 'yuku-t/vim-ref-ri', { 'autoload' : { 'filetypes' : ['ruby', 'eruby', 'haml', 'rspec', 'Gemfile', 'arb'] } }
   " }}}3
 
   " VCS "{{{3
@@ -163,6 +168,7 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
   NeoBundle 'mattn/gist-vim'      " vimscript for gist
   NeoBundle 'kmnk/vim-unite-giti' " unite source for using git
   NeoBundle 'mattn/unite-gist'    " unite source gist
+  NeoBundle 'iyuuya/vim-metarw-github-issues'
   " }}}3
 
   " Comu "{{{3
@@ -206,8 +212,6 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
           \ ]}}
 
     " Beautiful rspec output in vim. See also: https://github.com/skwp/vim-ruby-conque for non-blocking rspec through ConqueTerm
-    NeoBundle 'thinca/vim-ref' " Integrated reference viewer.
-    NeoBundleLazy 'yuku-t/vim-ref-ri', { 'autoload' : { 'filetypes' : ['ruby', 'eruby', 'haml', 'rspec', 'Gemfile'] } }
 
     NeoBundle 'altercation/vim-colors-solarized' " precision colorscheme for the vim text editor
     NeoBundleLazy 'rcyrus/snipmate-snippets-rubymotion', { 'autoload' : { 'filetypes' : ['rubymotion'] } }
@@ -650,6 +654,8 @@ if neobundle#is_installed('unite.vim')
   let g:unite_enable_start_insert = 0
   let g:unite_enable_split_vertically = 0
   let g:unite_source_history_yank_enable = 1
+  let g:unite_matcher_fuzzy_max_input_length = 30
+  let g:unite_source_find_max_candidates = 200
   let g:unite_data_directory = g:vim_tmp_directory."/unite"
 
   nnoremap <S-Space> :<C-u>Unite -start-insert source<CR>
@@ -657,7 +663,7 @@ if neobundle#is_installed('unite.vim')
   nnoremap [unite] <nop>
   nmap <C-k> [unite]
   nnoremap [unite]   :<C-u>Unite<Space>
-  nnoremap [unite]uf :<C-u>Unite file_point file buffer file_mru file_rec/async directory directory_mru directory_rec/async<CR>
+  nnoremap [unite]uf :<C-u>Unite -start-insert buffer file_mru file_rec/async:./ directory_mru directory_rec/async:./<CR>
   nnoremap [unite]ub :<C-u>Unite bookmark<CR>
   nnoremap [unite]us :<C-u>Unite source<CR>
   nnoremap [unite]ui :<C-u>Unite find<CR>
@@ -752,7 +758,7 @@ endif
 "-------------------------------------------------------------------------------
 " VimFiler: "{{{2
 
-if neobundle#is_installed('vimsfiler.vim')
+if neobundle#is_installed('vimfiler.vim')
   let g:vimfiler_as_default_explorer = 1
   let g:vimfiler_safe_mode_by_default = 0
   let g:vimfiler_data_directory = g:vim_tmp_directory.'/vimfiler'
@@ -824,7 +830,7 @@ endif
 
 set background=light
 
-if neobundle#is_installed('vim-powerline.vim')
+if neobundle#is_installed('vim-powerline')
   let g:Powerline_symbols = 'fancy'
   let g:Powerline_colorscheme = 'default'
 
@@ -867,7 +873,7 @@ if neobundle#is_installed('switch.vim')
         \ '*': [
         \   ['is', 'are']
         \ ],
-        \ 'ruby,eruby,haml' : [
+        \ 'ruby,eruby,haml,arb' : [
         \   ['if', 'unless'],
         \   ['while', 'until'],
         \   ['.blank?', '.present?'],
@@ -996,6 +1002,47 @@ if neobundle#is_installed('switch.vim')
     autocmd filetype * if !empty(split(&ft, '\.')) | call <SID>define_switch_mappings() | endif
   augroup END
 endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" AlpacaTags: "{{{2
+
+let g:alpaca_update_tags_config = {
+      \ '_' : '-R --sort=yes --languages=-js,html,css',
+      \ 'ruby': '--languages=+Ruby',
+      \ }
+
+augroup AlpacaTags
+  autocmd!
+  if exists(':Tags')
+    autocmd BufWritePost * TagsUpdate ruby
+    autocmd BufWritePost Gemfile TagsBundle
+    autocmd BufEnter * TagsSet
+  endif
+augroup END
+
+nnoremap <expr>[unite]tt ':Unite tags -horizontal -buffer-name=tags -input='.expand("<cword>").'<CR>'
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" Vim Ref: "{{{2
+
+let g:ref_open     = 'split'
+let g:ref_refe_cmd = expand('~/.rbenv/versions/2.0.0-p247/gemsets/global/bin')
+
+nnoremap [unite]rr :<C-U>Unite ref/refe -default-action=split -input=
+nnoremap [unite]ri :<C-U>Unite ref/ri   -default-action=split -input=
+
+aug MyAutoCmd
+  au FileType ruby,eruby,haml,ruby.rspec,arb nnoremap <silent><buffer>KK :<C-U>Unite -no-start-insert ref/ri   -input=<C-R><C-W><CR>
+  au FileType ruby,eruby,haml,ruby.rspec,arb nnoremap <silent><buffer>K  :<C-U>Unite -no-start-insert ref/refe -input=<C-R><C-W><CR>
+aug END
+"}}}
+
 
 " }}}2
 "-------------------------------------------------------------------------------
