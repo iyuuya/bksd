@@ -25,7 +25,7 @@ let s:islinux = !s:iswin && !s:iscygwin && !s:ismac
 if s:ismac
   set columns=160
   set lines=44
-  nnoremap <silent> <C-e>fl :<C-u>set columns=273 lines=60<CR>:winpos 0 0<CR>
+  nnoremap <silent> <C-e>fl :<C-u>set columns=320 lines=68<CR>:winpos 0 0<CR>
   set transparency=0
 elseif s:iswin
   set columns=128
@@ -75,8 +75,8 @@ if s:ismac
   " Use antialias
   set antialias
 
-  set guifont=Ricty:h14
-  set guifontwide=Ricty:h14
+  set guifont=Ricty:h12
+  set guifontwide=Ricty:h12
 
   " Number of pixel lines inserted between characters.
   set linespace=2
