@@ -5,3 +5,13 @@
   filemode     = true
   quotepath    = false
   excludesfile = ~/.git.d/ignore
+
+[color]
+  branch      = true
+  diff        = true
+  grep        = true
+  interactive = true
+  pager       = true
+  showbranch  = true
+  status      = true
+  ui          = true
