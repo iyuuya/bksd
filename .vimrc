@@ -40,6 +40,8 @@ endif
 
 NeoBundleFetch 'Shougo/neobundle.vim' " Ultimate Vim package manager
 
+NeoBundle 'altercation/vim-colors-solarized' " precision colorscheme for the vim text editor
+
 NeoBundleCheck
 
 filetype plugin indent on
@@ -87,5 +89,8 @@ set showcmd
 set wildmenu
 set wildmode=list:longest,list
 set wildoptions=tagfile
+
+set background=dark
+colorscheme solarized
 
 " vim: foldmethod=marker foldlevel=0
