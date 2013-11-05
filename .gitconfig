@@ -15,3 +15,12 @@
   showbranch  = true
   status      = true
   ui          = true
+
+[help]
+  autocorrect = 1
+
+[push]
+  default = simple
+
+[rerere]
+  enable = true
