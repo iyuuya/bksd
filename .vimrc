@@ -1,4 +1,13 @@
 "===============================================================================
+" Note: "{{{1
+" .vimrc
+"
+" Auhtor: iyuuya <i.yuuya@gmail.com>
+" }}}1
+"===============================================================================
+
+"===============================================================================
+" Initialize: "{{{1
 
 if has('vim_starting')
   set nocompatible
@@ -35,6 +44,9 @@ NeoBundleCheck
 
 filetype plugin indent on
 
+" }}}1
+"===============================================================================
+
 syntax enable
 
 set ignorecase
@@ -63,6 +75,8 @@ set foldmethod=syntax
 set foldlevelstart=99
 set foldcolumn=1
 
+set modeline
+
 set list
 set listchars=tab:>-,trail:_
 
@@ -73,3 +87,5 @@ set showcmd
 set wildmenu
 set wildmode=list:longest,list
 set wildoptions=tagfile
+
+" vim: foldmethod=marker foldlevel=0
