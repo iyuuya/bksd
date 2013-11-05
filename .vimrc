@@ -53,3 +53,9 @@ set shiftwidth=2
 set shiftround
 set smarttab
 set expandtab
+
+set foldenable
+set foldmethod=syntax
+set foldlevelstart=99
+set foldcolumn=1
+
