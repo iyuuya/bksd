@@ -69,3 +69,7 @@ set listchars=tab:>-,trail:_
 set laststatus=2
 set cmdheight=2
 set showcmd
+
+set wildmenu
+set wildmode=list:longest,list
+set wildoptions=tagfile
