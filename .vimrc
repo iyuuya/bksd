@@ -66,3 +66,6 @@ set foldcolumn=1
 set list
 set listchars=tab:>-,trail:_
 
+set laststatus=2
+set cmdheight=2
+set showcmd
