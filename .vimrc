@@ -63,3 +63,6 @@ set foldmethod=syntax
 set foldlevelstart=99
 set foldcolumn=1
 
+set list
+set listchars=tab:>-,trail:_
+
