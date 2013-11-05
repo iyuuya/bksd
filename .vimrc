@@ -40,6 +40,8 @@ endif
 
 NeoBundleFetch 'Shougo/neobundle.vim' " Ultimate Vim package manager
 
+NeoBundle 'Shougo/unite.vim' " Unite and create user interfaces
+
 NeoBundle 'altercation/vim-colors-solarized' " precision colorscheme for the vim text editor
 
 NeoBundleCheck
@@ -92,5 +94,35 @@ set wildoptions=tagfile
 
 set background=dark
 colorscheme solarized
+
+"===============================================================================
+" Plugins: "{{{1
+
+"-------------------------------------------------------------------------------
+" Unite: "{{{1
+
+if neobundle#is_installed('unite.vim')
+
+  nnoremap [unite] <nop>
+  nmap <C-k> [unite]
+
+  nnoremap [unite]   :<C-u>Unite<Space>
+  nnoremap [unite]uf :<C-u>Unite -start-insert file<CR>
+
+  if neobundle#is_installed('neobundle.vim')
+    nnoremap [unite]n  :<C-u>Unite neobundle<CR>
+    nnoremap [unite]ni :<C-u>Unite neobundle/install<CR>
+    nnoremap [unite]na :<C-u>Unite neobundle/lazy<CR>
+    nnoremap [unite]nl :<C-u>Unite neobundle/log<CR>
+    nnoremap [unite]ns :<C-u>Unite neobundle/search<CR>
+    nnoremap [unite]nu :<C-u>Unite neobundle/update<CR>
+  endif
+endif
+
+" }}}1
+"-------------------------------------------------------------------------------
+
+" }}}1
+"===============================================================================
 
 " vim: foldmethod=marker foldlevel=0
