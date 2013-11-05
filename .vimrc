@@ -1,3 +1,4 @@
+"===============================================================================
 
 if has('vim_starting')
   set nocompatible
@@ -43,8 +44,12 @@ set incsearch
 set hlsearch
 set wrapscan
 
-set nu
-set ts=2
-set sts=2
-set sw=2
-set et
+set number
+set ruler
+
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set shiftround
+set smarttab
+set expandtab
