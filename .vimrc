@@ -36,6 +36,13 @@ filetype plugin indent on
 
 syntax enable
 
+set ignorecase
+set smartcase
+set infercase
+set incsearch
+set hlsearch
+set wrapscan
+
 set nu
 set ts=2
 set sts=2
