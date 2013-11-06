@@ -105,6 +105,7 @@ if globpath(&rtp, 'bundle/neobundle.vim') != ''
   NeoBundle 'Shougo/vimfiler.vim'    " Powerful file explorer implemented by Vim script
   NeoBundle 'AndrewRadev/switch.vim' " A simple Vim plugin to switch segments of text with predefined replacements
   NeoBundle 'kana/vim-metarw' " Vim plugin: A framework to read/write fake:path
+  NeoBundle 'thinca/vim-quickrun' " Run commands quickly.
   " }}}3
 
   " View "{{{3
@@ -1009,21 +1010,23 @@ endif
 "-------------------------------------------------------------------------------
 " AlpacaTags: "{{{2
 
-let g:alpaca_update_tags_config = {
-      \ '_' : '-R --sort=yes --languages=-js,html,css',
-      \ 'ruby': '--languages=+Ruby',
-      \ }
+if neobundle#is_installed('alpaca_tags')
+  let g:alpaca_update_tags_config = {
+        \ '_' : '-R --sort=yes --languages=-js,html,css',
+        \ 'ruby': '--languages=+Ruby',
+        \ }
 
-augroup AlpacaTags
-  autocmd!
-  if exists(':Tags')
-    autocmd BufWritePost * TagsUpdate ruby
-    autocmd BufWritePost Gemfile TagsBundle
-    autocmd BufEnter * TagsSet
-  endif
-augroup END
+  augroup AlpacaTags
+    autocmd!
+    if exists(':Tags')
+      autocmd BufWritePost * TagsUpdate ruby
+      autocmd BufWritePost Gemfile TagsBundle
+      autocmd BufEnter * TagsSet
+    endif
+  augroup END
 
-nnoremap <expr>[unite]tt ':Unite tags -horizontal -buffer-name=tags -input='.expand("<cword>").'<CR>'
+  nnoremap <expr>[unite]tt ':Unite tags -horizontal -buffer-name=tags -input='.expand("<cword>").'<CR>'
+endif
 
 " }}}2
 "-------------------------------------------------------------------------------
@@ -1031,18 +1034,38 @@ nnoremap <expr>[unite]tt ':Unite tags -horizontal -buffer-name=tags -input='.exp
 "-------------------------------------------------------------------------------
 " Vim Ref: "{{{2
 
-let g:ref_open     = 'split'
-let g:ref_refe_cmd = expand('~/.rbenv/versions/2.0.0-p247/gemsets/global/bin')
+if neobundle#is_installed('vim-ref')
+  let g:ref_open     = 'split'
+  let g:ref_refe_cmd = expand('~/.rbenv/versions/2.0.0-p247/gemsets/global/bin')
 
-nnoremap [unite]rr :<C-U>Unite ref/refe -default-action=split -input=
-nnoremap [unite]ri :<C-U>Unite ref/ri   -default-action=split -input=
+  nnoremap [unite]rr :<C-U>Unite ref/refe -default-action=split -input=
+  nnoremap [unite]ri :<C-U>Unite ref/ri   -default-action=split -input=
 
-aug MyAutoCmd
-  au FileType ruby,eruby,haml,ruby.rspec,arb nnoremap <silent><buffer>KK :<C-U>Unite -no-start-insert ref/ri   -input=<C-R><C-W><CR>
-  au FileType ruby,eruby,haml,ruby.rspec,arb nnoremap <silent><buffer>K  :<C-U>Unite -no-start-insert ref/refe -input=<C-R><C-W><CR>
-aug END
-"}}}
+  aug MyAutoCmd
+    au FileType ruby,eruby,haml,ruby.rspec,arb nnoremap <silent><buffer>KK :<C-U>Unite -no-start-insert ref/ri   -input=<C-R><C-W><CR>
+    au FileType ruby,eruby,haml,ruby.rspec,arb nnoremap <silent><buffer>K  :<C-U>Unite -no-start-insert ref/refe -input=<C-R><C-W><CR>
+  aug END
+endif
 
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" QuickRun: "{{{2
+
+if neobundle#is_installed('vim-quickrun')
+  let g:quickrun_config = {
+        \ "dot/plantuml" : {
+        \   "command" : "plantuml",
+        \   "exec" : "%c %o %s:p",
+        \   "cmdopt"  : "-tutxt",
+        \   }
+        \ }
+
+" \       "hook/output_encode/encoding" : "sjis",
+" \       "hook/msvc_compiler/enable" : 1,
+" \       "hook/msvc_compiler/target" : "C:/Program Files/Microsoft Visual Studio 10.0",
+endif
 
 " }}}2
 "-------------------------------------------------------------------------------
