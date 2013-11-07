@@ -664,7 +664,7 @@ if neobundle#is_installed('unite.vim')
   nnoremap [unite] <nop>
   nmap <C-k> [unite]
   nnoremap [unite]   :<C-u>Unite<Space>
-  nnoremap [unite]uf :<C-u>Unite -start-insert buffer file_mru file_rec/async:./ directory_mru directory_rec/async:./<CR>
+  nnoremap [unite]uf :<C-u>Unite -start-insert buffer file_mru file_rec/async:./<CR>!html 
   nnoremap [unite]ub :<C-u>Unite bookmark<CR>
   nnoremap [unite]us :<C-u>Unite source<CR>
   nnoremap [unite]ui :<C-u>Unite find<CR>
@@ -697,22 +697,22 @@ if neobundle#is_installed('unite.vim')
   " unite-rake
   nnoremap [unite]rk :<C-u>Unite rake<CR>
   " unite-rails
-  nnoremap [unite]rf :<C-u>Unite rails/config<CR>
-  nnoremap [unite]rc :<C-u>Unite rails/controller<CR>
-  nnoremap [unite]rd :<C-u>Unite rails/db<CR>
-  nnoremap [unite]ry :<C-u>Unite rails/destroy<CR>
-  nnoremap [unite]rg :<C-u>Unite rails/generate<CR>
-  nnoremap [unite]rh :<C-u>Unite rails/helper<CR>
-  nnoremap [unite]ri :<C-u>Unite rails/initializer<CR>
-  nnoremap [unite]rj :<C-u>Unite rails/javascript<CR>
-  nnoremap [unite]rl :<C-u>Unite rails/lib<CR>
-  nnoremap [unite]ro :<C-u>Unite rails/log<CR>
-  nnoremap [unite]ra :<C-u>Unite rails/mailer<CR>
-  nnoremap [unite]rm :<C-u>Unite rails/model<CR>
-  nnoremap [unite]rr :<C-u>Unite rails/route<CR>
-  nnoremap [unite]rp :<C-u>Unite rails/spec<CR>
-  nnoremap [unite]rs :<C-u>Unite rails/stylesheet<CR>
-  nnoremap [unite]rv :<C-u>Unite rails/view<CR>
+  nnoremap [unite]rf :<C-u>Unite -start-insert rails/config<CR>
+  nnoremap [unite]rc :<C-u>Unite -start-insert rails/controller<CR>
+  nnoremap [unite]rd :<C-u>Unite -start-insert rails/db<CR>
+  nnoremap [unite]ry :<C-u>Unite -start-insert rails/destroy<CR>
+  nnoremap [unite]rg :<C-u>Unite -start-insert rails/generate<CR>
+  nnoremap [unite]rh :<C-u>Unite -start-insert rails/helper<CR>
+  nnoremap [unite]ri :<C-u>Unite -start-insert rails/initializer<CR>
+  nnoremap [unite]rj :<C-u>Unite -start-insert rails/javascript<CR>
+  nnoremap [unite]rl :<C-u>Unite -start-insert rails/lib<CR>
+  nnoremap [unite]ro :<C-u>Unite -start-insert rails/log<CR>
+  nnoremap [unite]ra :<C-u>Unite -start-insert rails/mailer<CR>
+  nnoremap [unite]rm :<C-u>Unite -start-insert rails/model<CR>
+  nnoremap [unite]rr :<C-u>Unite -start-insert rails/route<CR>
+  nnoremap [unite]rp :<C-u>Unite -start-insert rails/spec<CR>
+  nnoremap [unite]rs :<C-u>Unite -start-insert rails/stylesheet<CR>
+  nnoremap [unite]rv :<C-u>Unite -start-insert rails/view<CR>
   " Dictionaries
   nnoremap [unite]dw :<C-u>Unite webcolornane<CR>
   nnoremap [unite]dh :<C-u>Unite httpstatus<CR>
