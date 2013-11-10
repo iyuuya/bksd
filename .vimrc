@@ -377,6 +377,41 @@ set fileformats=unix,dos,mac
 if has('multi_byte_ime')
   set iminsert=0 imsearch=0
 endif
+=======
+if !exists('$MYVIMRC')
+  let $MYVIMRC = expand('~/.vimrc')
+endif
+
+if !exists('$MYGVIMRC')
+  let $MYGVIMRC = expand('~/.gvimrc')
+endif
+
+if !exists('$MYVIMFILES')
+  let $MYVIMFILES = expand('~/.vim')
+endif
+
+if has('vim_starting')
+  filetype off
+  let bundle_path = $MYVIMFILES . '/bundle'
+  let neobundle_path = bundle_path . '/neobundle.vim'
+  execute 'set runtimepath+=' . neobundle_path
+
+  if !isdirectory(neobundle_path)
+    call system('git clone https://github.com/Shougo/neobundle.vim.git ' . neobundle_path)
+  endif
+
+  call neobundle#rc(bundle_path)
+endif
+
+NeoBundleFetch 'Shougo/neobundle.vim' " Ultimate Vim package manager
+
+NeoBundle 'Shougo/unite.vim' " Unite and create user interfaces
+
+NeoBundle 'altercation/vim-colors-solarized' " precision colorscheme for the vim text editor
+
+NeoBundleCheck
+
+filetype plugin indent on
 
 " }}}1
 "===============================================================================
@@ -646,7 +681,7 @@ set smartindent
 "===============================================================================
 
 "===============================================================================
-" Plugin: "{{{1
+" Plugins: "{{{1
 
 "-------------------------------------------------------------------------------
 " Unite: "{{{2
