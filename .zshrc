@@ -4,7 +4,13 @@ export LSCOLORS=exfxcxdxbxegedabagacad
 
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
-source ~/.zsh.d/locale.zsh
-source ~/.zsh.d/pager.zsh
-source ~/.zsh.d/vi-mode.zsh
-source ~/.zsh.d/rvm.zsh
+function src() {
+  if [[ -s "$1" ]]; then
+    source "$1"
+  fi
+}
+
+src $HOME/.zsh.d/locale.zsh
+src $HOME/.zsh.d/pager.zsh
+src $HOME/.zsh.d/vi-mode.zsh
+src $HOME/.zsh.d/rvm.zsh
