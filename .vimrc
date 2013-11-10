@@ -71,14 +71,19 @@ augroup END
 
 "-------------------------------------------------------------------------------
 " NeoBundle: "{{{2
-
 if has('vim_starting')
-  set runtimepath+=$MYVIMFILES/bundle/neobundle.vim
-endif
-
-if globpath(&rtp, 'bundle/neobundle.vim') != ''
   filetype off
-  call neobundle#rc('$MYVIMFILES/bundle/')
+  let bundle_path = $MYVIMFILES . '/bundle'
+  let neobundle_path = bundle_path . '/neobundle.vim'
+  execute 'set runtimepath+=' . neobundle_path
+
+  if !isdirectory(neobundle_path)
+    call system('git clone https://github.com/Shougo/neobundle.vim.git ' . neobundle_path)
+  endif
+
+  filetype off
+  call neobundle#rc(bundle_path)
+
   " Ultimate Vim package manager
   NeoBundleFetch 'Shougo/neobundle.vim'
 
