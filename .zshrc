@@ -14,3 +14,4 @@ src $HOME/.zsh.d/locale.zsh
 src $HOME/.zsh.d/pager.zsh
 src $HOME/.zsh.d/vi-mode.zsh
 src $HOME/.zsh.d/rvm.zsh
+src $HOME/.zsh.d/options.zsh
