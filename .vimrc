@@ -99,7 +99,7 @@ colorscheme solarized
 " Plugins: "{{{1
 
 "-------------------------------------------------------------------------------
-" Unite: "{{{1
+" Unite: "{{{2
 
 if neobundle#is_installed('unite.vim')
 
@@ -119,7 +119,7 @@ if neobundle#is_installed('unite.vim')
   endif
 endif
 
-" }}}1
+" }}}2
 "-------------------------------------------------------------------------------
 
 " }}}1
