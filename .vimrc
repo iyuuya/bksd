@@ -116,7 +116,8 @@ NeoBundle 'thinca/vim-quickrun' " Run commands quickly.
 
 " View "{{{3
 NeoBundle 'vim-scripts/molokai'     " A port of the monokai scheme for TextMate
-NeoBundle 'Lokaltog/vim-powerline'  " The ultimate vim statusline utility.
+" NeoBundle 'Lokaltog/vim-powerline'  " The ultimate vim statusline utility.
+NeoBundle 'bling/vim-airline' " lean & mean status/tabline for vim that's light as air
 " }}}3
 
 " Edit "{{{3
@@ -834,7 +835,7 @@ endif
 "-------------------------------------------------------------------------------
 " Vim PowerLine: "{{{2
 
-set background=light
+" set background=light
 
 if neobundle#is_installed('vim-powerline')
   let g:Powerline_symbols = 'fancy'
@@ -849,6 +850,18 @@ if neobundle#is_installed('vim-powerline')
   let g:Powerline_mode_s = 'SE'
   let g:Powerline_mode_S = 'SL'
   let g:Powerline_mode_cs = 'SB'
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" Vim Airline: "{{{2
+
+if neobundle#is_installed('vim-airline')
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#left_sep = ' '
+  let g:airline#extensions#tabline#left_alt_sep = '|'
 endif
 
 " }}}2
