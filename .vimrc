@@ -112,11 +112,15 @@ NeoBundle 'Shougo/vimfiler.vim'    " Powerful file explorer implemented by Vim s
 NeoBundle 'AndrewRadev/switch.vim' " A simple Vim plugin to switch segments of text with predefined replacements
 NeoBundle 'kana/vim-metarw' " Vim plugin: A framework to read/write fake:path
 NeoBundle 'thinca/vim-quickrun' " Run commands quickly.
+
+NeoBundle 'dbext.vim' " Provides database access to many DBMS (Oracle, Sybase, Microsoft, MySQL, DBI,..)
+NeoBundle 'osyo-manga/vim-over' " :substitute preview
 " }}}3
 
 " View "{{{3
 NeoBundle 'vim-scripts/molokai'     " A port of the monokai scheme for TextMate
 NeoBundle 'Lokaltog/vim-powerline'  " The ultimate vim statusline utility.
+" NeoBundle 'bling/vim-airline' " lean & mean status/tabline for vim that's light as air
 " }}}3
 
 " Edit "{{{3
@@ -154,7 +158,7 @@ NeoBundleLazy 'cakebaker/scss-syntax.vim', { 'autoload' : { 'filetypes' : ['scss
 NeoBundleLazy 'groenewege/vim-less', { 'autoload' : { 'filetypes' : ['less', 'css'] } } " vim syntax for LESS (dynamic CSS)
 NeoBundleLazy 'digitaltoad/vim-jade', { 'autoload' : { 'filetypes' : ['jade'] } } " Vim Jade template engine syntax highlighting and indention
 NeoBundleLazy 'kchmck/vim-coffee-script', { 'autoload' : { 'filetypes' : ['coffee', 'js'] } } " CoffeeScript support for vim
-NeoBundle 'skammer/vim-css-color'     " Highlight colors in css files
+NeoBundle 'lilydjwg/colorizer' " A Vim plugin to colorize all text in the form #rrggbb or #rgb.
 " }}}4
 if has('mac')
   NeoBundle 'vim-scripts/cocoa.vim' " Plugin for Cocoa/Objective-C development
@@ -176,6 +180,7 @@ NeoBundle 'mattn/gist-vim'      " vimscript for gist
 NeoBundle 'kmnk/vim-unite-giti' " unite source for using git
 NeoBundle 'mattn/unite-gist'    " unite source gist
 NeoBundle 'iyuuya/vim-metarw-github-issues'
+NeoBundle 'joker1007/unite-pull-request' " unite-pull-request is a unite.vim plugin for Viewing GitHub pull request.
 " }}}3
 
 " Comu "{{{3
@@ -224,8 +229,6 @@ if 0 " old bundles
   NeoBundleLazy 'rcyrus/snipmate-snippets-rubymotion', { 'autoload' : { 'filetypes' : ['rubymotion'] } }
   NeoBundle 'thinca/vim-template'
 
-  " Provides database access to many DBMS (Oracle, Sybase, Microsoft, MySQL, DBI,..)
-  NeoBundle 'dbext.vim'
 
   NeoBundle 'szw/vim-tags'
   NeoBundle 'slim-template/vim-slim' " A clone of the slim vim plugin from stonean. For use with Pathogen.
@@ -834,7 +837,7 @@ endif
 "-------------------------------------------------------------------------------
 " Vim PowerLine: "{{{2
 
-set background=light
+" set background=light
 
 if neobundle#is_installed('vim-powerline')
   let g:Powerline_symbols = 'fancy'
@@ -850,6 +853,18 @@ if neobundle#is_installed('vim-powerline')
   let g:Powerline_mode_S = 'SL'
   let g:Powerline_mode_cs = 'SB'
 endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" Vim Airline: "{{{2
+
+" if neobundle#is_installed('vim-airline')
+"   let g:airline#extensions#tabline#enabled = 1
+"   let g:airline#extensions#tabline#left_sep = ' '
+"   let g:airline#extensions#tabline#left_alt_sep = '|'
+" endif
 
 " }}}2
 "-------------------------------------------------------------------------------
@@ -1070,6 +1085,16 @@ if neobundle#is_installed('vim-quickrun')
 " \       "hook/output_encode/encoding" : "sjis",
 " \       "hook/msvc_compiler/enable" : 1,
 " \       "hook/msvc_compiler/target" : "C:/Program Files/Microsoft Visual Studio 10.0",
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+"
+"-------------------------------------------------------------------------------
+" VimOver: "{{{2
+
+if neobundle#is_installed('vim-over')
+  nnoremap <silent> <Leader><Space> :OverCommandLine<CR>
 endif
 
 " }}}2
