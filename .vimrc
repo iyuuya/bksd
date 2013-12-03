@@ -466,6 +466,7 @@ set backspace=indent,eol,start
 
 " Use clipboard register.
 set clipboard& clipboard+=unnamed
+set clipboard+=autoselect
 
 " Auto read if file is changed.
 set autoread
@@ -773,6 +774,10 @@ if neobundle#is_installed('vimfiler.vim')
   let g:vimfiler_data_directory = g:vim_tmp_directory.'/vimfiler'
   nnoremap : :VimFilerBufferDir -split -simple -no-quit -winwidth=32<CR>
   nnoremap ,vf :VimFilerDouble<CR>
+
+  augroup MyiVimFilerGrp
+    autocmd FileType vimfiler set nonumber
+  augroup END
 endif
 
 " }}}2
@@ -1095,6 +1100,7 @@ endif
 
 if neobundle#is_installed('vim-over')
   nnoremap <silent> <Leader><Space> :OverCommandLine<CR>
+  vnoremap <silent> <Leader><Space> :OverCommandLine<CR>
 endif
 
 " }}}2
