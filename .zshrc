@@ -1,14 +1,17 @@
-[[ $UID > 0 && $UID = $GID ]] && umask 002 || umask 022
-
-export LSCOLORS=exfxcxdxbxegedabagacad
-
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-
 function src() {
   if [[ -s "$1" ]]; then
     source "$1"
   fi
 }
+
+src $HOME/.zsh.d/former.zsh
+src $HOME/.zsh.d/former.alias.zsh
+
+[[ $UID > 0 && $UID = $GID ]] && umask 002 || umask 022
+
+export LSCOLORS=exfxcxdxbxegedabagacad
+
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 src $HOME/.zsh.d/locale.zsh
 src $HOME/.zsh.d/pager.zsh
