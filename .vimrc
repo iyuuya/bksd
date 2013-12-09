@@ -194,6 +194,7 @@ NeoBundle 'osyo-manga/unite-banban'
 NeoBundle 'mattn/unite-nyancat'
 NeoBundle 'osyo-manga/unite-moo'
 NeoBundle 'osyo-manga/unite-homo'
+NeoBundle 'thinca/vim-splash' " Changes the splash of Vim as you like.
 " }}}3
 
 "{{{4
@@ -1101,6 +1102,18 @@ endif
 if neobundle#is_installed('vim-over')
   nnoremap <silent> <Leader><Space> :OverCommandLine<CR>
   vnoremap <silent> <Leader><Space> :OverCommandLine<CR>
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" Vim Splash: "{{{2
+
+let g:splash#path = g:vim_tmp_directory . '/vim_info.txt'
+
+if !filereadable(g:splash#path)
+  call system('curl -o ' . g:splash#path . ' https://gist.github.com/OrgaChem/7630711/raw/c90299e0aaa0cea8cd05a6ceb2e70074186f8ce5/vim_intro.txt')
 endif
 
 " }}}2
