@@ -135,6 +135,7 @@ NeoBundleLazy 'alpaca-tc/vim-endwise', { 'autoload' : { 'insert' : 1 } }
 NeoBundleLazy 'edsono/vim-matchit', { 'autoload' : {
       \ 'filetypes' : 'ruby',
       \ 'mappings' : [',nx', '%'] } }
+NeoBundle 'thinca/vim-template'
 " }}}3
 
 " Vim "{{{3
@@ -228,7 +229,6 @@ if 0 " old bundles
 
   NeoBundle 'altercation/vim-colors-solarized' " precision colorscheme for the vim text editor
   NeoBundleLazy 'rcyrus/snipmate-snippets-rubymotion', { 'autoload' : { 'filetypes' : ['rubymotion'] } }
-  NeoBundle 'thinca/vim-template'
 
 
   NeoBundle 'szw/vim-tags'
