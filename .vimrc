@@ -1231,7 +1231,9 @@ else
   set shell=zsh
 endif
 
-source $HOME/.vimrc.local
+if filereadable($HOME.'/.vimrc.local')
+  source $HOME/.vimrc.local
+endif
 
 " }}}1
 "===============================================================================
