@@ -165,6 +165,7 @@ if has('mac')
   NeoBundle 'vim-scripts/cocoa.vim' " Plugin for Cocoa/Objective-C development
 endif
 NeoBundle 'nelstrom/vim-markdown-folding'
+NeoBundle 'dan-bolsun/vim-tmux' " TMUX syntax highlight
 " }}}3
 
 " Dictionary / Reference "{{{3
