@@ -114,11 +114,13 @@ NeoBundle 'kana/vim-metarw' " Vim plugin: A framework to read/write fake:path
 NeoBundle 'thinca/vim-quickrun' " Run commands quickly.
 
 NeoBundle 'dbext.vim' " Provides database access to many DBMS (Oracle, Sybase, Microsoft, MySQL, DBI,..)
+NeoBundle 'junegunn/vim-redis' " Experimental Redis plugin for Vim
 NeoBundle 'osyo-manga/vim-over' " :substitute preview
 " }}}3
 
 " View "{{{3
 NeoBundle 'vim-scripts/molokai'     " A port of the monokai scheme for TextMate
+NeoBundle 'altercation/vim-colors-solarized' " precision colorscheme for the vim text editor
 NeoBundle 'Lokaltog/vim-powerline'  " The ultimate vim statusline utility.
 " NeoBundle 'bling/vim-airline' " lean & mean status/tabline for vim that's light as air
 " }}}3
@@ -228,7 +230,6 @@ if 0 " old bundles
 
   " Beautiful rspec output in vim. See also: https://github.com/skwp/vim-ruby-conque for non-blocking rspec through ConqueTerm
 
-  NeoBundle 'altercation/vim-colors-solarized' " precision colorscheme for the vim text editor
   NeoBundleLazy 'rcyrus/snipmate-snippets-rubymotion', { 'autoload' : { 'filetypes' : ['rubymotion'] } }
 
 
