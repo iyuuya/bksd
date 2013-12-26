@@ -4,12 +4,7 @@ function src() {
   fi
 }
 
-[[ $UID > 0 && $UID = $GID ]] && umask 002 || umask 022
-
-export LSCOLORS=exfxcxdxbxegedabagacad
-
 # PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-
 
 src $HOME/.zsh.d/former.zsh
 export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/X11/bin

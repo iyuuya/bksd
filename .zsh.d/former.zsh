@@ -16,6 +16,12 @@
 export LSCOLORS=exfxcxdxbxegedabagacad
 # default color theme for vim (iTerm)
 
+case ${OSTYPE} in
+  linux*)
+    export TERM=xterm-256color
+    ;;
+esac
+
 # "}}}1
 #===============================================================================
 
