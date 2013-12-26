@@ -104,7 +104,15 @@ endif
 " Disable bell.
 set vb t_vb=
 
-colorscheme molokai
+if exists('$VIM_COLORSCHEME')
+  exec('colorscheme ' . $VIM_COLORSCHEME)
+else
+  colorscheme molokai
+end
+
+if exists('$VIM_BACKGROUND')
+  exec('set background=' . $VIM_BACKGROUND)
+end
 
 " }}}1
 "===============================================================================

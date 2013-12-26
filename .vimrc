@@ -122,6 +122,7 @@ NeoBundle 'osyo-manga/vim-over' " :substitute preview
 NeoBundle 'vim-scripts/molokai'     " A port of the monokai scheme for TextMate
 NeoBundle 'altercation/vim-colors-solarized' " precision colorscheme for the vim text editor
 NeoBundle 'Lokaltog/vim-powerline'  " The ultimate vim statusline utility.
+NeoBundle 'stephenmckinney/vim-solarized-powerline' " Solarized colorscheme and theme for vim-powerline with a focus on terminal Vim.
 " NeoBundle 'bling/vim-airline' " lean & mean status/tabline for vim that's light as air
 " }}}3
 
@@ -845,11 +846,24 @@ endif
 "-------------------------------------------------------------------------------
 " Vim PowerLine: "{{{2
 
-" set background=light
+if exists('$VIM_COLORSCHEME')
+  exec('colorscheme ' . $VIM_COLORSCHEME)
+else
+  colorscheme molokai
+end
+
+if exists('$VIM_BACKGROUND')
+  exec('set background=' . $VIM_BACKGROUND)
+end
 
 if neobundle#is_installed('vim-powerline')
   let g:Powerline_symbols = 'fancy'
-  let g:Powerline_colorscheme = 'default'
+
+  if exists('$VIM_COLORSCHEME') && $VIM_COLORSCHEME == 'solarized'
+    let g:Powerline_colorscheme = 'solarized256_' . &background
+  else
+    let g:Powerline_colorscheme = 'default'
+  endif
 
   let g:Powerline_mode_n = 'NR'
   let g:Powerline_mode_i = 'IN'
@@ -1249,8 +1263,6 @@ set mouse=a
 " Use Japanese or English help.
 " 真のVimmerはen
 set helplang& helplang=ja,en
-
-colorscheme molokai
 
 set secure
 
