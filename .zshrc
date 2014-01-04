@@ -13,4 +13,5 @@ export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/share/npm/bin:/us
 # src $HOME/.zsh.d/vi-mode.zsh
 # src $HOME/.zsh.d/options.zsh
 src $HOME/.zsh.d/rvm.zsh
+src $HOME/.zsh.d/tmuxinator.zsh
 src $HOME/.zsh.d/former.alias.zsh
