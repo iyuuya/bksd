@@ -112,6 +112,7 @@ NeoBundle 'Shougo/vimfiler.vim'    " Powerful file explorer implemented by Vim s
 NeoBundle 'AndrewRadev/switch.vim' " A simple Vim plugin to switch segments of text with predefined replacements
 NeoBundle 'kana/vim-metarw' " Vim plugin: A framework to read/write fake:path
 NeoBundle 'thinca/vim-quickrun' " Run commands quickly.
+NeoBundle 'ujihisa/quicklearn' " A quickrun plugin to show intermediate codes
 
 NeoBundle 'dbext.vim' " Provides database access to many DBMS (Oracle, Sybase, Microsoft, MySQL, DBI,..)
 NeoBundle 'junegunn/vim-redis' " Experimental Redis plugin for Vim
@@ -204,18 +205,10 @@ NeoBundle 'thinca/vim-splash' " Changes the splash of Vim as you like.
 
 "{{{4
 if 0 " old bundles
-  NeoBundle 'basyura/TweetVim'
-  NeoBundle 'basyura/twibill.vim'
-
   if !s:iswin
     NeoBundle 'Shougo/neocomplcache-rsense' " The neocomplcache source for RSense
     NeoBundle 'alpaca-tc/vim-rsense' " rsense/etc/vimrsense copy
   endif
-
-  " Run commands quickly.
-  NeoBundle 'thinca/vim-quickrun'
-  " A quickrun plugin to show intermediate codes
-  NeoBundle 'ujihisa/quicklearn'
 
   " zen-coding for vim: http://code.google.com/p/zen-coding/
   NeoBundle 'mattn/zencoding-vim'
