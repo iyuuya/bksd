@@ -32,7 +32,7 @@ Pry.commands.alias_command 'q!', 'exit-program'
 Pry.commands.alias_command 'h',  'help'
 
 # pry-debugger
-unless Pry.plugins['debugger'].nil?
+if Pry.plugins.has_key? 'debugger'
   Pry.commands.alias_command 'c', 'continue'
   Pry.commands.alias_command 's', 'step'
   Pry.commands.alias_command 'n', 'next'
