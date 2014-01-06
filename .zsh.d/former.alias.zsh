@@ -7,11 +7,11 @@
 #===============================================================================
 
 if type /Applications/MacVim.app/Contents/MacOS/Vim > /dev/null 2>&1; then
-  alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+  alias vim='env LANG=ja_JP.UTF-8 reattach-to-user-namespace /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 fi
 
 if type mvim > /dev/null 2>&1; then
-  alias gvim='mvim'
+  alias gvim='reattach-to-user-namespace mvim'
 fi
 
 alias v='vim'
