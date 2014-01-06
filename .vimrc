@@ -771,10 +771,6 @@ if neobundle#is_installed('vimfiler.vim')
   let g:vimfiler_data_directory = g:vim_tmp_directory.'/vimfiler'
   nnoremap : :VimFilerBufferDir -split -simple -no-quit -winwidth=32<CR>
   nnoremap ,vf :VimFilerDouble<CR>
-
-  augroup MyiVimFilerGrp
-    autocmd FileType vimfiler set nonumber
-  augroup END
 endif
 
 " }}}2
