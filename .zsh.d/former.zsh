@@ -16,6 +16,11 @@
 export LSCOLORS=exfxcxdxbxegedabagacad
 # default color theme for vim (iTerm)
 
+function solarized {
+  export VIM_COLORSCHEME=solarized
+  export VIM_BACKGROUND=dark
+}
+
 case ${OSTYPE} in
   linux*)
     export TERM=xterm-256color
