@@ -152,7 +152,8 @@ NeoBundle 'tsukkee/unite-help' " help source for unite.vim
 " FileType "{{{3
 " Ruby/Rails "{{{4
 NeoBundle 'ujihisa/unite-rake'    " A Unite.vim plugin to run tasks or to view descriptions easily, using rake command
-NeoBundle 'basyura/unite-rails'   " a unite.vim plugin for rails
+" NeoBundle 'basyura/unite-rails'   " a unite.vim plugin for rails
+NeoBundle 'iyuuya/unite-rails', 'spring'   " a unite.vim plugin for rails
 NeoBundle 'tpope/vim-rails', { 'autoload' : { 'filetypes' : ['haml', 'ruby', 'eruby', 'arb'] } } " rails.vim: Ruby on Rails power tools
 NeoBundle 'thoughtbot/vim-rspec'  " Run Rspec specs from Vim
 " }}}4
