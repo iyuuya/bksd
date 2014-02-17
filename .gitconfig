@@ -28,3 +28,6 @@
 [include]
   path = ~/.git.d/local
   path = ~/.git.d/alias
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
