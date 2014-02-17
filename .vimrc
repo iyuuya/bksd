@@ -171,6 +171,7 @@ if has('mac')
 endif
 NeoBundle 'nelstrom/vim-markdown-folding'
 NeoBundle 'dan-bolsun/vim-tmux' " TMUX syntax highlight
+NeoBundle 'vim-scripts/csharp.vim' " C# Syntax file
 " }}}3
 
 " Dictionary / Reference "{{{3
@@ -681,7 +682,7 @@ if neobundle#is_installed('unite.vim')
   nnoremap [unite]ug :<C-u>Unite grep<CR>
   nnoremap [unite]uj :<C-u>Unite -start-insert jump<CR>
   nnoremap [unite]uc :<C-u>Unite -start-insert launcher<CR>
-  nnoremap [unite]ul :<C-u>Unite -start-insert line/fast<CR>
+  nnoremap [unite]ul :<C-u>Unite -start-insert line<CR>
   nnoremap [unite]uk :<C-u>Unite -start-insert mapping<CR>
   nnoremap [unite]uo :<C-u>Unite output<CR>
   nnoremap [unite]ur :<C-u>Unite -start-insert register<CR>

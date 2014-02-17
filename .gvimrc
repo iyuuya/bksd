@@ -26,6 +26,7 @@ if s:ismac
   set columns=160
   set lines=44
   nnoremap <silent> <C-e>fl :<C-u>set columns=320 lines=68<CR>:winpos 0 0<CR>
+  nnoremap <silent> <C-e>fL :<C-u>set columns=319 lines=70<CR>:winpos -1920 0<CR>
   set transparency=0
 elseif s:iswin
   set columns=128
@@ -76,20 +77,19 @@ if s:ismac
   set antialias
 
   set guifont=Ricty:h12
-  set guifontwide=Ricty:h12
 
   " Number of pixel lines inserted between characters.
   set linespace=2
 elseif s:iswin || s:iscygwin
   " For Windows.
   set guifont=Consolas_for_Powerline_FixedD:h10:cANSI
-  let &guifontwide = iconv('Osaka－等幅:h10:cSHIFTJIS', &encoding, 'cp932')
+  "let &guifontwide = iconv('Osaka－等幅:h10:cSHIFTJIS', &encoding, 'cp932')
   " Number of pixel lines inserted between characters.
   set linespace=2
 else
   " For Linux.
   let &guifont="Ricty\ 11"
-  let &guifontwide="Ricty\ 11"
+  "let &guifontwide="Ricty\ 11"
   " Number of pixel lines inserted between characters.
   set linespace=0
 endif
