@@ -103,7 +103,11 @@ if type /Applications/Gyazo.app/Contents/MacOS/Gyazo> /dev/null 2>&1; then
   alias gyazo='/Applications/Gyazo.app/Contents/MacOS/Gyazo "$@"'
 fi
 
-alias tks='tmux kill-session -t'
+if type tmux> /dev/null 2>&1; then
+  alias t='tmux'
+  alias tls='tmux ls'
+  alias tks='tmux kill-session -t'
+fi
 
 # vim: et sw=2 sts=2 ts=2
 # vim: ft=zsh fdm=marker
