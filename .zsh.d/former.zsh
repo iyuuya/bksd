@@ -81,31 +81,29 @@ function swlc() {
 # PATH
 
 # Does not register a duplicate PATH.
-typeset -U path
+# typeset -U path
+# 
+# path=(
+#   # ~/bin
+#   $HOME/bin(N-/)
+#   # Homebrew
+#   $HOME/brew/bin(N-/)
+#   # cabal
+#   $HOME/.cabal/bin(N-/)
+#   # System
+#   {/usr/local,/usr/local/share/npm,/usr,}/bin(N-/)
+#   # Mac
+#   /usr/X11/bin(N-/)
+# )
+# 
+# # SUDO_PATH
+# typeset -xT SUDO_PATH sudo_path
+# typeset -U sudo_path
+# sudo_path=({,/usr/local,/usr}/sbin(N-/))
 
-path=(
-  # ~/bin
-  $HOME/bin(N-/)
-  # Homebrew
-  $HOME/brew/bin(N-/)
-  # rbenv
-  $HOME/.rbenv/bin(N-/)
-  # rvm
-  $HOME/.rvm/bin(N-/)
-  # cabal
-  $HOME/.cabal/bin(N-/)
-  # System
-  {/usr/local,/usr/local/share/npm,/usr,}/bin(N-/)
-  # Mac
-  /usr/X11/bin(N-/)
-)
+# PATH=$PATH:$SUDO_PATH
 
-# SUDO_PATH
-typeset -xT SUDO_PATH sudo_path
-typeset -U sudo_path
-sudo_path=({,/usr/local,/usr}/sbin(N-/))
-
-PATH=$PATH:$SUDO_PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/usr/X11/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:
 
 # man path
 typeset -U manpath
@@ -229,8 +227,6 @@ if type rbenv > /dev/null 2>&1; then
   eval "$(rbenv init -)"
   src $HOME/brew/Cellar/rbenv/0.4.0/completions/rbenv.zsh
 fi
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 src $HOME/.nvm/nvm.sh
 
@@ -721,5 +717,3 @@ function git-rewrite-author2()
 src "$HOME/.zshrc.local"
 
 # vim: ft=zsh fdm=marker
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
