@@ -1,17 +1,48 @@
+#===============================================================================
+# Note: "{{{1
+# .zshrc
+#
+# Author: iyuuya <i.yuuya@gmail.com>
+# }}}1
+#===============================================================================
+
+#===============================================================================
+# MacroFunction: "{{{1
+
+# If the file exists then read.
 function src() {
   if [[ -s "$1" ]]; then
     source "$1"
   fi
 }
 
-# PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+# "}}}1
+#===============================================================================
+
+#===============================================================================
+# Environment: "{{{1
+
+src $HOME/.zsh.d/pre_initialize.zsh
+src $HOME/.zsh.d/locale.zsh
+src $HOME/.zsh.d/paths.zsh
+src $HOME/.zsh.d/tools.zsh
+src $HOME/.zsh.d/initialize.zsh
+src $HOME/.zsh.d/colors.zsh
+src $HOME/.nvm/nvm.sh
+src /opt/boxen/env.sh
+src $HOME/.zshenv.local
+
+# "}}}1
+#===============================================================================
+
+#===============================================================================
+# Configuration: "{{{1
 
 src $HOME/.zsh.d/former.zsh
-export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/X11/bin
-# src $HOME/.zsh.d/locale.zsh
-# src $HOME/.zsh.d/pager.zsh
-# src $HOME/.zsh.d/vi-mode.zsh
-# src $HOME/.zsh.d/options.zsh
-src $HOME/.zsh.d/rvm.zsh
 src $HOME/.zsh.d/tmuxinator.zsh
-src $HOME/.zsh.d/former.alias.zsh
+src $HOME/.zsh.d/aliases.zsh
+
+# "}}}1
+#===============================================================================
+
+# vim: foldmethod=marker foldlevel=0

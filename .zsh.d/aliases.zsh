@@ -103,7 +103,7 @@ if type /Applications/Gyazo.app/Contents/MacOS/Gyazo> /dev/null 2>&1; then
   alias gyazo='/Applications/Gyazo.app/Contents/MacOS/Gyazo "$@"'
 fi
 
-if type tmux> /dev/null 2>&1; then
+if type tmux > /dev/null 2>&1; then
   alias t='tmux'
   alias tls='tmux ls'
   alias tks='tmux kill-session -t'

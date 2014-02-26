@@ -1,39 +1,26 @@
 #===============================================================================
 # Note: "{{{1
-# locales.zsh
+# pre_initialize.zsh
 #
 # Author: iyuuya <i.yuuya@gmail.com>
 # }}}1
 #===============================================================================
 
 #===============================================================================
-# Locale: "{{{1
+# PreInitialize: "{{{1
+
+# mask
+[[ $UID > 0 && $UID == $GID ]] && umask 002 || umask 022
+
+# ls color (BSD)
+export LSCOLORS=exfxcxdxbxegedabagacad
+# default color theme for vim (iTerm)
 
 case ${OSTYPE} in
-  darwin*)
-    export LANG=ja_JP.UTF-8
-    export SECOND_LANG=C
-    ;;
   linux*)
-    export LANG=C
-    export SECOND_LANG=ja_JP.UTF-8
-    ;;
-  *)
-    export LANG=C
+    export TERM=xterm-256color
     ;;
 esac
-
-export LC_TIME=C
-
-# Switch locale
-function swlc() {
-  if [ -n "$SECOND_LANG" ]; then
-    tmp_lang=$LANG
-    export LANG=$SECOND_LANG
-    export SECOND_LANG=$tmp_lang
-    locale
-  fi
-}
 
 # "}}}1
 #===============================================================================
