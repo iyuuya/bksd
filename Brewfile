@@ -31,6 +31,7 @@ install readline
 install reattach-to-user-namespace
 install redis
 install ruby-build
+install tig
 install tmux
 install w3m
 install wget
