@@ -30,6 +30,10 @@ src $HOME/.zsh.d/initialize.zsh
 src $HOME/.zsh.d/colors.zsh
 src $HOME/.nvm/nvm.sh
 src /opt/boxen/env.sh
+export PATH=$HOME/brew/bin:$PATH
+
+export RBENV_ROOT=/Users/iyuuya/brew/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 src $HOME/.zshenv.local
 
 # "}}}1
