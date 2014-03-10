@@ -652,6 +652,10 @@ syntax enable
 set autoindent
 set smartindent
 
+augroup MyArbGrp
+  autocmd BufEnter,BufRead,BufNew *.arb setlocal filetype=ruby
+augroup END
+
 " }}}1
 "===============================================================================
 
