@@ -173,6 +173,7 @@ NeoBundle 'nelstrom/vim-markdown-folding'
 NeoBundle 'dan-bolsun/vim-tmux' " TMUX syntax highlight
 NeoBundle 'vim-scripts/csharp.vim' " C# Syntax file
 NeoBundle 'aussiegeek/vim-puppet' " Vim bundle for puppet suitable for using with pathogen
+NeoBundle 'gudleik/vim-slim' " Slim support for vim
 " }}}3
 
 " Dictionary / Reference "{{{3
