@@ -206,6 +206,7 @@ NeoBundle 'mattn/unite-nyancat'
 NeoBundle 'osyo-manga/unite-moo'
 NeoBundle 'osyo-manga/unite-homo'
 NeoBundle 'thinca/vim-splash' " Changes the splash of Vim as you like.
+NeoBundle 'thinca/vim-threes' " Play Threes! in Vim!
 " }}}3
 
 "{{{4
