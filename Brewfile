@@ -36,6 +36,7 @@ install tmux
 install w3m
 install wget
 install zsh --disable-etcdir
+install weechat --ruby --perl --python
 
 # cask
 install brew-cask
