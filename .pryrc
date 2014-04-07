@@ -1,6 +1,18 @@
 # Hirb
+
+Pry.config.color = true
+Pry.config.editor = "vim"
+
+Pry.config.prompt = proc do |obj, level, _|
+  prompt = ""
+  prompt << "#{Rails.version}@" if defined?(Rails)
+  prompt << "#{RUBY_VERSION}"
+  "#{prompt} (#{obj})> "
+end
+
 begin
   require 'hirb'
+  require 'awesome_print'
 rescue LoadError
   # Missing goodies, bummer
 end
@@ -25,7 +37,16 @@ if defined? Hirb
   Hirb.enable
 end
 
-#
+if defined? AwesomePrint
+  begin
+    require 'awesome_print'
+    Pry.config.print = proc { |output, value| Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai}", output) }
+  rescue LoadError => err
+    puts "no awesome_print :("
+    puts err
+  end
+end
+
 Pry.commands.alias_command 'e',  'edit'
 Pry.commands.alias_command 'q',  'exit'
 Pry.commands.alias_command 'q!', 'exit-program'
