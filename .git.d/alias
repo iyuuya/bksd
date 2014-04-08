@@ -14,6 +14,7 @@
   dg      = diff --stat
   dp      = diff --stat -p
   dw      = diff --color-words -C
+  ds      = diff --shortstat
   f       = fetch
   filelog = log -u
   l       = log --graph --pretty=format:'%Cblue%h%Cred%d%Creset %Cgreen%an%Creset: %s %Cblue%ar%Creset'
