@@ -680,7 +680,7 @@ if neobundle#is_installed('unite.vim')
   nnoremap [unite] <nop>
   nmap <C-k> [unite]
   nnoremap [unite]   :<C-u>Unite<Space>
-  nnoremap [unite]uf :<C-u>Unite -start-insert buffer file_mru file_rec/async:./<CR>!html 
+  nnoremap [unite]uf :<C-u>Unite -start-insert buffer file_rec/async<CR>
   nnoremap [unite]ub :<C-u>Unite bookmark<CR>
   nnoremap [unite]us :<C-u>Unite source<CR>
   nnoremap [unite]ui :<C-u>Unite find<CR>
