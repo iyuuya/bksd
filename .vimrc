@@ -174,6 +174,8 @@ NeoBundle 'dan-bolsun/vim-tmux' " TMUX syntax highlight
 NeoBundle 'vim-scripts/csharp.vim' " C# Syntax file
 NeoBundle 'aussiegeek/vim-puppet' " Vim bundle for puppet suitable for using with pathogen
 NeoBundle 'gudleik/vim-slim' " Slim support for vim
+NeoBundle 'tmsanrinsha/yaml.vim' " syntax based folding for yaml
+NeoBundle 'chase/vim-ansible-yaml' " Add additional support for Ansible in VIM
 " }}}3
 
 " Dictionary / Reference "{{{3
