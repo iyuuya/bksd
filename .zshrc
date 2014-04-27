@@ -32,8 +32,14 @@ src $HOME/.nvm/nvm.sh
 src /opt/boxen/env.sh
 export PATH=$HOME/brew/bin:$PATH
 
-export RBENV_ROOT=/Users/iyuuya/brew/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if [ -d $HOME/.anyenv ] ; then
+  export PATH=$HOME/.anyenv/bin:$PATH
+  eval "$(anyenv init -)"
+  for D in `ls $HOME/.anyenv/envs`
+  do
+    export PATH=$HOME/.anyenv/envs/$D/shims:$PATH
+  done
+fi
 src $HOME/.zshenv.local
 
 # "}}}1
