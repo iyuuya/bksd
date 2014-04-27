@@ -21,16 +21,12 @@ install libevent
 install libffi
 install mercurial
 install mysql
-install node
 install openssl
 install pkg-config
-install phantomjs
 install qt
-install rbenv
 install readline
 install reattach-to-user-namespace
 install redis
-install ruby-build
 install tig
 install tmux
 install w3m
