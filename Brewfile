@@ -47,3 +47,5 @@ cask install skype
 cask install vagrant
 cask install virtualbox
 cask install vlc
+
+cleanup
