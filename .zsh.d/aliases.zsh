@@ -94,8 +94,8 @@ function app_alias()
   done;
 }
 
-app_alias gv c cpp h rb php html haml mkd md txt
-app_alias js ru py pl hs lhs sql conf
+# app_alias gv c cpp h rb php html haml mkd md txt
+# app_alias gv js ru py pl hs lhs sql conf
 
 if type /Applications/Tower.app/Contents/MacOS/Tower > /dev/null 2>&1; then
   alias tower="open /Applications/Tower.app"
