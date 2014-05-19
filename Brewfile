@@ -7,7 +7,6 @@ tap phinze/homebrew-cask
 install binutils
 install cmigemo
 install curl
-install curl-ca-bundle
 install fontforge
 install git
 install git-cal
