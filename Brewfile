@@ -1,4 +1,5 @@
 # taps
+tap homebrew/versions || true
 tap homebrew/binary || true
 tap phinze/homebrew-cask || true
 
@@ -27,11 +28,11 @@ install readline || true
 install reattach-to-user-namespace || true
 install redis || true
 install tig || true
+install tree
 install tmux || true
 install w3m || true
 install wget || true
 install zsh --disable-etcdir || true
-install weechat --ruby --perl --python || true
 
 # cask
 install brew-cask || true
