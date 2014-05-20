@@ -18,3 +18,5 @@ Icon
 
 # log
 *.log
+
+vendor/bundle
