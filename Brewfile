@@ -1,50 +1,50 @@
-update
-
 # taps
-tap homebrew/binary
-tap phinze/homebrew-cask
+tap homebrew/binary || true
+tap phinze/homebrew-cask || true
 
-install binutils
-install cmigemo
-install curl
-install fontforge
-install git
-install git-cal
-install git-extras
-install git-flow
-install git-now
-install graphviz
-install hub
-install imagemagick
-install libevent
-install libffi
-install mercurial
-install mysql
-install openssl
-install pkg-config
-install qt
-install readline
-install reattach-to-user-namespace
-install redis
-install tig
-install tmux
-install w3m
-install wget
-install zsh --disable-etcdir
-install weechat --ruby --perl --python
+update || true
+
+install binutils || true
+install cmigemo || true
+install curl || true
+install fontforge || true
+install git || true
+install git-cal || true
+install git-extras || true
+install git-flow || true
+install git-now || true
+install graphviz || true
+install hub || true
+install imagemagick || true
+install libevent || true
+install libffi || true
+install mercurial || true
+install mysql || true
+install openssl || true
+install pkg-config || true
+install qt || true
+install readline || true
+install reattach-to-user-namespace || true
+install redis || true
+install tig || true
+install tmux || true
+install w3m || true
+install wget || true
+install zsh --disable-etcdir || true
+install weechat --ruby --perl --python || true
 
 # cask
-install brew-cask
-cask install alfred
-cask install dropbox
-cask install firefox
-cask install flip4mac
-cask install github
-cask install google-chrome
-cask install iterm2
-cask install skype
-cask install vagrant
-cask install virtualbox
-cask install vlc
+install brew-cask || true
+cask install alfred || true
+cask install dropbox || true
+cask install firefox || true
+cask install flip4mac || true
+cask install github || true
+cask install google-chrome || true
+cask install iterm2 || true
+cask install skype || true
+cask install vagrant || true
+cask install virtualbox || true
+cask install vlc || true
 
-cleanup
+cleanup || true
