@@ -194,6 +194,7 @@ NeoBundle 'mattn/unite-gist'    " unite source gist
 NeoBundle 'iyuuya/vim-metarw-github-issues'
 NeoBundle 'joker1007/unite-pull-request' " unite-pull-request is a unite.vim plugin for Viewing GitHub pull request.
 NeoBundle 'rhysd/git-messenger.vim' " Shows commit message at a cursor line
+NeoBundle 'airblade/vim-gitgutter' " A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
 " }}}3
 
 " Comu "{{{3
