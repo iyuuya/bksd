@@ -215,7 +215,6 @@ NeoBundle 'thinca/vim-threes' " Play Threes! in Vim!
 "{{{4
 if 0 " old bundles
   if !s:iswin
-    NeoBundle 'Shougo/neocomplcache-rsense' " The neocomplcache source for RSense
     NeoBundle 'alpaca-tc/vim-rsense' " rsense/etc/vimrsense copy
   endif
 
@@ -233,20 +232,13 @@ if 0 " old bundles
 
   " Beautiful rspec output in vim. See also: https://github.com/skwp/vim-ruby-conque for non-blocking rspec through ConqueTerm
 
-  NeoBundleLazy 'rcyrus/snipmate-snippets-rubymotion', { 'autoload' : { 'filetypes' : ['rubymotion'] } }
-
-
   NeoBundle 'szw/vim-tags'
-  NeoBundle 'slim-template/vim-slim' " A clone of the slim vim plugin from stonean. For use with Pathogen.
-
   NeoBundle 'koron/chalice' " Chalice for Vim - 2ch.net browser written in vim script.
-
   NeoBundle 'dmitry-ilyashevich/vim-typescript' " Vim TypeScript syntax mirror for bundle
 endif
 "}}}4
 
 if 0 "{{{4
-  NeoBundle 'tsukkee/unite-tag'
   NeoBundle 'osyo-manga/unite-quickfix'
   NeoBundle 'ujihisa/unite-gem'
 
@@ -259,7 +251,6 @@ if 0 "{{{4
   NeoBundle 'moro/unite-stepdefs'              " unite-vim source for completing Cucumber step definition.
   NeoBundle 'nise-nabe/unite-openpne'          "
   NeoBundle 'osyo-manga/unite-qfixhowm'        "
-  NeoBundle 'osyo-manga/unite-quickfix'        "
   NeoBundle 'osyo-manga/unite-rofi'            "
   NeoBundle 'osyo-manga/unite-sl'              "
   NeoBundle 'pocket7878/unite-hyperspec'       " unite source for lookup hyperspec contents.
