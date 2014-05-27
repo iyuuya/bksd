@@ -33,6 +33,7 @@ install tmux || true
 install w3m || true
 install wget || true
 install zsh --disable-etcdir || true
+install htop-osx
 
 # cask
 install brew-cask || true
