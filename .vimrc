@@ -176,6 +176,8 @@ NeoBundle 'aussiegeek/vim-puppet' " Vim bundle for puppet suitable for using wit
 NeoBundle 'gudleik/vim-slim' " Slim support for vim
 NeoBundle 'tmsanrinsha/yaml.vim' " syntax based folding for yaml
 NeoBundle 'chase/vim-ansible-yaml' " Add additional support for Ansible in VIM
+NeoBundle 'svsudhir/textile.vim' " Syntax highlighting for textile files in Vim
+NeoBundle 'scrooloose/syntastic' " Syntax checking hacks for vim
 " }}}3
 
 " Dictionary / Reference "{{{3
@@ -1123,6 +1125,24 @@ let g:splash#path = g:vim_tmp_directory . '/vim_info.txt'
 
 if !filereadable(g:splash#path)
   call system('curl -o ' . g:splash#path . ' https://gist.github.com/OrgaChem/7630711/raw/c90299e0aaa0cea8cd05a6ceb2e70074186f8ce5/vim_intro.txt')
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" Syntastic: "{{{2
+
+if neobundle#is_installed('syntastic')
+  " mode: active -> autocmd bufwrite SyntasticCheck
+  let g:syntastic_mode_map = {
+        \ 'mode': 'active',
+        \ 'active_filetypes': ['ruby']
+        \ }
+  call system('rubocop -v')
+  if v:shell_error == 0
+    let g:syntastic_ruby_checkers = ['rubocop']
+  endif
 endif
 
 " }}}2
