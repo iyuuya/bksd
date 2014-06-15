@@ -909,7 +909,7 @@ if neobundle#is_installed('vim-quickrun')
         \ }
 
   if neobundle#is_installed('vim-watchdogs')
-    let g:watchdogs_check_BufWritePost_enable = 1
+    let g:watchdogs_check_BufWritePost_enable = 0
     let g:quickrun_config['ruby/watchdogs_checker'] = {
           \   "type" : "watchdogs_checker/rubocop"
           \ }
