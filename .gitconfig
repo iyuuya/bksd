@@ -25,6 +25,9 @@
 [rerere]
   enable = true
 
+[grep]
+  linenumber = true
+
 [include]
   path = ~/.git.d/local
   path = ~/.git.d/alias
