@@ -19,7 +19,7 @@ cask install skype || true
 cask install vagrant || true
 cask install virtualbox || true
 cask install vlc || true
-caks install xquartz || true
+cask install xquartz || true
 
 install binutils || true
 install cmigemo || true
