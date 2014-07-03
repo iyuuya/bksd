@@ -1,6 +1,7 @@
 # taps
 tap homebrew/versions || true
 tap homebrew/binary || true
+tap peco/peco || true
 tap phinze/homebrew-cask || true
 
 update || true
@@ -43,11 +44,12 @@ install readline || true
 install reattach-to-user-namespace || true
 install redis || true
 install tig || true
-install tree
+install tree || true
 install tmux || true
 install w3m || true
 install wget || true
 install zsh --disable-etcdir || true
-install htop-osx
+install htop-osx || true
+install peco || true
 
 cleanup || true
