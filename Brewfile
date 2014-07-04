@@ -5,6 +5,7 @@ tap peco/peco || true
 tap phinze/homebrew-cask || true
 
 update || true
+upgrade || true
 
 # cask
 install brew-cask || true
@@ -51,5 +52,6 @@ install wget || true
 install zsh --disable-etcdir || true
 install htop-osx || true
 install peco || true
+install vimpager || true
 
 cleanup || true
