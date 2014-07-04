@@ -24,20 +24,11 @@ function src() {
 
 src $HOME/.zsh.d/pre_initialize.zsh
 src $HOME/.zsh.d/locale.zsh
-src $HOME/.zsh.d/paths.zsh
 src $HOME/.zsh.d/tools.zsh
 src $HOME/.zsh.d/initialize.zsh
 src $HOME/.zsh.d/colors.zsh
 
-if [ -d $HOME/.anyenv ] ; then
-  export PATH=$HOME/.anyenv/bin:$PATH
-  eval "$(anyenv init -)"
-  # for D in `ls $HOME/.anyenv/envs`
-  # do
-  #   export PATH=$HOME/.anyenv/envs/$D/shims:$PATH
-  # done
-fi
-src $HOME/.zshenv.local
+src $HOME/.zshrc.local
 
 # "}}}1
 #===============================================================================

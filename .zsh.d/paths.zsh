@@ -59,6 +59,22 @@ case ${OSTYPE} in
     ;;
 esac
 
+if [ -d $HOME/.anyenv ] ; then
+  export PATH=$HOME/.anyenv/bin:$PATH
+  eval "$(anyenv init -)"
+  for D in `ls $HOME/.anyenv/envs`
+  do
+    export PATH=$HOME/.anyenv/envs/$D/shims:$PATH
+  done
+fi
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
+export CLASSPATH=$CLASSPATH:$CATALINA_HOME/common/lib:$CATALINA_HOME/common/lib/servlet-api.jar
+export CLASSPATH_PREFIX=$JAVA_HOME/jre/lib/mysql-connector-java-5.1.26-bin.jar
+export GRAPHVIZ_DOT=`brew --prefix`/bin/dot
+
+
 # "}}}1
 #===============================================================================
 
