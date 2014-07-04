@@ -117,5 +117,9 @@ if type tmux > /dev/null 2>&1; then
   alias tks='tmux kill-session -t'
 fi
 
+if type peco > /dev/null 2>&1; then
+  alias -g P='| peco'
+fi
+
 # vim: et sw=2 sts=2 ts=2
 # vim: ft=zsh fdm=marker

@@ -9,17 +9,19 @@
 #===============================================================================
 # Pager: "{{{1
 
-if type lv > /dev/null 2>&1; then
-  export PAGER="lv"
-else
-  export PAGER="less"
+# if type lv > /dev/null 2>&1; then
+#   export PAGER="lv"
+# else
+#   export PAGER="less"
+# fi
+
+if type vimpager > /dev/null 2>&1; then
+  export PAGER="vimpager"
 fi
 
-# lv: "{{{2
-
-if [ "$PAGER" = "lv" ]; then
-  export LV="-c -l"
-fi
+# if [ "$PAGER" = "lv" ]; then
+#   export LV="-c -l"
+# fi
 
 alias lv="$PAGER"
 alias less="$PAGER"
