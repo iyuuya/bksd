@@ -520,7 +520,7 @@ if neobundle#is_installed('unite.vim')
   " unite-rails
   nnoremap [unite]rf :<C-u>Unite -start-insert rails/config<CR>
   nnoremap [unite]rc :<C-u>Unite -start-insert rails/controller<CR>
-  nnoremap [unite]rd :<C-u>Unite -start-insert rails/db<CR>
+  nnoremap [unite]rdb :<C-u>Unite -start-insert rails/db<CR>
   nnoremap [unite]ry :<C-u>Unite -start-insert rails/destroy<CR>
   nnoremap [unite]rg :<C-u>Unite -start-insert rails/generate<CR>
   nnoremap [unite]rh :<C-u>Unite -start-insert rails/helper<CR>
@@ -534,6 +534,8 @@ if neobundle#is_installed('unite.vim')
   nnoremap [unite]rp :<C-u>Unite -start-insert rails/spec<CR>
   nnoremap [unite]rs :<C-u>Unite -start-insert rails/stylesheet<CR>
   nnoremap [unite]rv :<C-u>Unite -start-insert rails/view<CR>
+  nnoremap [unite]rde :<C-u>Unite -start-insert file:app/decorators<CR>
+  nnoremap [unite]rad :<C-u>Unite -start-insert file:app/admin<CR>
   " Dictionaries
   nnoremap [unite]dw :<C-u>Unite webcolornane<CR>
   nnoremap [unite]dh :<C-u>Unite httpstatus<CR>
