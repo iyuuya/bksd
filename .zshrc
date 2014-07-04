@@ -28,8 +28,6 @@ src $HOME/.zsh.d/paths.zsh
 src $HOME/.zsh.d/tools.zsh
 src $HOME/.zsh.d/initialize.zsh
 src $HOME/.zsh.d/colors.zsh
-src $HOME/.nvm/nvm.sh
-export PATH=$HOME/brew/bin:$PATH
 
 if [ -d $HOME/.anyenv ] ; then
   export PATH=$HOME/.anyenv/bin:$PATH
@@ -48,7 +46,6 @@ src $HOME/.zshenv.local
 # Configuration: "{{{1
 
 src $HOME/.zsh.d/former.zsh
-# src $HOME/.zsh.d/tmuxinator.zsh
 src $HOME/.zsh.d/aliases.zsh
 
 # "}}}1
