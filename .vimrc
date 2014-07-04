@@ -185,8 +185,10 @@ endfunction"}}}
 
 autocmd MyAutoCmd BufReadPost * call s:ReCheck_FENC()
 
-" Default fileformat.
-set fileformat=unix
+if !exists('vimpager')
+  " Default fileformat.
+  set fileformat=unix
+endif
 " Automatic recognition of a new line cord.
 set fileformats=unix,dos,mac
 
@@ -659,7 +661,7 @@ endif
 if exists('$VIM_COLORSCHEME')
   exec('colorscheme ' . $VIM_COLORSCHEME)
 else
-  colorscheme molokai
+  colorscheme hybrid
 end
 
 if exists('$VIM_BACKGROUND')
