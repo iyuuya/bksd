@@ -81,7 +81,6 @@ if has('vim_starting')
     call system('git clone https://github.com/Shougo/neobundle.vim.git ' . neobundle_path)
   endif
 
-  filetype off
   call neobundle#rc(bundle_path)
 endif
 
@@ -91,8 +90,7 @@ endif
 " }}}2
 "-------------------------------------------------------------------------------
 
-filetype indent on
-filetype plugin on
+filetype indent plugin on
 
 " }}}1
 "===============================================================================
@@ -453,9 +451,6 @@ set lazyredraw
 
 "===============================================================================
 " Syntax: "{{{1
-
-" Enable syntax color.
-syntax enable
 
 " Enable smart indent.
 set autoindent
@@ -1088,6 +1083,9 @@ endif
 
 "===============================================================================
 " Other: "{{{1
+
+" Enable syntax color.
+syntax on
 
 " Enable mouse support.
 set mouse=a

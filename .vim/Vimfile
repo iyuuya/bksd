@@ -65,6 +65,7 @@ NeoBundle 'thinca/vim-scouter'        " Measures Battle Power of a vimmer.
 NeoBundle 'zhaocai/unite-scriptnames' " unite.vim extension for runtime scriptnames
 NeoBundle 'ujihisa/unite-colorscheme' " A unite.vim plugin
 NeoBundle 'tsukkee/unite-help' " help source for unite.vim
+NeoBundle 'mattn/benchvimrc-vim' " make benchmark result of your vimrc
 NeoBundle 'vim-jp/vital.vim' " A comprehensive Vim utility functions for Vim plugins
 " }}}1
 
@@ -139,6 +140,6 @@ NeoBundle 'w0ng/vim-hybrid' " A dark colour scheme for Vim & gVim
 NeoBundle 'iyuuya/td.vim'
 
 "{{{1
-NeoBundleCheck
+" NeoBundleCheck
 
 " vim: fdm=marker ft=vim
