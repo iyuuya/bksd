@@ -139,6 +139,8 @@ NeoBundle 'w0ng/vim-hybrid' " A dark colour scheme for Vim & gVim
 
 NeoBundle 'iyuuya/td.vim'
 
+NeoBundle 'sotte/presenting.vim' " A simple tool for presenting slides in vim based on text files.
+
 "{{{1
 " NeoBundleCheck
 
