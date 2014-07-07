@@ -556,6 +556,9 @@ if neobundle#is_installed('vimshell.vim')
   let g:vimshell_interactive_update_time = 10
   let g:vimshell_temporary_directory = g:vim_tmp_directory."/vimshell"
   let g:vimshell_max_command_history = 10000
+  if s:ismac
+    let g:vimshell_editor_command='/opt/homebrew-cask/Caskroom/macvim/7.4-73/MacVim-snapshot-73/MacVim.app'
+  endif
 
   let g:vimshell_prompt = '% '
   let g:vimshell_user_prompt = "$USER.'@'.hostname().'('.strftime('%Y/%m/%d %H:%M:%S').')>>'"
