@@ -1,6 +1,6 @@
 [core]
   editor       = vim
-  pager        = vimpager
+  pager        = less
   autocrlf     = false
   filemode     = true
   quotepath    = false
