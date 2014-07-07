@@ -7,6 +7,144 @@
 #===============================================================================
 
 #===============================================================================
+# Initialisation: "{{{1
+
+setopt global_export
+setopt global_rcs
+setopt rcs
+
+# "}}}1
+#===============================================================================
+
+#===============================================================================
+# Input/Output: "{{{1
+
+setopt aliases
+setopt clobber
+setopt no_flow_control
+setopt ignore_eof
+setopt hash_cmds
+setopt hash_dirs
+setopt path_dirs
+setopt short_loops
+
+# "}}}1
+#===============================================================================
+
+#===============================================================================
+# Job Control: "{{{1
+
+setopt bg_nice
+setopt check_jobs
+setopt hup
+setopt long_list_jobs
+setopt notify
+
+# "}}}1
+#===============================================================================
+
+#===============================================================================
+# Prompting: "{{{1
+
+setopt prompt_cr
+setopt prompt_sp
+setopt prompt_percent
+setopt prompt_subst
+setopt transient_rprompt
+
+#-------------------------------------------------------------------------------
+# rbenv-prompt: "{{{2
+function rbenv_prompt {
+  if type rbenv > /dev/null 2>&1; then
+    result=`rbenv version-name`
+    if [ "$result" ] ; then
+      echo "$result"
+    else
+      echo "rbenv"
+    fi
+  else
+    echo ""
+  fi
+}
+# }}}2
+#-------------------------------------------------------------------------------
+
+## return prompt format expand characters count (not support Japanese)
+function count_prompt_characters()
+{
+  print -n -P -- "$1" | sed -e $'s/\e\[[0-9;]*m//g' | wc -m | sed -e 's/ //g'
+}
+
+#-------------------------------------------------------------------------------
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats "%F{green}%c%u%b%f:"
+zstyle ':vcs_info:*' actionformats '%b|%a'
+
+function update_prompt() # "{{{2
+{
+  # user@host(2012/03/04 05:06)[1.9.3]>>-: "{{{3
+  # user@host
+  bar_left_self="%{%F{green}%}%n%{%F{yellow}%}@%{%F{red}%}%m%{%f%}"
+  # date: (2012/03/04 05:06)
+  bar_left_date="(%D{%Y/%m/%d %H:%M})"
+  # rbenv : [1.9.3]
+  if [ -n "$(rbenv_prompt)" ]; then
+    bar_left_ruby="[%{%F{cyan}%}$(rbenv_prompt)%{%f%}]"
+  fi
+
+  local bar_left="${bar_left_self}${bar_left_date}${bar_left_ruby}>>-"
+  # "}}}3
+
+  # ----<master:project>-<<: "{{{3
+  prompt_bar_right='${vcs_info_msg_0_}'
+  # LANG=C vcs_info >&/dev/null
+  # if [ -n "$(git_prompt)" ]; then
+  #   prompt_bar_right="$(git_prompt):"
+  # fi
+  # -<master:project>-<<
+  prompt_bar_right="<${prompt_bar_right}%{%F{yellow}%}%c%{%f%}>-<<"
+
+  local bar_left_length=$(count_prompt_characters "$bar_left")
+  local bar_rest_length=$[COLUMNS - bar_left_length]
+  local bar_right_without_path="${prompt_bar_right:s/%d//}"
+  local bar_right_without_path_length=$(count_prompt_characters "$bar_right_without_path")
+  local max_path_length=$[bar_rest_length - bar_right_without_path_length]
+  bar_right=${prompt_bar_right:s/%d/%(C,%${max_path_length}<...<%d%<<,)/}
+  local separator="${(l:${bar_rest_length}::-:)}"
+
+  bar_right="%${bar_rest_length}<<${separator}${bar_right}%<<"
+  # "}}}3
+
+  local prompt_left="%#%{%b%} "
+
+  # user@host(2012/03/04 05:06)[1.9.3]>>-----<master:project>-<<
+  # % 
+  PROMPT="${bar_left}${bar_right}"$'\n'"${prompt_left}"
+  RPROMPT="[%{%B%F{magenta}%}%~%{%f%b%}]"
+  SPROMPT="%{[31m%}%r is correct? [n,y,a,e]:%{[m%} "
+}
+# "}}}2
+#-------------------------------------------------------------------------------
+
+precmd_functions=($precmd_functions vcs_info update_prompt)
+
+# "}}}1
+#===============================================================================
+
+#===============================================================================
+# Scripts and Functions: "{{{1
+
+setopt exec
+setopt multios
+
+# "}}}1
+#===============================================================================
+
+#===============================================================================
 # Changing Directories: "{{{1
 
 setopt auto_cd
@@ -155,196 +293,6 @@ bindkey '^r' peco-select-history
 #===============================================================================
 
 #===============================================================================
-# Initialisation: "{{{1
-
-setopt global_export
-setopt global_rcs
-setopt rcs
-
-# "}}}1
-#===============================================================================
-
-#===============================================================================
-# Input/Output: "{{{1
-
-setopt aliases
-setopt clobber
-setopt no_flow_control
-setopt ignore_eof
-setopt hash_cmds
-setopt hash_dirs
-setopt path_dirs
-setopt short_loops
-
-# "}}}1
-#===============================================================================
-
-#===============================================================================
-# Job Control: "{{{1
-
-setopt bg_nice
-setopt check_jobs
-setopt hup
-setopt long_list_jobs
-setopt notify
-
-# "}}}1
-#===============================================================================
-
-#===============================================================================
-# Prompting: "{{{1
-
-setopt prompt_cr
-setopt prompt_sp
-setopt prompt_percent
-setopt prompt_subst
-setopt transient_rprompt
-
-#-------------------------------------------------------------------------------
-# rvm-prompt: "{{{2
-function rvm_prompt {
-  if type rvm > /dev/null 2>&1; then
-    result=`rvm-prompt v g`
-    if [ "$result" ] ; then
-      echo "$result"
-    else
-      echo "rvm"
-    fi
-  else
-    echo ""
-  fi
-}
-# "}}}2
-#-------------------------------------------------------------------------------
-
-#-------------------------------------------------------------------------------
-# rbenv-prompt: "{{{2
-function rbenv_prompt {
-  if type rbenv > /dev/null 2>&1; then
-    result=`rbenv version-name`
-    if [ "$result" ] ; then
-      echo "$result"
-    else
-      echo "rbenv"
-    fi
-  else
-    echo ""
-  fi
-}
-# }}}2
-#-------------------------------------------------------------------------------
-
-#-------------------------------------------------------------------------------
-# git-prompt: "{{{2
-# Show branch name in Zsh's prompt
-# autoload -Uz VCS_INFO_get_data_git; VCS_INFO_get_data_git 2> /dev/null
-# 
-# function git_prompt {
-#   local name st color gitdir action
-#   if [[ "$PWD" =~ '/促.git(/.*)?$' ]]; then
-#     return
-#   fi
-#   name=$(basename "`git symbolic-ref HEAD 2> /dev/null`")
-#   if [[ -z $name ]]; then
-#     return
-#   fi
-# 
-#   gitdir=`git rev-parse --git-dir 2> /dev/null`
-#   action=`VCS_INFO_git_getaction "$gitdir"` && action="($action)"
-# 
-#   st=`git status 2> /dev/null`
-#   if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
-#     color=%F{green}
-#   elif [[ -n `echo "$st" | grep "^nothing added"` ]]; then
-#     color=%F{yellow}
-#   elif [[ -n `echo "$st" | grep "^# Untracked"` ]]; then
-#     color=%B%F{red}
-#   else
-#     color=%F{red}
-#   fi
-#   echo "$color$name$action%f%b"
-# }
-# "}}}2
-#-------------------------------------------------------------------------------
-
-## return prompt format expand characters count (not support Japanese)
-function count_prompt_characters()
-{
-  print -n -P -- "$1" | sed -e $'s/\e\[[0-9;]*m//g' | wc -m | sed -e 's/ //g'
-}
-
-#-------------------------------------------------------------------------------
-autoload -Uz vcs_info
-setopt prompt_subst
-zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
-zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
-zstyle ':vcs_info:*' formats "%F{green}%c%u%b%f:"
-zstyle ':vcs_info:*' actionformats '%b|%a'
-
-function update_prompt() # "{{{2
-{
-  # user@host(2012/03/04 05:06)[1.9.3]>>-: "{{{3
-  # user@host
-  bar_left_self="%{%F{green}%}%n%{%F{yellow}%}@%{%F{red}%}%m%{%f%}"
-  # date: (2012/03/04 05:06)
-  bar_left_date="(%D{%Y/%m/%d %H:%M})"
-  # rbenv or rvm: [1.9.3]
-  if [ -n "$(rvm_prompt)" ]; then
-    bar_left_ruby="[%{%F{cyan}%}$(rvm_prompt)%{%f%}]"
-  elif [ -n "$(rbenv_prompt)" ]; then
-    bar_left_ruby="[%{%F{cyan}%}$(rbenv_prompt)%{%f%}]"
-  fi
-
-  local bar_left="${bar_left_self}${bar_left_date}${bar_left_ruby}>>-"
-  # "}}}3
-
-  # ----<master:project>-<<: "{{{3
-  prompt_bar_right='${vcs_info_msg_0_}'
-  # LANG=C vcs_info >&/dev/null
-  # if [ -n "$(git_prompt)" ]; then
-  #   prompt_bar_right="$(git_prompt):"
-  # fi
-  # -<master:project>-<<
-  prompt_bar_right="<${prompt_bar_right}%{%F{yellow}%}%c%{%f%}>-<<"
-
-  local bar_left_length=$(count_prompt_characters "$bar_left")
-  local bar_rest_length=$[COLUMNS - bar_left_length]
-  local bar_right_without_path="${prompt_bar_right:s/%d//}"
-  local bar_right_without_path_length=$(count_prompt_characters "$bar_right_without_path")
-  local max_path_length=$[bar_rest_length - bar_right_without_path_length]
-  bar_right=${prompt_bar_right:s/%d/%(C,%${max_path_length}<...<%d%<<,)/}
-  local separator="${(l:${bar_rest_length}::-:)}"
-
-  bar_right="%${bar_rest_length}<<${separator}${bar_right}%<<"
-  # "}}}3
-
-  local prompt_left="%#%{%b%} "
-
-  # user@host(2012/03/04 05:06)[1.9.3]>>-----<master:project>-<<
-  # % 
-  PROMPT="${bar_left}${bar_right}"$'\n'"${prompt_left}"
-  RPROMPT="[%{%B%F{magenta}%}%~%{%f%b%}]"
-  SPROMPT="%{[31m%}%r is correct? [n,y,a,e]:%{[m%} "
-}
-# "}}}2
-#-------------------------------------------------------------------------------
-
-precmd_functions=($precmd_functions vcs_info update_prompt)
-
-# "}}}1
-#===============================================================================
-
-#===============================================================================
-# Scripts and Functions: "{{{1
-
-setopt exec
-setopt multios
-
-# "}}}1
-#===============================================================================
-
-#===============================================================================
 # Zle: "{{{1
 
 setopt no_beep
@@ -374,51 +322,6 @@ bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
-
-# "}}}1
-#===============================================================================
-
-#===============================================================================
-# Alias: "{{{1
-
-# global: "{{{2
-
-alias -g L='|& $PAGER'
-alias -g G='| grep'
-alias -g C='| cat -n'
-alias -g H='| head'
-alias -g T='| tail'
-alias -g A='| awk'
-alias -g S='| sed'
-alias -g W='| wc'
-alias -g D='> /dev/null 2>&1'
-
-# "}}}2
-
-# normal: "{{{2
-
-alias rr='command rm -rf'
-
-alias ls='ls -GF'
-alias l='ls'
-alias ll='l -lh'
-alias la='l -a'
-alias lf='l | grep /'
-alias dir='l -al'
-
-alias lns='ln -s'
-alias rmr='rm -rf'
-
-alias pd='pushd'
-alias po='popd'
-
-alias where='command -v'
-
-alias x='exit'
-
-# "}}}2
-
-src "$HOME/.zsh.d/alias.zsh"
 
 # "}}}1
 #===============================================================================
@@ -483,7 +386,5 @@ function git-rewrite-author2()
 
 # "}}}1
 #===============================================================================
-
-src "$HOME/.zshrc.local"
 
 # vim: ft=zsh fdm=marker

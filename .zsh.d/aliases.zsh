@@ -6,6 +6,45 @@
 # }}}1
 #===============================================================================
 
+alias lv="$PAGER"
+alias less="$PAGER"
+
+# global: "{{{2
+
+alias -g L='|& $PAGER'
+alias -g G='| grep'
+alias -g C='| cat -n'
+alias -g H='| head'
+alias -g T='| tail'
+alias -g A='| awk'
+alias -g S='| sed'
+alias -g W='| wc'
+alias -g D='> /dev/null 2>&1'
+
+# "}}}2
+
+alias rr='command rm -rf'
+
+alias ls='ls -GF'
+alias l='ls'
+alias ll='l -lh'
+alias la='l -a'
+alias lf='l | grep /'
+alias dir='l -al'
+
+alias lns='ln -s'
+alias rmr='rm -rf'
+
+alias pd='pushd'
+alias po='popd'
+
+alias where='command -v'
+
+alias x='exit'
+
+if type gsed > /dev/null 2>&1; then
+  alias sed=gsed
+fi
 if type htop > /dev/null 2>&1; then
   alias top=htop
 fi

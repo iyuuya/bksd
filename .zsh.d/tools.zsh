@@ -9,22 +9,19 @@
 #===============================================================================
 # Pager: "{{{1
 
-# if type lv > /dev/null 2>&1; then
-#   export PAGER="lv"
-# else
-#   export PAGER="less"
-# fi
-
-if type vimpager > /dev/null 2>&1; then
-  export PAGER="vimpager"
+if type lv > /dev/null 2>&1; then
+  export PAGER="lv"
+else
+  export PAGER="less"
 fi
 
-# if [ "$PAGER" = "lv" ]; then
-#   export LV="-c -l"
+# if type vimpager > /dev/null 2>&1; then
+#   export PAGER="vimpager"
 # fi
 
-alias lv="$PAGER"
-alias less="$PAGER"
+if [ "$PAGER" = "lv" ]; then
+  export LV="-c -l"
+fi
 
 # "}}}2
 
@@ -72,10 +69,6 @@ fi
 
 #===============================================================================
 # editor: "{{{1
-
-if ! type vim > /dev/null 2>&1; then
-  alias vim=vi
-fi
 
 export EDITOR=vim
 

@@ -20,26 +20,24 @@ function src() {
 #===============================================================================
 
 #===============================================================================
-# Environment: "{{{1
-
-src $HOME/.zsh.d/pre_initialize.zsh
-src $HOME/.zsh.d/locale.zsh
-src $HOME/.zsh.d/tools.zsh
-src $HOME/.zsh.d/initialize.zsh
-src $HOME/.zsh.d/colors.zsh
-
-src $HOME/.zshrc.local
-
-# "}}}1
-#===============================================================================
-
-#===============================================================================
 # Configuration: "{{{1
 
+src $HOME/.zsh.d/colors.zsh
 src $HOME/.zsh.d/former.zsh
 src $HOME/.zsh.d/aliases.zsh
 
+function reset_db {
+  bundle exec rake db:drop
+  bundle exec rake db:create
+  bundle exec rake db:migrate
+  bundle exec rake db:seed_fu
+  RAILS_ENV=test bundle exec rake db:migrate
+}
+
+
 # "}}}1
 #===============================================================================
+
+src $HOME/.zshrc.local
 
 # vim: foldmethod=marker foldlevel=0
