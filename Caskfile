@@ -1,0 +1,25 @@
+tap phinze/homebrew-cask || true
+
+update || true
+upgrade || true
+
+install brew-cask || true
+
+cask install alfred        || true
+cask install dropbox       || true
+cask install firefox       || true
+cask install flip4mac      || true
+cask install github        || true
+cask install google-chrome || true
+cask install iterm2        || true
+cask install skype         || true
+cask install vagrant       || true
+cask install virtualbox    || true
+cask install vlc           || true
+cask install xquartz       || true
+
+cask install macvim        || true
+cask install emacs         || true
+cask install atom          || true
+
+cleanup || true
