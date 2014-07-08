@@ -55,6 +55,7 @@ pkg_config_path=({/usr/local,/usr}/lib/pkgconfig(N-/))
 case ${OSTYPE} in
   darwin*)
     export NODE_PATH=/usr/local/lib/node
+    export VIM_APP_DIR=$HOME/Applications
     export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
     ;;
 esac

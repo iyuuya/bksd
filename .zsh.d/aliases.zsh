@@ -49,18 +49,15 @@ if type htop > /dev/null 2>&1; then
   alias top=htop
 fi
 
-if type /Applications/MacVim.app/Contents/MacOS/Vim > /dev/null 2>&1; then
-  alias vim='env LANG=ja_JP.UTF-8 reattach-to-user-namespace /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-fi
-
-if type ~/Applications/MacVim.app/Contents/MacOS/Vim > /dev/null 2>&1; then
-  alias vim='env LANG=ja_JP.UTF-8 reattach-to-user-namespace ~/Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-fi
+# if type ~/Applications/MacVim.app/Contents/MacOS/Vim > /dev/null 2>&1; then
+#   alias vim='env LANG=ja_JP.UTF-8 reattach-to-user-namespace ~/Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+# fi
 
 if type mvim > /dev/null 2>&1; then
   alias gvim='reattach-to-user-namespace mvim'
 fi
 
+alias vi='vim'
 alias v='vim'
 alias gv='gvim'
 
@@ -99,11 +96,6 @@ alias b='bundle'
 alias bi='b install'
 alias be='b exec'
 
-# rvm:
-alias rvg='rvm gemset'
-alias rvgl='rvm gemset list'
-alias rvgc='rvm gemset create'
-
 # rbenv:
 alias rb='rbenv'
 alias rbv='rbenv version'
@@ -117,9 +109,11 @@ alias rk='rake'
 alias rkt='rake -T'
 
 # rails:
-alias r='rails'
-alias pw='powder'
-alias pwr='pw restart'
+alias rb='bin/bundle'
+alias rr='bin/rails'
+alias ra='bin/rake'
+alias rp='bin/rspec'
+alias rs='bin/spring'
 
 # }}}2
 
@@ -148,6 +142,9 @@ fi
 
 if type /Applications/Gyazo.app/Contents/MacOS/Gyazo> /dev/null 2>&1; then
   alias gyazo='/Applications/Gyazo.app/Contents/MacOS/Gyazo "$@"'
+fi
+if type ~/Applications/Gyazo.app/Contents/MacOS/Gyazo> /dev/null 2>&1; then
+  alias gyazo='~/Applications/Gyazo.app/Contents/MacOS/Gyazo "$@"'
 fi
 
 if type tmux > /dev/null 2>&1; then
