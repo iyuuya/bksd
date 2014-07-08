@@ -18,7 +18,7 @@ cask install virtualbox    || true
 cask install vlc           || true
 cask install xquartz       || true
 
-cask install macvim        || true
+cask install Casks/macvim-kaoriya.rb || true
 cask install emacs         || true
 cask install atom          || true
 
