@@ -36,6 +36,7 @@ install wget                       || true
 install zsh --disable-etcdir       || true
 install htop-osx                   || true
 install peco                       || true
+install vim --with-client-server --with-lua --with-luajit --with-perl || true
 install vimpager                   || true
 
 cleanup || true
