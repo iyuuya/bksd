@@ -556,22 +556,22 @@ if neobundle#is_installed('vimshell.vim')
   let g:vimshell_interactive_update_time = 10
   let g:vimshell_temporary_directory = g:vim_tmp_directory."/vimshell"
   let g:vimshell_max_command_history = 10000
-  if s:ismac
-    let g:vimshell_editor_command='/opt/homebrew-cask/Caskroom/macvim/7.4-73/MacVim-snapshot-73/MacVim.app'
-  endif
+  " if s:ismac
+  "   let g:vimshell_editor_command = system('readlink ~/Applications/MacVim.app') . '/Contents/MacOS/MacVim'
+  " endif
 
   let g:vimshell_prompt = '% '
   let g:vimshell_user_prompt = "$USER.'@'.hostname().'('.strftime('%Y/%m/%d %H:%M:%S').')>>'"
   let g:vimshell_secondary_prompt = '> '
   let g:vimshell_right_prompt = "'['.fnamemodify(getcwd(), ':~').']'"
 
-  augroup MyVimShellGrp
-    autocmd FileType vimshell call vimshell#hook#add('chpwd', 'my_chpwd', 'g:my_chpwd')
-  augroup END
+  " augroup MyVimShellGrp
+  "   autocmd FileType vimshell call vimshell#hook#add('chpwd', 'my_chpwd', 'g:my_chpwd')
+  " augroup END
 
-  function! g:my_chpwd(args, context)
-    call vimshell#execute('ls')
-  endfunction
+  " function! g:my_chpwd(args, context)
+  "   call vimshell#execute('ls')
+  " endfunction
 
   nnoremap ; :VimShellCurrentDir<CR>
 endif

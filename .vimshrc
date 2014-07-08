@@ -7,7 +7,6 @@ alias v='vim $$ARGS; exit'
 alias i='iexe'
 
 # ls
-alias ls='ls -FCG'
 alias l='ls'
 alias la='ls -a'
 alias ll='ls -l'
