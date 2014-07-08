@@ -1,8 +1,5 @@
 tap phinze/homebrew-cask || true
 
-update || true
-upgrade || true
-
 install brew-cask || true
 
 cask install alfred        || true
@@ -22,4 +19,5 @@ cask install macvim        || true
 cask install emacs         || true
 cask install atom          || true
 
-cleanup || true
+cask update  || true
+cask cleanup || true
