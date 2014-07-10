@@ -18,6 +18,16 @@ rescue LoadError
   # Missing goodies, bummer
 end
 
+if defined? AwesomePrint
+  begin
+    require 'awesome_print'
+    Pry.config.print = proc { |output, value| Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai}", output) }
+  rescue LoadError => err
+    puts "no awesome_print :("
+    puts err
+  end
+end
+
 if defined? Hirb
   # Slightly dirty hack to fully support in-session Hirb.disable/enable toggling
   Hirb::View.instance_eval do
@@ -36,16 +46,6 @@ if defined? Hirb
   end
 
   Hirb.enable
-end
-
-if defined? AwesomePrint
-  begin
-    require 'awesome_print'
-    Pry.config.print = proc { |output, value| Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai}", output) }
-  rescue LoadError => err
-    puts "no awesome_print :("
-    puts err
-  end
 end
 
 Pry.commands.alias_command 'e',  'edit'
