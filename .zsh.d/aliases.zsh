@@ -97,12 +97,12 @@ alias bi='b install'
 alias be='b exec'
 
 # rbenv:
-alias rb='rbenv'
-alias rbv='rbenv version'
-alias rbvs='rbenv versions'
-alias rbg='rbenv global'
-alias rbl='rbenv local'
-alias rbr='rbenv rehash'
+# alias rb='rbenv'
+# alias rbv='rbenv version'
+# alias rbvs='rbenv versions'
+# alias rbg='rbenv global'
+# alias rbl='rbenv local'
+# alias rbr='rbenv rehash'
 
 # rake:
 alias rk='rake'
@@ -110,6 +110,9 @@ alias rkt='rake -T'
 
 # rails:
 alias rb='bin/bundle'
+alias rbe='bin/bundle exec'
+alias rbi='bin/bundle install'
+alias rbu='bin/bundle update'
 alias rr='bin/rails'
 alias ra='bin/rake'
 alias rp='bin/rspec'
