@@ -27,10 +27,7 @@ src $HOME/.zsh.d/former.zsh
 src $HOME/.zsh.d/aliases.zsh
 
 function reset_db {
-  bundle exec rake db:drop
-  bundle exec rake db:create
-  bundle exec rake db:migrate
-  bundle exec rake db:seed_fu
+  bundle exec rake db:drop db:create db:migrate
   RAILS_ENV=test bundle exec rake db:migrate
 }
 
