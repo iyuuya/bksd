@@ -15,7 +15,7 @@ cask install virtualbox    || true
 cask install vlc           || true
 cask install xquartz       || true
 
-cask install Casks/macvim-kaoriya.rb || true
+cask install https://raw.githubusercontent.com/iyuuya/brew-config/master/Casks/macvim-kaoriya.rb || true
 cask install emacs         || true
 cask install atom          || true
 
