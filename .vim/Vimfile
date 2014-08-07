@@ -38,13 +38,31 @@ NeoBundle 'Shougo/vimfiler.vim'    " Powerful file explorer implemented by Vim s
 " }}}1
 
 " View: "{{{1
-" NeoBundle 'vim-scripts/molokai'     " A port of the monokai scheme for TextMate
-" NeoBundle 'nanotech/jellybeans.vim' " A colorful, dark color scheme for Vim.
-NeoBundle 'w0ng/vim-hybrid' " A dark colour scheme for Vim & gVim
-" NeoBundle 'altercation/vim-colors-solarized' " precision colorscheme for the vim text editor
 NeoBundle 'Lokaltog/vim-powerline'  " The ultimate vim statusline utility.
 " NeoBundle 'stephenmckinney/vim-solarized-powerline' " Solarized colorscheme and theme for vim-powerline with a focus on terminal Vim.
 " NeoBundle 'bling/vim-airline' " lean & mean status/tabline for vim that's light as air
+
+" ColorScheme: "{{{2
+NeoBundle 'sjl/badwolf' " A Vim color scheme.
+NeoBundle 'vim-scripts/BusyBee' " a dark color scheme (modification of Mustang.vim)
+NeoBundle '29decibel/codeschool-vim-theme' " codeschool vim theme
+NeoBundle 'vim-scripts/darktango.vim' " Tango based color scheme
+NeoBundle 'morhetz/gruvbox' " Retro groove color scheme for Vim
+NeoBundle 'w0ng/vim-hybrid' " A dark colour scheme for Vim & gVim
+NeoBundle 'ciaranm/inkpot' " Inkpot 88/256 Colour Scheme for Vim
+NeoBundle 'nanotech/jellybeans.vim' " A colorful, dark color scheme for Vim.
+NeoBundle 'jonathanfilip/vim-lucius' " Lucius color scheme for vim
+NeoBundle 'djjcast/mirodark' " A Vim color scheme based on Jason W Ryan's miromiro Vim color file and dark terminal color scheme.
+NeoBundle 'tomasr/molokai' " Molokai color scheme for Vim
+NeoBundle 'sickill/vim-monokai' " Monokai color scheme for Vim converted with coloration.ku1ik.com from Textmate theme with the same name.
+NeoBundle 'vim-scripts/phd' " Color theme with dark blue background for coding
+NeoBundle 'jpo/vim-railscasts-theme' " A port of the Railscasts Textmate theme to Vim
+NeoBundle 'altercation/vim-colors-solarized' " precision colorscheme for the vim text editor
+NeoBundle 'chriskempson/vim-tomorrow-theme' " Tomorrow Theme for Vim
+NeoBundle 'vim-scripts/twilight' " A clone of Textmates twilight scheme
+NeoBundle 'jnurmine/Zenburn' " Zenburn is a low-contrast color scheme for Vim.
+" }}}2
+
 " }}}1
 
 " Edit: "{{{1
@@ -66,7 +84,7 @@ NeoBundle 'thinca/vim-template'
 " Vim: "{{{1
 " NeoBundle 'thinca/vim-scouter'        " Measures Battle Power of a vimmer.
 " NeoBundle 'zhaocai/unite-scriptnames' " unite.vim extension for runtime scriptnames
-" NeoBundle 'ujihisa/unite-colorscheme' " A unite.vim plugin
+NeoBundle 'ujihisa/unite-colorscheme' " A unite.vim plugin
 " NeoBundle 'tsukkee/unite-help' " help source for unite.vim
 " NeoBundle 'mattn/benchvimrc-vim' " make benchmark result of your vimrc
 " NeoBundle 'vim-jp/vital.vim' " A comprehensive Vim utility functions for Vim plugins
