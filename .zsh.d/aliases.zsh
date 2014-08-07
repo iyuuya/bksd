@@ -21,6 +21,8 @@ alias -g S='| sed'
 alias -g W='| wc'
 alias -g D='> /dev/null 2>&1'
 
+alias -g RT='RAILS_ENV=test'
+
 # "}}}2
 
 alias rr='command rm -rf'
