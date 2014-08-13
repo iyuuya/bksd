@@ -41,3 +41,4 @@
   uncmt   = reset --soft HEAD~
   unstage = reset HEAD
   w       = commit -m wip
+  gf      = grep --no-line-number --full-name --name-only
