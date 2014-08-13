@@ -157,4 +157,8 @@ endif
 " }}}1
 "===============================================================================
 
+if filereadable($HOME.'/.gvimrc.local')
+  source $HOME/.gvimrc.local
+endif
+
 " vim: foldmethod=marker foldlevel=0
