@@ -72,6 +72,7 @@ endif
 NeoBundle 'Shougo/neosnippet.vim' " neo-snippet plugin contains neocomplcache snippets source
 NeoBundle 'Shougo/neosnippet-snippets' " The standard snippets repository for neosnippet
 NeoBundle 'h1mesuke/vim-alignta' " Align Them All!
+NeoBundle 'tpope/vim-repeat' " repeat.vim: enable repeating supported plugin maps with '.'
 NeoBundle 'tpope/vim-abolish' " abolish.vim: easily search for, substitute, and abbreviate multiple variants of a word
 " endwise.vim: wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
 NeoBundleLazy 'alpaca-tc/vim-endwise', { 'autoload' : { 'insert' : 1 } }
