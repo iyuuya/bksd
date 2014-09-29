@@ -5,8 +5,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Interactive command execution in Vim.
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
-      \   'win64' : 'nmake -f make_msvc32.mak',
-      \   'win32' : 'nmake -f make_msvc64.mak',
+      \   'win32' : 'nmake -f make_msvc32.mak',
+      \   'win64' : 'nmake -f make_msvc64.mak',
       \   'mac'   : 'make -f make_mac.mak',
       \   'unix'  : 'make -f make_unix.mak',
       \   },
@@ -72,6 +72,7 @@ endif
 NeoBundle 'Shougo/neosnippet.vim' " neo-snippet plugin contains neocomplcache snippets source
 NeoBundle 'Shougo/neosnippet-snippets' " The standard snippets repository for neosnippet
 NeoBundle 'h1mesuke/vim-alignta' " Align Them All!
+NeoBundle 'tpope/vim-abolish' " abolish.vim: easily search for, substitute, and abbreviate multiple variants of a word
 " endwise.vim: wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
 NeoBundleLazy 'alpaca-tc/vim-endwise', { 'autoload' : { 'insert' : 1 } }
 " A git repository for a vim plugin called matchit
