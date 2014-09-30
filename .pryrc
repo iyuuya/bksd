@@ -4,12 +4,14 @@ Pry.config.color = true
 Pry.config.editor = "vim"
 Pry.config.pager = "less"
 
-Pry.config.prompt = proc do |obj, level, _|
-  prompt = ""
-  prompt << "#{Rails.version}@" if defined?(Rails)
-  prompt << "#{RUBY_VERSION}"
-  "#{prompt} (#{obj})> "
-end
+old_prompt = Pry.config.prompt
+version = ""
+version << "#{Rails.version}@" if defined?(Rails)
+version << "#{RUBY_VERSION}"
+Pry.config.prompt = [
+  proc { |*a| "#{version} #{old_prompt.first.call(*a)}" },
+  proc { |*a| "#{version} #{old_prompt.second.call(*a)}" }
+]
 
 begin
   require 'hirb'
