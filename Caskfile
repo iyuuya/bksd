@@ -1,23 +1,23 @@
 tap phinze/homebrew-cask || true
 
-install brew-cask || true
+brew install brew-cask || true
 
-cask install alfred        || true
-cask install dropbox       || true
-cask install firefox       || true
-cask install flip4mac      || true
-cask install github        || true
-cask install google-chrome || true
-cask install iterm2        || true
-cask install skype         || true
-cask install vagrant       || true
-cask install virtualbox    || true
-cask install vlc           || true
-cask install xquartz       || true
+brew cask install alfred        || true
+brew cask install dropbox       || true
+brew cask install firefox       || true
+brew cask install flip4mac      || true
+brew cask install github        || true
+brew cask install google-chrome || true
+brew cask install iterm2        || true
+brew cask install skype         || true
+brew cask install vagrant       || true
+brew cask install virtualbox    || true
+brew cask install vlc           || true
+brew cask install xquartz       || true
 
-cask install https://raw.githubusercontent.com/iyuuya/brew-config/master/Casks/macvim-kaoriya.rb || true
-cask install emacs         || true
-cask install atom          || true
+brew cask install https://raw.githubusercontent.com/iyuuya/brew-config/master/Casks/macvim-kaoriya.rb || true
+brew cask install emacs         || true
+brew cask install atom          || true
 
-cask update  || true
-cask cleanup || true
+brew cask update  || true
+brew cask cleanup || true
