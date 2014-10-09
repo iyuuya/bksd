@@ -1,4 +1,4 @@
-tap phinze/homebrew-cask || true
+brew tap phinze/homebrew-cask || true
 
 brew install brew-cask || true
 
