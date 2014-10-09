@@ -9,8 +9,8 @@ version = ""
 version << "#{Rails.version}@" if defined?(Rails)
 version << "#{RUBY_VERSION}"
 Pry.config.prompt = [
-  proc { |*a| "#{version} #{old_prompt.first.call(*a)}" },
-  proc { |*a| "#{version} #{old_prompt.second.call(*a)}" }
+  proc { |*a| "#{version} #{old_prompt[0].call(*a)}" },
+  proc { |*a| "#{version} #{old_prompt[1].call(*a)}" }
 ]
 
 begin
