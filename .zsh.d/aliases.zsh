@@ -85,7 +85,8 @@ alias ga='g add'
 alias gs='g status'
 alias gpl='g pull'
 alias gps='g push'
-alias gsb='g submodule'
+alias gsm='g submodule'
+alias gst='g subtree'
 alias gsu="g submodule foreach 'git checkout master; git pull'"
 alias grmal='git ls-files -z --deleted | xargs -0 git rm'
 
