@@ -29,10 +29,10 @@
   rc      = rebase --continue
   ri      = rebase -i
   rr      = rebase -i --root
-  sb      = submodule
+  sm      = submodule
+  st      = subtree
   sh      = show
   s       = status
-  st      = status
   ss      = stash
   sd      = stash drop
   sp      = stash pop
