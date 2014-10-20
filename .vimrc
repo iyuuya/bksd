@@ -81,12 +81,13 @@ if has('vim_starting')
     call system('git clone https://github.com/Shougo/neobundle.vim.git ' . neobundle_path)
   endif
 
-  call neobundle#rc(bundle_path)
+  call neobundle#begin(bundle_path)
+  if filereadable($HOME.'/.vim/Vimfile')
+    source $HOME/.vim/Vimfile
+  endif
+  call neobundle#end()
 endif
 
-if filereadable($HOME.'/.vim/Vimfile')
-  source $HOME/.vim/Vimfile
-endif
 " }}}2
 "-------------------------------------------------------------------------------
 
