@@ -38,7 +38,7 @@ NeoBundle 'Shougo/vimfiler.vim'    " Powerful file explorer implemented by Vim s
 " }}}1
 
 " View: "{{{1
-NeoBundle 'Lokaltog/vim-powerline'  " The ultimate vim statusline utility.
+NeoBundle 'Lokaltog/vim-powerline', 'develop'  " The ultimate vim statusline utility.
 " NeoBundle 'stephenmckinney/vim-solarized-powerline' " Solarized colorscheme and theme for vim-powerline with a focus on terminal Vim.
 " NeoBundle 'bling/vim-airline' " lean & mean status/tabline for vim that's light as air
 
@@ -162,6 +162,5 @@ NeoBundle 'tpope/vim-fugitive'  " fugitive.vim: a Git wrapper so awesome, it sho
 " NeoBundle 'sotte/presenting.vim' " A simple tool for presenting slides in vim based on text files.
 
 "{{{1
-" NeoBundleCheck
 
 " vim: fdm=marker ft=vim
