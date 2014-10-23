@@ -1,4 +1,0 @@
-#!/bin/sh
-
-ln -sfv `brew --prefix`/opt/elasticsearch/*.plist ~/Library/LaunchAgents
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist
