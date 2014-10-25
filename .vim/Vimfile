@@ -1,7 +1,6 @@
 " Ultimate Vim package manager
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Utility: "{{{1
 " Interactive command execution in Vim.
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
@@ -13,67 +12,39 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 NeoBundle 'Shougo/unite.vim'       " Unite and create user interfaces
 NeoBundle 'Shougo/unite-outline'   " outline source for unite.vim
-" NeoBundle 'tacroe/unite-mark'
-" NeoBundle 'alpaca-tc/alpaca_tags'
 
-" NeoBundle 'mattn/webapi-vim'       " vim interface to Web API
-" NeoBundle 'tyru/open-browser.vim'  " Open URI with your favorite browser from your favorite editor
 NeoBundle 'Shougo/vimshell.vim'    " Powerful shell implemented by vim.
-" NeoBundle 'ujihisa/vimshell-ssh'   " the world first vimshell plugin that you can run 'vim' command on ssh on vimshell
-" NeoBundle 'vim-scripts/open-terminal-filemanager' " Open native terminal , file manager app for various platforms
 NeoBundle 'Shougo/vimfiler.vim'    " Powerful file explorer implemented by Vim script
-" NeoBundle 'AndrewRadev/switch.vim' " A simple Vim plugin to switch segments of text with predefined replacements
-" NeoBundle 'kana/vim-metarw' " Vim plugin: A framework to read/write fake:path
-" NeoBundle 'thinca/vim-quickrun' " Run commands quickly.
-" NeoBundle 'ujihisa/quicklearn' " A quickrun plugin to show intermediate codes
-" NeoBundle 'osyo-manga/shabadou.vim'
 
-" NeoBundle 'dbext.vim' " Provides database access to many DBMS (Oracle, Sybase, Microsoft, MySQL, DBI,..)
-" NeoBundle 'junegunn/vim-redis' " Experimental Redis plugin for Vim
-" NeoBundle 'osyo-manga/vim-over' " :substitute preview
-
-" NeoBundle 'jceb/vim-hier' " Highlight quickfix errors
-" NeoBundle 'osyo-manga/vim-watchdogs' " Async syntax checking.
-" NeoBundle 'tyru/capture.vim' " Show Ex command output in buffer
-" }}}1
-
-" View: "{{{1
 NeoBundle 'Lokaltog/vim-powerline', 'develop'  " The ultimate vim statusline utility.
-" NeoBundle 'stephenmckinney/vim-solarized-powerline' " Solarized colorscheme and theme for vim-powerline with a focus on terminal Vim.
-" NeoBundle 'bling/vim-airline' " lean & mean status/tabline for vim that's light as air
 
-" ColorScheme: "{{{2
-NeoBundle 'sjl/badwolf' " A Vim color scheme.
-NeoBundle 'vim-scripts/BusyBee' " a dark color scheme (modification of Mustang.vim)
-NeoBundle '29decibel/codeschool-vim-theme' " codeschool vim theme
-NeoBundle 'vim-scripts/darktango.vim' " Tango based color scheme
-NeoBundle 'morhetz/gruvbox' " Retro groove color scheme for Vim
-NeoBundle 'w0ng/vim-hybrid' " A dark colour scheme for Vim & gVim
-NeoBundle 'ciaranm/inkpot' " Inkpot 88/256 Colour Scheme for Vim
-NeoBundle 'nanotech/jellybeans.vim' " A colorful, dark color scheme for Vim.
-NeoBundle 'jonathanfilip/vim-lucius' " Lucius color scheme for vim
-NeoBundle 'djjcast/mirodark' " A Vim color scheme based on Jason W Ryan's miromiro Vim color file and dark terminal color scheme.
-NeoBundle 'tomasr/molokai' " Molokai color scheme for Vim
-NeoBundle 'sickill/vim-monokai' " Monokai color scheme for Vim converted with coloration.ku1ik.com from Textmate theme with the same name.
-NeoBundle 'vim-scripts/phd' " Color theme with dark blue background for coding
-NeoBundle 'jpo/vim-railscasts-theme' " A port of the Railscasts Textmate theme to Vim
+NeoBundle 'sjl/badwolf'                      " A Vim color scheme.
+NeoBundle 'vim-scripts/BusyBee'              " a dark color scheme (modification of Mustang.vim)
+NeoBundle '29decibel/codeschool-vim-theme'   " codeschool vim theme
+NeoBundle 'vim-scripts/darktango.vim'        " Tango based color scheme
+NeoBundle 'morhetz/gruvbox'                  " Retro groove color scheme for Vim
+NeoBundle 'w0ng/vim-hybrid'                  " A dark colour scheme for Vim & gVim
+NeoBundle 'ciaranm/inkpot'                   " Inkpot 88/256 Colour Scheme for Vim
+NeoBundle 'nanotech/jellybeans.vim'          " A colorful, dark color scheme for Vim.
+NeoBundle 'jonathanfilip/vim-lucius'         " Lucius color scheme for vim
+NeoBundle 'djjcast/mirodark'                 " A Vim color scheme based on Jason W Ryan's miromiro Vim color file and dark terminal color scheme.
+NeoBundle 'tomasr/molokai'                   " Molokai color scheme for Vim
+NeoBundle 'sickill/vim-monokai'              " Monokai color scheme for Vim converted with coloration.ku1ik.com from Textmate theme with the same name.
+NeoBundle 'vim-scripts/phd'                  " Color theme with dark blue background for coding
+NeoBundle 'jpo/vim-railscasts-theme'         " A port of the Railscasts Textmate theme to Vim
 NeoBundle 'altercation/vim-colors-solarized' " precision colorscheme for the vim text editor
-NeoBundle 'chriskempson/vim-tomorrow-theme' " Tomorrow Theme for Vim
-NeoBundle 'vim-scripts/twilight' " A clone of Textmates twilight scheme
-NeoBundle 'jnurmine/Zenburn' " Zenburn is a low-contrast color scheme for Vim.
-" }}}2
+NeoBundle 'chriskempson/vim-tomorrow-theme'  " Tomorrow Theme for Vim
+NeoBundle 'vim-scripts/twilight'             " A clone of Textmates twilight scheme
+NeoBundle 'jnurmine/Zenburn'                 " Zenburn is a low-contrast color scheme for Vim.
 
-" }}}1
-
-" Edit: "{{{1
 if has('lua')
-  NeoBundle 'Shougo/neocomplete.vim' " Next generation completion framework after neocomplcache
+NeoBundle 'Shougo/neocomplete.vim'     " Next generation completion framework after neocomplcache
 endif
-NeoBundle 'Shougo/neosnippet.vim' " neo-snippet plugin contains neocomplcache snippets source
+NeoBundle 'Shougo/neosnippet.vim'      " neo-snippet plugin contains neocomplcache snippets source
 NeoBundle 'Shougo/neosnippet-snippets' " The standard snippets repository for neosnippet
-NeoBundle 'h1mesuke/vim-alignta' " Align Them All!
-NeoBundle 'tpope/vim-repeat' " repeat.vim: enable repeating supported plugin maps with '.'
-NeoBundle 'tpope/vim-abolish' " abolish.vim: easily search for, substitute, and abbreviate multiple variants of a word
+NeoBundle 'h1mesuke/vim-alignta'       " Align Them All!
+NeoBundle 'tpope/vim-repeat'           " repeat.vim: enable repeating supported plugin maps with '.'
+NeoBundle 'tpope/vim-abolish'          " abolish.vim: easily search for, substitute, and abbreviate multiple variants of a word
 " endwise.vim: wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
 NeoBundleLazy 'alpaca-tc/vim-endwise', { 'autoload' : { 'insert' : 1 } }
 " A git repository for a vim plugin called matchit
@@ -81,86 +52,11 @@ NeoBundleLazy 'edsono/vim-matchit', { 'autoload' : {
       \ 'filetypes' : 'ruby',
       \ 'mappings' : [',nx', '%'] } }
 NeoBundle 'thinca/vim-template'
-" }}}1
 
-" Vim: "{{{1
-" NeoBundle 'thinca/vim-scouter'        " Measures Battle Power of a vimmer.
-" NeoBundle 'zhaocai/unite-scriptnames' " unite.vim extension for runtime scriptnames
 NeoBundle 'ujihisa/unite-colorscheme' " A unite.vim plugin
-" NeoBundle 'tsukkee/unite-help' " help source for unite.vim
-" NeoBundle 'mattn/benchvimrc-vim' " make benchmark result of your vimrc
-" NeoBundle 'vim-jp/vital.vim' " A comprehensive Vim utility functions for Vim plugins
-" }}}1
 
-" FileType: "{{{1
-" Ruby_Rails: "{{{2
-" NeoBundle 'ujihisa/unite-rake'    " A Unite.vim plugin to run tasks or to view descriptions easily, using rake command
-NeoBundle 'basyura/unite-rails'   " a unite.vim plugin for rails
-" NeoBundle 'iyuuya/unite-rails', 'spring'   " a unite.vim plugin for rails
-" NeoBundle 'tpope/vim-rails', { 'autoload' : { 'filetypes' : ['haml', 'ruby', 'eruby', 'arb'] } } " rails.vim: Ruby on Rails power tools
-" NeoBundle 'thoughtbot/vim-rspec'  " Run Rspec specs from Vim
-" }}}2
-" Web: "{{{2
-" NeoBundle 'othree/html5.vim' " HTML5 omnicomplete and syntax
-" NeoBundleLazy 'hail2u/vim-css3-syntax', { 'autoload' : { 'filetypes' : ['scss', 'sass', 'less', 'css'] } } " Add CSS3 syntax support to vim's built-in `syntax/css.vim`.
-" NeoBundleLazy 'cakebaker/scss-syntax.vim', { 'autoload' : { 'filetypes' : ['scss', 'sass', 'css'] } } " Vim syntax file for scss (Sassy CSS)
-" NeoBundleLazy 'groenewege/vim-less', { 'autoload' : { 'filetypes' : ['less', 'css'] } } " vim syntax for LESS (dynamic CSS)
-" NeoBundleLazy 'digitaltoad/vim-jade', { 'autoload' : { 'filetypes' : ['jade'] } } " Vim Jade template engine syntax highlighting and indention
-" NeoBundleLazy 'kchmck/vim-coffee-script', { 'autoload' : { 'filetypes' : ['coffee', 'js'] } } " CoffeeScript support for vim
-" NeoBundle 'lilydjwg/colorizer' " A Vim plugin to colorize all text in the form #rrggbb or #rgb.
-" }}}2
-" if has('mac')
-"   NeoBundle 'vim-scripts/cocoa.vim' " Plugin for Cocoa/Objective-C development
-" endif
-" NeoBundle 'nelstrom/vim-markdown-folding'
-" NeoBundle 'dan-bolsun/vim-tmux' " TMUX syntax highlight
-" NeoBundle 'vim-scripts/csharp.vim' " C# Syntax file
-" NeoBundle 'aussiegeek/vim-puppet' " Vim bundle for puppet suitable for using with pathogen
-" NeoBundle 'gudleik/vim-slim' " Slim support for vim
-" NeoBundle 'tmsanrinsha/yaml.vim' " syntax based folding for yaml
-" NeoBundle 'chase/vim-ansible-yaml' " Add additional support for Ansible in VIM
-" NeoBundle 'svsudhir/textile.vim' " Syntax highlighting for textile files in Vim
-" }}}3
+NeoBundle 'basyura/unite-rails' " a unite.vim plugin for rails
 
-" Dictionary_Reference: "{{{1
-" NeoBundle 'pasela/unite-webcolorname' " A unite source plugin which provides Web Color Names.
-" NeoBundle 'mackee/unite-httpstatus'
-" NeoBundle 'thinca/vim-ref' " Integrated reference viewer.
-" NeoBundleLazy 'yuku-t/vim-ref-ri', { 'autoload' : { 'filetypes' : ['ruby', 'eruby', 'haml', 'rspec', 'Gemfile', 'arb'] } }
-" }}}1
-
-" VCS: "{{{1
-NeoBundle 'tpope/vim-fugitive'  " fugitive.vim: a Git wrapper so awesome, it should be illegal
-" NeoBundle 'gregsexton/gitv'     " gitk for Vim.
-" NeoBundle 'mattn/gist-vim'      " vimscript for gist
-" NeoBundle 'kmnk/vim-unite-giti' " unite source for using git
-" NeoBundle 'mattn/unite-gist'    " unite source gist
-" NeoBundle 'iyuuya/vim-metarw-github-issues'
-" NeoBundle 'joker1007/unite-pull-request' " unite-pull-request is a unite.vim plugin for Viewing GitHub pull request.
-" NeoBundle 'rhysd/git-messenger.vim' " Shows commit message at a cursor line
-" NeoBundle 'airblade/vim-gitgutter' " A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
-" NeoBundle 'sgur/unite-git_grep' " git-grep source for unite.vim inspired by http://subtech.g.hatena.ne.jp/secondlife/20080606/1212729424
-" }}}1
-
-" Comu: "{{{1
-" NeoBundle 'basyura/twibill.vim'
-" NeoBundle 'basyura/TweetVim'
-" NeoBundle 'basyura/J6uil.vim'
-" }}}1
-
-" Fun: "{{{1
-" NeoBundle 'osyo-manga/unite-banban'
-" NeoBundle 'mattn/unite-nyancat'
-" NeoBundle 'osyo-manga/unite-moo'
-" NeoBundle 'osyo-manga/unite-homo'
-" NeoBundle 'thinca/vim-splash' " Changes the splash of Vim as you like.
-" NeoBundle 'thinca/vim-threes' " Play Threes! in Vim!
-" }}}1
-
-" NeoBundle 'iyuuya/td.vim'
-
-" NeoBundle 'sotte/presenting.vim' " A simple tool for presenting slides in vim based on text files.
-
-"{{{1
+NeoBundle 'tpope/vim-fugitive' " fugitive.vim: a Git wrapper so awesome, it should be illegal
 
 " vim: fdm=marker ft=vim
