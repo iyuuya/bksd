@@ -13,6 +13,7 @@ brew install openssl         || true
 brew install curl --with-ssl || true
 brew install wget            || true
 brew install w3m             || true
+brew install ctags           || true
 
 brew install tree                       || true
 brew install htop-osx                   || true
