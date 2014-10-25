@@ -82,7 +82,8 @@ if s:ismac
   set linespace=2
 elseif s:iswin || s:iscygwin
   " For Windows.
-  set guifont=Consolas_for_Powerline_FixedD:h10:cANSI
+  set guifont=Meslo_LG_S_for_Powerline:h10:cANSI
+  " set guifont=Consolas_for_Powerline_FixedD:h10:cANSI
   "let &guifontwide = iconv('Osaka－等幅:h10:cSHIFTJIS', &encoding, 'cp932')
   " Number of pixel lines inserted between characters.
   set linespace=2
