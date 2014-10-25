@@ -73,19 +73,23 @@ augroup END
 " NeoBundle: "{{{2
 if has('vim_starting')
   filetype off
-  let bundle_path = $MYVIMFILES . '/bundle'
-  let neobundle_path = bundle_path . '/neobundle.vim'
-  execute 'set runtimepath+=' . neobundle_path
+  let s:bundle_path = expand($MYVIMFILES . '/bundle')
+  let s:neobundle_path = expand(s:bundle_path . '/neobundle.vim')
+  execute 'set runtimepath+=' . s:neobundle_path
 
-  if !isdirectory(neobundle_path)
-    call system('git clone https://github.com/Shougo/neobundle.vim.git ' . neobundle_path)
+  if !isdirectory(s:neobundle_path)
+    call system('git clone https://github.com/Shougo/neobundle.vim.git ' . s:neobundle_path)
   endif
 
-  call neobundle#begin(bundle_path)
-  if filereadable($HOME.'/.vim/Vimfile')
-    source $HOME/.vim/Vimfile
+  call neobundle#begin(s:bundle_path)
+  let s:vimfile_path = expand($MYVIMFILES . '/Vimfile')
+  if filereadable(s:vimfile_path)
+    execute 'source ' . s:vimfile_path
   endif
+  unlet s:vimfile_path
   call neobundle#end()
+  unlet s:bundle_path
+  unlet s:neobundle_path
 endif
 
 " }}}2
