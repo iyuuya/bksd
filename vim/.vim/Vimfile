@@ -1,0 +1,62 @@
+" Ultimate Vim package manager
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Interactive command execution in Vim.
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \   'win32' : 'nmake -f make_msvc32.mak',
+      \   'win64' : 'nmake -f make_msvc64.mak',
+      \   'mac'   : 'make -f make_mac.mak',
+      \   'unix'  : 'make -f make_unix.mak',
+      \   },
+      \ }
+NeoBundle 'Shougo/unite.vim'       " Unite and create user interfaces
+NeoBundle 'Shougo/unite-outline'   " outline source for unite.vim
+
+NeoBundle 'Shougo/vimshell.vim'    " Powerful shell implemented by vim.
+NeoBundle 'Shougo/vimfiler.vim'    " Powerful file explorer implemented by Vim script
+
+NeoBundle 'Lokaltog/vim-powerline', 'develop'  " The ultimate vim statusline utility.
+
+NeoBundle 'sjl/badwolf'                      " A Vim color scheme.
+NeoBundle 'vim-scripts/BusyBee'              " a dark color scheme (modification of Mustang.vim)
+NeoBundle '29decibel/codeschool-vim-theme'   " codeschool vim theme
+NeoBundle 'vim-scripts/darktango.vim'        " Tango based color scheme
+NeoBundle 'morhetz/gruvbox'                  " Retro groove color scheme for Vim
+NeoBundle 'w0ng/vim-hybrid'                  " A dark colour scheme for Vim & gVim
+NeoBundle 'ciaranm/inkpot'                   " Inkpot 88/256 Colour Scheme for Vim
+NeoBundle 'nanotech/jellybeans.vim'          " A colorful, dark color scheme for Vim.
+NeoBundle 'jonathanfilip/vim-lucius'         " Lucius color scheme for vim
+NeoBundle 'djjcast/mirodark'                 " A Vim color scheme based on Jason W Ryan's miromiro Vim color file and dark terminal color scheme.
+NeoBundle 'tomasr/molokai'                   " Molokai color scheme for Vim
+NeoBundle 'sickill/vim-monokai'              " Monokai color scheme for Vim converted with coloration.ku1ik.com from Textmate theme with the same name.
+NeoBundle 'vim-scripts/phd'                  " Color theme with dark blue background for coding
+NeoBundle 'jpo/vim-railscasts-theme'         " A port of the Railscasts Textmate theme to Vim
+NeoBundle 'altercation/vim-colors-solarized' " precision colorscheme for the vim text editor
+NeoBundle 'chriskempson/vim-tomorrow-theme'  " Tomorrow Theme for Vim
+NeoBundle 'vim-scripts/twilight'             " A clone of Textmates twilight scheme
+NeoBundle 'jnurmine/Zenburn'                 " Zenburn is a low-contrast color scheme for Vim.
+
+if has('lua')
+NeoBundle 'Shougo/neocomplete.vim'     " Next generation completion framework after neocomplcache
+endif
+NeoBundle 'Shougo/neosnippet.vim'      " neo-snippet plugin contains neocomplcache snippets source
+NeoBundle 'Shougo/neosnippet-snippets' " The standard snippets repository for neosnippet
+NeoBundle 'h1mesuke/vim-alignta'       " Align Them All!
+NeoBundle 'tpope/vim-repeat'           " repeat.vim: enable repeating supported plugin maps with '.'
+NeoBundle 'tpope/vim-abolish'          " abolish.vim: easily search for, substitute, and abbreviate multiple variants of a word
+" endwise.vim: wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
+NeoBundleLazy 'alpaca-tc/vim-endwise', { 'autoload' : { 'insert' : 1 } }
+" A git repository for a vim plugin called matchit
+NeoBundleLazy 'edsono/vim-matchit', { 'autoload' : {
+      \ 'filetypes' : 'ruby',
+      \ 'mappings' : [',nx', '%'] } }
+NeoBundle 'thinca/vim-template'
+
+NeoBundle 'ujihisa/unite-colorscheme' " A unite.vim plugin
+
+NeoBundle 'basyura/unite-rails' " a unite.vim plugin for rails
+
+NeoBundle 'tpope/vim-fugitive' " fugitive.vim: a Git wrapper so awesome, it should be illegal
+
+" vim: fdm=marker ft=vim
