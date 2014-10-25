@@ -1,0 +1,3 @@
+#!/bin/sh
+
+cat ~/.ssh/config.d/* | grep -v '#' > ~/.ssh/config
