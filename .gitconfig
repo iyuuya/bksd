@@ -1,0 +1,40 @@
+[core]
+  editor       = vim
+  pager        = less
+  autocrlf     = false
+  filemode     = true
+  quotepath    = false
+  excludesfile = ~/.git.d/ignore
+
+[color]
+  branch      = true
+  diff        = true
+  grep        = true
+  interactive = true
+  pager       = true
+  showbranch  = true
+  status      = true
+  ui          = true
+
+[help]
+  autocorrect = 1
+
+[push]
+  default = simple
+
+[rerere]
+  enable = true
+
+[grep]
+  linenumber = true
+
+[include]
+  path = ~/.git.d/local
+  path = ~/.git.d/alias
+
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+
+[hub]
+  protocol = https

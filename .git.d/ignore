@@ -1,0 +1,23 @@
+# Linux
+.*
+!.gitignore
+
+# vim
+*.swp
+*~
+
+# Mac OS X
+.DS_Store
+
+# Dropbox
+.dropbox
+Icon
+
+# tags
+**/tags
+**/tags-ja
+
+# log
+*.log
+
+vendor/bundle
