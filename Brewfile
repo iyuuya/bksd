@@ -39,4 +39,7 @@ brew install sqlite3 || true
 brew tap peco/peco || true
 brew install peco  || true
 
+brew tap homebrew/science  || true
+brew install R || true
+
 brew cleanup || true
