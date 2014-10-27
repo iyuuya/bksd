@@ -56,7 +56,7 @@ case ${OSTYPE} in
   darwin*)
     export NODE_PATH=/usr/local/lib/node
     export VIM_APP_DIR=$HOME/Applications
-    export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+    # export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
     export JAVA_HOME=$(/usr/libexec/java_home)
     export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
     export CLASSPATH=$CLASSPATH:$CATALINA_HOME/common/lib:$CATALINA_HOME/common/lib/servlet-api.jar

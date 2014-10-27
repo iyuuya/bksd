@@ -69,6 +69,23 @@ function rbenv_prompt {
 # }}}2
 #-------------------------------------------------------------------------------
 
+#-------------------------------------------------------------------------------
+# pyenv-prompt: "{{{2
+function pyenv_prompt {
+  if type pyenv > /dev/null 2>&1; then
+    result=`pyenv version-name`
+    if [ "$result" ] ; then
+      echo "$result"
+    else
+      echo "pyenv"
+    fi
+  else
+    echo ""
+  fi
+}
+# }}}2
+#-------------------------------------------------------------------------------
+
 ## return prompt format expand characters count (not support Japanese)
 function count_prompt_characters()
 {
@@ -93,10 +110,13 @@ function update_prompt() # "{{{2
   bar_left_date="(%D{%Y/%m/%d %H:%M})"
   # rbenv : [1.9.3]
   if [ -n "$(rbenv_prompt)" ]; then
-    bar_left_ruby="[%{%F{cyan}%}$(rbenv_prompt)%{%f%}]"
+    bar_left_ruby="[%{%F{red}%}$(rbenv_prompt)%{%f%}]"
+  fi
+  if [ -n "$(pyenv_prompt)" ]; then
+    bar_left_python="[%{%F{green}%}$(pyenv_prompt)%{%f%}]"
   fi
 
-  local bar_left="${bar_left_self}${bar_left_date}${bar_left_ruby}>>-"
+  local bar_left="${bar_left_self}${bar_left_date}${bar_left_ruby}${bar_left_python}>>-"
   # "}}}3
 
   # ----<master:project>-<<: "{{{3
