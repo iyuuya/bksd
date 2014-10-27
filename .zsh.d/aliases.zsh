@@ -163,5 +163,9 @@ if type peco > /dev/null 2>&1; then
   alias -g P='| peco'
 fi
 
+if type ~/Applications/Shoes.app/Contents/MacOS/shoes > /dev/null 2>&1; then
+  alias shoes='~/Applications/Shoes.app/Contents/MacOS/shoes "$@"'
+fi
+
 # vim: et sw=2 sts=2 ts=2
 # vim: ft=zsh fdm=marker
