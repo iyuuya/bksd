@@ -16,6 +16,7 @@ brew cask install virtualbox    || true
 brew cask install vagrant       || true
 brew cask install vlc           || true
 brew cask install xquartz       || true
+brew cask install shoes         || true
 
 brew cask install https://raw.githubusercontent.com/iyuuya/brew-config/master/Casks/macvim-kaoriya.rb || true
 # brew cask install emacs         || true
