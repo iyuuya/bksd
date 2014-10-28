@@ -22,15 +22,8 @@ function src() {
 #===============================================================================
 # Configuration: "{{{1
 
-src $HOME/.zsh.d/colors.zsh
 src $HOME/.zsh.d/former.zsh
 src $HOME/.zsh.d/aliases.zsh
-
-function reset_db {
-  bundle exec rake db:drop db:create db:migrate
-  RAILS_ENV=test bundle exec rake db:migrate
-}
-
 
 # "}}}1
 #===============================================================================
