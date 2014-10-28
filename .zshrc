@@ -7,19 +7,6 @@
 #===============================================================================
 
 #===============================================================================
-# MacroFunction: "{{{1
-
-# If the file exists then read.
-function src() {
-  if [[ -s "$1" ]]; then
-    source "$1"
-  fi
-}
-
-# "}}}1
-#===============================================================================
-
-#===============================================================================
 # Configuration: "{{{1
 
 src $HOME/.zsh.d/former.zsh
@@ -30,4 +17,4 @@ src $HOME/.zsh.d/aliases.zsh
 
 src $HOME/.zshrc.local
 
-# vim: foldmethod=marker foldlevel=0
+# vim: ft=zsh fdm=marker et sw=2 sts=2 ts=2
