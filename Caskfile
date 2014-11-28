@@ -1,6 +1,4 @@
-brew tap phinze/homebrew-cask || true
-
-brew install brew-cask || true
+brew install caskroom/cask/brew-cask || true
 
 brew cask install alfred        || true
 brew cask install butter        || true
