@@ -59,4 +59,7 @@ NeoBundle 'basyura/unite-rails' " a unite.vim plugin for rails
 
 NeoBundle 'tpope/vim-fugitive' " fugitive.vim: a Git wrapper so awesome, it should be illegal
 
+NeoBundle 'timcharper/textile.vim' " Textile for VIM
+NeoBundle 'kannokanno/previm' " Realtime preview by Vim. (Markdown, reStructuredText, textile)
+
 " vim: fdm=marker ft=vim
