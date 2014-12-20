@@ -62,4 +62,7 @@ NeoBundle 'tpope/vim-fugitive' " fugitive.vim: a Git wrapper so awesome, it shou
 NeoBundle 'timcharper/textile.vim' " Textile for VIM
 NeoBundle 'kannokanno/previm' " Realtime preview by Vim. (Markdown, reStructuredText, textile)
 
+NeoBundle 'scrooloose/syntastic' " Syntax checking hacks for vim
+NeoBundle 'ngmy/vim-rubocop' " The Vim RuboCop plugin runs RuboCop and displays the results in Vim
+
 " vim: fdm=marker ft=vim
