@@ -86,6 +86,23 @@ function pyenv_prompt {
 # }}}2
 #-------------------------------------------------------------------------------
 
+#-------------------------------------------------------------------------------
+# ndenv-prompt: "{{{2
+function ndenv_prompt {
+  if type ndenv > /dev/null 2>&1; then
+    result=`ndenv version-name`
+    if [ "$result" ] ; then
+      echo "$result"
+    else
+      echo "ndenv"
+    fi
+  else
+    echo ""
+  fi
+}
+# }}}2
+#-------------------------------------------------------------------------------
+
 ## return prompt format expand characters count (not support Japanese)
 function count_prompt_characters()
 {
@@ -113,10 +130,13 @@ function update_prompt() # "{{{2
     bar_left_ruby="[%{%F{red}%}$(rbenv_prompt)%{%f%}]"
   fi
   if [ -n "$(pyenv_prompt)" ]; then
-    bar_left_python="[%{%F{green}%}$(pyenv_prompt)%{%f%}]"
+    bar_left_python="[%{%F{blue}%}$(pyenv_prompt)%{%f%}]"
+  fi
+  if [ -n "$(ndenv_prompt)" ]; then
+    bar_left_node="[%{%F{green}%}$(ndenv_prompt)%{%f%}]"
   fi
 
-  local bar_left="${bar_left_self}${bar_left_date}${bar_left_ruby}${bar_left_python}>>-"
+  local bar_left="${bar_left_self}${bar_left_date}${bar_left_ruby}${bar_left_node}${bar_left_python}>>-"
   # "}}}3
 
   # ----<master:project>-<<: "{{{3
@@ -564,6 +584,17 @@ fi
 if type ~/Applications/Shoes.app/Contents/MacOS/shoes > /dev/null 2>&1; then
   alias shoes='~/Applications/Shoes.app/Contents/MacOS/shoes "$@"'
 fi
+
+function peco-src () {
+  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-src
+bindkey '^g' peco-src
 
 # "}}}1
 #===============================================================================
