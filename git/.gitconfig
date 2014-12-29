@@ -38,3 +38,6 @@
 
 [hub]
   protocol = https
+
+[ghq]
+  root = ~/working
