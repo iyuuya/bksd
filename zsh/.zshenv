@@ -72,9 +72,13 @@ esac
 # 
 
 # PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-PATH=$HOME/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/X11/bin:$PATH
-PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
-export PATH
+case ${OSTYPE} in
+  darwin*)
+    PATH=$HOME/bin:$HOME/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/X11/bin
+    PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin
+    export PATH
+    ;;
+esac
 
 # man path
 typeset -U manpath
