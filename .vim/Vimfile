@@ -64,5 +64,11 @@ NeoBundle 'kannokanno/previm' " Realtime preview by Vim. (Markdown, reStructured
 
 NeoBundle 'scrooloose/syntastic' " Syntax checking hacks for vim
 NeoBundle 'ngmy/vim-rubocop' " The Vim RuboCop plugin runs RuboCop and displays the results in Vim
+NeoBundle 'vim-scripts/dbext.vim'
+
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'tyru/open-browser.vim'
+
+NeoBundle 'kchmck/vim-coffee-script'
 
 " vim: fdm=marker ft=vim
