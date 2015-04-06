@@ -41,5 +41,7 @@
   sa      = stash apply
   uncmt   = reset --soft HEAD~
   unstage = reset HEAD
+  rmunstg = clean -df
+  rmunstglist = clean -dfn
   w       = commit -m wip
   gf      = grep --no-line-number --full-name --name-only
