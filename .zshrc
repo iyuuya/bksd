@@ -546,6 +546,13 @@ alias rs='bin/spring'
 
 # }}}2
 
+# docker: "{{{2
+
+alias d='docker'
+alias b2d='boot2docker'
+
+# }}}2
+
 alias nko='nkf --overwrite'
 alias tree='tree -N'
 alias s='search'
