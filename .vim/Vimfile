@@ -12,6 +12,7 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 NeoBundle 'Shougo/unite.vim'       " Unite and create user interfaces
 NeoBundle 'Shougo/unite-outline'   " outline source for unite.vim
+NeoBundle 'tsukkee/unite-tag'      " tags soruce for unite.vim
 
 NeoBundle 'Shougo/vimshell.vim'    " Powerful shell implemented by vim.
 NeoBundle 'Shougo/vimfiler.vim'    " Powerful file explorer implemented by Vim script
@@ -70,6 +71,7 @@ NeoBundle 'mattn/webapi-vim'
 NeoBundle 'tyru/open-browser.vim'
 
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'thinca/vim-ref' " Integrated reference viewer.
 
 NeoBundle 'lambdalisue/vim-gista'
 
