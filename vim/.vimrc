@@ -549,6 +549,10 @@ if neobundle#is_installed('unite.vim')
   nnoremap [unite]gs :<C-u>Unite giti/status<CR>
   " unite-colorscheme
   command! ColorScheme :Unite -auto-preview colorscheme
+  " unite-tag
+  nnoremap [unite]t  :<C-u>Unite tag<CR>
+  nnoremap [unite]tf :<C-u>Unite tag/file<CR>
+  nnoremap [unite]ti :<C-u>Unite tag/include<CR>
 endif
 
 " }}}2
