@@ -544,6 +544,10 @@ alias ra='bin/rake'
 alias rp='bin/rspec'
 alias rs='bin/spring'
 
+# ctags:
+
+alias rtags='ctags --langmap=RUBY:.rb --exclude="*.js" --exclude=".git*" -R'
+
 # }}}2
 
 # docker: "{{{2
