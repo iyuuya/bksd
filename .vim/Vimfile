@@ -75,4 +75,6 @@ NeoBundle 'thinca/vim-ref' " Integrated reference viewer.
 
 NeoBundle 'lambdalisue/vim-gista'
 
+NeoBundle 'thinca/vim-quickrun'
+
 " vim: fdm=marker ft=vim
