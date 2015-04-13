@@ -44,6 +44,8 @@ endif
 NeoBundle 'Shougo/neosnippet.vim'      " neo-snippet plugin contains neocomplcache snippets source
 NeoBundle 'Shougo/neosnippet-snippets' " The standard snippets repository for neosnippet
 NeoBundle 'h1mesuke/vim-alignta'       " Align Them All!
+
+NeoBundle 'tpope/vim-fugitive' " fugitive.vim: a Git wrapper so awesome, it should be illegal
 NeoBundle 'tpope/vim-repeat'           " repeat.vim: enable repeating supported plugin maps with '.'
 NeoBundle 'tpope/vim-abolish'          " abolish.vim: easily search for, substitute, and abbreviate multiple variants of a word
 " endwise.vim: wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
@@ -57,8 +59,6 @@ NeoBundle 'thinca/vim-template'
 NeoBundle 'ujihisa/unite-colorscheme' " A unite.vim plugin
 
 NeoBundle 'basyura/unite-rails' " a unite.vim plugin for rails
-
-NeoBundle 'tpope/vim-fugitive' " fugitive.vim: a Git wrapper so awesome, it should be illegal
 
 NeoBundle 'timcharper/textile.vim' " Textile for VIM
 NeoBundle 'kannokanno/previm' " Realtime preview by Vim. (Markdown, reStructuredText, textile)
@@ -75,6 +75,5 @@ NeoBundle 'thinca/vim-ref' " Integrated reference viewer.
 
 NeoBundle 'lambdalisue/vim-gista'
 
-NeoBundle 'thinca/vim-quickrun'
-
+NeoBundle 'thinca/vim-quickrun' " Run commands quickly.
 " vim: fdm=marker ft=vim
