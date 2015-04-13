@@ -103,6 +103,39 @@ function ndenv_prompt {
 # }}}2
 #-------------------------------------------------------------------------------
 
+#-------------------------------------------------------------------------------
+# scalaenv-prompt: "{{{2
+function scalaenv_prompt {
+  if type scalaenv > /dev/null 2>&1; then
+    result=`scalaenv version-name`
+    if [ "$result" ] ; then
+      echo "$result"
+    else
+      echo "scala"
+    fi
+  else
+    echo ""
+  fi
+}
+# }}}2
+#-------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------
+# goenv-prompt: "{{{2
+function goenv_prompt {
+  if type goenv > /dev/null 2>&1; then
+    result=`goenv version`
+    if [ "$result" ] ; then
+      echo "$result"
+    else
+      echo "goenv"
+    fi
+  else
+    echo ""
+  fi
+}
+# }}}2
+#-------------------------------------------------------------------------------
 ## return prompt format expand characters count (not support Japanese)
 function count_prompt_characters()
 {
@@ -135,8 +168,14 @@ function update_prompt() # "{{{2
   if [ -n "$(ndenv_prompt)" ]; then
     bar_left_node="[%{%F{green}%}$(ndenv_prompt)%{%f%}]"
   fi
+  if [ -n "$(goenv_prompt)" ]; then
+    bar_left_go="[%{%F{yellow}%}$(goenv_prompt)%{%f%}]"
+  fi
+  if [ -n "$(scalaenv_prompt)" ]; then
+    bar_left_scala="[%{%F{magenta}%}$(scalaenv_prompt)%{%f%}]"
+  fi
 
-  local bar_left="${bar_left_self}${bar_left_date}${bar_left_ruby}${bar_left_node}${bar_left_python}>>-"
+  local bar_left="${bar_left_self}${bar_left_date}${bar_left_ruby}${bar_left_node}${bar_left_python}${bar_left_go}${bar_left_scala}>>-"
   # "}}}3
 
   # ----<master:project>-<<: "{{{3
