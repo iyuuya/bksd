@@ -72,7 +72,6 @@ augroup END
 "-------------------------------------------------------------------------------
 " NeoBundle: "{{{2
 if has('vim_starting')
-  filetype off
   let s:bundle_path = expand($MYVIMFILES . '/bundle')
   let s:neobundle_path = expand(s:bundle_path . '/neobundle.vim')
   execute 'set runtimepath+=' . s:neobundle_path
