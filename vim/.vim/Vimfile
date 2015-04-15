@@ -82,4 +82,7 @@ NeoBundle 'thinca/vim-quickrun' " Run commands quickly.
 NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'kana/vim-smartinput' " Vim plugin: Provide smart input assistant
 
+NeoBundle 'thoughtbot/vim-rspec' " Run Rspec specs from Vim
+NeoBundle 'tpope/vim-rails' " rails.vim: Ruby on Rails power tools
+
 " vim: fdm=marker ft=vim
