@@ -16,6 +16,7 @@ NeoBundle 'tsukkee/unite-tag'      " tags soruce for unite.vim
 NeoBundle 'Shougo/neomru.vim'
 
 NeoBundle 'Shougo/vimshell.vim'    " Powerful shell implemented by vim.
+NeoBundle 'ujihisa/vimshell-ssh' " the world first vimshell plugin that you can run 'vim' command on ssh on vimshell
 NeoBundle 'Shougo/vimfiler.vim'    " Powerful file explorer implemented by Vim script
 
 NeoBundle 'Lokaltog/vim-powerline', 'develop'  " The ultimate vim statusline utility.
