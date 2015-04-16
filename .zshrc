@@ -570,22 +570,22 @@ alias bs='bundle show `bundle-gemname-list | peco`'
 alias bo='bundle open `bundle-gemname-list | peco`'
 
 # rbenv:
-# alias rb='rbenv'
-# alias rbv='rbenv version'
-# alias rbvs='rbenv versions'
-# alias rbg='rbenv global'
-# alias rbl='rbenv local'
-# alias rbr='rbenv rehash'
+alias rb='rbenv'
+alias rbv='rbenv version'
+alias rbvs='rbenv versions'
+alias rbg='rbenv global'
+alias rbl='rbenv local'
+alias rbr='rbenv rehash'
 
 # rake:
 alias rk='rake'
 alias rkt='rake -T'
 
 # rails:
-alias rb='bin/bundle'
-alias rbe='bin/bundle exec'
-alias rbi='bin/bundle install'
-alias rbu='bin/bundle update'
+alias bb='bin/bundle'
+alias bbe='bin/bundle exec'
+alias bbi='bin/bundle install'
+alias bbu='bin/bundle update'
 alias rr='bin/rails'
 alias ra='bin/rake'
 alias rp='bin/rspec'
