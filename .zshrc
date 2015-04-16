@@ -668,6 +668,17 @@ function peco-select-branch() {
 zle -N peco-select-branch
 bindkey '^gb' peco-select-branch
 
+function peco-cd() {
+  local selected_line="$(ls -aF | grep / | peco)"
+  if [ -n "$selected_line" ]; then
+    cd $selected_line
+    # zle accept-line
+    peco-cd
+  fi
+  # zle clear-screen
+}
+alias pcd=peco-cd
+
 # "}}}1
 #===============================================================================
 
