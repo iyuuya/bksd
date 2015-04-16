@@ -236,8 +236,8 @@ if type /usr/local/bin/zsh > /dev/null 2>&1; then
   export SHELL=/usr/local/bin/zsh
 fi
 
-if type $HOME/brew/bin/zsh > /dev/null 2>&1; then
-  export SHELL=$HOME/brew/bin/zsh
+if type $HOME/.brew/bin/zsh > /dev/null 2>&1; then
+  export SHELL=$HOME/.brew/bin/zsh
 fi
 # "}}}1
 #===============================================================================
