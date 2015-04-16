@@ -86,4 +86,6 @@ NeoBundle 'kana/vim-smartinput' " Vim plugin: Provide smart input assistant
 NeoBundle 'thoughtbot/vim-rspec' " Run Rspec specs from Vim
 NeoBundle 'tpope/vim-rails' " rails.vim: Ruby on Rails power tools
 
+NeoBundle 'airblade/vim-gitgutter' " A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
+
 " vim: fdm=marker ft=vim
