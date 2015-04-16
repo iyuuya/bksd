@@ -561,6 +561,14 @@ alias b='bundle'
 alias bi='b install'
 alias be='b exec'
 
+function bundle-gemname-list()
+{
+  bundle list | sed -e '1d' | tr -d '*().' | sed -e 's/   \(.*\) [0-9]*/\1/g'
+}
+
+alias bs='bundle show `bundle-gemname-list | peco`'
+alias bo='bundle open `bundle-gemname-list | peco`'
+
 # rbenv:
 # alias rb='rbenv'
 # alias rbv='rbenv version'
