@@ -39,6 +39,7 @@ NeoBundle 'altercation/vim-colors-solarized' " precision colorscheme for the vim
 NeoBundle 'chriskempson/vim-tomorrow-theme'  " Tomorrow Theme for Vim
 NeoBundle 'vim-scripts/twilight'             " A clone of Textmates twilight scheme
 NeoBundle 'jnurmine/Zenburn'                 " Zenburn is a low-contrast color scheme for Vim.
+NeoBundle 'sjl/badwolf'                      " A Vim color scheme.  http://stevelosh.com/projects/badwolf/
 
 if has('lua')
 NeoBundle 'Shougo/neocomplete.vim'     " Next generation completion framework after neocomplcache

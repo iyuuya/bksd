@@ -108,7 +108,8 @@ set vb t_vb=
 if exists('$VIM_COLORSCHEME')
   exec('colorscheme ' . $VIM_COLORSCHEME)
 else
-  colorscheme hybrid
+  colorscheme badwolf
+  " colorscheme hybrid
 end
 
 if exists('$VIM_BACKGROUND')
