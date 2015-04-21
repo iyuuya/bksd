@@ -256,7 +256,7 @@ esac
 zstyle ':completion:*' format '%B%d%b'
 zstyle ':completion:*' group-name ''
 
-zstyle ':completion:*:default' menu select=2
+zstyle ':completion:*:default' menu select interactive
 
 zstyle ':completion:*:default' list-colors ""
 
