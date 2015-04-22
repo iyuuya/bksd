@@ -225,7 +225,12 @@ function update_prompt() # "{{{2
 # "}}}2
 #-------------------------------------------------------------------------------
 
-precmd_functions=($precmd_functions vcs_info update_prompt)
+function update_tmux_pwd()
+{
+  $([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#I_#P") "$PWD")
+}
+
+precmd_functions=($precmd_functions vcs_info update_prompt update_tmux_pwd)
 
 # "}}}1
 #===============================================================================
