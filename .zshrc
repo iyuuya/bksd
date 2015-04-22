@@ -352,22 +352,6 @@ setopt share_history
 
 autoload history-search-end
 
-function peco-select-history() {
-  local tac
-  if which tac > /dev/null; then
-    tac='tac'
-  else
-    tac='tail -r'
-  fi
-  BUFFER=$(history -n 1 | \
-    eval $tac | \
-    peco --query "$LBUFFER")
-  CURSOR=$#BUFFER
-  zle clear-screen
-}
-zle -N peco-select-history
-bindkey '^r' peco-select-history
-
 # "}}}1
 #===============================================================================
 
@@ -712,6 +696,22 @@ fi
 if type ~/Applications/Shoes.app/Contents/MacOS/shoes > /dev/null 2>&1; then
   alias shoes='~/Applications/Shoes.app/Contents/MacOS/shoes "$@"'
 fi
+
+function peco-select-history() {
+  local tac
+  if which tac > /dev/null; then
+    tac='tac'
+  else
+    tac='tail -r'
+  fi
+  BUFFER=$(history -n 1 | \
+    eval $tac | \
+    peco --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle clear-screen
+}
+zle -N peco-select-history
+bindkey '^r' peco-select-history
 
 function peco-src () {
   local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
