@@ -87,5 +87,6 @@ NeoBundle 'thoughtbot/vim-rspec' " Run Rspec specs from Vim
 NeoBundle 'tpope/vim-rails' " rails.vim: Ruby on Rails power tools
 
 NeoBundle 'airblade/vim-gitgutter' " A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
+NeoBundle 'christoomey/vim-tmux-navigator' " Seamless navigation between tmux panes and vim splits
 
 " vim: fdm=marker ft=vim
