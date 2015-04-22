@@ -101,22 +101,6 @@ case ${OSTYPE} in
     ;;
 esac
 
-if [ -d $HOME/.anyenv ] ; then
-  export PATH=$HOME/.anyenv/bin:$PATH
-  eval "$(anyenv init -)"
-  for D in `ls $HOME/.anyenv/envs`
-  do
-    export PATH=$HOME/.anyenv/envs/$D/shims:$PATH
-  done
-fi
-
-if [ -x "`which go`" ]; then
-  export GOROOT=`go env GOROOT`
-  export GOPATH=$HOME/working/go
-  export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-  mkdir -p $GOPATH
-fi
-
 # "}}}1
 #===============================================================================
 
