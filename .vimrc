@@ -484,7 +484,7 @@ if neobundle#is_installed('unite.vim')
   nnoremap <S-Space> :<C-u>Unite -start-insert source<CR>
   " unite.vim
   nnoremap [unite] <nop>
-  nmap <C-k> [unite]
+  nmap <C-m> [unite]
   nnoremap [unite]   :<C-u>Unite<Space>
   nnoremap [unite]uf :<C-u>Unite -start-insert buffer file_rec/async<CR>
   nnoremap [unite]ub :<C-u>Unite bookmark<CR>
@@ -1000,6 +1000,23 @@ let g:vimrubocop_config = './.rubocop.yml'
 let g:gista#github_user = 'iyuuya'
 let g:gista#directory = g:vim_tmp_directory . '/gista/'
 let g:gista#update_on_write = 1
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" TmuxNavigator: "{{{2
+
+if neobundle#is_installed('vim-tmux-navigator')
+  let g:tmux_navigator_no_mappings = 1
+
+  nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
+  nnoremap <silent> <C-j> :TmuxNavigateDown<CR>
+  nnoremap <silent> <C-k> :TmuxNavigateUp<CR>
+  nnoremap <silent> <C-l> :TmuxNavigateRight<CR>
+  command! Tvs :call system('tmux split-window')
+  command! Tsp :call system('tmux split-window -h')
+endif
 
 " }}}2
 "-------------------------------------------------------------------------------
