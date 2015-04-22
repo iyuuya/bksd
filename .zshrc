@@ -685,8 +685,11 @@ fi
 
 if type tmux > /dev/null 2>&1; then
   alias t='tmux'
+  compdef t=tmux
   alias tls='tmux ls'
   alias tks='tmux kill-session -t'
+  alias sp='tmux split-window'
+  alias vs='tmux split-window -h'
 fi
 
 if type peco > /dev/null 2>&1; then
