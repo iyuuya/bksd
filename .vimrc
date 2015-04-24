@@ -344,6 +344,7 @@ set history=10000
 " Show line number.
 set number
 set numberwidth=4
+set relativenumber
 " Show ruler.
 set ruler
 
@@ -433,6 +434,9 @@ set display=lastline
 
 " Put cursor on non-whitespace in case of moved line.
 set startofline
+
+set cursorline
+" set cursorcolumn
 
 " Enable spell check.
 set nospell spelllang=en_us
