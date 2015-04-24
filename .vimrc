@@ -1059,17 +1059,17 @@ nnoremap <C-q> <C-^>
 " Switch wrap.
 nnoremap <silent><C-e>tw :<C-u>setlocal wrap! wrap?<CR>
 
-if exists('$MYVIMRC')
-  nnoremap <silent> <C-e>v :<C-u>e $MYVIMRC<CR>
-  nnoremap <C-e>V :<C-u>source $MYVIMRC<CR>
-endif
-if exists('$MYGVIMRC')
-  nnoremap <silent> <C-e>gv :<C-u>e $MYGVIMRC<CR>
-  nnoremap <C-e>gV :<C-u>source $MYGVIMRC<CR>
-endif
-
 nnoremap [mybind] Nop
 nmap <C-e> [mybind]
+
+if exists('$MYVIMRC')
+  nnoremap <silent> [mybind]v :<C-u>e $MYVIMRC<CR>
+  nnoremap [mybind]V :<C-u>source $MYVIMRC<CR>
+endif
+if exists('$MYGVIMRC')
+  nnoremap <silent> [mybind]gv :<C-u>e $MYGVIMRC<CR>
+  nnoremap [mybind]gV :<C-u>source $MYGVIMRC<CR>
+endif
 
 " Change current window and size.
 nnoremap <silent> [mybind]h <c-w>h:call GoodWinWidth()<cr>
@@ -1096,6 +1096,8 @@ nnoremap <silent> [mybind]fi :<C-u>setlocal foldmethod=indent<CR>
 nnoremap <silent> [mybind]fs :<C-u>setlocal foldmethod=syntax<CR>
 
 nnoremap <silent> [mybind]cc :<C-u>let &colorcolumn = &colorcolumn == 0 ? 80 : 0<CR>
+
+nnoremap <silent> [mybind]tn :<C-u>set relativenumber!<CR>
 
 " }}}1
 "===============================================================================
