@@ -981,11 +981,12 @@ augroup END
 "-------------------------------------------------------------------------------
 " Syntastic: "{{{2
 
-" let g:syntastic_mode_map = {
-"       \ 'mode': 'passive',
-"       \ 'active_filetypes': ['ruby']
-"       \ }
+let g:syntastic_mode_map = {
+      \ 'mode': 'passive',
+      \ 'active_filetypes': ['ruby']
+      \ }
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_ruby_rubocop_exec = $HOME . "/.anyenv/envs/rbenv/shims/rubocop"
 
 " }}}2
 "-------------------------------------------------------------------------------
