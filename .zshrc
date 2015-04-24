@@ -479,7 +479,7 @@ alias less="$PAGER"
 
 # global: "{{{2
 
-alias -g L='|& $PAGER'
+alias -g L='|& $PAGER -R'
 alias -g G='| grep'
 alias -g C='| cat -n'
 alias -g H='| head'
