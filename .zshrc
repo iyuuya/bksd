@@ -573,9 +573,6 @@ function bundle-gemname-list()
   bundle list | sed -e '1d' | tr -d '*().' | sed -e 's/   \(.*\) [0-9]*/\1/g'
 }
 
-alias bs='bundle show `bundle-gemname-list | peco`'
-alias bo='bundle open `bundle-gemname-list | peco`'
-
 # rbenv:
 alias rb='rbenv'
 compctl -K _rbenv rb
@@ -713,73 +710,14 @@ if type tmux > /dev/null 2>&1; then
   alias vs='tmux split-window -h'
 fi
 
-if type peco > /dev/null 2>&1; then
-  alias -g P='| peco'
-fi
-
 if type ~/Applications/Shoes.app/Contents/MacOS/shoes > /dev/null 2>&1; then
   alias shoes='~/Applications/Shoes.app/Contents/MacOS/shoes "$@"'
 fi
 
-function peco-select-history() {
-  local tac
-  if which tac > /dev/null; then
-    tac='tac'
-  else
-    tac='tail -r'
-  fi
-  BUFFER=$(history -n 1 | \
-    eval $tac | \
-    peco --query "$LBUFFER")
-  CURSOR=$#BUFFER
-  zle clear-screen
-}
-zle -N peco-select-history
-bindkey '^r' peco-select-history
-
-function peco-src () {
-  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
-  if [ -n "$selected_dir" ]; then
-    BUFFER="cd ${selected_dir}"
-    zle accept-line
-  fi
-  zle clear-screen
-}
-zle -N peco-src
-bindkey '^g' peco-src
-
-function peco-select-branch() {
-    local current_buffer=$BUFFER
-
-    local selected_line="$(git for-each-ref --format='%(refname:short) | %(committerdate:relative) | %(committername) | %(subject)' --sort=-committerdate refs/heads refs/remotes \
-        | column -t -s '|' \
-        | peco \
-        | head -n 1 \
-        | awk '{print $1}')"
-    if [ -n "$selected_line" ]; then
-        BUFFER="${current_buffer} ${selected_line}"
-        CURSOR=$#BUFFER
-        # ↓そのまま実行の場合
-        #zle accept-line
-    fi
-    zle clear-screen
-}
-zle -N peco-select-branch
-bindkey '^gb' peco-select-branch
-
-function peco-cd() {
-  local selected_line="$(ls -aF | grep / | peco)"
-  if [ -n "$selected_line" ]; then
-    cd $selected_line
-    # zle accept-line
-    peco-cd
-  fi
-  # zle clear-screen
-}
-alias pcd=peco-cd
-
 # "}}}1
 #===============================================================================
+
+src $HOME/.zsh.d/peco.zsh
 
 src $HOME/.zshrc.local
 
