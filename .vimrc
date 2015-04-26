@@ -641,12 +641,12 @@ if neobundle#is_installed('neosnippet.vim')
   xmap <C-k>     <Plug>(neosnippet_expand_target)
 
   " SuperTab like snippets behavior.
-  imap <expr><C-TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-  smap <expr><C-TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+  "imap <expr><C-TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+  "smap <expr><C-TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
   " For snippet_complete marker.
   if has('conceal')
-    set conceallevel=2 concealcursor=i
+    set conceallevel=2 concealcursor=niv
   endif
 
   nnoremap <silent><Leader>nse :<C-u>NeoSnippetEdit -split<CR>
