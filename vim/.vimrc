@@ -488,7 +488,7 @@ if neobundle#is_installed('unite.vim')
   nnoremap <S-Space> :<C-u>Unite -start-insert source<CR>
   " unite.vim
   nnoremap [unite] <nop>
-  nmap <C-m> [unite]
+  nmap <C-s> [unite]
   nnoremap [unite]   :<C-u>Unite<Space>
   nnoremap [unite]uf :<C-u>Unite -start-insert buffer file_rec/async<CR>
   nnoremap [unite]ub :<C-u>Unite bookmark<CR>
@@ -918,24 +918,29 @@ endif
 " QuickRun: "{{{2
 
 if neobundle#is_installed('vim-quickrun')
-  let g:quickrun_config = {
-        \ "dot/plantuml" : {
+  let g:quickrun_config = get(g:, 'quickrun_config', {})
+  let g:quickrun_config["dot/plantuml"] = {
         \   "command" : "plantuml",
         \   "exec" : "%c %o %s:p",
         \   "cmdopt"  : "-tutxt",
-        \   }
+        \ }
+  let g:quickrun_config.cpp = {
+        \   'command' : 'clang++',
+        \   'cmdopt' : '-std=c++1y -Wall -Wextra',
+        \   'hook/quickrunex/enable' : 1,
+        \ }
+  let g:quickrun_config['cpp/gcc'] = {
+        \   'command' : 'g++',
+        \   'cmdopt' : '-std=c++11 -Wall -Wextra',
         \ }
 
   if neobundle#is_installed('vim-watchdogs')
-    let g:watchdogs_check_BufWritePost_enable = 0
-    let g:quickrun_config['ruby/watchdogs_checker'] = {
-          \   "type" : "watchdogs_checker/rubocop"
-          \ }
+    let g:watchdogs_check_BufWritePost_enable = 1
+    let g:quickrun_config['ruby/watchdogs_checker']    = { "type" : "watchdogs_checker/rubocop" }
+    let g:quickrun_config["cpp/watchdogs_checker"]     = { "type" : "watchdogs_checker/clang++" }
+    let g:quickrun_config["watchdogs_checker/g++"]     = { "cmdopt" : "-Wall" }
+    let g:quickrun_config["watchdogs_checker/clang++"] = { "cmdopt" : "-Wall" }
   endif
-
-" \       "hook/output_encode/encoding" : "sjis",
-" \       "hook/msvc_compiler/enable" : 1,
-" \       "hook/msvc_compiler/target" : "C:/Program Files/Microsoft Visual Studio 10.0",
 endif
 
 " }}}2
