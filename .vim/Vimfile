@@ -78,7 +78,9 @@ NeoBundle 'thinca/vim-ref' " Integrated reference viewer.
 
 NeoBundle 'lambdalisue/vim-gista'
 
-NeoBundle 'thinca/vim-quickrun' " Run commands quickly.
+NeoBundle 'thinca/vim-quickrun', { 'depends' : 'mattn/quickrunex-vim' } " Run commands quickly.
+NeoBundle 'osyo-manga/vim-watchdogs' " Async syntax checking.
+NeoBundle 'osyo-manga/shabadou.vim'
 
 NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'kana/vim-smartinput' " Vim plugin: Provide smart input assistant
@@ -89,7 +91,10 @@ NeoBundle 'tpope/vim-rails' " rails.vim: Ruby on Rails power tools
 NeoBundle 'airblade/vim-gitgutter' " A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
 NeoBundle 'christoomey/vim-tmux-navigator' " Seamless navigation between tmux panes and vim splits
 
-NeoBundle 'osyo-manga/vim-marching' " Async clang code completion.
+NeoBundleLazy 'vim-jp/cpp-vim', {
+            \ 'autoload' : {'filetypes' : 'cpp'}
+            \ }
+NeoBundle 'osyo-manga/vim-marching', { 'autoload' : { 'filetypes' : ['c', 'cpp'] } } " Async clang code completion.
 NeoBundle 'tyru/caw.vim' " sophisticated comment plugin http://www.vim.org/scripts/script.php?script_id=2554
 
 " vim: fdm=marker ft=vim
