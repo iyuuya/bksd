@@ -488,7 +488,7 @@ if neobundle#is_installed('unite.vim')
   nnoremap <S-Space> :<C-u>Unite -start-insert source<CR>
   " unite.vim
   nnoremap [unite] <nop>
-  nmap <C-s> [unite]
+  nmap <C-w> [unite]
   nnoremap [unite]   :<C-u>Unite<Space>
   nnoremap [unite]uf :<C-u>Unite -start-insert buffer file_rec/async<CR>
   nnoremap [unite]ub :<C-u>Unite bookmark<CR>
@@ -1075,6 +1075,16 @@ endif
 "-------------------------------------------------------------------------------
 
 "-------------------------------------------------------------------------------
+" ESKK: "{{{2
+
+if neobundle#is_installed('eskk.vim')
+  let g:eskk#server = { 'host' : 'localhost', 'port' : 55100 }
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
 " tmp: "{{{2
 
 " }}}2
@@ -1118,6 +1128,10 @@ endif
 if exists('$MYGVIMRC')
   nnoremap <silent> [mybind]gv :<C-u>e $MYGVIMRC<CR>
   nnoremap [mybind]gV :<C-u>source $MYGVIMRC<CR>
+endif
+if exists('$MYVIMFILES/Vimfile')
+  nnoremap <silent> [mybind]bv :<C-u>e $MYVIMFILES/Vimfile<CR>
+  nnoremap [mybind]bV :<C-u>source $MYVIMFILES/Vimfile<CR>
 endif
 
 " Change current window and size.
