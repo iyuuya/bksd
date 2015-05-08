@@ -268,7 +268,7 @@ endif
 
 " CursorHold time.
 " If 2.5sec stop cursor then save swapfile.
-set updatetime=2500
+set updatetime=200
 
 " Keymapping timeout.
 set timeout timeoutlen=750 ttimeoutlen=200
@@ -1031,6 +1031,39 @@ endif
 if neobundle#is_installed('caw.vim')
   nmap <Leader>c <Plug>(caw:i:toggle)
   vmap <Leader>c <Plug>(caw:i:toggle)
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" Marching: "{{{2
+
+if neobundle#is_installed('vim-marching')
+  let g:marching_clang_command = 'clang'
+  let g:marching#clang_command#options = {
+        \ 'cpp' : '-std=c++1y'
+        \ }
+
+  if s:ismac
+    let g:marching_include_paths = [
+          \ system("echo -n $(brew --prefix gcc)/include/c++/4.9.2"),
+          \ system("echo -n $(brew --prefix boost)/include"),
+          \ '/usr/include',
+          \ system("echo -n $(brew --prefix)/include"),
+          \ ]
+    augroup CppPath
+      autocmd!
+      autocmd FileType cpp let &l:path=join(g:marching_include_paths,',')
+    augroup END
+  endif
+  let g:marching_enable_neocomplete = 1
+
+  if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns = {}
+  endif
+
+  let g:neocomplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
 endif
 
 " }}}2
