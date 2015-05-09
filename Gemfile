@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'pry'
+gem 'pry-coolline'
+gem 'pry-doc'
+gem 'tmuxinator'
+gem 'rubocop'
+gem 'google-ime-skk'
+gem 'yard'
+gem 'watson-ruby'
