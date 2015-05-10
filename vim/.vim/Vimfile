@@ -98,4 +98,7 @@ NeoBundleLazy 'vim-jp/cpp-vim', {
 NeoBundle 'osyo-manga/vim-marching', { 'autoload' : { 'filetypes' : ['c', 'cpp'] } } " Async clang code completion.
 NeoBundle 'tyru/caw.vim' " sophisticated comment plugin http://www.vim.org/scripts/script.php?script_id=2554
 
+NeoBundle 'basyura/TweetVim', { 'depends' : ['tyru/open-browser.vim', 'basyura/twibill.vim', 'mattn/webapi-vim', 'basyura/bitly.vim', 'mattn/favstar-vim'] }
+NeoBundle 'basyura/J6uil.vim'
+
 " vim: fdm=marker ft=vim
