@@ -61,4 +61,14 @@ if type peco > /dev/null 2>&1; then
     # zle clear-screen
   }
   alias pcd=peco-cd
+
+  # peco-cd-vim-neomru
+  function peco-vim-neomru() {
+    local mru_path="~/.cache/neomru/directory"
+    local SELECTED=$(eval more $mru_path | peco --query "$1")
+    if [ 0 -ne ${#SELECTED} ]; then
+      eval cd $SELECTED
+    fi
+  }
+  alias pvd=peco-vim-neomru
 fi
