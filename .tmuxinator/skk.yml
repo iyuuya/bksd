@@ -1,0 +1,5 @@
+name: skk
+root: ~/
+
+windows:
+  - google: google-ime-skk
