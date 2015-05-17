@@ -9,7 +9,9 @@ DotInstallTask.new :vim do |t|
   t.add_link 'bin/mvim', 'bin/mvim' if /darwin/ =~ RUBY_PLATFORM
 end
 DotInstallTask.new :zsh
-DotInstallTask.new :ruby
+DotInstallTask.new :ruby do |t|
+  t.add_link 'default-gems', 'default-gems', ENV['RBENV_ROOT']
+end
 DotInstallTask.new :tmux
 
 HomebrewSetupTask.new :brew
