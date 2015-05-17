@@ -49,6 +49,7 @@ alias gpl='git pull'
 alias gps='git push'
 alias gsb='git submodule'
 alias gsu="git submodule foreach 'git checkout master; git pull'"
+alias gstps='git subtree push'
 alias grmal='git ls-files -z --deleted | xargs -0 git rm'
 
 # vim: ft=vimshrc
