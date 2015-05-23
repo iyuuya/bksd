@@ -559,6 +559,12 @@ alias gst='g subtree'
 alias gsu="g submodule foreach 'git checkout master; git pull'"
 alias grmal='git ls-files -z --deleted | xargs -0 git rm'
 
+case ${OSTYPE} in
+  darwin*)
+    alias gnw=~/.brew/opt/git/share/git-core/contrib/workdir/git-new-workdir
+    ;;
+esac
+
 # "}}}2
 
 # ruby: "{{{2
