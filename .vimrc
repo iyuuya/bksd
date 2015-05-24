@@ -1289,12 +1289,14 @@ endfunction
 "-------------------------------------------------------------------------------
 " Peco: "{{{2
 
-function! PecoOpen()
-  for filename in split(system("find . -type f | peco"), "\n")
-    execute "e" filename
-  endfor
-endfunction
-nnoremap <Leader>op :call PecoOpen()<CR>
+if !has('gui_running')
+  function! PecoOpen()
+    for filename in split(system("find . -type f | peco"), "\n")
+      execute "e" filename
+    endfor
+  endfunction
+  nnoremap <Leader>op :call PecoOpen()<CR>
+endif
 
 " }}}2
 "-------------------------------------------------------------------------------
