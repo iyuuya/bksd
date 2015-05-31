@@ -344,7 +344,7 @@ set history=10000
 " Show line number.
 set number
 set numberwidth=4
-set relativenumber
+set norelativenumber
 " Show ruler.
 set ruler
 
