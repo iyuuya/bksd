@@ -28,6 +28,17 @@ brew install git-flow   || true
 brew install hub        || true
 brew install tig        || true
 
+# for PHP
+brew install libevent || true
+brew install libjpeg  || true
+brew install libpng   || true
+brew install mcrypt   || true
+brew install libtool  || true
+brew install autoconf || true
+brew install libxml2  || true
+brew install lemon    || true
+brew install re2c     || true
+
 brew install fontforge --with-cairo --with-python             || true
 brew install graphviz --with-freetype                         || true
 brew install imagemagick --with-fontconfig --with-ghostscript || true
