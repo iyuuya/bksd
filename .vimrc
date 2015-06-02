@@ -89,6 +89,8 @@ if has('vim_starting')
   call neobundle#end()
   unlet s:bundle_path
   unlet s:neobundle_path
+
+  NeoBundleCheck
 endif
 
 " }}}2
