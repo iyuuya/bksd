@@ -1,0 +1,7 @@
+name: update
+root: ~/working/bksd
+
+windows:
+  - bksd: git fetch --all && git pull && exit
+  - anyenv: anyenv update && exit
+  - brew: brew update && brew upgrade --all && brew cleanup && exit
