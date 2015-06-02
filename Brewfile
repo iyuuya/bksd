@@ -44,11 +44,9 @@ brew install graphviz --with-freetype                         || true
 brew install imagemagick --with-fontconfig --with-ghostscript || true
 brew install qt                                               || true
 
-brew install mysql   || true
-brew install sqlite3 || true
-
-brew tap peco/peco || true
-brew install peco  || true
+brew install mysql      || true
+brew install sqlite3    || true
+brew install postgresql || true
 
 brew tap homebrew/science  || true
 brew install R || true
