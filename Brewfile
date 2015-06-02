@@ -51,4 +51,6 @@ brew install postgresql || true
 brew tap homebrew/science  || true
 brew install R || true
 
+brew install docker || true
+
 brew cleanup || true
