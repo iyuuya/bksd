@@ -611,7 +611,7 @@ alias rtags='ctags --langmap=RUBY:.rb --exclude="*.js" --exclude=".git*" -R'
 # docker: "{{{2
 
 alias d='docker'
-compdef d=docker
+# compdef d=docker
 alias b2d='boot2docker'
 _boot2docker() {
   local context state line
