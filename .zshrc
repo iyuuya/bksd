@@ -15,13 +15,6 @@ if [ -d $HOME/.anyenv ] ; then
   done
 fi
 
-if [ -x "`which go`" ]; then
-  export GOROOT=`go env GOROOT`
-  export GOPATH=$HOME/working/go
-  export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-  mkdir -p $GOPATH
-fi
-
 #===============================================================================
 # Initialisation: "{{{1
 
@@ -723,6 +716,7 @@ fi
 # "}}}1
 #===============================================================================
 
+src $HOME/.zsh.d/go.zsh
 src $HOME/.zsh.d/peco.zsh
 
 src $HOME/.zshrc.local
