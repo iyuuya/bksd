@@ -31,6 +31,7 @@
 [include]
   path = ~/.git.d/local
   path = ~/.git.d/alias
+  path = ~/.git.d/ghq
 
 [filter "media"]
   clean = git-media-clean %f
@@ -38,9 +39,6 @@
 
 [hub]
   protocol = https
-
-[ghq]
-  root = ~/working
 
 [filter "lfs"]
   clean = git lfs clean %f
