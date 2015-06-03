@@ -508,9 +508,6 @@ alias x='exit'
 if type gsed > /dev/null 2>&1; then
   alias sed=gsed
 fi
-if type htop > /dev/null 2>&1; then
-  alias top=htop
-fi
 
 if type mvim > /dev/null 2>&1; then
   alias gvim='reattach-to-user-namespace mvim'
