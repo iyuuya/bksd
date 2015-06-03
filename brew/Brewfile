@@ -20,6 +20,8 @@ brew install htop-osx                   || true
 brew install zsh --disable-etcdir       || true
 brew install reattach-to-user-namespace || true
 brew install tmux                       || true
+brew install pv                         || true
+brew install ranger                     || true
 
 brew install git --with-brewed-curl --with-brewed-openssl --with-gettext --with-pcre || true
 brew install git-cal    || true
