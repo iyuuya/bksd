@@ -551,7 +551,7 @@ alias grmal='git ls-files -z --deleted | xargs -0 git rm'
 
 case ${OSTYPE} in
   darwin*)
-    alias gnw=~/.brew/opt/git/share/git-core/contrib/workdir/git-new-workdir
+    alias gnw=/usr/local/opt/git/share/git-core/contrib/workdir/git-new-workdir
     ;;
 esac
 
