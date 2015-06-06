@@ -20,9 +20,24 @@ if type peco > /dev/null 2>&1; then
   zle -N peco-select-history
   bindkey '^r' peco-select-history
 
+  function ghq-list-relative () {
+    local query
+    if [ $# = 1 ]; then
+      query=$1
+    else
+      query=''
+    fi
+    ghq list $query -p | sed -e "s/$(echo $HOME | sed -e 's/\//\\\//g')/~/g"
+  }
 
   function peco-src () {
-    local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+    local list
+    if [ $# = 1 ]; then
+      list=$(ghq-list-relative $1)
+    else
+      list=$(ghq-list-relative)
+    fi
+    local selected_dir=$(echo $list | peco --query "$LBUFFER")
     if [ -n "$selected_dir" ]; then
       BUFFER="cd ${selected_dir}"
       zle accept-line
@@ -30,7 +45,13 @@ if type peco > /dev/null 2>&1; then
     zle clear-screen
   }
   zle -N peco-src
-  bindkey '^g' peco-src
+  bindkey '^gg' peco-src
+
+  function peco-my-src () {
+    peco-src $USER
+  }
+  zle -N peco-my-src
+  bindkey '^gm' peco-my-src
 
   function peco-select-branch() {
       local current_buffer=$BUFFER
