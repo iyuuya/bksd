@@ -1,3 +1,5 @@
+" TODO : 整理する
+
 " Ultimate Vim package manager
 NeoBundleFetch 'Shougo/neobundle.vim'
 
