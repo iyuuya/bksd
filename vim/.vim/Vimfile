@@ -72,6 +72,9 @@ NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'kana/vim-smartinput' " Vim plugin: Provide smart input assistant
 NeoBundle 'osyo-manga/vim-over'
 
+NeoBundle 'tpope/vim-surround' " surround.vim: quoting/parenthesizing made simple
+NeoBundle 'mattn/emmet-vim' " emmet for vim: http://emmet.io/
+
 NeoBundle 'thoughtbot/vim-rspec' " Run Rspec specs from Vim
 NeoBundle 'tpope/vim-rails' " rails.vim: Ruby on Rails power tools
 
