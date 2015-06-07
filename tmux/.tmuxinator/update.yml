@@ -1,5 +1,5 @@
 name: update
-root: ~/working/bksd
+root: ~/.ghq/github.com/iyuuya/bksd
 
 windows:
   - bksd: git fetch --all && git pull && exit
