@@ -76,7 +76,7 @@ if s:ismac
   " Use antialias
   set antialias
 
-  set guifont=Ricty:h12
+  set guifont=Ricty_Discord_Regular_for_Powerline:h12
 
   " Number of pixel lines inserted between characters.
   set linespace=2
