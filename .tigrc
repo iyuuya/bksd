@@ -1,2 +1,2 @@
 set main-view = date author id commit-title:graph=yes,refs=yes
-set diff-content = 5
+set diff-context = 5
