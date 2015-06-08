@@ -39,6 +39,7 @@ brew install reattach-to-user-namespace || true
 brew install tmux                       || true
 brew install pv                         || true
 brew install ranger                     || true
+brew install global                     || true
 brew install htop-osx                   || true
 brew install nmap                       || true
 brew install jq                         || true
