@@ -102,4 +102,6 @@ NeoBundle 'basyura/J6uil.vim'
 
 NeoBundle 'vim-jp/vital.vim'
 
+NeoBundle 'rking/ag.vim' " Vim plugin for the_silver_searcher, 'ag', a replacement for the Perl module / CLI script 'ack'
+
 " vim: fdm=marker ft=vim
