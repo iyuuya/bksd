@@ -33,6 +33,7 @@
   rr      = rebase -i --root
   sm      = submodule
   st      = subtree
+  stpsm   = "!sh -c 'git subtree push --prefix=$1 $1 master' -"
   sh      = show
   s       = status
   ss      = stash
