@@ -1,6 +1,7 @@
 brew install caskroom/cask/brew-cask || true
 
 brew cask install xquartz       || true
+brew cask install karabiner     || true
 
 brew cask install alfred        || true
 brew cask install iterm2        || true
