@@ -1,6 +1,7 @@
 # Linux
 .*
 !.gitignore
+!.gitattributes
 
 # vim
 *.swp
