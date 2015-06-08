@@ -17,6 +17,7 @@
   ds      = diff --shortstat
   df      = diff --name-only
   f       = fetch
+  fap     = fetch --all --prune
   filelog = log -u
   l       = log --graph --pretty=format:'%Cblue%h%Cred%d%Creset %Cgreen%an%Creset: %s %Cblue%ar%Creset'
   m       = merge
