@@ -548,6 +548,7 @@ alias gsm='g submodule'
 alias gst='g subtree'
 alias gsu="g submodule foreach 'git checkout master; git pull'"
 alias grmal='git ls-files -z --deleted | xargs -0 git rm'
+alias tiga='tig --all'
 
 case ${OSTYPE} in
   darwin*)
