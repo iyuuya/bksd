@@ -32,6 +32,7 @@ brew install git-extras || true
 brew install git-flow   || true
 brew install hub        || true
 brew install tig        || true
+brew install gibo       || true
 
 brew install tree                       || true
 brew install zsh --disable-etcdir       || true
