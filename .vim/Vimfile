@@ -88,6 +88,7 @@ NeoBundle 'evidens/vim-twig' " Twig syntax highlighting, snipMate, etc.
 NeoBundle 'elixir-lang/vim-elixir' " Vim configuration files for Elixir
 NeoBundle 'mattreduce/vim-mix' " Vim plugin for using Elixir's build tool, mix
 
+NeoBundle 'moznion/unite-git-conflict.vim' " Unite source for git conflicts.
 NeoBundle 'airblade/vim-gitgutter' " A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
 NeoBundle 'christoomey/vim-tmux-navigator' " Seamless navigation between tmux panes and vim splits
 
