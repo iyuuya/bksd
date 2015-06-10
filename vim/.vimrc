@@ -1329,6 +1329,12 @@ endif
 " }}}2
 "-------------------------------------------------------------------------------
 
+" 雑: GetPageTitle('http://hoge.com/fuga')
+" 雑: i<C-r>=GetPageTitle(@*)
+function! GetPageTitle(url)
+  return system('curl --silent ' . a:url . " | grep '<title>' | sed -e 's/\\<title\\>//g' | sed -e 's/\\<\\/title\\>//g' | sed -e 's/ *$//g' | sed -e 's/^ *//g' | sed -e 's/\\n$//g'")
+endfunction
+
 " }}}1
 "===============================================================================
 
