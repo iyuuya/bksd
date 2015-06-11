@@ -482,7 +482,6 @@ alias -g S='| sed'
 alias -g W='| wc'
 alias -g D='> /dev/null 2>&1'
 
-alias -g RT='RAILS_ENV=test'
 alias -g JQ="| jq '.'"
 
 # "}}}2
@@ -558,47 +557,6 @@ case ${OSTYPE} in
 esac
 
 # "}}}2
-
-# ruby: "{{{2
-
-# bundle:
-alias b='bundle'
-alias bi='b install'
-alias be='b exec'
-
-function bundle-gemname-list()
-{
-  bundle list | sed -e '1d' | tr -d '*().' | sed -e 's/   \(.*\) [0-9]*/\1/g'
-}
-
-# rbenv:
-alias rb='rbenv'
-compctl -K _rbenv rb
-alias rbv='rbenv version'
-alias rbvs='rbenv versions'
-alias rbg='rbenv global'
-alias rbl='rbenv local'
-alias rbr='rbenv rehash'
-
-# rake:
-alias rk='rake'
-alias rkt='rake -T'
-
-# rails:
-alias bb='bin/bundle'
-alias bbe='bin/bundle exec'
-alias bbi='bin/bundle install'
-alias bbu='bin/bundle update'
-alias rr='bin/rails'
-alias ra='bin/rake'
-alias rp='bin/rspec'
-alias rs='bin/spring'
-
-# ctags:
-
-alias rtags='ctags --langmap=RUBY:.rb --exclude="*.js" --exclude=".git*" -R'
-
-# }}}2
 
 # docker: "{{{2
 
@@ -713,6 +671,7 @@ fi
 
 src $HOME/.zsh.d/go.zsh
 src $HOME/.zsh.d/peco.zsh
+src $HOME/.zsh.d/ruby.zsh
 
 src $HOME/.zshrc.local
 
