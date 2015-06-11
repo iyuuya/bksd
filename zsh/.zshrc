@@ -687,10 +687,6 @@ function app_alias()
 # app_alias gv c cpp h rb php html haml mkd md txt
 # app_alias gv js ru py pl hs lhs sql conf
 
-if type /Applications/Tower.app/Contents/MacOS/Tower > /dev/null 2>&1; then
-  alias tower="open /Applications/Tower.app"
-fi
-
 if type /Applications/Gyazo.app/Contents/MacOS/Gyazo> /dev/null 2>&1; then
   alias gyazo='/Applications/Gyazo.app/Contents/MacOS/Gyazo "$@"'
 fi
