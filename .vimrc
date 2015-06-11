@@ -766,7 +766,7 @@ endif
 if exists('$VIM_COLORSCHEME')
   exec('colorscheme ' . $VIM_COLORSCHEME)
 else
-  colorscheme molokai
+  colorscheme Tomorrow-Night-Bright
 end
 
 if exists('$VIM_BACKGROUND')
