@@ -59,7 +59,6 @@ NeoBundle 'asciidoc/vim-asciidoc' " (Soon to be) the official repository for the
 NeoBundle 'aklt/plantuml-syntax' " vim syntax file for plantuml
 NeoBundle 'kannokanno/previm' " Realtime preview by Vim. (Markdown, reStructuredText, textile)
 
-NeoBundle 'scrooloose/syntastic' " Syntax checking hacks for vim
 NeoBundle 'vim-scripts/dbext.vim'
 
 NeoBundle 'mattn/webapi-vim'
@@ -73,9 +72,9 @@ NeoBundle 'lambdalisue/vim-gista'
 NeoBundle 'thinca/vim-quickrun', { 'depends' : 'mattn/quickrunex-vim' } " Run commands quickly.
 NeoBundle 'osyo-manga/vim-watchdogs' " Async syntax checking.
 NeoBundle 'osyo-manga/shabadou.vim'
+NeoBundle 'scrooloose/syntastic' " Syntax checking hacks for vim
 
 NeoBundle 'vim-scripts/AnsiEsc.vim'
-NeoBundle 'kana/vim-smartinput' " Vim plugin: Provide smart input assistant
 NeoBundle 'osyo-manga/vim-over'
 
 NeoBundle 'tpope/vim-surround' " surround.vim: quoting/parenthesizing made simple
