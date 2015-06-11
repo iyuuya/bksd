@@ -483,6 +483,7 @@ alias -g W='| wc'
 alias -g D='> /dev/null 2>&1'
 
 alias -g RT='RAILS_ENV=test'
+alias -g JQ="| jq '.'"
 
 # "}}}2
 
