@@ -75,6 +75,7 @@ NeoBundle 'osyo-manga/shabadou.vim'
 NeoBundle 'scrooloose/syntastic' " Syntax checking hacks for vim
 
 NeoBundle 'vim-scripts/AnsiEsc.vim'
+NeoBundle 'cohama/lexima.vim'
 NeoBundle 'osyo-manga/vim-over'
 
 NeoBundle 'tpope/vim-surround' " surround.vim: quoting/parenthesizing made simple
