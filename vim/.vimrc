@@ -1314,21 +1314,6 @@ endfunction
 " }}}2
 "-------------------------------------------------------------------------------
 
-"-------------------------------------------------------------------------------
-" Peco: "{{{2
-
-if !has('gui_running')
-  function! PecoOpen()
-    for filename in split(system("find . -type f | peco"), "\n")
-      execute "e" filename
-    endfor
-  endfunction
-  nnoremap <Leader>op :call PecoOpen()<CR>
-endif
-
-" }}}2
-"-------------------------------------------------------------------------------
-
 " 雑: GetPageTitle('http://hoge.com/fuga')
 " 雑: i<C-r>=GetPageTitle(@*)
 function! GetPageTitle(url)
