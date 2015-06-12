@@ -45,7 +45,7 @@ brew install htop-osx                   || true
 brew install nmap                       || true
 brew install jq                         || true
 brew install ag                         || true
-brew install packer                     || true
+brew install asciidoc                   || true
 
 brew install fontforge --with-cairo --with-python             || true
 brew install graphviz --with-freetype                         || true
@@ -61,6 +61,7 @@ brew install mongodb    || true
 brew tap homebrew/science  || true
 brew install R || true
 
+brew install packer || true
 brew install docker || true
 
 brew cleanup || true
