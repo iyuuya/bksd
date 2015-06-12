@@ -46,6 +46,7 @@ brew install nmap                       || true
 brew install jq                         || true
 brew install ag                         || true
 brew install asciidoc                   || true
+brwe install source-highlight           || true
 
 brew install fontforge --with-cairo --with-python             || true
 brew install graphviz --with-freetype                         || true
