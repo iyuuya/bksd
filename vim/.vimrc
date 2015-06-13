@@ -763,24 +763,12 @@ endif
 "-------------------------------------------------------------------------------
 " Vim PowerLine: "{{{2
 
-if exists('$VIM_COLORSCHEME')
-  exec('colorscheme ' . $VIM_COLORSCHEME)
-else
-  colorscheme Tomorrow-Night-Bright
-end
-
-if exists('$VIM_BACKGROUND')
-  exec('set background=' . $VIM_BACKGROUND)
-end
+colorscheme Tomorrow-Night-Bright
 
 if neobundle#is_installed('vim-powerline')
   let g:Powerline_symbols = 'fancy'
 
-  if exists('$VIM_COLORSCHEME') && $VIM_COLORSCHEME == 'solarized'
-    let g:Powerline_colorscheme = 'solarized256_' . &background
-  else
-    let g:Powerline_colorscheme = 'default'
-  endif
+  let g:Powerline_colorscheme = 'default'
 
   let g:Powerline_mode_n = 'NR'
   let g:Powerline_mode_i = 'IN'
