@@ -1,0 +1,4 @@
+# set project rubocop conf:
+# inherit_from: ~/.rubocop.yml
+Style/Documentation:
+  Enabled: false
