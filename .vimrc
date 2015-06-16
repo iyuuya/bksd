@@ -1019,7 +1019,7 @@ if neobundle#is_installed('vim-quickrun')
 
   if neobundle#is_installed('vim-watchdogs')
     let g:watchdogs_check_BufWritePost_enable = 1
-    let g:quickrun_config['ruby/watchdogs_checker']    = { "type" : "watchdogs_checker/rubocop" }
+    " let g:quickrun_config['ruby/watchdogs_checker']    = { "type" : "watchdogs_checker/rubocop" }
     let g:quickrun_config["cpp/watchdogs_checker"]     = { "type" : "watchdogs_checker/clang++" }
     let g:quickrun_config["watchdogs_checker/g++"]     = { "cmdopt" : "-Wall" }
     let g:quickrun_config["watchdogs_checker/clang++"] = { "cmdopt" : "-Wall" }
@@ -1069,7 +1069,7 @@ augroup END
 " Syntastic: "{{{2
 
 let g:syntastic_mode_map = {
-      \ 'mode': 'passive',
+      \ 'mode': 'active',
       \ 'active_filetypes': ['ruby']
       \ }
 let g:syntastic_ruby_checkers = ['rubocop']
