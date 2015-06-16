@@ -1068,12 +1068,16 @@ augroup END
 "-------------------------------------------------------------------------------
 " Syntastic: "{{{2
 
-let g:syntastic_mode_map = {
-      \ 'mode': 'active',
-      \ 'active_filetypes': ['ruby']
-      \ }
-let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_ruby_rubocop_exec = $HOME . "/.anyenv/envs/rbenv/shims/rubocop"
+if neobundle#is_installed('syntastic')
+  let g:syntastic_mode_map = {
+        \ 'mode': 'active',
+        \ 'active_filetypes': ['ruby']
+        \ }
+  let g:syntastic_ruby_checkers = ['rubocop']
+  let g:syntastic_ruby_rubocop_exec = $HOME . "/.anyenv/envs/rbenv/shims/rubocop"
+
+  let g:syntastic_ruby_mri_exec = $HOME . '.anyenv/env/rbenv/shims/ruby'
+endif
 
 " }}}2
 "-------------------------------------------------------------------------------
@@ -1081,7 +1085,9 @@ let g:syntastic_ruby_rubocop_exec = $HOME . "/.anyenv/envs/rbenv/shims/rubocop"
 "-------------------------------------------------------------------------------
 " Rubocop: "{{{2
 
-let g:vimrubocop_config = './.rubocop.yml'
+if neobundle#is_installed('vim-rubocop')
+  let g:vimrubocop_config = './.rubocop.yml'
+endif
 
 " }}}2
 "-------------------------------------------------------------------------------
