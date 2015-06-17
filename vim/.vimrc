@@ -307,6 +307,7 @@ set modeline
 set foldenable
 " Syntax highlighting items specify folds.
 set foldmethod=syntax
+autocmd FileType yaml setlocal foldmethod=indent
 " Always start editing with all no folds closed.
 set foldlevelstart=99
 " Show folding level.
