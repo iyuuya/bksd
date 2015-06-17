@@ -986,7 +986,7 @@ endif
 
 if neobundle#is_installed('vim-ref')
   let g:ref_open     = 'split'
-  let g:ref_refe_cmd = expand('~/.rbenv/versions/2.0.0-p247/gemsets/global/bin')
+  let g:ref_refe_cmd = 'refe'
 
   nnoremap [unite]rr :<C-U>Unite ref/refe -default-action=split -input=
   nnoremap [unite]ri :<C-U>Unite ref/ri   -default-action=split -input=
