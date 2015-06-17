@@ -989,11 +989,9 @@ if neobundle#is_installed('vim-ref')
   let g:ref_refe_cmd = 'refe'
 
   nnoremap [unite]rr :<C-U>Unite ref/refe -default-action=split -input=
-  nnoremap [unite]ri :<C-U>Unite ref/ri   -default-action=split -input=
 
   aug MyAutoCmd
-    au FileType ruby,eruby,haml,ruby.rspec,arb nnoremap <silent><buffer>KK :<C-U>Unite -no-start-insert ref/ri   -input=<C-R><C-W><CR>
-    au FileType ruby,eruby,haml,ruby.rspec,arb nnoremap <silent><buffer>K  :<C-U>Unite -no-start-insert ref/refe -input=<C-R><C-W><CR>
+    au FileType ruby,eruby,haml,ruby.rspec,arb nnoremap <silent><buffer>K  :<C-U>Unite -no-start-insert ref/refe -default-action=split -input=<C-R><C-W><CR>
   aug END
 endif
 
