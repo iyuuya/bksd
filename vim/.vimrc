@@ -447,7 +447,9 @@ set display=lastline
 set startofline
 
 set cursorline
-" set cursorcolumn
+augroup MyCursorColumnGrp
+  autocmd FileType yaml setlocal cursorcolumn
+augroup END
 
 " Enable spell check.
 set nospell spelllang=en_us
@@ -1277,7 +1279,8 @@ nnoremap <silent> [mybind]fi :<C-u>setlocal foldmethod=indent<CR>
 nnoremap <silent> [mybind]fs :<C-u>setlocal foldmethod=syntax<CR>
 
 nnoremap <silent> [mybind]cc :<C-u>let &colorcolumn = &colorcolumn == 0 ? 80 : 0<CR>
-
+nnoremap <silent> [mybind]cl :<C-u>set cursorline!<CR>
+nnoremap <silent> [mybind]cn :<C-u>set cursorcolumn!<CR>
 nnoremap <silent> [mybind]tn :<C-u>set relativenumber!<CR>
 
 " }}}1
