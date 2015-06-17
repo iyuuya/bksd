@@ -76,6 +76,14 @@ case ${OSTYPE} in
   darwin*)
     PATH=$HOME/bin:$HOME/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/X11/bin
     PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin
+    if [ -d $HOME/.anyenv ] ; then
+      export PATH=$HOME/.anyenv/bin:$PATH
+      eval "$(anyenv init -)"
+      for D in `ls $HOME/.anyenv/envs`
+      do
+        export PATH=$HOME/.anyenv/envs/$D/shims:$PATH
+      done
+    fi
     export PATH
     ;;
 esac
