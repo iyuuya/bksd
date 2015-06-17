@@ -1,3 +1,4 @@
+# vim: ft=gitconfig
 [ghq]
   root = ~/.ghq
   root = ~/.go
