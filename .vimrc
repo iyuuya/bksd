@@ -331,6 +331,7 @@ set grepprg=internal
 
 " Set tags file.
 set tags=./tags,tags
+
 if v:version < 7.3 || (v:version == 7.3 && has('patch336'))
   " Vim's bug.
   set notagbsearch
@@ -1198,6 +1199,19 @@ endif
 
 if neobundle#is_installed('ag.vim')
   let g:agprg="ag --column"
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" Tags: "{{{2
+
+if neobundle#is_installed('vim-tags')
+  let g:vim_tags_auto_generate = 0
+  let g:vim_tags_project_tags_command = "ctags -f tags -R . 2>/dev/null"
+  let g:vim_tags_gems_tags_command = "ctags -R -f Gemfile.lock.tags `bundle show --paths` 2>/dev/null"
+  set tags+=tags,Gemfile.lock.tags
 endif
 
 " }}}2
