@@ -105,4 +105,6 @@ NeoBundle 'rking/ag.vim' " Vim plugin for the_silver_searcher, 'ag', a replaceme
 NeoBundle '5t111111/alt-gtags.vim'
 NeoBundle 'szw/vim-tags'
 
+NeoBundle 'thinca/vim-scouter'
+
 " vim: fdm=marker ft=vim
