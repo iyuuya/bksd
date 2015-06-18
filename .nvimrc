@@ -6,6 +6,9 @@ endif
 
 filetype plugin indent on
 
+set number
+set ruler
+
 syntax enable
 
 set modeline
