@@ -2,6 +2,14 @@ scriptencoding utf-8
 
 if has('vim_starting')
   set nocompatible
+
+  if !exists('$MYVIMRC')
+    let $MYVIMRC = expand('~/.nvimrc')
+  endif
+
+  if !exists('$MYVIMFILES')
+    let $MYVIMFILES = expand('~/.nvimr')
+  endif
 endif
 
 augroup MyAutoCmd
