@@ -18,6 +18,9 @@ augroup MyAutoCmd
   autocmd FileType sh,bash,zsh setlocal keywordprg=man\ -s
 augroup END
 
+set splitright
+set splitbelow
+
 syntax enable
 
 set modeline
