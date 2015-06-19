@@ -129,6 +129,9 @@ set numberwidth=4
 set norelativenumber
 set ruler
 
+set list
+set listchars=tab:>-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+
 syntax enable
 
 set modeline
