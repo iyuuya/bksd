@@ -23,6 +23,14 @@ if !exists('g:nvim_tmpdir')
 endif
 call s:mkdir_p(g:nvim_tmpdir)
 
+let mapleader = ','
+let maplocalleader = 'm'
+
+nnoremap <LocalLeader> <Nop>
+xnoremap <LocalLeader> <Nop>
+nnoremap <leader> <Nop>
+xnoremap <leader> <Nop>
+
 filetype plugin indent on
 
 set backup
