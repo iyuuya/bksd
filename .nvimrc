@@ -140,6 +140,9 @@ set ruler
 set list
 set listchars=tab:>-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 
+set nowrap
+nnoremap <Leader>tw :<C-u>setlocal wrap! wrap?<CR>
+
 syntax enable
 
 set modeline
