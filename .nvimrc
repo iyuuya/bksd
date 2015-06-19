@@ -82,6 +82,13 @@ augroup FoldAutoCmd
         \| endif
 augroup END
 
+set ignorecase
+set smartcase
+set infercase
+set incsearch
+set hlsearch
+set wrapscan
+
 set number
 set numberwidth=4
 set norelativenumber
