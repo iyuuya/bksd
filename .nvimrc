@@ -124,6 +124,7 @@ nnoremap n :cnext<CR>
 nnoremap N :cprevious<CR>
 
 set backspace=indent,eol,start
+set whichwrap=h,l,<,>,[,],b,s
 
 augroup MyAutoCmd
   autocmd FileType sh,bash,zsh setlocal keywordprg=man\ -s
