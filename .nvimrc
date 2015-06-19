@@ -109,6 +109,8 @@ nnoremap <C-p> N
 nnoremap n :cnext<CR>
 nnoremap N :cprevious<CR>
 
+set backspace=indent,eol,start
+
 set number
 set numberwidth=4
 set norelativenumber
