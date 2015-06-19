@@ -12,6 +12,17 @@ if has('vim_starting')
   endif
 endif
 
+function! s:mkdir_p(path)
+  if !isdirectory(a:path)
+    call mkdir(a:path)
+  endif
+endfunction
+
+if !exists('g:nvim_tmpdir')
+  let g:nvim_tmpdir = expand($MYVIMFILES . '/tmp')
+endif
+call s:mkdir_p(g:nvim_tmpdir)
+
 filetype plugin indent on
 
 set encoding=utf-8
