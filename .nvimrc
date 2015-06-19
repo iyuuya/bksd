@@ -140,7 +140,7 @@ set ruler
 
 set list
 set listchars=tab:>-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
-
+set showbreak=»\ 
 set nowrap
 nnoremap <Leader>tw :<C-u>setlocal wrap! wrap?<CR>
 
