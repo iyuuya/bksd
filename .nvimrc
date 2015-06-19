@@ -26,6 +26,24 @@ augroup END
 set splitright
 set splitbelow
 
+set foldenable
+set foldlevelstart=99
+set foldcolumn=1
+set foldmethod=syntax
+
+augroup FoldAutoCmd
+  autocmd!
+  autocmd FileType yaml setlocal foldmethod=indent
+  autocmd InsertEnter * if !exists('w:last_fdm')
+        \| let w:last_fdm=&foldmethod
+        \| setlocal foldmethod=manual
+        \| endif
+  autocmd InsertLeave,WinLeave * if exists('w:last_fdm')
+        \| let &l:foldmethod=w:last_fdm
+        \| unlet w:last_fdm
+        \| endif
+augroup END
+
 syntax enable
 
 set modeline
