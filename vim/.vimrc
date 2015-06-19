@@ -313,7 +313,7 @@ set foldlevelstart=99
 " Show folding level.
 set foldcolumn=1
 
-autocmd InsertEnter * if !exists('w:last+_fdm')
+autocmd InsertEnter * if !exists('w:last_fdm')
       \| let w:last_fdm=&foldmethod
       \| setlocal foldmethod=manual
       \| endif
