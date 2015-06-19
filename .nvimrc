@@ -89,6 +89,26 @@ set incsearch
 set hlsearch
 set wrapscan
 
+if executable('ag')
+  set grepprg=ag\ --nogroup\ -iS
+  set grepformat=%f:%l:%m
+else
+  set grepprg=grep\ -Hnd\ skip\ -r
+  set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m
+endif
+
+augroup VimGrepAutoCmd
+  autocmd!
+  autocmd QuickFixCmdPost *grep* cwindow
+augroup END
+
+nnoremap ? /
+nnoremap / :vimgrep  %<left><left>
+nnoremap <C-n> n
+nnoremap <C-p> N
+nnoremap n :cnext<CR>
+nnoremap N :cprevious<CR>
+
 set number
 set numberwidth=4
 set norelativenumber
