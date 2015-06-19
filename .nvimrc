@@ -40,6 +40,8 @@ set undofile
 let &undodir = g:nvim_tmpdir . '/udno'
 call s:mkdir_p(&undodir)
 
+set autoread
+
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,cp932,euc-jp
