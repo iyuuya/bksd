@@ -29,9 +29,6 @@ set expandtab
 set autoindent
 set smartindent
 
-set number
-set ruler
-
 augroup KeywordPrgCmd
   autocmd!
   autocmd FileType vim         setlocal keywordprg=:help
@@ -58,6 +55,11 @@ augroup FoldAutoCmd
         \| unlet w:last_fdm
         \| endif
 augroup END
+
+set number
+set numberwidth=4
+set norelativenumber
+set ruler
 
 syntax enable
 
