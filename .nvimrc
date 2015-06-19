@@ -122,6 +122,8 @@ augroup MyAutoCmd
   autocmd FileType vim setlocal keywordprg=:help
 augroup END
 
+set clipboard=
+
 set number
 set numberwidth=4
 set norelativenumber
