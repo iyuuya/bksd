@@ -111,6 +111,11 @@ nnoremap N :cprevious<CR>
 
 set backspace=indent,eol,start
 
+augroup MyAutoCmd
+  autocmd FileType sh,bash,zsh setlocal keywordprg=man\ -s
+  autocmd FileType vim setlocal keywordprg=:help
+augroup END
+
 set number
 set numberwidth=4
 set norelativenumber
