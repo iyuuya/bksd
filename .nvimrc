@@ -20,6 +20,8 @@ set shiftwidth=2
 set shiftround
 set smarttab
 set expandtab
+set autoindent
+set smartindent
 
 set number
 set ruler
