@@ -25,6 +25,21 @@ call s:mkdir_p(g:nvim_tmpdir)
 
 filetype plugin indent on
 
+set backup
+set nowritebackup
+set backupcopy=auto
+let &backupdir = g:nvim_tmpdir . '/backup'
+call s:mkdir_p(&backupdir)
+
+set swapfile
+let &directory = g:nvim_tmpdir . '/swap'
+call s:mkdir_p(&directory)
+set updatetime=10000
+
+set undofile
+let &undodir = g:nvim_tmpdir . '/udno'
+call s:mkdir_p(&undodir)
+
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,cp932,euc-jp
