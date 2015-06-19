@@ -8,7 +8,7 @@ if has('vim_starting')
   endif
 
   if !exists('$MYVIMFILES')
-    let $MYVIMFILES = expand('~/.nvimr')
+    let $MYVIMFILES = expand('~/.nvim')
   endif
 endif
 
