@@ -42,6 +42,10 @@ call s:mkdir_p(&undodir)
 
 set autoread
 
+set timeout
+set timeoutlen=700
+set ttimeoutlen=100
+
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,cp932,euc-jp
