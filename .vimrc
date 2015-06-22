@@ -305,22 +305,24 @@ set modeline
 
 " Enable folding.
 set foldenable
-" Syntax highlighting items specify folds.
-set foldmethod=syntax
-autocmd FileType yaml setlocal foldmethod=indent
 " Always start editing with all no folds closed.
 set foldlevelstart=99
 " Show folding level.
 set foldcolumn=1
-
-autocmd InsertEnter * if !exists('w:last_fdm')
-      \| let w:last_fdm=&foldmethod
-      \| setlocal foldmethod=manual
-      \| endif
-autocmd InsertLeave,WinLeave * if exists('w:last_fdm')
-      \| let &l:foldmethod=w:last_fdm
-      \| unlet w:last_fdm
-      \| endif
+" Syntax highlighting items specify folds.
+set foldmethod=syntax
+augroup FoldAutoGroup
+  autocmd!
+  autocmd FileType yaml setlocal foldmethod=indent
+  autocmd InsertEnter * if !exists('w:last_fdm')
+        \| let w:last_fdm=&foldmethod
+        \| setlocal foldmethod=manual
+        \| endif
+  autocmd InsertLeave,WinLeave * if exists('w:last_fdm')
+        \| let &l:foldmethod=w:last_fdm
+        \| unlet w:last_fdm
+        \| endif
+augroup END
 
 " Use vimgrep.
 set grepprg=internal
@@ -450,6 +452,7 @@ set startofline
 
 set cursorline
 augroup MyCursorColumnGrp
+  autocmd!
   autocmd FileType yaml setlocal cursorcolumn
 augroup END
 
@@ -480,6 +483,7 @@ set autoindent
 set smartindent
 
 augroup MyArbGrp
+  autocmd!
   autocmd BufEnter,BufRead,BufNew *.arb setlocal filetype=ruby
 augroup END
 
