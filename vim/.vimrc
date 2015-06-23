@@ -552,43 +552,55 @@ if neobundle#is_installed('unite.vim')
   nnoremap [unite]ns :<C-u>Unite neobundle/search<CR>
   nnoremap [unite]nu :<C-u>Unite neobundle/update<CR>
   " unite-outline
-  nnoremap [unite]o  :<C-u>Unite -vertical -winwidth=36 outline<CR>
+  if neobundle#is_installed('unite-outline')
+    nnoremap [unite]o  :<C-u>Unite -vertical -winwidth=36 outline<CR>
+  endif
   " unite-rake
-  nnoremap [unite]rk :<C-u>Unite rake<CR>
+  if neobundle#is_installed('unite-rake')
+    nnoremap [unite]rk :<C-u>Unite rake<CR>
+  endif
   " unite-rails
-  nnoremap [unite]rf :<C-u>Unite -start-insert rails/config<CR>
-  nnoremap [unite]rc :<C-u>Unite -start-insert rails/controller<CR>
-  nnoremap [unite]rdb :<C-u>Unite -start-insert rails/db<CR>
-  nnoremap [unite]ry :<C-u>Unite -start-insert rails/destroy<CR>
-  nnoremap [unite]rg :<C-u>Unite -start-insert rails/generate<CR>
-  nnoremap [unite]rh :<C-u>Unite -start-insert rails/helper<CR>
-  nnoremap [unite]ri :<C-u>Unite -start-insert rails/initializer<CR>
-  nnoremap [unite]rj :<C-u>Unite -start-insert rails/javascript<CR>
-  nnoremap [unite]rl :<C-u>Unite -start-insert rails/lib<CR>
-  nnoremap [unite]ro :<C-u>Unite -start-insert rails/log<CR>
-  nnoremap [unite]ra :<C-u>Unite -start-insert rails/mailer<CR>
-  nnoremap [unite]rm :<C-u>Unite -start-insert rails/model<CR>
-  nnoremap [unite]rr :<C-u>Unite -start-insert rails/route<CR>
-  nnoremap [unite]rp :<C-u>Unite -start-insert rails/spec<CR>
-  nnoremap [unite]rs :<C-u>Unite -start-insert rails/stylesheet<CR>
-  nnoremap [unite]rv :<C-u>Unite -start-insert rails/view<CR>
-  nnoremap [unite]rde :<C-u>Unite -start-insert file:app/decorators<CR>
-  nnoremap [unite]rad :<C-u>Unite -start-insert file:app/admin<CR>
+  if neobundle#is_installed('unite-rails')
+    nnoremap [unite]rf :<C-u>Unite -start-insert rails/config<CR>
+    nnoremap [unite]rc :<C-u>Unite -start-insert rails/controller<CR>
+    nnoremap [unite]rdb :<C-u>Unite -start-insert rails/db<CR>
+    nnoremap [unite]ry :<C-u>Unite -start-insert rails/destroy<CR>
+    nnoremap [unite]rg :<C-u>Unite -start-insert rails/generate<CR>
+    nnoremap [unite]rh :<C-u>Unite -start-insert rails/helper<CR>
+    nnoremap [unite]ri :<C-u>Unite -start-insert rails/initializer<CR>
+    nnoremap [unite]rj :<C-u>Unite -start-insert rails/javascript<CR>
+    nnoremap [unite]rl :<C-u>Unite -start-insert rails/lib<CR>
+    nnoremap [unite]ro :<C-u>Unite -start-insert rails/log<CR>
+    nnoremap [unite]ra :<C-u>Unite -start-insert rails/mailer<CR>
+    nnoremap [unite]rm :<C-u>Unite -start-insert rails/model<CR>
+    nnoremap [unite]rr :<C-u>Unite -start-insert rails/route<CR>
+    nnoremap [unite]rp :<C-u>Unite -start-insert rails/spec<CR>
+    nnoremap [unite]rs :<C-u>Unite -start-insert rails/stylesheet<CR>
+    nnoremap [unite]rv :<C-u>Unite -start-insert rails/view<CR>
+    nnoremap [unite]rde :<C-u>Unite -start-insert file:app/decorators<CR>
+    nnoremap [unite]rad :<C-u>Unite -start-insert file:app/admin<CR>
+  endif
   " Dictionaries
   nnoremap [unite]dw :<C-u>Unite webcolornane<CR>
   nnoremap [unite]dh :<C-u>Unite httpstatus<CR>
-  " unite-giti
-  nnoremap [unite]g  :<C-u>Unite giti<CR>
-  nnoremap [unite]gb :<C-u>Unite giti/branch_all<CR>
-  nnoremap [unite]gl :<C-u>Unite giti/log<CR>
-  nnoremap [unite]gr :<C-u>Unite giti/remote<CR>
-  nnoremap [unite]gs :<C-u>Unite giti/status<CR>
+  if neobundle#is_installed('unite-giti')
+    " unite-giti
+    nnoremap [unite]g  :<C-u>Unite giti<CR>
+    nnoremap [unite]gb :<C-u>Unite giti/branch_all<CR>
+    nnoremap [unite]gl :<C-u>Unite giti/log<CR>
+    nnoremap [unite]gr :<C-u>Unite giti/remote<CR>
+    nnoremap [unite]gs :<C-u>Unite giti/status<CR>
+  endif
   " unite-colorscheme
-  command! ColorScheme :Unite -auto-preview colorscheme
+  if neobundle#is_installed('unite-colorscheme')
+    command! ColorScheme :Unite -auto-preview colorscheme
+  endif
   " unite-tag
-  nnoremap [unite]t  :<C-u>Unite tag<CR>
-  nnoremap [unite]tf :<C-u>Unite tag/file<CR>
-  nnoremap [unite]ti :<C-u>Unite tag/include<CR>
+  if neobundle#is_installed('unite-tag')
+    nnoremap [unite]t  :<C-u>Unite tag<CR>
+    nnoremap [unite]tf :<C-u>Unite tag/file<CR>
+    nnoremap [unite]ti :<C-u>Unite tag/include<CR>
+  endif
 endif
 
 " }}}2
