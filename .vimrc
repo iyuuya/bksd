@@ -239,18 +239,16 @@ if !exists('g:vim_tmp_directory')
 endif
 
 " Create tmp directory.
-if !isdirectory(g:vim_tmp_directory)
-  call mkdir(g:vim_tmp_directory)
-endif
-if !isdirectory(g:vim_tmp_directory.'/backup')
-  call mkdir(g:vim_tmp_directory.'/backup')
-endif
-if !isdirectory(g:vim_tmp_directory.'/swap')
-  call mkdir(g:vim_tmp_directory.'/swap')
-endif
-if !isdirectory(g:vim_tmp_directory.'/undo')
-  call mkdir(g:vim_tmp_directory.'/undo')
-endif
+function! s:mkdir_p(path)
+  if !isdirectory(a:path)
+    call mkdir(a:path)
+  endif
+endfunction
+
+call s:mkdir_p(g:vim_tmp_directory)
+call s:mkdir_p(g:vim_tmp_directory.'/backup')
+call s:mkdir_p(g:vim_tmp_directory.'/swap')
+call s:mkdir_p(g:vim_tmp_directory.'/undo')
 
 " Create backup files.
 set backup
