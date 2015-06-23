@@ -311,7 +311,7 @@ set foldcolumn=1
 set foldmethod=syntax
 augroup FoldAutoGroup
   autocmd!
-  autocmd FileType yaml setlocal foldmethod=indent
+  autocmd FileType html,erb,haml,yaml setlocal foldmethod=indent
   autocmd InsertEnter * if !exists('w:last_fdm')
         \| let w:last_fdm=&foldmethod
         \| setlocal foldmethod=manual
