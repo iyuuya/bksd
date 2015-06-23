@@ -1307,6 +1307,10 @@ nnoremap <silent> [mybind]cl :<C-u>set cursorline!<CR>
 nnoremap <silent> [mybind]cn :<C-u>set cursorcolumn!<CR>
 nnoremap <silent> [mybind]tn :<C-u>set relativenumber!<CR>
 
+nnoremap <silent> [mybind]/  :vimgrep  %<left><left>
+nnoremap <silent> [mybind]n  :cnext<CR>
+nnoremap <silent> [mybind]N  :cprevious<CR>
+
 " }}}1
 "===============================================================================
 
