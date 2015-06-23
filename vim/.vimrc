@@ -325,11 +325,15 @@ augroup FoldAutoGroup
 augroup END
 
 " Use vimgrep.
-set grepprg=internal
-" Use grep.
-" set grepprg=grep\ -nH
-" default-mac: grep -n $* /dev/null
-" default-win: findstr /n
+if executable('ag')
+  set grepprg=ag\ --nogroup\ -iS
+  set grepformat=%f:%l:%m
+elseif executable('grel')
+  set grepprg=grep\ -Hnd\ skip\ -r
+  set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m
+else
+  set grepprg=interval
+endif
 
 " Set tags file.
 set tags=./tags,tags
