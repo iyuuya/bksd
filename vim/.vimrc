@@ -376,7 +376,7 @@ set breakat=\ \>;:,!
 
 " Show <tab> and <space>(trailing)
 set list
-set listchars=tab:>-,trail:_
+set listchars=tab:>-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 
 " Highlight parenthesis.
 set showmatch
