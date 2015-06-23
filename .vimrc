@@ -333,6 +333,11 @@ else
   set grepprg=interval
 endif
 
+augroup VimGrepAutoCmd
+  autocmd!
+  autocmd QuickFixCmdPost *grep* cwindow
+augroup END
+
 " Set tags file.
 set tags=./tags,tags
 
