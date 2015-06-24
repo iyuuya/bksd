@@ -157,6 +157,10 @@ set scrolloff=5
 set sidescroll=1
 set sidescrolloff=10
 
+set wildmenu
+set wildmode=list:longest,full
+set wildoptions=tagfile
+
 syntax enable
 
 set modeline
