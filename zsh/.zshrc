@@ -162,20 +162,21 @@ function update_prompt() # "{{{2
   if [ -n "$(rbenv_prompt)" ]; then
     bar_left_ruby="[%{%F{red}%}$(rbenv_prompt)%{%f%}]"
   fi
-  if [ -n "$(pyenv_prompt)" ]; then
-    bar_left_python="[%{%F{blue}%}$(pyenv_prompt)%{%f%}]"
-  fi
-  if [ -n "$(ndenv_prompt)" ]; then
-    bar_left_node="[%{%F{green}%}$(ndenv_prompt)%{%f%}]"
-  fi
-  if [ -n "$(goenv_prompt)" ]; then
-    bar_left_go="[%{%F{yellow}%}$(goenv_prompt)%{%f%}]"
-  fi
-  if [ -n "$(scalaenv_prompt)" ]; then
-    bar_left_scala="[%{%F{magenta}%}$(scalaenv_prompt)%{%f%}]"
-  fi
+  #if [ -n "$(pyenv_prompt)" ]; then
+  #  bar_left_python="[%{%F{blue}%}$(pyenv_prompt)%{%f%}]"
+  #fi
+  #if [ -n "$(ndenv_prompt)" ]; then
+  #  bar_left_node="[%{%F{green}%}$(ndenv_prompt)%{%f%}]"
+  #fi
+  #if [ -n "$(goenv_prompt)" ]; then
+  #  bar_left_go="[%{%F{yellow}%}$(goenv_prompt)%{%f%}]"
+  #fi
+  #if [ -n "$(scalaenv_prompt)" ]; then
+  #  bar_left_scala="[%{%F{magenta}%}$(scalaenv_prompt)%{%f%}]"
+  #fi
 
-  local bar_left="${bar_left_self}${bar_left_date}${bar_left_ruby}${bar_left_node}${bar_left_python}${bar_left_go}${bar_left_scala}>>-"
+  # local bar_left="${bar_left_self}${bar_left_date}${bar_left_ruby}${bar_left_node}${bar_left_python}${bar_left_go}${bar_left_scala}>>-"
+  local bar_left="${bar_left_self}${bar_left_date}${bar_left_ruby}>>-"
   # "}}}3
 
   # ----<master:project>-<<: "{{{3
