@@ -157,7 +157,7 @@ function update_prompt() # "{{{2
   # user@host
   bar_left_self="%{%F{green}%}%n%{%F{yellow}%}@%{%F{red}%}%m%{%f%}"
   # date: (2012/03/04 05:06)
-  bar_left_date="(%D{%Y/%m/%d %H:%M})"
+  bar_left_date="(%D{%Y/%m/%d %H:%M:%S})"
   # rbenv : [1.9.3]
   if [ -n "$(rbenv_prompt)" ]; then
     bar_left_ruby="[%{%F{red}%}$(rbenv_prompt)%{%f%}]"
