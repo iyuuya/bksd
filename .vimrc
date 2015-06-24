@@ -326,11 +326,11 @@ augroup END
 if executable('ag')
   set grepprg=ag\ --nogroup\ -iS
   set grepformat=%f:%l:%m
-elseif executable('grel')
+elseif executable('grep')
   set grepprg=grep\ -Hnd\ skip\ -r
   set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m
 else
-  set grepprg=interval
+  set grepprg=internal
 endif
 
 augroup VimGrepAutoCmd
