@@ -454,6 +454,26 @@ function git-rewrite-author2()
   git filter-branch -f --env-filter "GIT_AUTHOR_NAME='$1'; GIT_AUTHOR_EMAIL='$2'; GIT_COMMITTER_NAME='$1'; GIT_COMMITTER_EMAIL='$2';" $3
 }
 
+function benchmark()
+{
+  if [ $# -le 1 ]; then
+    echo 'usage: benchmark num "command"'
+    return
+  fi
+
+  for i in {1..$1}; do
+    (time ($2)) |& sed -e "s/[a-z]//g" >> benchmark.tmp.log
+    print -n "."
+  done
+  print
+  ruby <<\EOS
+  ks=%i(user system cpu total);ss=Hash.new(0);i=0
+  File.open('benchmark.tmp.log'){|f|f.each_line{|line|ks.zip(line.split.map(&:to_f)).to_h.each{|k,v|ss[k]+=v};i+=1}}
+  ss.each{|k,v|puts"#{k.to_s.ljust(7)}: #{v/i}"}
+EOS
+  rm benchmark.tmp.log
+}
+
 # "}}}1
 #===============================================================================
 
