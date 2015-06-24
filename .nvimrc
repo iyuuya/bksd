@@ -157,6 +157,10 @@ set scrolloff=5
 set sidescroll=1
 set sidescrolloff=10
 
+set laststatus=2
+set cmdheight=2
+set showcmd
+
 set wildmenu
 set wildmode=list:longest,full
 set wildoptions=tagfile
