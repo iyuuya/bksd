@@ -151,6 +151,10 @@ set showbreak=»\
 set nowrap
 nnoremap <Leader>tw :<C-u>setlocal wrap! wrap?<CR>
 set textwidth=0
+set scroll=1
+set scrolloff=5
+set sidescroll=1
+set sidescrolloff=10
 
 syntax enable
 
