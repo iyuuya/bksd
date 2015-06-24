@@ -81,6 +81,7 @@ augroup END
 
 set splitright
 set splitbelow
+set noequalalways
 
 set foldenable
 set foldlevelstart=99
