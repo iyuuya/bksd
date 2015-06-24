@@ -160,6 +160,7 @@ set sidescrolloff=10
 set wildmenu
 set wildmode=list:longest,full
 set wildoptions=tagfile
+set wildignore=*.o,*.obj,*.swp,*.bak,*.png,*.jpg,*.gif,*.pdf,*.doc,*.docx,*.xls,*.xslx,*.zip,*.gz,*.tar
 
 syntax enable
 
