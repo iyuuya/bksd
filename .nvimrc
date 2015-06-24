@@ -110,9 +110,11 @@ set wrapscan
 if executable('ag')
   set grepprg=ag\ --nogroup\ -iS
   set grepformat=%f:%l:%m
-else
+elseif executable('grep')
   set grepprg=grep\ -Hnd\ skip\ -r
   set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m
+else
+  set grepprg=internal
 endif
 
 augroup VimGrepAutoCmd
@@ -130,7 +132,8 @@ nnoremap N :cprevious<CR>
 set backspace=indent,eol,start
 set whichwrap=h,l,<,>,[,],b,s
 
-augroup MyAutoCmd
+augroup KeywordPrgAutoCmd
+  autocmd!
   autocmd FileType sh,bash,zsh setlocal keywordprg=man\ -s
   autocmd FileType vim setlocal keywordprg=:help
 augroup END
