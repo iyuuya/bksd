@@ -146,6 +146,11 @@ set numberwidth=4
 set norelativenumber
 set ruler
 
+set showmatch
+set matchpairs+=<:>
+set cpoptions-=m
+set matchtime=3
+
 set list
 set listchars=tab:>-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set showbreak=»\ 
