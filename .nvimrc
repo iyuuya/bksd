@@ -162,6 +162,9 @@ set scrolloff=5
 set sidescroll=1
 set sidescrolloff=10
 
+set showtabline=2
+set tabpagemax=10
+
 set laststatus=2
 set cmdheight=2
 set showcmd
