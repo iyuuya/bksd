@@ -23,6 +23,10 @@ if !exists('g:nvim_tmpdir')
 endif
 call s:mkdir_p(g:nvim_tmpdir)
 
+language message C
+language ctype C
+language time C
+
 let mapleader = ','
 let maplocalleader = 'm'
 
