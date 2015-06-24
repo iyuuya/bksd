@@ -473,6 +473,7 @@ function benchmark()
 EOS
   rm benchmark.tmp.log
 }
+function b100 { benchmark 100 $1 }
 
 # "}}}1
 #===============================================================================
