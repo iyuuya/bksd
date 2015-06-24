@@ -176,7 +176,7 @@ function update_prompt() # "{{{2
   #fi
 
   # local bar_left="${bar_left_self}${bar_left_date}${bar_left_ruby}${bar_left_node}${bar_left_python}${bar_left_go}${bar_left_scala}>>-"
-  local bar_left="${bar_left_self}${bar_left_date}${bar_left_ruby}>>-"
+  local bar_left="${bar_left_self}${bar_left_date}${bar_left_ruby}"
   # "}}}3
 
   # ----<master:project>-<<: "{{{3
@@ -185,18 +185,19 @@ function update_prompt() # "{{{2
   # if [ -n "$(git_prompt)" ]; then
   #   prompt_bar_right="$(git_prompt):"
   # fi
-  # -<master:project>-<<
-  prompt_bar_right="<${prompt_bar_right}%{%F{yellow}%}%c%{%f%}>-<<"
+  # -<master:project>
+  prompt_bar_right="[${prompt_bar_right}%{%F{yellow}%}%c%{%f%}]"
 
-  local bar_left_length=$(count_prompt_characters "$bar_left")
-  local bar_rest_length=$[COLUMNS - bar_left_length]
+  #local bar_left_length=$(count_prompt_characters "$bar_left")
+  #local bar_rest_length=$[COLUMNS - bar_left_length]
   local bar_right_without_path="${prompt_bar_right:s/%d//}"
   local bar_right_without_path_length=$(count_prompt_characters "$bar_right_without_path")
-  local max_path_length=$[bar_rest_length - bar_right_without_path_length]
-  bar_right=${prompt_bar_right:s/%d/%(C,%${max_path_length}<...<%d%<<,)/}
-  local separator="${(l:${bar_rest_length}::-:)}"
+  #local max_path_length=$[bar_rest_length - bar_right_without_path_length]
+  #bar_right=${prompt_bar_right:s/%d/%(C,%${max_path_length}<...<%d%<<,)/}
+  bar_right=${prompt_bar_right:s/%d/%(C,%<...<%d%<<,)/}
+  #local separator="${(l:${bar_rest_length}::-:)}"
 
-  bar_right="%${bar_rest_length}<<${separator}${bar_right}%<<"
+  #bar_right="%${bar_rest_length}<<${separator}${bar_right}%<<"
   # "}}}3
 
   local prompt_left="%#%{%b%} "
