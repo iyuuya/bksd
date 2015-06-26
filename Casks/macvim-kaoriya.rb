@@ -1,8 +1,8 @@
 cask :v1 => 'macvim-kaoriya' do
-  sha256 'dc88078d53814eb86c860d7c9bf05d2fb4d7cd4ef76601bdf8518e8643dd4474'
-  url 'https://github.com/splhack/macvim-kaoriya/releases/download/20150429/macvim-kaoriya-20150429.dmg'
+  sha256 '47911a1e28daf1aef2115197750bf73ef7104a84a188195595525c148d0871f9'
+  url 'https://github.com/splhack/macvim-kaoriya/releases/download/20150623/macvim-kaoriya-20150623.dmg'
 
-  version '7.4.712'
+  version '7.4.1-752'
   homepage 'https://code.google.com/p/macvim-kaoriya'
 
   app 'MacVim.app'
