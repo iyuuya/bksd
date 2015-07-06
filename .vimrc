@@ -86,6 +86,11 @@ if has('vim_starting')
     execute 'source ' . s:vimfile_path
   endif
   unlet s:vimfile_path
+  let s:vimfile_local_path = expand($MYVIMFILES . '/Vimfile.local')
+  if filereadable(s:vimfile_local_path)
+    execute 'source ' . s:vimfile_local_path
+  endif
+  unlet s:vimfile_local_path
   call neobundle#end()
   unlet s:bundle_path
   unlet s:neobundle_path
