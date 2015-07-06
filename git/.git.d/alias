@@ -31,6 +31,7 @@
   rc      = rebase --continue
   ri      = rebase -i
   rr      = rebase -i --root
+  rs      = rebase --skip
   sm      = submodule
   st      = subtree
   stpsm   = "!sh -c 'git subtree push --prefix=$1 $1 master' -"
