@@ -20,8 +20,10 @@ brew cask install evernote      || true
 
 brew cask install flip4mac      || true
 brew cask install linein        || true
-brew cask install skitch        || true
 brew cask install vlc           || true
+brew cask install skitch        || true
+brew cask keycast               || true
+brew cask keycastr              || true
 
 brew cask install sequel-pro    || true
 # brew cask install navicat-for-sqlite     || true
