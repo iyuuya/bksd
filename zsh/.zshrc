@@ -671,7 +671,8 @@ if type tmux > /dev/null 2>&1; then
   alias t='tmux'
   compdef t=tmux
   alias tns='tmux new-session -s'
-  alias tls='tmux ls'
+  alias tat='tmux attach-session -t'
+  alias tls='tmux list-sessions'
   alias tks='tmux kill-session -t'
   alias sp='tmux split-window'
   alias vs='tmux split-window -h'
