@@ -3,6 +3,7 @@
   a       = add
   b       = branch
   bd      = branch -D
+  ba      = branch -a
   cl      = clone
   cm      = commit
   cmt     = commit --verbose
