@@ -83,6 +83,7 @@ NeoBundle 'mattn/emmet-vim' " emmet for vim: http://emmet.io/
 NeoBundle 'thoughtbot/vim-rspec' " Run Rspec specs from Vim
 NeoBundle 'tpope/vim-rails' " rails.vim: Ruby on Rails power tools
 NeoBundle 'basyura/unite-rails' " a unite.vim plugin for rails
+NeoBundle 'iyuuya/unite-rails-fat'
 "NeoBundle 'ngmy/vim-rubocop' " The Vim RuboCop plugin runs RuboCop and displays the results in Vim
 
 "NeoBundle 'evidens/vim-twig' " Twig syntax highlighting, snipMate, etc.
