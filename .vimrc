@@ -588,13 +588,17 @@ if neobundle#is_installed('unite.vim')
   " Dictionaries
   nnoremap [unite]dw :<C-u>Unite webcolornane<CR>
   nnoremap [unite]dh :<C-u>Unite httpstatus<CR>
+  " unite-giti
   if neobundle#is_installed('unite-giti')
-    " unite-giti
     nnoremap [unite]g  :<C-u>Unite giti<CR>
     nnoremap [unite]gb :<C-u>Unite giti/branch_all<CR>
     nnoremap [unite]gl :<C-u>Unite giti/log<CR>
     nnoremap [unite]gr :<C-u>Unite giti/remote<CR>
     nnoremap [unite]gs :<C-u>Unite giti/status<CR>
+  endif
+  " unite-git-conflict.vim
+  if neobundle#is_installed('unite-git-conflict.vim')
+    nnoremap [unite]gf :<C-u>Unite git-conflict -no-quit<CR>
   endif
   " unite-colorscheme
   if neobundle#is_installed('unite-colorscheme')
