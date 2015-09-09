@@ -566,23 +566,24 @@ if neobundle#is_installed('unite.vim')
   endif
   " unite-rails
   if neobundle#is_installed('unite-rails')
-    nnoremap [unite]rf :<C-u>Unite -start-insert rails/config<CR>
-    nnoremap [unite]rc :<C-u>Unite -start-insert rails/controller<CR>
+    nnoremap [unite]r  :<C-u>Unite -start-insert source<CR>rails/
+    nnoremap [unite]rcf :<C-u>Unite -start-insert rails/config<CR>
+    nnoremap [unite]rcn :<C-u>Unite -start-insert rails/controller<CR>
     nnoremap [unite]rdb :<C-u>Unite -start-insert rails/db<CR>
-    nnoremap [unite]ry :<C-u>Unite -start-insert rails/destroy<CR>
-    nnoremap [unite]rg :<C-u>Unite -start-insert rails/generate<CR>
     nnoremap [unite]rh :<C-u>Unite -start-insert rails/helper<CR>
     nnoremap [unite]ri :<C-u>Unite -start-insert rails/initializer<CR>
     nnoremap [unite]rj :<C-u>Unite -start-insert rails/javascript<CR>
     nnoremap [unite]rl :<C-u>Unite -start-insert rails/lib<CR>
-    nnoremap [unite]ro :<C-u>Unite -start-insert rails/log<CR>
-    nnoremap [unite]ra :<C-u>Unite -start-insert rails/mailer<CR>
     nnoremap [unite]rm :<C-u>Unite -start-insert rails/model<CR>
-    nnoremap [unite]rr :<C-u>Unite -start-insert rails/route<CR>
     nnoremap [unite]rp :<C-u>Unite -start-insert rails/spec<CR>
     nnoremap [unite]rs :<C-u>Unite -start-insert rails/stylesheet<CR>
     nnoremap [unite]rv :<C-u>Unite -start-insert rails/view<CR>
-    nnoremap [unite]rde :<C-u>Unite -start-insert file:app/decorators<CR>
+    nnoremap [unite]rde :<C-u>Unite -start-insert rails/decorator<CR>
+    nnoremap [unite]rfm :<C-u>Unite -start-insert rails/form<CR>
+    nnoremap [unite]rvl :<C-u>Unite -start-insert rails/value<CR>
+    nnoremap [unite]rva :<C-u>Unite -start-insert rails/validator<CR>
+    nnoremap [unite]rsv :<C-u>Unite -start-insert rails/service<CR>
+    nnoremap [unite]rpl :<C-u>Unite -start-insert rails/policy<CR>
     nnoremap [unite]rad :<C-u>Unite -start-insert file:app/admin<CR>
   endif
   " Dictionaries
