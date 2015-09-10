@@ -16,4 +16,9 @@ if [ -x "`which go`" ]; then
     echo 'installing ghq...'
     go get github.com/motemen/ghq
   fi
+
+  if [ ! -x "`which git-xlsx-textconv`" ]; then
+    echo 'installing git-xlsx-textconv'
+    go get github.com/tokuhirom/git-xlsx-textconv
+  fi
 fi
