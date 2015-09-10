@@ -1,10 +1,11 @@
 [core]
-  editor       = vim
-  pager        = less
-  autocrlf     = false
-  filemode     = true
-  quotepath    = false
-  excludesfile = ~/.git.d/ignore
+  editor         = vim
+  pager          = less
+  autocrlf       = false
+  filemode       = true
+  quotepath      = false
+  excludesfile   = ~/.git.d/ignore
+  attributesFile = ~/.git.d/attributes
 
 [color]
   branch      = true
@@ -45,6 +46,10 @@
 
 [merge]
   tool = vimdiff
+
+[diff "xlsx"]
+  binary = true
+  textconv = ~/.go/bin/git-xlsx-textconv
 
 [hub]
   protocol = https
