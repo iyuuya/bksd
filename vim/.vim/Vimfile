@@ -22,13 +22,15 @@ NeoBundle 'Shougo/vimshell.vim'    " Powerful shell implemented by vim.
 NeoBundle 'Shougo/vimfiler.vim'    " Powerful file explorer implemented by Vim script
 "NeoBundle 'tyru/eskk.vim' " eskk aims to provide powerful input method platform in Vim.
 
-NeoBundle 'Lokaltog/vim-powerline', 'develop'  " The ultimate vim statusline utility.
+" NeoBundle 'Lokaltog/vim-powerline', 'develop'  " The ultimate vim statusline utility.
+NeoBundle 'itchyny/lightline.vim'
 
 "NeoBundle 'w0ng/vim-hybrid'                  " A dark colour scheme for Vim & gVim
 "NeoBundle 'nanotech/jellybeans.vim'          " A colorful, dark color scheme for Vim.
-"NeoBundle 'tomasr/molokai'                   " Molokai color scheme for Vim
-NeoBundle 'chriskempson/vim-tomorrow-theme'  " Tomorrow Theme for Vim
+NeoBundle 'tomasr/molokai'                   " Molokai color scheme for Vim
+"NeoBundle 'chriskempson/vim-tomorrow-theme'  " Tomorrow Theme for Vim
 "NeoBundle 'ujihisa/unite-colorscheme' " A unite.vim plugin
+"NeoBundle 'vim-scripts/wombat256.vim' " Wombat for 256 color xterms
 
 if has('lua')
 NeoBundle 'Shougo/neocomplete.vim'     " Next generation completion framework after neocomplcache

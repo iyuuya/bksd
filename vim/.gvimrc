@@ -76,7 +76,8 @@ if s:ismac
   " Use antialias
   set antialias
 
-  set guifont=Ricty_Discord_Regular_for_Powerline:h12
+  " set guifont=Ricty_Discord_Regular_for_Powerline:h12
+  set guifont=Sauce_Code_Powerline:h12
 
   " Number of pixel lines inserted between characters.
   set linespace=2
@@ -105,7 +106,8 @@ endif
 " Disable bell.
 set vb t_vb=
 
-colorscheme Tomorrow-Night-Bright
+" colorscheme Tomorrow-Night-Bright
+colorscheme molokai
 
 " }}}1
 "===============================================================================
