@@ -250,6 +250,5 @@ esac
 #===============================================================================
 
 src $HOME/.zshenv.local
-src $HOME/.zshrc
 
 # vim: ft=zsh fdm=marker et sw=2 sts=2 ts=2
