@@ -1,5 +1,3 @@
-" TODO : 整理する
-
 " Ultimate Vim package manager
 NeoBundleFetch 'Shougo/neobundle.vim'
 
@@ -18,19 +16,18 @@ NeoBundle 'tsukkee/unite-tag'      " tags soruce for unite.vim
 NeoBundle 'Shougo/neomru.vim'
 
 NeoBundle 'Shougo/vimshell.vim'    " Powerful shell implemented by vim.
-"NeoBundle 'ujihisa/vimshell-ssh' " the world first vimshell plugin that you can run 'vim' command on ssh on vimshell
+NeoBundle 'ujihisa/vimshell-ssh' " the world first vimshell plugin that you can run 'vim' command on ssh on vimshell
 NeoBundle 'Shougo/vimfiler.vim'    " Powerful file explorer implemented by Vim script
 NeoBundle 'tyru/eskk.vim' " eskk aims to provide powerful input method platform in Vim.
 
-" NeoBundle 'Lokaltog/vim-powerline', 'develop'  " The ultimate vim statusline utility.
 NeoBundle 'itchyny/lightline.vim'
 
-"NeoBundle 'w0ng/vim-hybrid'                  " A dark colour scheme for Vim & gVim
-"NeoBundle 'nanotech/jellybeans.vim'          " A colorful, dark color scheme for Vim.
+NeoBundle 'w0ng/vim-hybrid'                  " A dark colour scheme for Vim & gVim
+NeoBundle 'nanotech/jellybeans.vim'          " A colorful, dark color scheme for Vim.
 NeoBundle 'tomasr/molokai'                   " Molokai color scheme for Vim
-"NeoBundle 'chriskempson/vim-tomorrow-theme'  " Tomorrow Theme for Vim
-"NeoBundle 'ujihisa/unite-colorscheme' " A unite.vim plugin
-"NeoBundle 'vim-scripts/wombat256.vim' " Wombat for 256 color xterms
+NeoBundle 'chriskempson/vim-tomorrow-theme'  " Tomorrow Theme for Vim
+NeoBundle 'ujihisa/unite-colorscheme' " A unite.vim plugin
+NeoBundle 'vim-scripts/wombat256.vim' " Wombat for 256 color xterms
 
 if has('lua')
 NeoBundle 'Shougo/neocomplete.vim'     " Next generation completion framework after neocomplcache
@@ -38,8 +35,6 @@ endif
 NeoBundle 'Shougo/neosnippet.vim'      " neo-snippet plugin contains neocomplcache snippets source
 NeoBundle 'Shougo/neosnippet-snippets' " The standard snippets repository for neosnippet
 NeoBundle 'h1mesuke/vim-alignta'       " Align Them All!
-
-"NeoBundle 'christoomey/vim-tmux-navigator' " Seamless navigation between tmux panes and vim splits
 
 NeoBundle 'tpope/vim-fugitive' " fugitive.vim: a Git wrapper so awesome, it should be illegal
 NeoBundle 'moznion/unite-git-conflict.vim' " Unite source for git conflicts.
@@ -56,9 +51,9 @@ NeoBundleLazy 'edsono/vim-matchit', { 'autoload' : {
 NeoBundle 'thinca/vim-template'
 
 
-"NeoBundle 'timcharper/textile.vim' " Textile for VIM
-"NeoBundle 'asciidoc/vim-asciidoc' " (Soon to be) the official repository for the AsciiDoc syntax support in VIM
-"NeoBundle 'aklt/plantuml-syntax' " vim syntax file for plantuml
+NeoBundle 'timcharper/textile.vim' " Textile for VIM
+NeoBundle 'asciidoc/vim-asciidoc' " (Soon to be) the official repository for the AsciiDoc syntax support in VIM
+NeoBundle 'aklt/plantuml-syntax' " vim syntax file for plantuml
 NeoBundle 'kannokanno/previm' " Realtime preview by Vim. (Markdown, reStructuredText, textile)
 
 NeoBundle 'vim-scripts/dbext.vim'
@@ -71,7 +66,7 @@ NeoBundle 'thinca/vim-ref' " Integrated reference viewer.
 
 NeoBundle 'lambdalisue/vim-gista'
 
-"NeoBundle 'thinca/vim-quickrun', { 'depends' : 'mattn/quickrunex-vim' } " Run commands quickly.
+NeoBundle 'thinca/vim-quickrun', { 'depends' : 'mattn/quickrunex-vim' } " Run commands quickly.
 "NeoBundle 'osyo-manga/vim-watchdogs' " Async syntax checking.
 "NeoBundle 'osyo-manga/shabadou.vim'
 "NeoBundle 'scrooloose/syntastic' " Syntax checking hacks for vim
@@ -87,12 +82,6 @@ NeoBundle 'tpope/vim-rails' " rails.vim: Ruby on Rails power tools
 NeoBundle 'basyura/unite-rails' " a unite.vim plugin for rails
 NeoBundle 'iyuuya/unite-rails-fat'
 "NeoBundle 'ngmy/vim-rubocop' " The Vim RuboCop plugin runs RuboCop and displays the results in Vim
-NeoBundle 'toyamarinyon/vim-swift' " Adds Swift support to vim. It covers syntax, intenting, and more.
-
-"NeoBundle 'evidens/vim-twig' " Twig syntax highlighting, snipMate, etc.
-
-"NeoBundle 'elixir-lang/vim-elixir' " Vim configuration files for Elixir
-"NeoBundle 'mattreduce/vim-mix' " Vim plugin for using Elixir's build tool, mix
 
 "NeoBundleLazy 'vim-jp/cpp-vim', {
 "            \ 'autoload' : {'filetypes' : 'cpp'}
@@ -103,12 +92,12 @@ NeoBundle 'toyamarinyon/vim-swift' " Adds Swift support to vim. It covers syntax
 "NeoBundle 'basyura/TweetVim', { 'depends' : ['tyru/open-browser.vim', 'basyura/twibill.vim', 'mattn/webapi-vim', 'basyura/bitly.vim', 'mattn/favstar-vim'] }
 "NeoBundle 'basyura/J6uil.vim'
 
-"NeoBundle 'vim-jp/vital.vim'
+NeoBundle 'vim-jp/vital.vim'
 
 "NeoBundle 'rking/ag.vim' " Vim plugin for the_silver_searcher, 'ag', a replacement for the Perl module / CLI script 'ack'
 "NeoBundle '5t111111/alt-gtags.vim'
 "NeoBundle 'szw/vim-tags'
 
-"NeoBundle 'thinca/vim-scouter'
+NeoBundle 'thinca/vim-scouter'
 
 " vim: fdm=marker ft=vim

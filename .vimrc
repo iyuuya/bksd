@@ -798,31 +798,6 @@ endif
 "-------------------------------------------------------------------------------
 
 "-------------------------------------------------------------------------------
-" Vim PowerLine: "{{{2
-
-" colorscheme Tomorrow-Night-Bright
-colorscheme molokai
-
-if neobundle#is_installed('vim-powerline')
-  let g:Powerline_symbols = 'fancy'
-
-  let g:Powerline_colorscheme = 'default'
-
-  let g:Powerline_mode_n = 'NR'
-  let g:Powerline_mode_i = 'IN'
-  let g:Powerline_mode_R = 'RE'
-  let g:Powerline_mode_v = 'VI'
-  let g:Powerline_mode_V = 'VL'
-  let g:Powerline_mode_cv = 'VB'
-  let g:Powerline_mode_s = 'SE'
-  let g:Powerline_mode_S = 'SL'
-  let g:Powerline_mode_cs = 'SB'
-endif
-
-" }}}2
-"-------------------------------------------------------------------------------
-
-"-------------------------------------------------------------------------------
 " Lightline: "{{{2
 
 if neobundle#is_installed('lightline.vim')
@@ -1207,23 +1182,6 @@ endif
 let g:gista#github_user = 'iyuuya'
 let g:gista#directory = g:vim_tmp_directory . '/gista/'
 let g:gista#update_on_write = 1
-
-" }}}2
-"-------------------------------------------------------------------------------
-
-"-------------------------------------------------------------------------------
-" TmuxNavigator: "{{{2
-
-if neobundle#is_installed('vim-tmux-navigator')
-  let g:tmux_navigator_no_mappings = 1
-
-  nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
-  nnoremap <silent> <C-j> :TmuxNavigateDown<CR>
-  nnoremap <silent> <C-k> :TmuxNavigateUp<CR>
-  nnoremap <silent> <C-l> :TmuxNavigateRight<CR>
-  command! Tvs :call system('tmux split-window')
-  command! Tsp :call system('tmux split-window -h')
-endif
 
 " }}}2
 "-------------------------------------------------------------------------------
