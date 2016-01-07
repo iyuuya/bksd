@@ -1193,23 +1193,6 @@ let g:gista#update_on_write = 1
 "-------------------------------------------------------------------------------
 
 "-------------------------------------------------------------------------------
-" TmuxNavigator: "{{{2
-
-if neobundle#is_installed('vim-tmux-navigator')
-  let g:tmux_navigator_no_mappings = 1
-
-  nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
-  nnoremap <silent> <C-j> :TmuxNavigateDown<CR>
-  nnoremap <silent> <C-k> :TmuxNavigateUp<CR>
-  nnoremap <silent> <C-l> :TmuxNavigateRight<CR>
-  command! Tvs :call system('tmux split-window')
-  command! Tsp :call system('tmux split-window -h')
-endif
-
-" }}}2
-"-------------------------------------------------------------------------------
-
-"-------------------------------------------------------------------------------
 " Caw: "{{{2
 
 if neobundle#is_installed('caw.vim')
