@@ -1249,7 +1249,22 @@ endif
 " ESKK: "{{{2
 
 if neobundle#is_installed('eskk.vim')
-  let g:eskk#server = { 'host' : 'localhost', 'port' : 55100 }
+  if s:ismac
+    let g:eskk#dictionary = '~/Library/Application\ Support/AquaSKK/skk-jisyo.utf8'
+    let g:eskk#large_dictionary = '~/Library/Application\ Support/AquaSKK/SKK-JISYO.L'
+  endif
+
+  let g:eskk#debug = 0
+  let g:eskk#egg_like_newline = 1
+  let g:eskk#revert_henkan_style = 'okuri'
+  let g:eskk#enable_completion = 0
+
+  " Use google-ime-server
+  let g:eskk#server = {
+        \ 'host': 'localhost',
+        \ 'port': 55100,
+        \ 'type': 'notfound',
+        \ }
 endif
 
 " }}}2
