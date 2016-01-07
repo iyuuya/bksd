@@ -527,8 +527,8 @@ if type mvim > /dev/null 2>&1; then
   alias gvim='reattach-to-user-namespace mvim'
 fi
 
-if type ~/Applications/MacVim.app/Contents/MacOS/Vim > /dev/null 2>&1; then
-  alias vim='reattach-to-user-namespace ~/Applications/MacVim.app/Contents/MacOS/Vim'
+if type $VIM_APP_DIR/MacVim.app/Contents/MacOS/Vim > /dev/null 2>&1; then
+  alias vim="reattach-to-user-namespace $VIM_APP_DIR/MacVim.app/Contents/MacOS/Vim"
 fi
 alias vi='vim'
 alias v='vim'
