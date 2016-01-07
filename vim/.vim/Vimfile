@@ -87,6 +87,7 @@ NeoBundle 'tpope/vim-rails' " rails.vim: Ruby on Rails power tools
 NeoBundle 'basyura/unite-rails' " a unite.vim plugin for rails
 NeoBundle 'iyuuya/unite-rails-fat'
 "NeoBundle 'ngmy/vim-rubocop' " The Vim RuboCop plugin runs RuboCop and displays the results in Vim
+NeoBundle 'toyamarinyon/vim-swift' " Adds Swift support to vim. It covers syntax, intenting, and more.
 
 "NeoBundle 'evidens/vim-twig' " Twig syntax highlighting, snipMate, etc.
 
