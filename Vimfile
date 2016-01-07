@@ -20,7 +20,6 @@ NeoBundle 'Shougo/vimshell.vim'    " Powerful shell implemented by vim.
 NeoBundle 'Shougo/vimfiler.vim'    " Powerful file explorer implemented by Vim script
 "NeoBundle 'tyru/eskk.vim' " eskk aims to provide powerful input method platform in Vim.
 
-" NeoBundle 'Lokaltog/vim-powerline', 'develop'  " The ultimate vim statusline utility.
 NeoBundle 'itchyny/lightline.vim'
 
 "NeoBundle 'w0ng/vim-hybrid'                  " A dark colour scheme for Vim & gVim
@@ -88,9 +87,6 @@ NeoBundle 'iyuuya/unite-rails-fat'
 
 "NeoBundle 'evidens/vim-twig' " Twig syntax highlighting, snipMate, etc.
 
-"NeoBundle 'elixir-lang/vim-elixir' " Vim configuration files for Elixir
-"NeoBundle 'mattreduce/vim-mix' " Vim plugin for using Elixir's build tool, mix
-
 "NeoBundleLazy 'vim-jp/cpp-vim', {
 "            \ 'autoload' : {'filetypes' : 'cpp'}
 "            \ }
@@ -100,13 +96,13 @@ NeoBundle 'iyuuya/unite-rails-fat'
 "NeoBundle 'basyura/TweetVim', { 'depends' : ['tyru/open-browser.vim', 'basyura/twibill.vim', 'mattn/webapi-vim', 'basyura/bitly.vim', 'mattn/favstar-vim'] }
 "NeoBundle 'basyura/J6uil.vim'
 
-"NeoBundle 'vim-jp/vital.vim'
+NeoBundle 'vim-jp/vital.vim'
 
 "NeoBundle 'rking/ag.vim' " Vim plugin for the_silver_searcher, 'ag', a replacement for the Perl module / CLI script 'ack'
 "NeoBundle '5t111111/alt-gtags.vim'
 "NeoBundle 'szw/vim-tags'
 
-"NeoBundle 'thinca/vim-scouter'
+NeoBundle 'thinca/vim-scouter'
 
 " TODO: check with nyaovim??
 NeoBundle 'rhysd/nyaovim-popup-tooltip'
