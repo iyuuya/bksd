@@ -1414,6 +1414,12 @@ function! GetPageTitle(url)
   return system('curl --silent ' . a:url . " | grep '<title>' | sed -e 's/\\<title\\>//g' | sed -e 's/\\<\\/title\\>//g' | sed -e 's/ *$//g' | sed -e 's/^ *//g' | sed -e 's/\\n$//g'")
 endfunction
 
+" Jimakun
+function! Jimakun(subtitle)
+  call system('jimakun "' . a:subtitle . '"')
+endfunction
+command! -nargs=1 Jimakun call Jimakun(<f-args>)
+
 " }}}1
 "===============================================================================
 
