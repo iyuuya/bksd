@@ -137,7 +137,7 @@ if !has('gui_running')
       setglobal termencoding=  " same as 'encoding'
     endif
   endif
-elseif IsWindows()
+elseif s:iswin
   " For system.
   setglobal termencoding=cp932
 endif
