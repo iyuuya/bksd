@@ -1472,7 +1472,7 @@ endfunction
 
 " Jimakun
 function! Jimakun(subtitle)
-  call system('jimakun "' . a:subtitle . '"')
+  call system('jimakun "' . a:subtitle . '" &')
 endfunction
 command! -nargs=1 Jimakun call Jimakun(<f-args>)
 
