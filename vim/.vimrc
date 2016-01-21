@@ -78,7 +78,7 @@ augroup END
 if has('vim_starting')
   let s:bundle_path = expand($MYVIMFILES . '/bundle')
   let s:neobundle_path = expand(s:bundle_path . '/neobundle.vim')
-  execute 'setglobl runtimepath+=' . s:neobundle_path
+  execute 'setglobal runtimepath+=' . s:neobundle_path
 
   if !isdirectory(s:neobundle_path)
     call system('git clone https://github.com/Shougo/neobundle.vim.git ' . s:neobundle_path)
