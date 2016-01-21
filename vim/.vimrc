@@ -17,7 +17,7 @@ if exists('$SUDO_USER')
 endif
 
 " Enable no Vi compatible commands.
-if has('vim_starting')
+if &compatible && has('vim_starting')
   set nocompatible
 endif
 
