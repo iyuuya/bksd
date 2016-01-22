@@ -667,6 +667,13 @@ if neobundle#is_installed('unite.vim')
     nnoremap [unite]tf :<C-u>Unite tag/file<CR>
     nnoremap [unite]ti :<C-u>Unite tag/include<CR>
   endif
+  " vim-unite-watson.vim
+  if neobundle#is_installed('vim-unite-watson.vim')
+    nnoremap [unite]wa :<C-u>Unite watson<CR>
+    nnoremap [unite]wd :<C-u>Unite watson/dirty<CR>
+    nnoremap [unite]wp :<C-u>Unite watson/current_file<CR>
+    nnoremap [unite]wc :<C-u>Unite watson/clean<CR>
+  endif
 endif
 
 " }}}2
