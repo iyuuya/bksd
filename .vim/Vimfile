@@ -92,6 +92,14 @@ NeoBundle 'iyuuya/unite-rails-fat'
 "NeoBundle 'basyura/TweetVim', { 'depends' : ['tyru/open-browser.vim', 'basyura/twibill.vim', 'mattn/webapi-vim', 'basyura/bitly.vim', 'mattn/favstar-vim'] }
 "NeoBundle 'basyura/J6uil.vim'
 
+" vim-unite-watson.vim is the unite source for watson.
+NeoBundleLazy 'alpaca-tc/vim-unite-watson.vim', {
+      \ 'commands' : 'Watson',
+      \ 'depends' : 'Shougo/unite.vim',
+      \ 'autoload' : {
+      \   'unite_sources' : ['watson', 'watson/dirty', 'watson/clean', 'watson/current_file'],
+      \ }}
+
 NeoBundle 'vim-jp/vital.vim'
 
 "NeoBundle 'rking/ag.vim' " Vim plugin for the_silver_searcher, 'ag', a replacement for the Perl module / CLI script 'ack'
