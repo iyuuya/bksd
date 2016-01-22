@@ -425,11 +425,11 @@ setglobal history=10000
 " View: "{{{1
 
 " Show line number.
-setglobal number
-setglobal numberwidth=4
-setglobal norelativenumber
+set number
+set numberwidth=4
+set norelativenumber
 " Show ruler.
-setglobal ruler
+set ruler
 
 " Wrap long line.
 setglobal wrap
