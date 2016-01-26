@@ -683,6 +683,9 @@ if type ~/Applications/Shoes.app/Contents/MacOS/shoes > /dev/null 2>&1; then
   alias shoes='~/Applications/Shoes.app/Contents/MacOS/shoes "$@"'
 fi
 
+# added by travis gem
+[ -f /Users/iyuuya/.travis/travis.sh ] && source /Users/iyuuya/.travis/travis.sh
+
 # "}}}1
 #===============================================================================
 
