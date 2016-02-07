@@ -574,8 +574,8 @@ esac
 
 # docker: "{{{2
 
-alias d='docker'
-compdef d=docker
+# alias d='docker'
+# compdef d=docker
 alias dm='docker-machine'
 alias b2d='boot2docker'
 _boot2docker() {
