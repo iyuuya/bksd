@@ -67,9 +67,9 @@ NeoBundle 'thinca/vim-ref' " Integrated reference viewer.
 NeoBundle 'lambdalisue/vim-gista'
 
 NeoBundle 'thinca/vim-quickrun', { 'depends' : 'mattn/quickrunex-vim' } " Run commands quickly.
-"NeoBundle 'osyo-manga/vim-watchdogs' " Async syntax checking.
-"NeoBundle 'osyo-manga/shabadou.vim'
-"NeoBundle 'scrooloose/syntastic' " Syntax checking hacks for vim
+NeoBundle 'osyo-manga/vim-watchdogs' " Async syntax checking.
+NeoBundle 'osyo-manga/shabadou.vim'
+NeoBundle 'scrooloose/syntastic' " Syntax checking hacks for vim
 
 NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'osyo-manga/vim-over'
@@ -81,13 +81,13 @@ NeoBundle 'thoughtbot/vim-rspec' " Run Rspec specs from Vim
 NeoBundle 'tpope/vim-rails' " rails.vim: Ruby on Rails power tools
 NeoBundle 'basyura/unite-rails' " a unite.vim plugin for rails
 NeoBundle 'iyuuya/unite-rails-fat'
-"NeoBundle 'ngmy/vim-rubocop' " The Vim RuboCop plugin runs RuboCop and displays the results in Vim
+NeoBundle 'ngmy/vim-rubocop' " The Vim RuboCop plugin runs RuboCop and displays the results in Vim
 
-"NeoBundleLazy 'vim-jp/cpp-vim', {
-"            \ 'autoload' : {'filetypes' : 'cpp'}
-"            \ }
-"NeoBundle 'osyo-manga/vim-marching', { 'autoload' : { 'filetypes' : ['c', 'cpp'] } } " Async clang code completion.
-"NeoBundle 'tyru/caw.vim' " sophisticated comment plugin http://www.vim.org/scripts/script.php?script_id=2554
+NeoBundleLazy 'vim-jp/cpp-vim', {
+            \ 'autoload' : {'filetypes' : 'cpp'}
+            \ }
+NeoBundle 'osyo-manga/vim-marching', { 'autoload' : { 'filetypes' : ['c', 'cpp'] } } " Async clang code completion.
+NeoBundle 'tyru/caw.vim' " sophisticated comment plugin http://www.vim.org/scripts/script.php?script_id=2554
 
 "NeoBundle 'basyura/TweetVim', { 'depends' : ['tyru/open-browser.vim', 'basyura/twibill.vim', 'mattn/webapi-vim', 'basyura/bitly.vim', 'mattn/favstar-vim'] }
 "NeoBundle 'basyura/J6uil.vim'
