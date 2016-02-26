@@ -51,3 +51,4 @@
   rmunstglist = clean -dfn
   w       = commit -m wip
   gf      = grep --no-line-number --full-name --name-only
+  cfu     = config --get-regexp "^user"
