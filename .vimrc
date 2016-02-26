@@ -1216,9 +1216,10 @@ augroup END
 " Syntastic: "{{{2
 
 if neobundle#is_installed('syntastic')
+  let g:syntastic_always_populate_loc_list = 1
   let g:syntastic_mode_map = {
         \ 'mode': 'passive',
-        \ 'active_filetypes': ['ruby']
+        \ 'passive_filetypes': ['ruby']
         \ }
   let g:syntastic_ruby_checkers = ['rubocop', 'mri']
   let g:syntastic_ruby_rubocop_exec = $HOME . "/.anyenv/envs/rbenv/shims/rubocop"
