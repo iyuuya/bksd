@@ -475,6 +475,17 @@ EOS
 }
 function b100 { benchmark 100 $1 }
 
+function switch-user {
+  if [ $# -ne 1 ]; then
+    echo 'usage: switch-user USERNAME'
+    return
+  fi
+
+  cp ~/.git.d/local.$1 ~/.git.d/local
+  cp ~/.ssh/config.$1 ~/.ssh/config
+}
+alias sw=switch-user
+
 # "}}}1
 #===============================================================================
 
