@@ -406,7 +406,7 @@ function reload()
   src "$HOME/.zshrc"
 }
 
-function search ()
+function search()
 {
   if [ $# = 0 ]
   then
