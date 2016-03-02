@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+if ARGV.size != 1
+  STDERR.puts <<EOS
+usage:
+  svn-grep PATTERN
+EOS
+  exit
+end
+
+require 'nokogiri'
+
+log = Nokogiri::XML(`svn log --xml`)
+logentries = log.css('logentry').select do |logentry|
+  logentry.css('msg').first.content.include?(ARGV[0])
+end
+revisions = logentries.collect do |logentry|
+  '-r' + logentry['revision']
+end.join(' ')
+
+system "svn log -v #{revisions}"
