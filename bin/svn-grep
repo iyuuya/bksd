@@ -14,8 +14,14 @@ log = Nokogiri::XML(`svn log --xml`)
 logentries = log.css('logentry').select do |logentry|
   logentry.css('msg').first.content.include?(ARGV[0])
 end
-revisions = logentries.collect do |logentry|
-  '-r' + logentry['revision']
-end.join(' ')
 
-system "svn log -v #{revisions}"
+if logentries.empty?
+  puts 'not found'
+else
+  revisions = logentries.map do |logentry|
+    '-r' + logentry['revision']
+  end.join(' ')
+  system "svn log -v #{revisions}"
+end
+
+# vim: ts=2 sts=2 sw=2 et
