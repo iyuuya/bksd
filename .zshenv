@@ -102,7 +102,7 @@ pkg_config_path=({/usr/local,/usr}/lib/pkgconfig(N-/))
 case ${OSTYPE} in
   darwin*)
     export NODE_PATH=/usr/local/lib/node
-    export VIM_APP_DIR="/opt/homebrew-cask/Caskroom/macvim-kaoriya/7.4.1362"
+    export VIM_APP_DIR="/opt/homebrew-cask/Caskroom/macvim-kaoriya/7.4.1468"
     # export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
     export JAVA_HOME=$(/usr/libexec/java_home)
     export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
