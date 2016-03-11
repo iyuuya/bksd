@@ -20,16 +20,6 @@ if type peco > /dev/null 2>&1; then
   zle -N peco-select-history
   bindkey '^r' peco-select-history
 
-  function ghq-list-relative () {
-    local query
-    if [ $# = 1 ]; then
-      query=$1
-    else
-      query=''
-    fi
-    ghq list $query -p | sed -e "s/$(echo $HOME | sed -e 's/\//\\\//g')/~/g"
-  }
-
   function peco-src () {
     local list
     if [ $# = 1 ]; then
