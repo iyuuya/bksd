@@ -10,6 +10,11 @@ alias -g RT='RAILS_ENV=test'
 alias b='bundle'
 alias bi='b install'
 alias be='b exec'
+alias bu='b update'
+if type peco > /dev/null 2&>1; then
+  alias bs='bundle show `bundle-gemname-list | peco`'
+  alias bo='bundle open `bundle-gemname-list | peco`'
+fi
 
 function bundle-gemname-list()
 {
