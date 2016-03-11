@@ -211,7 +211,15 @@ fi
 #===============================================================================
 # editor: "{{{1
 
-export EDITOR=vim
+case ${OSTYPE} in
+  darwin*)
+    export EDITOR=$VIM_APP_DIR/MacVim.app/Contents/MacOS/Vim
+    ;;
+  linux*)
+    export EDITOR=vim
+    ;;
+esac
+export BUNDLE_EDITOR=$EDITOR
 
 # "}}}1
 #===============================================================================

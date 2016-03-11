@@ -1,9 +1,6 @@
 if type peco > /dev/null 2>&1; then
   alias -g P='| peco'
 
-  alias bs='bundle show `bundle-gemname-list | peco`'
-  alias bo='bundle open `bundle-gemname-list | peco`'
-
   function peco-select-history() {
     local tac
     if which tac > /dev/null; then
