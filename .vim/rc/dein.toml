@@ -28,22 +28,30 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 
+[[plugins]]
+repo = 'mattn/webapi-vim'
+
+[[plugins]] # rails.vim: Ruby on Rails power tools
+repo = 'tpope/vim-rails'
+
+[[plugins]] # Run Rspec specs from Vim
+repo = 'thoughtbot/vim-rspec'
 #-------------------------------------------------------------------------------
 # ColorScheme
 #-------------------------------------------------------------------------------
 [[plugins]] # A dark colour scheme for Vim & gVim
-repo   = 'w0ng/vim-hybrid'
+repo = 'w0ng/vim-hybrid'
 
 [[plugins]] # A colorful, dark color scheme for Vim.
-repo   = 'nanotech/jellybeans.vim'
+repo = 'nanotech/jellybeans.vim'
 
 [[plugins]] # Molokai color scheme for Vim
-repo   = 'tomasr/molokai'
+repo = 'tomasr/molokai'
 
 [[plugins]] # Tomorrow Theme for Vim
-repo   = 'chriskempson/vim-tomorrow-theme'
+repo = 'chriskempson/vim-tomorrow-theme'
 
 [[plugins]] # Wombat for 256 color xterms
-repo   = 'vim-scripts/wombat256.vim'
+repo = 'vim-scripts/wombat256.vim'
 
 #-------------------------------------------------------------------------------

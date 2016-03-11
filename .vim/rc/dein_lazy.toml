@@ -32,6 +32,14 @@ repo      = 'alpaca-tc/vim-unite-watson.vim'
 on_source = ['unite.vim']
 on_cmd    = ['Watson']
 
+[[plugins]] # a unite.vim plugin for rails
+repo      = 'basyura/unite-rails'
+on_source = ['unite.vim']
+
+[[plugins]]
+repo      = 'iyuuya/unite-rails-fat'
+on_source = ['unite.vim', 'unite-raills']
+
 [[plugins]]
 repo      = 'Shougo/neomru.vim'
 on_source = ['unite.vim']
@@ -49,8 +57,9 @@ on_i = 1
 
 # neo-snippet plugin contains neocomplcache snippets source
 [[plugins]]
-repo      = 'Shougo/neosnippet.vim'
-on_source = ['neocomplete.vim']
+repo  = 'Shougo/neosnippet.vim'
+on_i  = 1
+on_ft = 'snippet'
 
 # The standard snippets repository for neosnippet
 [[plugins]]
@@ -62,10 +71,37 @@ on_source = ['neosnippet.vim']
 repo      = 'ujihisa/vimshell-ssh'
 on_source = ['vimshell.vim']
 
-[[plugins]]
-repo   = 'thinca/vim-scouter'
-on_cmd = ['Scouter']
+[[plugins]] # endwise.vim: wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
+repo = 'alpaca-tc/vim-endwise'
+on_i = 1
 
 [[plugins]] # Vim plugin for the_silver_searcher, 'ag', a replacement for the Perl module / CLI script 'ack'
 repo   = 'rking/ag.vim'
 on_cmd = ['Ag']
+
+[[plugins]]
+repo   = 'thinca/vim-scouter'
+on_cmd = ['Scouter']
+
+#-------------------------------------------------------------------------------
+# FileType/Syntax
+#-------------------------------------------------------------------------------
+[[plugins]] # Vim syntax for TOML
+repo  = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]] # (Soon to be) the official repository for the AsciiDoc syntax support in VIM
+repo  = 'asciidoc/vim-asciidoc' 
+on_ft = 'asciidoc'
+
+[[plugins]] # Textile for VIM
+repo  = 'timcharper/textile.vim' 
+on_ft = 'textile'
+
+# vim syntax file for plantuml
+repo  = 'aklt/plantuml-syntax'
+on_ft = 'plantuml'
+
+[[plugins]]
+repo  = 'kchmck/vim-coffee-script'
+on_ft = 'coffee'

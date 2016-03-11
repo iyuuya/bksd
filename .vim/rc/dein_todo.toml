@@ -1,50 +1,27 @@
 # "NeoBundle 'airblade/vim-gitgutter' " A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
-# 
 # "NeoBundle 'tpope/vim-repeat'           " repeat.vim: enable repeating supported plugin maps with '.'
 # "NeoBundle 'tpope/vim-abolish'          " abolish.vim: easily search for, substitute, and abbreviate multiple variants of a word
-# " endwise.vim: wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
-# NeoBundleLazy 'alpaca-tc/vim-endwise', { 'autoload' : { 'insert' : 1 } }
 # " A git repository for a vim plugin called matchit
 # NeoBundleLazy 'edsono/vim-matchit', { 'autoload' : {
 #       \ 'filetypes' : 'ruby',
 #       \ 'mappings' : [',nx', '%'] } }
 # NeoBundle 'thinca/vim-template'
-# 
-# 
-# NeoBundle 'timcharper/textile.vim' " Textile for VIM
-# NeoBundle 'asciidoc/vim-asciidoc' " (Soon to be) the official repository for the AsciiDoc syntax support in VIM
-# NeoBundle 'aklt/plantuml-syntax' " vim syntax file for plantuml
 # NeoBundle 'kannokanno/previm' " Realtime preview by Vim. (Markdown, reStructuredText, textile)
-# 
 # NeoBundle 'vim-scripts/dbext.vim'
-# 
-# NeoBundle 'mattn/webapi-vim'
 # NeoBundle 'tyru/open-browser.vim'
-# 
-# NeoBundle 'kchmck/vim-coffee-script'
 # NeoBundle 'thinca/vim-ref' " Integrated reference viewer.
-# 
 # NeoBundle 'lambdalisue/vim-gista'
-# 
 # NeoBundle 'thinca/vim-quickrun', { 'depends' : 'mattn/quickrunex-vim' } " Run commands quickly.
 # NeoBundle 'osyo-manga/vim-watchdogs' " Async syntax checking.
 # NeoBundle 'osyo-manga/shabadou.vim'
 # NeoBundle 'scrooloose/syntastic' " Syntax checking hacks for vim
 # NeoBundle 'jceb/vim-hier' " Highlight quickfix errors
 # NeoBundle 'dannyob/quickfixstatus' " See quickfix, location list and Syntastic lists errors and warnings as you move through a vim file.
-# 
 # NeoBundle 'vim-scripts/AnsiEsc.vim'
 # NeoBundle 'osyo-manga/vim-over'
-# 
 # NeoBundle 'tpope/vim-surround' " surround.vim: quoting/parenthesizing made simple
 # NeoBundle 'mattn/emmet-vim' " emmet for vim: http://emmet.io/
-# 
-# NeoBundle 'thoughtbot/vim-rspec' " Run Rspec specs from Vim
-# NeoBundle 'tpope/vim-rails' " rails.vim: Ruby on Rails power tools
-# NeoBundle 'basyura/unite-rails' " a unite.vim plugin for rails
-# NeoBundle 'iyuuya/unite-rails-fat'
 # NeoBundle 'ngmy/vim-rubocop' " The Vim RuboCop plugin runs RuboCop and displays the results in Vim
-# 
 # NeoBundleLazy 'vim-jp/cpp-vim', {
 #             \ 'autoload' : {'filetypes' : 'cpp'}
 #             \ }
@@ -53,13 +30,7 @@
 # 
 # "NeoBundle 'basyura/TweetVim', { 'depends' : ['tyru/open-browser.vim', 'basyura/twibill.vim', 'mattn/webapi-vim', 'basyura/bitly.vim', 'mattn/favstar-vim'] }
 # "NeoBundle 'basyura/J6uil.vim'
-# 
-# 
 # NeoBundle 'vim-jp/vital.vim'
-# 
-# "NeoBundle 'rking/ag.vim' " Vim plugin for the_silver_searcher, 'ag', a replacement for the Perl module / CLI script 'ack'
 # "NeoBundle '5t111111/alt-gtags.vim'
 # "NeoBundle 'szw/vim-tags'
-# 
-# 
 # " vim: fdm=marker ft=vim
