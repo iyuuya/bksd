@@ -18,6 +18,7 @@ repo = 'tyru/eskk.vim'
 
 [[plugins]] # Powerful file explorer implemented by Vim script
 repo = 'Shougo/vimfiler.vim'
+depends = ['unite.vim']
 
 [[plugins]] # Align Them All!
 repo = 'h1mesuke/vim-alignta'
