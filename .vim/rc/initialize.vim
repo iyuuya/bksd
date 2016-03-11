@@ -48,7 +48,7 @@ endif
 
 " tmp directory.
 if !exists('g:vim_tmp_directory')
-  let g:vim_tmp_directory = $HOME."/.vimtmp"
+  let g:vim_tmp_directory = $HOME."/.vim/tmp"
 endif
 
 " Create tmp directory.
