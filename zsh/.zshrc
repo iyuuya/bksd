@@ -702,6 +702,7 @@ fi
 
 src $HOME/.zsh.d/git.zsh
 src $HOME/.zsh.d/go.zsh
+src $HOME/.zsh.d/ghq.zsh
 src $HOME/.zsh.d/peco.zsh
 src $HOME/.zsh.d/ruby.zsh
 
