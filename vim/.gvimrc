@@ -7,28 +7,16 @@
 "===============================================================================
 
 "===============================================================================
-" Initialize: "{{{1
-
-let s:iswin = has('win32') || has('win64') || has('win95') || has('win16')
-let s:iscygwin = has('win32unix')
-let s:ismac = has('mac') || has('macunix') || has('gui_mac') || has('gui_macvim') ||
-      \ (!executable('xdg-open') && system('uname') =~? '^darwin')
-let s:islinux = !s:iswin && !s:iscygwin && !s:ismac
-
-" }}}1
-"===============================================================================
-
-"===============================================================================
 " Window: "{{{1
 "
 
-if s:ismac
+if my#ismac()
   set columns=160
   set lines=44
   nnoremap <silent> <C-e>fl :<C-u>set columns=320 lines=68<CR>:winpos 0 0<CR>
   nnoremap <silent> <C-e>fL :<C-u>set columns=319 lines=70<CR>:winpos -1920 0<CR>
   set transparency=0
-elseif s:iswin
+elseif my#iswin()
   set columns=128
   set lines=36
 else
@@ -46,7 +34,7 @@ endif
 " Hide toolbar.
 set guioptions-=T
 
-if !s:ismac
+if !my#ismac()
   " For Windows
   " Hide menus.
   set guioptions-=m
@@ -70,7 +58,7 @@ set guioptions-=e
 " Font: "{{{1
 "
 
-if s:ismac
+if my#ismac()
   " For MacOSX.
 
   " Use antialias
@@ -81,7 +69,7 @@ if s:ismac
 
   " Number of pixel lines inserted between characters.
   set linespace=2
-elseif s:iswin || s:iscygwin
+elseif my#iswin() || my#iscygwin()
   " For Windows.
   set guifont=Meslo_LG_S_for_Powerline:h10:cANSI
   " set guifont=Consolas_for_Powerline_FixedD:h10:cANSI
