@@ -1,2 +1,1 @@
-.vim/bundle/*
-.vim/Vimfile.local
+.vim/rc/dein_local.toml
