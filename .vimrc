@@ -18,7 +18,7 @@ endif
 
 " Enable no Vi compatible commands.
 if &compatible && has('vim_starting')
-  setglobal nocompatible
+  set nocompatible
 endif
 
 " Check platform "{{{3
@@ -78,7 +78,7 @@ augroup END
 if has('vim_starting')
   let s:bundle_path = expand($MYVIMFILES . '/bundle')
   let s:neobundle_path = expand(s:bundle_path . '/neobundle.vim')
-  execute 'setglobal runtimepath+=' . s:neobundle_path
+  execute 'set runtimepath+=' . s:neobundle_path
 
   if !isdirectory(s:neobundle_path)
     call system('git clone https://github.com/Shougo/neobundle.vim.git ' . s:neobundle_path)
@@ -118,7 +118,7 @@ filetype indent plugin on
 " Setting of the encoding to use for a save and reading.
 " Make it normal in UTF-8 in Unix.
 if has('vim_starting')
-  setglobal encoding=utf-8
+  set encoding=utf-8
 endif
 
 " Setting of terminal encoding."{{{
@@ -128,22 +128,22 @@ if !has('gui_running')
     " Setting when use the non-GUI Japanese console.
 
     " Garbled unless set this.
-    setglobal termencoding=cp932
+    set termencoding=cp932
     " Japanese input changes itself unless set this.  Be careful because the
     " automatic recognition of the character code is not possible!
-    setglobal encoding=japan
+    set encoding=japan
   else
     if $ENV_ACCESS ==# 'linux'
-      setglobal termencoding=euc-jp
+      set termencoding=euc-jp
     elseif $ENV_ACCESS ==# 'colinux'
-      setglobal termencoding=utf-8
+      set termencoding=utf-8
     else  " fallback
-      setglobal termencoding=  " same as 'encoding'
+      set termencoding=  " same as 'encoding'
     endif
   endif
 elseif s:iswin
   " For system.
-  setglobal termencoding=cp932
+  set termencoding=cp932
 endif
 "}}}
 
@@ -189,7 +189,7 @@ endif
 
 if has('kaoriya')
   " For Kaoriya only.
-  setglobal fileencodings=guess
+  set fileencodings=guess
 endif
 
 " When do not include Japanese, use encoding for fileencoding.
@@ -203,9 +203,9 @@ endfunction"}}}
 autocmd MyAutoCmd BufReadPost * call s:ReCheck_FENC()
 
 " Default fileformat.
-setglobal fileformat=unix
+set fileformat=unix
 " Automatic recognition of a new line cord.
-setglobal fileformats=unix,dos,mac
+set fileformats=unix,dos,mac
 
 " Command group opening with a specific character code again."{{{
 " In particular effective when I am garbled in a terminal.
@@ -258,7 +258,7 @@ command! -bang -complete=file -nargs=? WMac
 "}}}
 
 if has('multi_byte_ime')
-  setglobal iminsert=0 imsearch=0
+  set iminsert=0 imsearch=0
 endif
 
 " }}}1
@@ -268,24 +268,24 @@ endif
 " Search: "{{{1
 
 " Ignore the case of normal letters.
-setglobal ignorecase
+set ignorecase
 " If the search pattern contains upper case characters,
 " override ignorecase option.
-setglobal smartcase
+set smartcase
 " Ignore case on insert completion.
-setglobal infercase
+set infercase
 
 " Enable incremental search.
-setglobal incsearch
+set incsearch
 " Don't highlight search result.
-setglobal hlsearch
+set hlsearch
 
 " Searches wrap around the end of the file.
-setglobal wrapscan
+set wrapscan
 
 " Use migemo
 if has('migemo')
-  setglobal migemo
+  set migemo
 endif
 
 " }}}1
@@ -312,64 +312,64 @@ call s:mkdir_p(g:vim_tmp_directory.'/swap')
 call s:mkdir_p(g:vim_tmp_directory.'/undo')
 
 " Create backup files.
-setglobal backup
-setglobal nowritebackup
+set backup
+set nowritebackup
 let &backupdir=g:vim_tmp_directory.'/backup'
 
 " Create swap files.
-setglobal swapfile
+set swapfile
 " Set swapfile save directory.
 let &directory=g:vim_tmp_directory.'/swap'
 
 if v:version >= 703
   " Set undo file.
-  setglobal undofile
+  set undofile
   let &undodir=g:vim_tmp_directory.'/undo'
 endif
 
 " CursorHold time.
 " If 2.5sec stop cursor then save swapfile.
-setglobal updatetime=200
+set updatetime=200
 
 " Keymapping timeout.
-setglobal timeout timeoutlen=750 ttimeoutlen=200
+set timeout timeoutlen=750 ttimeoutlen=200
 
 " Enable backspace delete indent and newline.
-setglobal backspace=indent,eol,start
+set backspace=indent,eol,start
 
 " Use clipboard register.
-setglobal clipboard& clipboard+=unnamed
-setglobal clipboard+=autoselect
+set clipboard& clipboard+=unnamed
+set clipboard+=autoselect
 
 " Auto read if file is changed.
-setglobal autoread
+set autoread
 
 " Substitue <tab> with blanks.
-setglobal tabstop=2
+set tabstop=2
 " Spaces instead <tab>.
-setglobal softtabstop=2
+set softtabstop=2
 "Autoindent width.
-setglobal shiftwidth=2
+set shiftwidth=2
 " "Round indent by shiftwidth.
-setglobal shiftround
+set shiftround
 
 " Smart insert tab setting.
-setglobal smarttab
+set smarttab
 
 " Exchange tab to spaces.
-setglobal expandtab
+set expandtab
 
 " Enable modeline.
-setglobal modeline
+set modeline
 
 " Enable folding.
-setglobal foldenable
+set foldenable
 " Always start editing with all no folds closed.
-setglobal foldlevelstart=99
+set foldlevelstart=99
 " Show folding level.
-setglobal foldcolumn=1
+set foldcolumn=1
 " Syntax highlighting items specify folds.
-setglobal foldmethod=syntax
+set foldmethod=syntax
 augroup FoldAutoGroup
   autocmd!
   autocmd FileType html,erb,haml,yaml setlocal foldmethod=indent
@@ -385,13 +385,13 @@ augroup END
 
 " Use vimgrep.
 if executable('ag')
-  setglobal grepprg=ag\ --nogroup\ -iS
-  setglobal grepformat=%f:%l:%m
+  set grepprg=ag\ --nogroup\ -iS
+  set grepformat=%f:%l:%m
 elseif executable('grep')
-  setglobal grepprg=grep\ -Hnd\ skip\ -r
-  setglobal grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m
+  set grepprg=grep\ -Hnd\ skip\ -r
+  set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m
 else
-  setglobal grepprg=internal
+  set grepprg=internal
 endif
 
 augroup VimGrepAutoCmd
@@ -400,23 +400,23 @@ augroup VimGrepAutoCmd
 augroup END
 
 " Set tags file.
-setglobal tags=./tags,tags
+set tags=./tags,tags
 
 if v:version < 7.3 || (v:version == 7.3 && has('patch336'))
   " Vim's bug.
-  setglobal notagbsearch
+  set notagbsearch
 endif
 
 " Enable virtualedit in visual block mode.
-setglobal virtualedit=block
+set virtualedit=block
 
 " Set keyword help. (K)
-setglobal keywordprg=:help
+set keywordprg=:help
 " default: set keywordprg=man\ -s
 " will use unite.vim or ref.vim if can
 
 " Increase history amount.
-setglobal history=10000
+set history=10000
 
 " }}}1
 "===============================================================================
@@ -432,113 +432,113 @@ set norelativenumber
 set ruler
 
 " Wrap long line.
-setglobal wrap
-setglobal whichwrap+=h,l,<,>,[,],b,s
+set wrap
+set whichwrap+=h,l,<,>,[,],b,s
 " Disable auto break long line.
-setglobal textwidth=0
-setglobal sidescroll=0
+set textwidth=0
+set sidescroll=0
 " Turn down a long line appointed in 'braket' (if wrap/nolist then effective)
-setglobal linebreak
-setglobal showbreak=>\ 
-setglobal breakat=\ \>;:,!
+set linebreak
+set showbreak=>\ 
+set breakat=\ \>;:,!
 
 " Show <tab> and <space>(trailing)
-setglobal list
-setglobal listchars=tab:>-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+set list
+set listchars=tab:>-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 
 " Highlight parenthesis.
-setglobal showmatch
+set showmatch
 " Highlight <>.
-setglobal matchpairs+=<:>
+set matchpairs+=<:>
 " Highlight when CursorMoved.
-setglobal cpoptions-=m
-setglobal matchtime=3
+set cpoptions-=m
+set matchtime=3
 " Highlighted columns.
-setglobal colorcolumn=0
+set colorcolumn=0
 
 " Always display statusline.
-setglobal laststatus=2
+set laststatus=2
 " Height of command line.
-setglobal cmdheight=2
+set cmdheight=2
 " Show command on statusline.
-setglobal showcmd
+set showcmd
 
 " Show title.
-setglobal title
+set title
 " Title length.
-setglobal titlelen=100
+set titlelen=100
 " Title string.
 if s:iswin
-  setglobal titlestring=%<%F\ -\ Vim " %{expand("%:p:.")} \ [%{getfperm(expand('$p'))}]\ %<\ -\ Vim
+  set titlestring=%<%F\ -\ Vim " %{expand("%:p:.")} \ [%{getfperm(expand('$p'))}]\ %<\ -\ Vim
 else
   let &titlestring="%{expand('%:p:.')}%(%m%r%w%) [%{getfperm(expand('%p'))}] %< - Vim"
 endif
 
 " Show always tabline.
-setglobal showtabline=2
+set showtabline=2
 " Set tabpage max.
-setglobal tabpagemax=10
+set tabpagemax=10
 
 " Adjust window size of preview and help.
-setglobal previewheight=5
-setglobal helpheight=15
+set previewheight=5
+set helpheight=15
 
 " Display all the information of the tag by the supplement of the Insert mode.
-setglobal showfulltag
+set showfulltag
 
 " Display candidate supplement.
-setglobal wildmenu
-setglobal wildmode=list:longest,list
+set wildmenu
+set wildmode=list:longest,list
 " Can supplement a tag in a command-line.
-setglobal wildoptions=tagfile
+set wildoptions=tagfile
 
 " Show always vertical 5 lines for cursor.
-setglobal scrolloff=5
+set scrolloff=5
 
 " Completion setting.
-setglobal completeopt=menuone,preview
+set completeopt=menuone,preview
 " Complete from tag, include file, other buffer.
-setglobal complete=.,t,i,w,b,u
+set complete=.,t,i,w,b,u
 " Set popup menu max height.
-setglobal pumheight=20
+set pumheight=20
 
 " Splitting a window will put the new window right the current one.
-setglobal splitright
+set splitright
 " Splitting a window will put the new window below the current one.
-setglobal splitbelow
+set splitbelow
 " No equal windows size.
-setglobal noequalalways
+set noequalalways
 
 " Set maximam command line window.
-setglobal cmdwinheight=5
+set cmdwinheight=5
 
 " When a line is long, do not omit it in @.
-setglobal display=lastline
+set display=lastline
 
 " Put cursor on non-whitespace in case of moved line.
-setglobal startofline
+set startofline
 
-setglobal cursorline
+set cursorline
 augroup MyCursorColumnGrp
   autocmd!
   autocmd FileType yaml setlocal cursorcolumn
 augroup END
 
 " Enable spell check.
-setglobal nospell spelllang=en_us
+set nospell spelllang=en_us
 
 " Disable bell.
-setglobal visualbell
-setglobal vb t_vb=
+set visualbell
+set vb t_vb=
 
 " Explicitly tell vim that the terminal supports 256 colors
-setglobal t_Co=256
+set t_Co=256
 
 " Report changes.
-setglobal report=0
+set report=0
 
 " Don't redraw while macro executing.
-setglobal lazyredraw
+set lazyredraw
 
 " }}}1
 "===============================================================================
@@ -547,8 +547,8 @@ setglobal lazyredraw
 " Syntax: "{{{1
 
 " Enable smart indent.
-setglobal autoindent
-setglobal smartindent
+set autoindent
+set smartindent
 
 augroup MyArbGrp
   autocmd!
@@ -841,7 +841,7 @@ if neobundle#is_installed('neosnippet.vim')
 
   " For snippet_complete marker.
   if has('conceal')
-    setglobal conceallevel=2 concealcursor=niv
+    set conceallevel=2 concealcursor=niv
   endif
 
   nnoremap <silent><Leader>nse :<C-u>NeoSnippetEdit -split<CR>
@@ -1354,7 +1354,7 @@ if neobundle#is_installed('vim-tags')
   let g:vim_tags_auto_generate = 0
   let g:vim_tags_project_tags_command = "ctags -f tags -R . 2>/dev/null"
   let g:vim_tags_gems_tags_command = "ctags -R -f Gemfile.lock.tags `bundle show --paths` 2>/dev/null"
-  setglobal tags+=tags,Gemfile.lock.tags
+  set tags+=tags,Gemfile.lock.tags
 endif
 
 " }}}2
@@ -1435,9 +1435,9 @@ nnoremap <silent> [mybind]fi :<C-u>setlocal foldmethod=indent<CR>
 nnoremap <silent> [mybind]fs :<C-u>setlocal foldmethod=syntax<CR>
 
 nnoremap <silent> [mybind]cc :<C-u>let &colorcolumn = &colorcolumn == 0 ? 80 : 0<CR>
-nnoremap <silent> [mybind]cl :<C-u>setglobal cursorline!<CR>
-nnoremap <silent> [mybind]cn :<C-u>setglobal cursorcolumn!<CR>
-nnoremap <silent> [mybind]tn :<C-u>setglobal relativenumber!<CR>
+nnoremap <silent> [mybind]cl :<C-u>set cursorline!<CR>
+nnoremap <silent> [mybind]cn :<C-u>set cursorcolumn!<CR>
+nnoremap <silent> [mybind]tn :<C-u>set relativenumber!<CR>
 
 nnoremap <silent> [mybind]/  :vimgrep  %<left><left>
 nnoremap <silent> [mybind]n  :cnext<CR>
@@ -1490,9 +1490,9 @@ command! -nargs=1 Jimakun call Jimakun(<f-args>)
 " Platform: "{{{1
 
 if s:iswin
-  setglobal shell=bash
+  set shell=bash
 else
-  setglobal shell=zsh
+  set shell=zsh
 endif
 
 if filereadable($HOME.'/.vimrc.local')
@@ -1509,13 +1509,13 @@ endif
 syntax on
 
 " Enable mouse support.
-setglobal mouse=a
+set mouse=a
 
 " Use Japanese or English help.
 " 真のVimmerはen
-setglobal helplang& helplang=ja,en
+set helplang& helplang=ja,en
 
-setglobal secure
+set secure
 
 " }}}1
 "===============================================================================
