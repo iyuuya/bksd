@@ -1,0 +1,49 @@
+[[plugins]] # Dark powered Vim/Neovim plugin manager
+repo = 'Shougo/dein.vim'
+
+[[plugins]] # Interactive command execution in Vim.
+repo = 'Shougo/vimproc.vim'
+
+  [plugins.build]
+# windows = 'tools\\update-dll-mingw'
+  win32   = 'nmake -f make_msvc32.mak'
+  win64   = 'nmake -f make_msvc64.mak'
+  cygwin  = 'make -f make_cygwin.mak'
+  mac     = 'make -f make_mac.mak'
+  linux   = 'make'
+  unix    = 'gmake'
+
+[[plugins]] # eskk aims to provide powerful input method platform in Vim.
+repo = 'tyru/eskk.vim'
+
+[[plugins]] # Powerful file explorer implemented by Vim script
+repo = 'Shougo/vimfiler.vim'
+
+[[plugins]] # Align Them All!
+repo = 'h1mesuke/vim-alignta'
+
+[[plugins]] # fugitive.vim: a Git wrapper so awesome, it should be illegal
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+#-------------------------------------------------------------------------------
+# ColorScheme
+#-------------------------------------------------------------------------------
+[[plugins]] # A dark colour scheme for Vim & gVim
+repo   = 'w0ng/vim-hybrid'
+
+[[plugins]] # A colorful, dark color scheme for Vim.
+repo   = 'nanotech/jellybeans.vim'
+
+[[plugins]] # Molokai color scheme for Vim
+repo   = 'tomasr/molokai'
+
+[[plugins]] # Tomorrow Theme for Vim
+repo   = 'chriskempson/vim-tomorrow-theme'
+
+[[plugins]] # Wombat for 256 color xterms
+repo   = 'vim-scripts/wombat256.vim'
+
+#-------------------------------------------------------------------------------
