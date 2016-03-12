@@ -1,50 +1,11 @@
-#-------------------------------------------------------------------------------
-# Unite
-#-------------------------------------------------------------------------------
-# Unite and create user interfaces
 [[plugins]]
-repo = 'Shougo/unite.vim'
-
-# outline source for unite.vim
-[[plugins]]
-repo      = 'Shougo/unite-outline'
-on_source = ['unite.vim']
-
-# tags soruce for unite.vim
-[[plugins]]
-repo      = 'tsukkee/unite-tag'
-on_source = ['unite.vim']
+repo    = 'Shougo/neomru.vim'
+on_path = '.*'
 
 [[plugins]]
-repo      = 'osyo-manga/unite-quickfix'
-on_source = ['unite.vim']
-
-[[plugins]] # A unite.vim plugin
-repo      = 'ujihisa/unite-colorscheme' 
-on_source = ['unite.vim']
-
-[[plugins]] # Unite source for git conflicts.
-repo      = 'moznion/unite-git-conflict.vim'
-on_source = ['unite.vim']
-
-[[plugins]] #  vim-unite-watson.vim is the unite source for watson.
-repo      = 'alpaca-tc/vim-unite-watson.vim'
-on_source = ['unite.vim']
-on_cmd    = ['Watson']
-
-[[plugins]] # a unite.vim plugin for rails
-repo      = 'basyura/unite-rails'
-on_source = ['unite.vim']
-
-[[plugins]]
-repo      = 'iyuuya/unite-rails-fat'
-on_source = ['unite.vim', 'unite-raills']
-
-[[plugins]]
-repo      = 'Shougo/neomru.vim'
-on_source = ['unite.vim']
-
-#-------------------------------------------------------------------------------
+repo    = 'Shougo/neoyank.vim'
+on_path = '.*'
+on_i    = 1
 
 # Powerful shell implemented by vim.
 [[plugins]]
@@ -54,6 +15,7 @@ repo = 'Shougo/vimshell.vim'
 [[plugins]]
 repo = 'Shougo/neocomplete.vim'
 on_i = 1
+if   = 'has("lua")'
 
 # neo-snippet plugin contains neocomplcache snippets source
 [[plugins]]
@@ -63,13 +25,13 @@ on_ft = 'snippet'
 
 # The standard snippets repository for neosnippet
 [[plugins]]
-repo      = 'Shougo/neosnippet-snippets'
-on_source = ['neosnippet.vim']
+repo    = 'Shougo/neosnippet-snippets'
+depends = 'neosnippet.vim'
 
 # the world first vimshell plugin that you can run 'vim' command on ssh on vimshell
 [[plugins]]
-repo      = 'ujihisa/vimshell-ssh'
-on_source = ['vimshell.vim']
+repo    = 'ujihisa/vimshell-ssh'
+depends = 'vimshell.vim'
 
 [[plugins]] # endwise.vim: wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
 repo = 'alpaca-tc/vim-endwise'
@@ -77,11 +39,11 @@ on_i = 1
 
 [[plugins]] # Vim plugin for the_silver_searcher, 'ag', a replacement for the Perl module / CLI script 'ack'
 repo   = 'rking/ag.vim'
-on_cmd = ['Ag']
+on_cmd = 'Ag'
 
 [[plugins]]
 repo   = 'thinca/vim-scouter'
-on_cmd = ['Scouter']
+on_cmd = 'Scouter'
 
 #-------------------------------------------------------------------------------
 # FileType/Syntax

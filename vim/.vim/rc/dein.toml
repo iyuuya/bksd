@@ -37,6 +37,41 @@ repo = 'tpope/vim-rails'
 
 [[plugins]] # Run Rspec specs from Vim
 repo = 'thoughtbot/vim-rspec'
+
+#-------------------------------------------------------------------------------
+# Unite
+#-------------------------------------------------------------------------------
+# Unite and create user interfaces
+[[plugins]]
+repo = 'Shougo/unite.vim'
+
+# outline source for unite.vim
+[[plugins]]
+repo = 'Shougo/unite-outline'
+
+# tags soruce for unite.vim
+[[plugins]]
+repo = 'tsukkee/unite-tag'
+
+[[plugins]]
+repo = 'osyo-manga/unite-quickfix'
+
+[[plugins]] # A unite.vim plugin
+repo = 'ujihisa/unite-colorscheme'
+
+[[plugins]] # Unite source for git conflicts.
+repo = 'moznion/unite-git-conflict.vim'
+
+[[plugins]] #  vim-unite-watson.vim is the unite source for watson.
+repo   = 'alpaca-tc/vim-unite-watson.vim'
+on_cmd = 'Watson'
+
+[[plugins]] # a unite.vim plugin for rails
+repo = 'basyura/unite-rails'
+
+[[plugins]]
+repo = 'iyuuya/unite-rails-fat'
+
 #-------------------------------------------------------------------------------
 # ColorScheme
 #-------------------------------------------------------------------------------
@@ -54,5 +89,3 @@ repo = 'chriskempson/vim-tomorrow-theme'
 
 [[plugins]] # Wombat for 256 color xterms
 repo = 'vim-scripts/wombat256.vim'
-
-#-------------------------------------------------------------------------------
