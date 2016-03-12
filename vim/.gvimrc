@@ -119,7 +119,7 @@ set mousehide
 " Key Mapping: "{{{1
 "
 
-if s:ismac
+if my#ismac()
   " Transparency key map
   nnoremap ,ad :set transparency=0<CR>
   nnoremap ,ae :set transparency=10<CR>
@@ -133,7 +133,7 @@ endif
 " Command: "{{{1
 "
 
-if s:ismac
+if my#ismac()
   command! TransparencyToggle let &transparency = (&transparency != 0 && &transparency != 100) ? 0 : 3
 endif
 

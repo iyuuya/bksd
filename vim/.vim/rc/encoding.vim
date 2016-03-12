@@ -29,7 +29,7 @@ if !has('gui_running')
       set termencoding=  " same as 'encoding'
     endif
   endif
-elseif s:iswin
+elseif my#iswin()
   " For system.
   set termencoding=cp932
 endif
