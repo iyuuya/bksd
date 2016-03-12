@@ -74,10 +74,16 @@ esac
 # PATH=$PATH:$SUDO_PATH
 # 
 
+case ${OSTYPE} in
+  darwin*)
+    export VIM_APP_DIR="/opt/homebrew-cask/Caskroom/macvim-kaoriya/7.4.1468"
+    ;;
+esac
+
 # PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 case ${OSTYPE} in
   darwin*)
-    PATH=$HOME/bin:$HOME/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/X11/bin
+    PATH=$VIM_APP_DIR/MacVim.app/Contents/MacOS:$HOME/bin:$HOME/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/X11/bin
     PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin
     if [ -d $HOME/.anyenv ] ; then
       export PATH=$HOME/.anyenv/bin:$PATH
@@ -101,9 +107,6 @@ pkg_config_path=({/usr/local,/usr}/lib/pkgconfig(N-/))
 # other path
 case ${OSTYPE} in
   darwin*)
-    export NODE_PATH=/usr/local/lib/node
-    export VIM_APP_DIR="/opt/homebrew-cask/Caskroom/macvim-kaoriya/7.4.1468"
-    # export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
     export JAVA_HOME=$(/usr/libexec/java_home)
     export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
     export CLASSPATH=$CLASSPATH:$CATALINA_HOME/common/lib:$CATALINA_HOME/common/lib/servlet-api.jar
@@ -211,14 +214,7 @@ fi
 #===============================================================================
 # editor: "{{{1
 
-case ${OSTYPE} in
-  darwin*)
-    export EDITOR=$VIM_APP_DIR/MacVim.app/Contents/MacOS/Vim
-    ;;
-  linux*)
-    export EDITOR=vim
-    ;;
-esac
+export EDITOR=vim
 export BUNDLE_EDITOR=$EDITOR
 
 # "}}}1
