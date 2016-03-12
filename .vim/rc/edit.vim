@@ -1,7 +1,6 @@
 "===============================================================================
 " Edit: "{{{1
 
-
 call my#mkdir_p(g:vim_tmp_directory.'/backup')
 call my#mkdir_p(g:vim_tmp_directory.'/swap')
 call my#mkdir_p(g:vim_tmp_directory.'/undo')

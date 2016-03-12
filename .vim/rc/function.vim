@@ -5,19 +5,19 @@
 " WindowResize: "{{{2
 
 function! GoodWinWidth()
-  let w = float2nr((2.0 / 3.0) * &columns)
-  if winwidth(0) < w
-    execute "vertical resize " . w
+  let s:w = float2nr((2.0 / 3.0) * &columns)
+  if winwidth(0) < s:w
+    execute "vertical resize " . s:w
   endif
-  unlet w
+  unlet s:w
 endfunction
 
 function! GoodWinHeight()
-  let h = float2nr((2.0 / 3.0) * &lines)
-  if winheight(0) < h
-    execute "botright resize " . h
+  let s:h = float2nr((2.0 / 3.0) * &lines)
+  if winheight(0) < s:h
+    execute "botright resize " . s:h
   endif
-  unlet h
+  unlet s:h
 endfunction
 
 " }}}2
