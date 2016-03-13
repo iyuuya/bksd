@@ -11,4 +11,7 @@ if exists('$SUDO_USER')
   finish
 endif
 
+" トロイの木馬対策
+set secure
+
 " vim: foldmethod=marker
