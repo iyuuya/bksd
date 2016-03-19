@@ -481,8 +481,10 @@ function switch-user {
     return
   fi
 
-  cp ~/.git.d/local.$1 ~/.git.d/local
-  cp ~/.ssh/config.$1 ~/.ssh/config
+  rm $HOME/.git.d/local
+  ln -s $HOME/.git.d/local.$1 $HOME/.git.d/local
+  rm $HOME/.ssh/config
+  ln -s $HOME/.ssh/config.$1  $HOME/.ssh/config
 }
 alias sw=switch-user
 
