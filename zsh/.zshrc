@@ -255,7 +255,7 @@ compinit
 
 case ${OSTYPE} in
   darwin*)
-    fpath=($HOME/brew/share/zsh-completions $fpath)
+    fpath=(/usr/local/share/zsh-completions(N-/) $HOME/brew/share/zsh-completions(N-/) $fpath)
     ;;
 esac
 
