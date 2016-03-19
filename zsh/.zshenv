@@ -83,17 +83,30 @@ esac
 # PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 case ${OSTYPE} in
   darwin*)
-    PATH=$VIM_APP_DIR/MacVim.app/Contents/MacOS:$HOME/bin:$HOME/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/X11/bin
-    PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin
+    typeset -U path
+    path=(
+      $VIM_APP_DIR/MacVim.app/Contents/MacOS(N-/)
+      $HOME/bin(N-/)
+      $HOME/.brew/bin(N-/)
+      /usr/local/bin(N-/)
+      /usr/bin(N-/)
+      /bin(N-/)
+      /usr/X11/bin(N-/)
+    )
     if [ -d $HOME/.anyenv ] ; then
-      export PATH=$HOME/.anyenv/bin:$PATH
+      path=($HOME/.anyenv/bin(N-/) $path)
       eval "$(anyenv init -)"
       for D in `ls $HOME/.anyenv/envs`
       do
-        export PATH=$HOME/.anyenv/envs/$D/shims:$PATH
+        path=($HOME/.anyenv/envs/$D/shims(N-/) $path)
       done
     fi
-    export PATH
+    path=(
+      $path
+      /usr/local/sbin(N-/)
+      /usr/sbin(N-/)
+      /sbin(N-/)
+    )
     ;;
 esac
 
