@@ -1,7 +1,10 @@
-git subtree push --prefix=vim  vim  master
-git subtree push --prefix=nvim nvim master
-git subtree push --prefix=zsh  zsh  master
-git subtree push --prefix=git  git  master
-git subtree push --prefix=tmux tmux master
-git subtree push --prefix=ruby ruby master
-git subtree push --prefix=brew brew master
+function gstps () {
+  git subtree push --prefix=$1 $1 master
+}
+gstps vim
+gstps nvim
+gstps zsh
+gstps git
+gstps tmux
+gstps ruby
+gstps brew
