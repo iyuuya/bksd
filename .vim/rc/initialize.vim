@@ -75,13 +75,15 @@ if has('vim_starting')
   endif
 
   if dein#load_state(s:dein_dir)
+    let s:toml      = expand('~/.vim/rc/dein.toml')
+    let s:lazy_toml = expand('~/.vim/rc/dein_lazy.toml')
     call dein#begin(s:dein_dir)
-    let s:toml      = '~/.vim/rc/dein.toml'
-    let s:lazy_toml = '~/.vim/rc/dein_lazy.toml'
     call dein#load_toml(s:toml, {'lazy': 0})
     call dein#load_toml(s:lazy_toml, {'lazy': 1})
     call dein#end()
     call dein#save_state()
+    unlet s:toml
+    unlet s:lazy_toml
   endif
 
   if dein#check_install()
@@ -90,8 +92,6 @@ if has('vim_starting')
 
   unlet s:dein_dir
   unlet s:dein_repo_dir
-  unlet s:toml
-  unlet s:lazy_toml
 endif
 
 " }}}2
