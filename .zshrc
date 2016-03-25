@@ -6,51 +6,10 @@
 # }}}1
 #===============================================================================
 
-#===============================================================================
-# Initialisation: "{{{1
-
-setopt global_export
-setopt global_rcs
-setopt rcs
-
-# "}}}1
-#===============================================================================
-
-#===============================================================================
-# Input/Output: "{{{1
-
-setopt aliases
-setopt clobber
-setopt no_flow_control
-setopt ignore_eof
-setopt hash_cmds
-setopt hash_dirs
-setopt path_dirs
-setopt short_loops
-
-# "}}}1
-#===============================================================================
-
-#===============================================================================
-# Job Control: "{{{1
-
-setopt bg_nice
-setopt check_jobs
-setopt hup
-setopt long_list_jobs
-setopt notify
-
-# "}}}1
-#===============================================================================
+src ~/.zsh.d/options.zsh
 
 #===============================================================================
 # Prompting: "{{{1
-
-setopt prompt_cr
-setopt prompt_sp
-setopt prompt_percent
-setopt prompt_subst
-setopt transient_rprompt
 
 #-------------------------------------------------------------------------------
 # rbenv-prompt: "{{{2
@@ -136,6 +95,7 @@ function goenv_prompt {
 }
 # }}}2
 #-------------------------------------------------------------------------------
+
 ## return prompt format expand characters count (not support Japanese)
 function count_prompt_characters()
 {
@@ -144,7 +104,6 @@ function count_prompt_characters()
 
 #-------------------------------------------------------------------------------
 autoload -Uz vcs_info
-setopt prompt_subst
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
 zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
@@ -221,29 +180,8 @@ precmd_functions=($precmd_functions vcs_info update_prompt update_tmux_pwd)
 # "}}}1
 #===============================================================================
 
-#===============================================================================
-# Scripts and Functions: "{{{1
-
-setopt exec
-setopt multios
-
-# "}}}1
-#===============================================================================
-
-#===============================================================================
-# Changing Directories: "{{{1
-
-setopt auto_cd
-setopt auto_pushd
-setopt chase_links
-setopt pushd_ignore_dups
-setopt pushd_to_home
-
 cdpath=($HOME)
 chpwd_functions=($chpwd_functions dirs)
-
-# "}}}1
-#===============================================================================
 
 #===============================================================================
 # Completion: "{{{1
@@ -296,45 +234,6 @@ if declare -f _git_commands > /dev/null; then
   eval "$(declare -f _git_commands | sed -e 's/base_commands=(/base_commands=(${_hub_commands} /')"
 fi
 
-setopt always_last_prompt
-setopt auto_list
-setopt auto_menu
-setopt auto_param_keys
-setopt auto_param_slash
-setopt auto_remove_slash
-setopt complete_aliases
-setopt complete_in_word
-setopt glob_complete
-setopt hash_list_all
-setopt list_ambiguous
-unsetopt list_beep
-setopt list_packed
-setopt list_types
-setopt menu_complete
-
-# "}}}1
-#===============================================================================
-
-#===============================================================================
-# Expansion and Globbing: "{{{1
-
-setopt bad_pattern
-setopt bare_glob_qual
-setopt case_glob
-setopt case_match
-setopt csh_null_glob # null_glob
-setopt equals
-setopt extended_glob
-setopt glob
-setopt magic_equal_subst
-setopt mark_dirs
-setopt multibyte
-setopt nomatch
-setopt numeric_glob_sort
-setopt rc_expand_param
-setopt rematch_pcre
-setopt unset
-
 # "}}}1
 #===============================================================================
 
@@ -345,28 +244,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=100000000
 SAVEHIST=$HISTSIZE
 
-setopt append_history
-setopt extended_history
-setopt no_hist_beep
-setopt hist_expand # bang_hist
-setopt hist_ignore_dups
-setopt hist_ignore_space
-setopt hist_reduce_blanks
-setopt hist_save_by_copy
-setopt hist_verify
-setopt inc_append_history
-setopt share_history
-
 autoload history-search-end
-
-# "}}}1
-#===============================================================================
-
-#===============================================================================
-# Zle: "{{{1
-
-setopt no_beep
-setopt vi # bindkey -v
 
 # "}}}1
 #===============================================================================
