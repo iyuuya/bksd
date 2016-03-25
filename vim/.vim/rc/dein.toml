@@ -38,6 +38,9 @@ repo = 'tpope/vim-rails'
 [[plugins]] # Run Rspec specs from Vim
 repo = 'thoughtbot/vim-rspec'
 
+[[plugins]] # emmet for vim: http://emmet.io/
+repo = 'mattn/emmet-vim'
+
 #-------------------------------------------------------------------------------
 # Unite
 #-------------------------------------------------------------------------------
