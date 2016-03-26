@@ -76,7 +76,7 @@ esac
 
 case ${OSTYPE} in
   darwin*)
-    export VIM_APP_DIR="/opt/homebrew-cask/Caskroom/macvim-kaoriya/7.4.1537"
+    export VIM_APP_DIR="/opt/homebrew-cask/Caskroom/macvim-kaoriya/7.4.1655"
     ;;
 esac
 
