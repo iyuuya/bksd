@@ -1,4 +1,4 @@
-README  [![Stories in Ready](https://badge.waffle.io/iyuuya/bksd.png?label=ready)](http://waffle.io/iyuuya/bksd)
+README
 ======
 
 Git/Githubの使い方勉強しながらShell/Editer周辺の設定を管理していきます。
