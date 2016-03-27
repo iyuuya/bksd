@@ -40,6 +40,8 @@ set cmdheight=2
 " Show command on statusline.
 set showcmd
 
+let &statusline="%<%f%=%m%r%w%y[%{(&fenc!=''?&fenc:&enc)}][&ff][%04l:%03v/%p%%]"
+
 " Show title.
 set title
 " Title length.
