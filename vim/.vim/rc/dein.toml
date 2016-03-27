@@ -96,7 +96,6 @@ repo = 'vim-scripts/wombat256.vim'
 #-------------------------------------------------------------------------------
 # TODO: 整理すること
 #-------------------------------------------------------------------------------
-
 [[plugins]] # A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
 repo = 'airblade/vim-gitgutter'
 
@@ -105,7 +104,6 @@ repo = 'tpope/vim-repeat'
 
 [[plugins]] # abolish.vim: easily search for, substitute, and abbreviate multiple variants of a word
 repo = 'tpope/vim-abolish'
-
 
 [[plugins]]
 repo = 'thinca/vim-template'
