@@ -1,0 +1,86 @@
+[[plugins]]
+repo    = 'Shougo/neomru.vim'
+on_path = '.*'
+
+[[plugins]]
+repo    = 'Shougo/neoyank.vim'
+on_path = '.*'
+on_i    = 1
+
+# Powerful shell implemented by vim.
+[[plugins]]
+repo = 'Shougo/vimshell.vim'
+
+# Next generation completion framework after neocomplcache
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+on_i = 1
+if   = 'has("lua")'
+
+# neo-snippet plugin contains neocomplcache snippets source
+[[plugins]]
+repo  = 'Shougo/neosnippet.vim'
+on_i  = 1
+on_ft = 'snippet'
+
+# The standard snippets repository for neosnippet
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+on_i = 1
+depends = 'neosnippet.vim'
+
+# the world first vimshell plugin that you can run 'vim' command on ssh on vimshell
+[[plugins]]
+repo    = 'ujihisa/vimshell-ssh'
+depends = 'vimshell.vim'
+
+[[plugins]] # endwise.vim: wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
+repo = 'alpaca-tc/vim-endwise'
+on_i = 1
+
+[[plugins]] # Vim plugin for the_silver_searcher, 'ag', a replacement for the Perl module / CLI script 'ack'
+repo   = 'rking/ag.vim'
+on_cmd = 'Ag'
+
+[[plugins]]
+repo   = 'thinca/vim-scouter'
+on_cmd = 'Scouter'
+
+[[plugins]] # A git repository for a vim plugin called matchit
+repo = 'edsono/vim-matchit'
+on_ft = 'ruby'
+
+[[plugins]] # Async clang code completion.
+repo = 'osyo-manga/vim-marching'
+on_ft = ['c', 'cpp']
+
+#-------------------------------------------------------------------------------
+# FileType/Syntax
+#-------------------------------------------------------------------------------
+[[plugins]] # Vim syntax for TOML
+repo  = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]] # (Soon to be) the official repository for the AsciiDoc syntax support in VIM
+repo  = 'asciidoc/vim-asciidoc' 
+on_ft = 'asciidoc'
+
+[[plugins]] # Textile for VIM
+repo  = 'timcharper/textile.vim' 
+on_ft = 'textile'
+
+# vim syntax file for plantuml
+repo  = 'aklt/plantuml-syntax'
+on_ft = 'plantuml'
+
+[[plugins]]
+repo  = 'kchmck/vim-coffee-script'
+on_ft = 'coffee'
+
+[[plugins]]
+repo  = 'slim-template/vim-slim'
+on_ft = 'slim'
+
+[[plugins]]
+repo ='vim-jp/cpp-vim'
+on_ft = 'cpp'

@@ -1,0 +1,55 @@
+# Global
+galias G='| grep'
+galias T='| tail'
+galias H='| head'
+
+alias v='vim $$ARGS; exit'
+alias i='iexe'
+
+# ls
+alias l='ls'
+alias la='ls -a'
+alias ll='ls -l'
+alias dir='ls -la'
+
+# ruby
+alias ru='ruby'
+
+# bundle
+alias b='bundle'
+alias be='bundle exec'
+alias bi='bundle install'
+
+# rails
+alias r='rails'
+
+# rbenv
+alias rb='rbenv'
+alias rbv='rbenv version'
+alias rbvs='rbenv versions'
+alias rbg='rbenv global'
+alias rbl='rbenv local'
+alias rbr='rbenv rehash'
+
+# rake
+alias rk='rake'
+alias rkt='rake -T'
+
+# git TODO: merge
+alias g='git'
+alias gl="git log --graph --pretty=format:'%Cblue%h%Creset%d %Cgreen%an%Creset: %s %Cblue%ar%Creset'"
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gco='git checkout'
+alias grs='git reset'
+alias gd='git diff'
+alias ga='git add'
+alias gs='git status'
+alias gpl='git pull'
+alias gps='git push'
+alias gsb='git submodule'
+alias gsu="git submodule foreach 'git checkout master; git pull'"
+alias gstps='git subtree push'
+alias grmal='git ls-files -z --deleted | xargs -0 git rm'
+
+# vim: ft=vimshrc

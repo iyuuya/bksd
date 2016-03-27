@@ -1,0 +1,145 @@
+snippet def
+abbr    #define CONSTANT (VALUE)
+  #define ${1:CONSTANT} (${2:VALUE})
+
+snippet mac
+abbr    #define CONSTANT(x) { Statement }
+  #define ${1:CONSTANT}(x) { ${2:Statement} }
+
+snippet ns
+abbr    namespace NamespaceName { }
+  namespace ${1:Namespace} {
+    ${0}
+  }
+
+snippet cl
+abbr    class ClassName { Constractor(); Destractor(); };
+  class ${1:ClassName}${0} {
+    //================================================================
+    //      Define
+    //================================================================
+
+    //================================================================
+    //      Constractor / Destractor
+    //================================================================
+    public:
+      $1();
+      virtual ~$1();
+
+    //================================================================
+    // Instance Method / Variable
+    //================================================================
+    public:
+      // -------------------------------------------------------------
+      //      Define
+      // -------------------------------------------------------------
+
+      // -------------------------------------------------------------
+      //      Method
+      // -------------------------------------------------------------
+
+      //      Accessor
+
+      //      Operator
+
+    protected:
+      // -------------------------------------------------------------
+      //      Method
+      // -------------------------------------------------------------
+
+      // -------------------------------------------------------------
+      //      Variable
+      // -------------------------------------------------------------
+
+    //================================================================
+    // Class Method / Variable
+    //================================================================
+    public:
+      // -------------------------------------------------------------
+      //      Define
+      // -------------------------------------------------------------
+
+      // -------------------------------------------------------------
+      //      Method
+      // -------------------------------------------------------------
+
+      //      Accessor
+
+    protected:
+      // -------------------------------------------------------------
+      //      Method
+      // -------------------------------------------------------------
+
+      // -------------------------------------------------------------
+      //      Variable
+      // -------------------------------------------------------------
+  };
+
+snippet new
+abbr    Type *var_name = new Type();
+  ${1:Type} *${2:var_name} = new $1();
+  ${0}
+
+snippet dl
+abbr    SAFE_DELETE(pointer);
+  SAFE_DLETE(${1:pointer});
+  ${0}
+
+snippet if
+abbr    if (condition) { }
+  if (${1:condition}) {
+    ${0}
+  }
+
+snippet sw
+abbr    switch (condition) { case case1: break; default: break; }
+  switch (${1:condition}) {
+    case ${2:case1}:
+      break;
+    default:
+      break;
+  }
+  ${0}
+
+snippet cs
+abbr    case condition: break;
+  case ${1:condition}:
+    ${0}
+    break;
+
+snippet wl
+abbr while (condition) { }
+  while (${1:condition}) {
+    ${0}
+  }
+
+snippet for
+abbr for (initial; condition; increment) { }
+  for (${1:initial}; ${2:condition}; ${3:increment}) {
+    ${0}
+  }
+
+snippet fori
+abbr for (int i = 0; i < value; i++) { }
+  for (int i = 0; i < ${1:value}; i++) {
+    ${0}
+  }
+
+snippet fnc
+abbr type func_name(params) {}
+  //--------------------------------------------------------------
+  //! @brief 
+  //! @param 
+  //! @return 
+  //--------------------------------------------------------------
+  ${1:type} ${2:func_name}(${3})
+  {
+    ${0}
+  }
+
+snippet once
+abbr include-guard
+  #ifndef ${1:SYMBOL}
+  #define $1
+  ${0:TARGET}
+  #endif // $1
