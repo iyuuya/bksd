@@ -414,17 +414,9 @@ if type gsed > /dev/null 2>&1; then
   alias sed=gsed
 fi
 
-if type mvim > /dev/null 2>&1; then
-  alias gvim='reattach-to-user-namespace mvim'
-fi
-
-if type $VIM_APP_DIR/MacVim.app/Contents/MacOS/Vim > /dev/null 2>&1; then
-  alias vim="reattach-to-user-namespace $VIM_APP_DIR/MacVim.app/Contents/MacOS/Vim"
-fi
-alias vi='vim'
-alias v='vim'
-compdef v=vim
-alias gv='gvim'
+alias vim='nvim'
+alias v='nvim'
+compdef v=nvim
 
 if type /usr/local/Cellar/emacs/24.3/Emacs.app/Contents/MacOS/Emacs > /dev/null 2>&1; then
   alias emacs="/usr/local/Cellar/emacs/24.3/Emacs.app/Contents/MacOS/Emacs -nw"

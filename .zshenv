@@ -74,18 +74,11 @@ esac
 # PATH=$PATH:$SUDO_PATH
 # 
 
-case ${OSTYPE} in
-  darwin*)
-    export VIM_APP_DIR="/opt/homebrew-cask/Caskroom/macvim-kaoriya/7.4.1655"
-    ;;
-esac
-
 # PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 case ${OSTYPE} in
   darwin*)
     typeset -U path
     path=(
-      $VIM_APP_DIR/MacVim.app/Contents/MacOS(N-/)
       $HOME/bin(N-/)
       $HOME/.brew/bin(N-/)
       /usr/local/bin(N-/)
