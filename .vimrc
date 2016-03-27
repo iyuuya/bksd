@@ -6,6 +6,11 @@
 " }}}1
 "===============================================================================
 
+" sudoの場合は設定を読み込まない
+if exists('$SUDO_USER')
+  finish
+endif
+
 source ~/.vim/rc/initialize.vim
 source ~/.vim/rc/encoding.vim
 source ~/.vim/rc/search.vim
