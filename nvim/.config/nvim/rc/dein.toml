@@ -27,9 +27,6 @@ repo = 'h1mesuke/vim-alignta'
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
-repo = 'itchyny/lightline.vim'
-
-[[plugins]]
 repo = 'mattn/webapi-vim'
 
 [[plugins]] # rails.vim: Ruby on Rails power tools
