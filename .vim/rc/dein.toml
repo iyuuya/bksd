@@ -173,7 +173,7 @@ repo = 'mattn/favstar-vim'
 
 [[plugins]]
 repo = 'basyura/TweetVim'
-depends ['open-browser.vim', 'twibill.vim', 'bitly.vim', 'webapi-vim', 'favstar-vim']
+depends = ['open-browser.vim', 'twibill.vim', 'bitly.vim', 'webapi-vim', 'favstar-vim']
 
 [[plugins]]
 repo = 'basyura/J6uil.vim'
