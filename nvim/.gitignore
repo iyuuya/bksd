@@ -1,1 +1,2 @@
-nvim/tmp
+.config/nvim/rc/dein_local.toml
+.config/nvim/tmp

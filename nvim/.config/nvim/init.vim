@@ -1,6 +1,6 @@
 "===============================================================================
 " Note: "{{{1
-" .vimrc
+" .config/nvim/init.im
 "
 " Author: iyuuya <i.yuuya@gmail.com>
 " }}}1
@@ -11,16 +11,16 @@ if exists('$SUDO_USER')
   finish
 endif
 
-source ~/.vim/rc/initialize.vim
-source ~/.vim/rc/encoding.vim
-source ~/.vim/rc/search.vim
-source ~/.vim/rc/edit.vim
-source ~/.vim/rc/view.vim
-source ~/.vim/rc/syntax.vim
-source ~/.vim/rc/plugins.vim
-source ~/.vim/rc/key_mapping.vim
-source ~/.vim/rc/function.vim
-source ~/.vim/rc/platform.vim
+source ~/.config/nvim/rc/initialize.vim
+source ~/.config/nvim/rc/encoding.vim
+source ~/.config/nvim/rc/search.vim
+source ~/.config/nvim/rc/edit.vim
+source ~/.config/nvim/rc/view.vim
+source ~/.config/nvim/rc/syntax.vim
+source ~/.config/nvim/rc/plugins.vim
+source ~/.config/nvim/rc/key_mapping.vim
+source ~/.config/nvim/rc/function.vim
+source ~/.config/nvim/rc/platform.vim
 
 " Enable syntax color.
 syntax on

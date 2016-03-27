@@ -33,7 +33,9 @@ set backspace=indent,eol,start
 
 " Use clipboard register.
 set clipboard& clipboard+=unnamed
-set clipboard+=autoselect
+if has('gui')
+  set clipboard+=autoselect
+endif
 
 " Auto read if file is changed.
 set autoread

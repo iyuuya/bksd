@@ -29,30 +29,25 @@ xnoremap <LocalLeader> <Nop>
 nnoremap <leader> <Nop>
 xnoremap <leader> <Nop>
 
-" environment variables.
-if !exists("$MYVIMRC")
-  let $MYVIMRC = expand('~/.vimrc')
-endif
-
-if !exists("$MYGVIMRC")
-  let $MYGVIMRC = expand('~/.gvimrc')
-endif
-
-if !exists("$MYVIMFILES")
-  if my#iswin()
-    let $MYVIMFILES = expand('~/vimfiles')
-  else
-    let $MYVIMFILES = expand('~/.vim')
-  endif
-endif
+let $MYVIMFILES = expand('~/.config/nvim')
 
 " tmp directory.
 if !exists('g:vim_tmp_directory')
-  let g:vim_tmp_directory = $HOME."/.vim/tmp"
+  let g:vim_tmp_directory = $MYVIMFILES . "/tmp"
 endif
 
 " Create tmp directory.
 call my#mkdir_p(g:vim_tmp_directory)
+
+" environment variables.
+if !exists("$MYVIMRC")
+  let $MYVIMRC = expand($MYVIMFILES . 'init.vm')
+endif
+
+" if !exists("$MYGVIMRC")
+"   let $MYGVIMRC = expand('~/.gvimrc')
+" endif
+
 
 augroup MyAutoCmd
   autocmd!
@@ -75,8 +70,8 @@ if has('vim_starting')
   endif
 
   if dein#load_state(s:dein_dir)
-    let s:toml      = expand('~/.vim/rc/dein.toml')
-    let s:lazy_toml = expand('~/.vim/rc/dein_lazy.toml')
+    let s:toml      = expand($MYVIMFILES . '/rc/dein.toml')
+    let s:lazy_toml = expand($MYVIMFILES . '/rc/dein_lazy.toml')
     call dein#begin(s:dein_dir)
     call dein#load_toml(s:toml, {'lazy': 0})
     call dein#load_toml(s:lazy_toml, {'lazy': 1})
@@ -98,6 +93,8 @@ endif
 "-------------------------------------------------------------------------------
 
 filetype indent plugin on
+
+colorscheme molokai
 
 " }}}1
 "===============================================================================
