@@ -99,64 +99,90 @@ repo = 'vim-scripts/wombat256.vim'
 
 [[plugins]] # A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
 repo = 'airblade/vim-gitgutter'
+
 [[plugins]] # repeat.vim: enable repeating supported plugin maps with '.'
 repo = 'tpope/vim-repeat'
+
 [[plugins]] # abolish.vim: easily search for, substitute, and abbreviate multiple variants of a word
 repo = 'tpope/vim-abolish'
-[[plugins]] # A git repository for a vim plugin called matchit
-repo = 'edsono/vim-matchit'
-#  { 'autoload' : { filetypes' : 'ruby', 'mappings' : [',nx', '%'] } }
+
+
 [[plugins]]
 repo = 'thinca/vim-template'
+
 [[plugins]] # Realtime preview by Vim. (Markdown, reStructuredText, textile)
 repo = 'kannokanno/previm'
+
 [[plugins]]
 repo = 'vim-scripts/dbext.vim'
+
 [[plugins]]
 repo = 'tyru/open-browser.vim'
+
 [[plugins]] # Integrated reference viewer.
 repo = 'thinca/vim-ref'
+
 [[plugins]]
 repo = 'lambdalisue/vim-gista'
+
 [[plugins]] # Run commands quickly.
 repo = 'thinca/vim-quickrun'
-#{ 'depends' : 'mattn/quickrunex-vim' }
+depends = 'quickrunex-vim'
+
 [[plugins]] # Async syntax checking.
 repo = 'osyo-manga/vim-watchdogs'
+
 [[plugins]]
 repo = 'osyo-manga/shabadou.vim'
+
 [[plugins]] # Syntax checking hacks for vim
 repo = 'scrooloose/syntastic'
+
 [[plugins]] # Highlight quickfix errors
 repo = 'jceb/vim-hier'
+
 [[plugins]] # See quickfix, location list and Syntastic lists errors and warnings as you move through a vim file.
 repo = 'dannyob/quickfixstatus'
+
 [[plugins]]
 repo = 'vim-scripts/AnsiEsc.vim'
+
 [[plugins]]
 repo = 'osyo-manga/vim-over'
+
 [[plugins]] # surround.vim: quoting/parenthesizing made simple
 repo = 'tpope/vim-surround'
+
 [[plugins]] # emmet for vim: http://emmet.io/
 repo = 'mattn/emmet-vim'
+
 [[plugins]] # The Vim RuboCop plugin runs RuboCop and displays the results in Vim
 repo = 'ngmy/vim-rubocop'
-[[plugins]]
-repo ='vim-jp/cpp-vim'
-# { 'autoload' : {'filetypes' : 'cpp'} }
-[[plugins]] # Async clang code completion.
-repo = 'osyo-manga/vim-marching'
-# { 'autoload' : { 'filetypes' : ['c', 'cpp'] } }
+
 [[plugins]] # sophisticated comment plugin http://www.vim.org/scripts/script.php?script_id=2554
 repo = 'tyru/caw.vim'
+
+[[plugins]]
+repo = 'basyura/twibill.vim'
+
+[[plugins]]
+repo = 'basyura/bitly.vim'
+
+[[plugins]]
+repo = 'mattn/favstar-vim'
+
 [[plugins]]
 repo = 'basyura/TweetVim'
-# { 'depends' : ['tyru/open-browser.vim', 'basyura/twibill.vim', 'mattn/webapi-vim', 'basyura/bitly.vim', 'mattn/favstar-vim'] }
+depends ['open-browser.vim', 'twibill.vim', 'bitly.vim', 'webapi-vim', 'favstar-vim']
+
 [[plugins]]
 repo = 'basyura/J6uil.vim'
+
 [[plugins]]
-epo = 'vim-jp/vital.vim'
+repo = 'vim-jp/vital.vim'
+
 [[plugins]]
 repo = '5t111111/alt-gtags.vim'
+
 [[plugins]]
 repo = 'szw/vim-tags'
