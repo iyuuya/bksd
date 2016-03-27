@@ -32,6 +32,8 @@ set mouse=a
 " 真のVimmerはen
 set helplang& helplang=ja,en
 
+colorscheme Tomorrow-Night-Bright
+
 set secure
 
 " vim: foldmethod=marker

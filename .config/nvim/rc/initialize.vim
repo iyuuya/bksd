@@ -94,8 +94,6 @@ endif
 
 filetype indent plugin on
 
-colorscheme molokai
-
 " }}}1
 "===============================================================================
 " vim: foldmethod=marker
