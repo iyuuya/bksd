@@ -1,5 +1,4 @@
 --skip-test-unit
 --skip-turbolinks
---skip-bundle
 --no-skip-spring
 --database=mysql
