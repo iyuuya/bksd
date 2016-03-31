@@ -82,5 +82,9 @@ repo  = 'slim-template/vim-slim'
 on_ft = 'slim'
 
 [[plugins]]
-repo ='vim-jp/cpp-vim'
+repo  = 'vim-jp/cpp-vim'
 on_ft = 'cpp'
+
+[[plugins]]
+repo  = 'chase/vim-ansible-yaml'
+on_ft = ['yaml', 'ansible']
