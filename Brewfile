@@ -70,7 +70,6 @@ brew tap homebrew/science  || true
 brew install R || true
 
 brew install packer || true
-brew install docker || true
 
 brew install cmatrix || true
 
