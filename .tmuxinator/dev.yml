@@ -1,0 +1,8 @@
+name: dev
+root: ./
+
+windows:
+  - nvim: nvim
+  - console:
+  - server: bin/rails s
+  - guard: bundle exec guard || exit
