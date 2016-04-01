@@ -220,7 +220,7 @@ fi
 #===============================================================================
 # editor: "{{{1
 
-export EDITOR=vim
+export EDITOR=nvim
 export BUNDLE_EDITOR=$EDITOR
 
 # "}}}1
