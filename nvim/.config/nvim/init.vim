@@ -22,6 +22,10 @@ source ~/.config/nvim/rc/key_mapping.vim
 source ~/.config/nvim/rc/function.vim
 source ~/.config/nvim/rc/platform.vim
 
+if filereadable(expand('~/.config/nvim/rc/local.vim'))
+  source ~/.config/nvim/rc/local.vim
+endif
+
 " Enable syntax color.
 syntax on
 

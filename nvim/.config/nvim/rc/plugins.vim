@@ -716,6 +716,31 @@ endif
 "-------------------------------------------------------------------------------
 
 "-------------------------------------------------------------------------------
+" Template: "{{{2
+
+if !exists('g:template_variables')
+  let g:template_variables = {}
+  let g:template_variables.author = 'iyuuya'
+  let g:template_variables.organization = 'IYUUYA'
+endif
+
+autocmd User plugin-template-loaded call s:template_keywords()
+function! s:template_keywords()
+  silent %s/<+FILE_NAME+>/\=expand('%:t')/ge
+  silent %s/<+DATE+>/\=strftime('%Y-%m-%d')/ge
+  silent %s/<+YEAR+>/\=strftime('%Y')/ge
+  silent %s/<+AUTHOR+>/\=g:template_variables.author/ge
+  silent %s/<+ORGANIZATION+>/\=g:template_variables.organization/ge
+  silent %s/<%=\(.\{-}\)^>/\=eval(submatch(1))/ge
+  if search('<+CURSOR+>')
+    execute 'normal! "_da>'
+  endif
+endfunction
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
 " tmp: "{{{2
 
 " }}}2
