@@ -13,6 +13,7 @@ DotInstallTask.new :ruby do |t|
   t.add_link 'default-gems', 'default-gems', ENV['RBENV_ROOT'] || '~/.anyenv/envs/rbenv/'
 end
 DotInstallTask.new :tmux
+DotInstallTask.new :nvim
 
 HomebrewSetupTask.new :brew
 
