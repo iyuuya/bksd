@@ -8,6 +8,24 @@
 
 src ~/.zsh.d/options.zsh
 
+autoload -U compinit
+compinit
+
+case ${OSTYPE} in
+  darwin*)
+    fpath=(/usr/local/share/zsh-completions(N-/) $HOME/brew/share/zsh-completions(N-/) $fpath)
+    ;;
+esac
+
+cdpath=($HOME)
+chpwd_functions=($chpwd_functions dirs)
+
+src $HOME/.zsh.d/git.zsh
+src $HOME/.zsh.d/go.zsh
+src $HOME/.zsh.d/ghq.zsh
+src $HOME/.zsh.d/peco.zsh
+src $HOME/.zsh.d/ruby.zsh
+
 #===============================================================================
 # Prompting: "{{{1
 
@@ -103,12 +121,6 @@ function count_prompt_characters()
 }
 
 #-------------------------------------------------------------------------------
-autoload -Uz vcs_info
-zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
-zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
-zstyle ':vcs_info:*' formats "%F{green}%c%u%b%f:"
-zstyle ':vcs_info:*' actionformats '%b|%a'
 
 function update_prompt() # "{{{2
 {
@@ -143,6 +155,36 @@ function update_prompt() # "{{{2
   # LANG=C vcs_info >&/dev/null
   # if [ -n "$(git_prompt)" ]; then
   #   prompt_bar_right="$(git_prompt):"
+function git-rewrite-author()
+{
+  if [ $# = 0 ]
+  then
+    echo 'usage: git-rewrite-author old_name new_name new_email range'
+    return
+  fi
+
+  local old_name=$1
+  local new_name=$2
+  local new_email=$3
+  local range=$4
+
+  git filter-branch --commit-filter "
+    if [ \"\$GIT_COMMITTER_NAME\" = \"$old_name\" ];
+    then
+      GIT_COMMITTER_NAME=\"$new_name\";
+      GIT_AUTHOR_NAME=\"$new_name\";
+      GIT_COMMITTER_EMAIL=\"$new_email\";
+      GIT_AUTHOR_EMAIL=\"$new_email\";
+      git commit-tree \"\$@\";
+    else
+      git commit-tree \"\$@\";
+    fi" $range
+}
+
+function git-rewrite-author2()
+{
+  git filter-branch -f --env-filter "GIT_AUTHOR_NAME='$1'; GIT_AUTHOR_EMAIL='$2'; GIT_COMMITTER_NAME='$1'; GIT_COMMITTER_EMAIL='$2';" $3
+}
   # fi
   # -<master:project>
   prompt_bar_right="[${prompt_bar_right}%{%F{yellow}%}%c%{%f%}]"
@@ -180,22 +222,10 @@ precmd_functions=($precmd_functions vcs_info update_prompt update_tmux_pwd)
 # "}}}1
 #===============================================================================
 
-cdpath=($HOME)
-chpwd_functions=($chpwd_functions dirs)
-
 #===============================================================================
 # Completion: "{{{1
 
 ## Initialize
-
-autoload -U compinit
-compinit
-
-case ${OSTYPE} in
-  darwin*)
-    fpath=(/usr/local/share/zsh-completions(N-/) $HOME/brew/share/zsh-completions(N-/) $fpath)
-    ;;
-esac
 
 ## Grouping completion
 zstyle ':completion:*' format '%B%d%b'
@@ -216,23 +246,6 @@ zstyle ':completion:*' varbose yes
 
 zstyle ':completion:sudo:*' environ PATH="$SUDO_PATH:$PATH"
 
-# Autoload _git completion functions
-# if declare -f _git > /dev/null; then
-#   _git
-# fi
-
-if declare -f _git_commands > /dev/null; then
-  _hub_commands=(
-    'alias:show shell instructions for wrapping git'
-    'pull-request:open a pull request on GitHub'
-    'fork:fork origin repo on GitHub'
-    'create:create new repo on GitHub for the current project'
-    'browse:browse the project on GitHub'
-    'compare:open GitHub compare view'
-  )
-  # Extend the '_git_commands' function with hub commands
-  eval "$(declare -f _git_commands | sed -e 's/base_commands=(/base_commands=(${_hub_commands} /')"
-fi
 
 # "}}}1
 #===============================================================================
@@ -301,36 +314,6 @@ function search()
   find "$d" -print0 | xargs -0 grep -nE "$w"
 }
 
-function git-rewrite-author()
-{
-  if [ $# = 0 ]
-  then
-    echo 'usage: git-rewrite-author old_name new_name new_email range'
-    return
-  fi
-
-  local old_name=$1
-  local new_name=$2
-  local new_email=$3
-  local range=$4
-
-  git filter-branch --commit-filter "
-    if [ \"\$GIT_COMMITTER_NAME\" = \"$old_name\" ];
-    then
-      GIT_COMMITTER_NAME=\"$new_name\";
-      GIT_AUTHOR_NAME=\"$new_name\";
-      GIT_COMMITTER_EMAIL=\"$new_email\";
-      GIT_AUTHOR_EMAIL=\"$new_email\";
-      git commit-tree \"\$@\";
-    else
-      git commit-tree \"\$@\";
-    fi" $range
-}
-
-function git-rewrite-author2()
-{
-  git filter-branch -f --env-filter "GIT_AUTHOR_NAME='$1'; GIT_AUTHOR_EMAIL='$2'; GIT_COMMITTER_NAME='$1'; GIT_COMMITTER_EMAIL='$2';" $3
-}
 
 function benchmark()
 {
@@ -422,38 +405,6 @@ if type /usr/local/Cellar/emacs/24.3/Emacs.app/Contents/MacOS/Emacs > /dev/null 
   alias emacs="/usr/local/Cellar/emacs/24.3/Emacs.app/Contents/MacOS/Emacs -nw"
 fi
 alias em=emacs
-
-# git: "{{{2
-if type hub > /dev/null 2>&1; then
-  alias git='hub'
-fi
-
-alias g='git'
-compdef g=git
-
-alias gl="g log --graph --pretty=format:'%Cblue%h%Creset%d %Cgreen%an%Creset: %s %Cblue%ar%Creset'"
-alias gc='g commit'
-alias gcm='g commit -m'
-alias gco='g checkout'
-alias grs='g reset'
-alias gd='g diff'
-alias ga='g add'
-alias gs='g status'
-alias gpl='g pull'
-alias gps='g push'
-alias gsm='g submodule'
-alias gst='g subtree'
-alias gsu="g submodule foreach 'git checkout master; git pull'"
-alias grmal='git ls-files -z --deleted | xargs -0 git rm'
-alias tiga='tig --all'
-
-case ${OSTYPE} in
-  darwin*)
-    alias gnw=/usr/local/opt/git/share/git-core/contrib/workdir/git-new-workdir
-    ;;
-esac
-
-# "}}}2
 
 # docker: "{{{2
 
@@ -571,12 +522,6 @@ fi
 
 # "}}}1
 #===============================================================================
-
-src $HOME/.zsh.d/git.zsh
-src $HOME/.zsh.d/go.zsh
-src $HOME/.zsh.d/ghq.zsh
-src $HOME/.zsh.d/peco.zsh
-src $HOME/.zsh.d/ruby.zsh
 
 src $HOME/.zshrc.local
 
