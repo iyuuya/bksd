@@ -40,6 +40,10 @@ class DotInstallTask < Rake::TaskLib
     @links.each do |src, dst| puts "#{src} -> #{dst}" end
   end
 
+  def remove_files
+    @links.each do |src, dst| rm_f dst ; rm_f src, dst end
+  end
+
   def define
     task @name => "#{@name}:install"
     namespace @name do
@@ -47,6 +51,8 @@ class DotInstallTask < Rake::TaskLib
       task :install do force_ln_links end
       desc "#{@name} list"
       task :list do print_links end
+      desc "#{@name} remove files"
+      task :clean do remove_files end
     end
   end
 end
