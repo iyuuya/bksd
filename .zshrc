@@ -26,9 +26,16 @@ cdpath=($HOME)
 chpwd_functions=($chpwd_functions dirs)
 
 src $HOME/.zsh.d/git.zsh
-src $HOME/.zsh.d/go.zsh
-src $HOME/.zsh.d/ghq.zsh
-src $HOME/.zsh.d/peco.zsh
+
+if type go > /dev/null 2&>1; then
+  src $HOME/.zsh.d/go.zsh
+fi
+if type ghq > /dev/null 2>&1; then
+  src $HOME/.zsh.d/ghq.zsh
+fi
+if type peco > /dev/null 2>&1; then
+  src $HOME/.zsh.d/peco.zsh
+fi
 src $HOME/.zsh.d/ruby.zsh
 
 #===============================================================================
