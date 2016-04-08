@@ -27,7 +27,7 @@ chpwd_functions=($chpwd_functions dirs)
 
 src $HOME/.zsh.d/git.zsh
 
-if type go > /dev/null 2&>1; then
+if type go > /dev/null 2>&1; then
   src $HOME/.zsh.d/go.zsh
 fi
 if type ghq > /dev/null 2>&1; then
