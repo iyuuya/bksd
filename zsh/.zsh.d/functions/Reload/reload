@@ -1,0 +1,2 @@
+source $HOME/.zshenv
+source $HOME/.zshrc
