@@ -1,0 +1,11 @@
+if [ $# = 0 ]; then
+  echo 'usage: search [path] text'
+  return
+fi
+local d="."
+local w=$1
+if [ $# = 2 ]; then
+  d=$1
+  w=$2
+fi
+find "$d" -print0 | xargs -0 grep -nE "$w"
