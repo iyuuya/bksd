@@ -358,6 +358,22 @@ alias sw=switch-user
 alias lv="$PAGER"
 alias less="$PAGER"
 
+if type ccat > /dev/null 2>&1; then
+  alias cat='ccat'
+fi
+
+if type colordiff > /dev/null 2>&1; then
+  alias diff='colordiff'
+fi
+
+if type dfc > /dev/null 2>&1; then
+  alias df='dfc'
+fi
+
+if type gsed > /dev/null 2>&1; then
+  alias sed=gsed
+fi
+
 # global: "{{{2
 
 alias -g L='|& $PAGER -R'
@@ -393,11 +409,9 @@ alias where='command -v'
 
 alias x='exit'
 
-if type gsed > /dev/null 2>&1; then
-  alias sed=gsed
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
 fi
-
-alias vim='nvim'
 alias v='nvim'
 compdef v=nvim
 
@@ -438,43 +452,6 @@ _boot2docker() {
     --vm'[virtual machine name. default="boot2docker-vm"]' \
     '*::boot2docker commands:_boot2docker_command'
 }
-
-(( $+functions[_boot2docker_command] )) ||
-_boot2docker_command() {
-  local _boot2docker_cmds
-
-  _boot2docker_cmds=(
-    'init:Create a new boot2docker VM.' \
-    'up:Start VM from any states.' \
-    'start:Start VM from any states.' \
-    'boot:Start VM from any states.' \
-    'ssh:Login to VM via SSH.' \
-    'save:Suspend VM and save state to disk.' \
-    'suspend:Suspend VM and save state to disk.' \
-    "down:Gracefully shutdown the VM." \
-    "stop:Gracefully shutdown the VM." \
-    "halt:Gracefully shutdown the VM." \
-    "restart:Gracefully reboot the VM." \
-    "poweroff:Forcefully power off the VM (might corrupt disk image)." \
-    "reset:Forcefully power cycle the VM (might corrupt disk image)." \
-    "delete:Delete boot2docker VM and its disk image." \
-    "destroy:Delete boot2docker VM and its disk image." \
-    "config:Show selected profile file settings." \
-    "cfg:Show selected profile file settings." \
-    "info:Display detailed information of VM." \
-    "ip:Display the IP address of the VM's Host-only network." \
-    "status:Display current state of VM." \
-    "download:Download boot2docker ISO image." \
-    "upgrade:Upgrade the boot2docker ISO image (if vm is running it will be stopped and started)." \
-    "version:Display version information."
-    )
-
-  if (( CURRENT == 1 )); then
-    _describe -t commands 'boot2docker subcommand' _boot2docker_cmds
-  fi
-}
-compdef _boot2docker boot2docker
-compdef _boot2docker b2d
 
 # }}}2
 
@@ -518,7 +495,7 @@ if type ~/Applications/Shoes.app/Contents/MacOS/shoes > /dev/null 2>&1; then
 fi
 
 # added by travis gem
-[ -f /Users/iyuuya/.travis/travis.sh ] && source /Users/iyuuya/.travis/travis.sh
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 # "}}}1
 #===============================================================================
