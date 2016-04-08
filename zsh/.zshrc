@@ -13,7 +13,12 @@ compinit
 
 case ${OSTYPE} in
   darwin*)
-    fpath=(/usr/local/share/zsh-completions(N-/) $HOME/brew/share/zsh-completions(N-/) $fpath)
+    fpath=(
+      /usr/local/share/zsh-completions(N-/)
+      $HOME/brew/share/zsh-completions(N-/)
+      $HOME/.zsh.d/functions/*(N-/)
+      $fpath
+    )
     ;;
 esac
 
@@ -155,36 +160,6 @@ function update_prompt() # "{{{2
   # LANG=C vcs_info >&/dev/null
   # if [ -n "$(git_prompt)" ]; then
   #   prompt_bar_right="$(git_prompt):"
-function git-rewrite-author()
-{
-  if [ $# = 0 ]
-  then
-    echo 'usage: git-rewrite-author old_name new_name new_email range'
-    return
-  fi
-
-  local old_name=$1
-  local new_name=$2
-  local new_email=$3
-  local range=$4
-
-  git filter-branch --commit-filter "
-    if [ \"\$GIT_COMMITTER_NAME\" = \"$old_name\" ];
-    then
-      GIT_COMMITTER_NAME=\"$new_name\";
-      GIT_AUTHOR_NAME=\"$new_name\";
-      GIT_COMMITTER_EMAIL=\"$new_email\";
-      GIT_AUTHOR_EMAIL=\"$new_email\";
-      git commit-tree \"\$@\";
-    else
-      git commit-tree \"\$@\";
-    fi" $range
-}
-
-function git-rewrite-author2()
-{
-  git filter-branch -f --env-filter "GIT_AUTHOR_NAME='$1'; GIT_AUTHOR_EMAIL='$2'; GIT_COMMITTER_NAME='$1'; GIT_COMMITTER_EMAIL='$2';" $3
-}
   # fi
   # -<master:project>
   prompt_bar_right="[${prompt_bar_right}%{%F{yellow}%}%c%{%f%}]"
@@ -290,63 +265,11 @@ zle -N history-beginning-search-forward-end history-search-end
 #===============================================================================
 # Function: "{{{1
 
-# reload config files
-function reload()
-{
-  src "$HOME/.zshenv"
-  src "$HOME/.zshrc"
-}
-
-function search()
-{
-  if [ $# = 0 ]
-  then
-    echo 'usage: search [path] text'
-    return
-  fi
-  local d="."
-  local w=$1
-  if [ $# = 2 ]
-  then
-    d=$1
-    w=$2
-  fi
-  find "$d" -print0 | xargs -0 grep -nE "$w"
-}
-
-
-function benchmark()
-{
-  if [ $# -le 1 ]; then
-    echo 'usage: benchmark num "command"'
-    return
-  fi
-
-  for i in {1..$1}; do
-    (time ($2)) |& sed -e "s/[a-z]//g" >> benchmark.tmp.log
-    print -n "."
-  done
-  print
-  ruby <<\EOS
-  ks=%i(user system cpu total);ss=Hash.new(0);i=0
-  File.open('benchmark.tmp.log'){|f|f.each_line{|line|ks.zip(line.split.map(&:to_f)).to_h.each{|k,v|ss[k]+=v};i+=1}}
-  ss.each{|k,v|puts"#{k.to_s.ljust(7)}: #{v/i}"}
-EOS
-  rm benchmark.tmp.log
-}
-function b100 { benchmark 100 $1 }
-
-function switch-user {
-  if [ $# -ne 1 ]; then
-    echo 'usage: switch-user USERNAME'
-    return
-  fi
-
-  rm $HOME/.git.d/local
-  ln -s $HOME/.git.d/local.$1 $HOME/.git.d/local
-  rm $HOME/.ssh/config
-  ln -s $HOME/.ssh/config.$1  $HOME/.ssh/config
-}
+autoload -Uz reload
+autoload -Uz search
+autoload -Uz benchmark
+autoload -Uz b100
+autoload -Uz switch-user
 alias sw=switch-user
 
 # "}}}1
