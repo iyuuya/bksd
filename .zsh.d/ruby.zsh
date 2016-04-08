@@ -47,3 +47,5 @@ alias rs='bin/spring'
 # ctags:
 
 alias rtags='ctags --langmap=RUBY:.rb --exclude="*.js" --exclude=".git*" -R'
+
+alias mux='tmuxinator'
