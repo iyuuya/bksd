@@ -1,0 +1,16 @@
+if [ $# -ne 1 ]; then
+  echo 'usage: switch-user USERNAME'
+  return
+fi
+
+if [[ -s $HOME/.git.d/local.$1 ]]; then
+  rm $HOME/.git.d/local
+  ln -s $HOME/.git.d/local.$1 $HOME/.git.d/local
+  echo 'configure git'
+fi
+
+if [[ -s $HOME/.ssh/config.$1 ]]; then
+  rm $HOME/.ssh/config
+  ln -s $HOME/.ssh/config.$1  $HOME/.ssh/config
+  echo 'configure ssh'
+fi
