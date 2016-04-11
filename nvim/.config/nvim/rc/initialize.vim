@@ -13,6 +13,9 @@ if &compatible && has('vim_starting')
   set nocompatible
 endif
 
+let $MYVIMFILES = expand('~/.config/nvim')
+execute 'set runtimepath^=' . $MYVIMFILES
+
 if my#iswin()
   language message en
 else
@@ -28,8 +31,6 @@ nnoremap <LocalLeader> <Nop>
 xnoremap <LocalLeader> <Nop>
 nnoremap <leader> <Nop>
 xnoremap <leader> <Nop>
-
-let $MYVIMFILES = expand('~/.config/nvim')
 
 " tmp directory.
 if !exists('g:vim_tmp_directory')
