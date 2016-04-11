@@ -1,5 +1,15 @@
 alias -g P='| peco'
 
+function ghq-list-relative() {
+  local query
+  if [ $# = 1 ]; then
+    query=$1
+  else
+    query=''
+  fi
+  ghq list $query -p | sed -e "s/$(echo $HOME | sed -e 's/\//\\\//g')/~/g"
+}
+
 function peco-select-history() {
   local tac
   if which tac > /dev/null; then
