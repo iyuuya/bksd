@@ -1,0 +1,5 @@
+for dir in `ghq list -p`; do
+  echo "updating... : $dir"
+  cd $dir
+  git pull
+done

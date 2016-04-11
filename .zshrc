@@ -30,9 +30,6 @@ src $HOME/.zsh.d/git.zsh
 if type go > /dev/null 2>&1; then
   src $HOME/.zsh.d/go.zsh
 fi
-if type ghq > /dev/null 2>&1; then
-  src $HOME/.zsh.d/ghq.zsh
-fi
 if type peco > /dev/null 2>&1; then
   src $HOME/.zsh.d/peco.zsh
 fi
@@ -278,6 +275,9 @@ autoload -Uz benchmark
 autoload -Uz b100
 autoload -Uz switch-user
 alias sw=switch-user
+autoload -Uz ghq-update
+autoload -Uz bundle-gemname-list
+autoload -Uz db_reset
 
 # "}}}1
 #===============================================================================

@@ -1,9 +1,3 @@
-function db_reset()
-{
-  bin/rake db:drop db:create db:migrate db:seed_fu
-  RAILS_ENV=test bin/rake db:migrate
-}
-
 # bundle:
 alias -g RT='RAILS_ENV=test'
 
@@ -15,11 +9,6 @@ if type peco > /dev/null 2>&1; then
   alias bs='bundle show `bundle-gemname-list | peco`'
   alias bo='bundle open `bundle-gemname-list | peco`'
 fi
-
-function bundle-gemname-list()
-{
-  bundle list | sed -e '1d' | tr -d '*().' | sed -e 's/   \(.*\) [0-9]*/\1/g'
-}
 
 # rbenv:
 alias rb='rbenv'
