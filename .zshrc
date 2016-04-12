@@ -6,10 +6,10 @@
 # }}}1
 #===============================================================================
 
-src ~/.zsh.d/options.zsh
+source ~/.zsh.d/options.zsh
 
 autoload -U compinit
-compinit
+compinit -C
 
 case ${OSTYPE} in
   darwin*)
@@ -25,15 +25,15 @@ esac
 cdpath=($HOME)
 chpwd_functions=($chpwd_functions dirs)
 
-src $HOME/.zsh.d/git.zsh
+source $HOME/.zsh.d/git.zsh
 
 if type go > /dev/null 2>&1; then
-  src $HOME/.zsh.d/go.zsh
+  source $HOME/.zsh.d/go.zsh
 fi
 if type peco > /dev/null 2>&1; then
-  src $HOME/.zsh.d/peco.zsh
+  source $HOME/.zsh.d/peco.zsh
 fi
-src $HOME/.zsh.d/ruby.zsh
+source $HOME/.zsh.d/ruby.zsh
 
 #===============================================================================
 # Prompting: "{{{1
@@ -252,6 +252,10 @@ log
 WORDCHARS=${WORDCHARS:s,/,,}
 WORDCHARS="${WORDCHARS}|"
 
+function ztime {
+  time (zsh -i -c exit)
+}
+
 # "}}}1
 #===============================================================================
 
@@ -425,11 +429,14 @@ if type ~/Applications/Shoes.app/Contents/MacOS/shoes > /dev/null 2>&1; then
 fi
 
 # added by travis gem
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+src $HOME/.travis/travis.sh
 
 # "}}}1
 #===============================================================================
 
 src $HOME/.zshrc.local
 
+if type zprof > /dev/null 2>&1; then
+  zprof | less
+fi
 # vim: ft=zsh fdm=marker et sw=2 sts=2 ts=2
