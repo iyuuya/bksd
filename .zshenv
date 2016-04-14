@@ -91,9 +91,7 @@ case ${OSTYPE} in
     )
     if [ -d $HOME/.anyenv ] ; then
       path=($HOME/.anyenv/bin(N-/) $path)
-      eval "$(anyenv init -)"
-      for D in `ls $HOME/.anyenv/envs`
-      do
+      for D in `ls $HOME/.anyenv/envs`; do
         path=($HOME/.anyenv/envs/$D/shims(N-/) $path)
       done
     fi
