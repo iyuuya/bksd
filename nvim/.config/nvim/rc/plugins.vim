@@ -545,12 +545,13 @@ endif
 "-------------------------------------------------------------------------------
 " Vim Splash: "{{{2
 
-let g:splash#path = g:vim_tmp_directory . '/vim_info.txt'
+if dein#tap('vim-splash')
+  let g:splash#path = g:vim_tmp_directory . '/vim_info.txt'
 
-if !filereadable(g:splash#path)
-  call system('curl -o ' . g:splash#path . ' https://gist.github.com/OrgaChem/7630711/raw/c90299e0aaa0cea8cd05a6ceb2e70074186f8ce5/vim_intro.txt')
+  if !filereadable(g:splash#path)
+    call system('curl -o ' . g:splash#path . ' https://gist.github.com/OrgaChem/7630711/raw/c90299e0aaa0cea8cd05a6ceb2e70074186f8ce5/vim_intro.txt')
+  endif
 endif
-
 " }}}2
 "-------------------------------------------------------------------------------
 
