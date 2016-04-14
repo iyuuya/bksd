@@ -20,4 +20,3 @@ DotInstallTask.new :mysql
 HomebrewSetupTask.new :brew
 
 task :default => [:brew, :git, :vim, :zsh, :ruby, :tmux, :nvim, :node, :mysql]
-
