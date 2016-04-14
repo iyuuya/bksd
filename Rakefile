@@ -14,8 +14,9 @@ DotInstallTask.new :ruby do |t|
 end
 DotInstallTask.new :tmux
 DotInstallTask.new :nvim
+DotInstallTask.new :node
 
 HomebrewSetupTask.new :brew
 
-task :default => [:brew, :git, :vim, :zsh, :ruby, :tmux]
+task :default => [:brew, :git, :vim, :zsh, :ruby, :tmux, :nvim, :node]
 
