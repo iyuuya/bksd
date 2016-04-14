@@ -88,3 +88,14 @@ function peco-vim-neomru() {
   fi
 }
 alias pvd=peco-vim-neomru
+
+function peco-xdg-config() {
+  local selected_dir=$(ls -L ~/.config/ | peco --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ~/.config/${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-xdg-config
+bindkey '^gf' peco-xdg-config
