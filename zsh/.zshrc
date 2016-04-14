@@ -6,6 +6,8 @@
 # }}}1
 #===============================================================================
 
+[ -f ~/.anyenv/bin/anyenv ] && eval "$(anyenv init - zsh)"
+
 source ~/.zsh.d/options.zsh
 
 autoload -U compinit
