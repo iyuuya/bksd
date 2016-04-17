@@ -34,7 +34,7 @@ class DotInstallTask < Rake::TaskLib
     end
 
     if with_config
-      list = Dir.glob("#{@@bksd_dir}/#{@name}/.config/*").map{|p| p.sub(config_path+'', '')}
+      list = Dir.glob("#{@@bksd_dir}/#{@name}/.config/*").map{|p| p.sub(config_path, '')}
       list.each do |path|
         add_link path, File.basename(path, ""), "~/.config/"
       end
