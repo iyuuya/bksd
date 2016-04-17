@@ -27,8 +27,17 @@ class DotInstallTask < Rake::TaskLib
     list.delete("/..")
     list.delete("/.git")
     list.delete("/.gitignore")
+    with_config = list.delete("/.config")
+
     list.each do |path|
       add_link path, File.basename(path, "")
+    end
+
+    if with_config
+      list = Dir.glob("#{@@bksd_dir}/#{@name}/.config/*").map{|p| p.sub(config_path+'', '')}
+      list.each do |path|
+        link path, File.basename(path, ""), "~/.config/"
+      end
     end
   end
 
