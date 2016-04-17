@@ -8,7 +8,7 @@
 
 [ -f ~/.anyenv/bin/anyenv ] && eval "$(anyenv init - zsh)"
 
-source ~/.zsh.d/options.zsh
+source ~/.config/zsh/options.zsh
 
 autoload -U compinit
 compinit -C
@@ -18,7 +18,7 @@ case ${OSTYPE} in
     fpath=(
       /usr/local/share/zsh-completions(N-/)
       $HOME/brew/share/zsh-completions(N-/)
-      $HOME/.zsh.d/functions/*(N-/)
+      $HOME/.config/zsh/functions/*(N-/)
       $fpath
     )
     ;;
@@ -27,15 +27,15 @@ esac
 cdpath=($HOME)
 chpwd_functions=($chpwd_functions dirs)
 
-source $HOME/.zsh.d/git.zsh
+source $HOME/.config/zsh/git.zsh
 
 if type go > /dev/null 2>&1; then
-  source $HOME/.zsh.d/go.zsh
+  source $HOME/.config/zsh/go.zsh
 fi
 if type peco > /dev/null 2>&1; then
-  source $HOME/.zsh.d/peco.zsh
+  source $HOME/.config/zsh/peco.zsh
 fi
-source $HOME/.zsh.d/ruby.zsh
+source $HOME/.config/zsh/ruby.zsh
 
 #===============================================================================
 # Prompting: "{{{1
