@@ -45,11 +45,6 @@ if !exists("$MYVIMRC")
   let $MYVIMRC = expand($MYVIMFILES . 'init.vm')
 endif
 
-" if !exists("$MYGVIMRC")
-"   let $MYGVIMRC = expand('~/.gvimrc')
-" endif
-
-
 augroup MyAutoCmd
   autocmd!
 augroup END
