@@ -72,14 +72,11 @@ if my#ismac()
 elseif my#iswin() || my#iscygwin()
   " For Windows.
   set guifont=Meslo_LG_S_for_Powerline:h10:cANSI
-  " set guifont=Consolas_for_Powerline_FixedD:h10:cANSI
-  "let &guifontwide = iconv('Osaka－等幅:h10:cSHIFTJIS', &encoding, 'cp932')
   " Number of pixel lines inserted between characters.
   set linespace=2
 else
   " For Linux.
   let &guifont="Ricty\ 11"
-  "let &guifontwide="Ricty\ 11"
   " Number of pixel lines inserted between characters.
   set linespace=0
 endif
@@ -94,7 +91,6 @@ endif
 " Disable bell.
 set vb t_vb=
 
-" colorscheme Tomorrow-Night-Bright
 colorscheme molokai
 
 " }}}1
