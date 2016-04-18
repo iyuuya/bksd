@@ -47,36 +47,6 @@ esac
 #===============================================================================
 # Path: "{{{1
 
-# PATH
-
-# Does not register a duplicate PATH.
-# typeset -U path
-# 
-# path=(
-#   # ~/bin
-#   $HOME/bin(N-/)
-#   # Homebrew
-#   $HOME/brew/bin(N-/)
-#   # rbenv
-#   $HOME/.rbenv/bin(N-/)
-#   # rvm
-#   $HOME/.rvm/bin(N-/)
-#   # cabal
-#   $HOME/.cabal/bin(N-/)
-#   # System
-#   {/usr/local,/usr/local/share/npm,/usr,}/bin(N-/)
-#   # Mac
-#   /usr/X11/bin(N-/)
-# )
-# 
-# # SUDO_PATH
-# typeset -xT SUDO_PATH sudo_path
-# typeset -U sudo_path
-# sudo_path=({,/usr/local,/usr}/sbin(N-/))
-# 
-# PATH=$PATH:$SUDO_PATH
-# 
-
 # PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 case ${OSTYPE} in
   darwin*)
