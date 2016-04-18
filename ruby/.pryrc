@@ -9,10 +9,6 @@ version = ""
 version << "#{Rails.version}@" if defined?(Rails)
 version << "#{RUBY_VERSION}"
 Pry.config.prompt = old_prompt.map { |prompt| proc { |*a| "#{version} #{prompt.call(*a)}" } }
-# [
-#   proc { |*a| "#{version} #{old_prompt[0].call(*a)}" },
-#   proc { |*a| "#{version} #{old_prompt[1].call(*a)}" }
-# ]
 
 begin
   require 'hirb'
