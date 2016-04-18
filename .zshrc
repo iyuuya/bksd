@@ -141,7 +141,6 @@ zstyle ':completion:*' varbose yes
 
 zstyle ':completion:sudo:*' environ PATH="$SUDO_PATH:$PATH"
 
-
 # "}}}1
 #===============================================================================
 
