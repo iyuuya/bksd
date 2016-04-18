@@ -316,8 +316,11 @@ function app_alias()
   done;
 }
 
-# app_alias gv c cpp h rb php html haml mkd md txt
-# app_alias gv js ru py pl hs lhs sql conf
+app_alias nvim c cpp cc h cs \
+  rb rake ru erb haml slim html php \
+  js jsx ts coffee json jade css scss sass \
+  mkd md asciidoc adoc asc textile rdoc creole txt csv go \
+  py pl hs lhs sql conf toml yaml yml y
 
 if type /Applications/Gyazo.app/Contents/MacOS/Gyazo> /dev/null 2>&1; then
   alias gyazo='/Applications/Gyazo.app/Contents/MacOS/Gyazo "$@"'
