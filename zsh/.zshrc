@@ -240,8 +240,6 @@ alias -g JQ="| jq '.'"
 
 # "}}}2
 
-alias rr='command rm -rf'
-
 alias ls='ls -GF'
 alias l='ls'
 alias ll='l -lh'
