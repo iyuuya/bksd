@@ -181,3 +181,6 @@ repo = '5t111111/alt-gtags.vim'
 
 [[plugins]]
 repo = 'szw/vim-tags'
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
