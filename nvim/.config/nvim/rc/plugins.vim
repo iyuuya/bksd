@@ -728,6 +728,7 @@ endif
 autocmd User plugin-template-loaded call s:template_keywords()
 function! s:template_keywords()
   silent %s/<+FILE_NAME+>/\=expand('%:t')/ge
+  silent %s/<+FILE_BASENAME+>/\=expand('%:t:r')/ge
   silent %s/<+DATE+>/\=strftime('%Y-%m-%d')/ge
   silent %s/<+YEAR+>/\=strftime('%Y')/ge
   silent %s/<+AUTHOR+>/\=g:template_variables.author/ge
