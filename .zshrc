@@ -272,33 +272,6 @@ alias em=emacs
 # alias d='docker'
 # compdef d=docker
 alias dm='docker-machine'
-alias b2d='boot2docker'
-_boot2docker() {
-  local context state line
-
-  _arguments -C \
-    --basevmdk'[Path to VMDK to use as base for persistent partition]:vmdk:' \
-    --dhcp'[enable VirtualBox host-only network DHCP. default=true]' \
-    --dhcpip'[VirtualBox host-only network DHCP server address. default=192.168.59.99]' \
-    '(-s --disksize)'{-s,--disksize}'[boot2docker disk image size (in MB). default=20000.]:disksize:' \
-    --dockerport'[host Docker port (forward to port 2375 in VM).]:PORT:' \
-    --hostip'[VirtualBox host-only network IP address.]:IP:' \
-    --iso'[path to boot2docker ISO image.]:FILE:_files' \
-    --lowerip'[VirtualBox host-only network DHCP lower bound.]:IP:' \
-    '(-m --memory)'{-m,--memory}'[virtual machine memory size (in MB). default=2048]' \
-    --netmask'[VirtualBox host-only network mask.]' \
-    --serial'[try serial console to get IP address (experimental) default=false]' \
-    --serialfile'[path to the serial socket/pipe.]:FILE:_files' \
-    --ssh'[path to SSH client utility. default="ssh"]:SSH:' \
-    --ssh-keygen'[path to ssh-keygen utility. default="ssh-keygen"]:KEYGEN:' \
-    --sshkey'[path to SSH key to use.]:FILE:_files' \
-    --sshport'[host SSH port (forward to port 22 in VM). default=2022]:PORT:' \
-    --upperip'[VirtualBox host-only network DHCP upper bound. default=192.168.59.254]:IP:' \
-    --vbm'[path to VirtualBox management utility. default="VBoxManage"]' \
-    '(-v --verbose)'{-v,--verbose}'[display verbose command invocations. default=false]' \
-    --vm'[virtual machine name. default="boot2docker-vm"]' \
-    '*::boot2docker commands:_boot2docker_command'
-}
 
 # }}}2
 
