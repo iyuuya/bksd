@@ -76,7 +76,7 @@ if dein#tap('unite.vim')
     nnoremap [unite]rad :<C-u>Unite -start-insert file:app/admin<CR>
   endif
   " Dictionaries
-  nnoremap [unite]dw :<C-u>Unite webcolornane<CR>
+  nnoremap [unite]dw :<C-u>Unite webcolorname<CR>
   nnoremap [unite]dh :<C-u>Unite httpstatus<CR>
   " unite-giti
   if dein#tap('unite-giti')
