@@ -50,5 +50,6 @@
   rmunstg = clean -df
   rmunstglist = clean -dfn
   w       = commit -m wip
+  wm      = "!sh -c 'git commit -m \"[wip] $0\"'"
   gf      = grep --no-line-number --full-name --name-only
   cfu     = config --get-regexp "^user"
