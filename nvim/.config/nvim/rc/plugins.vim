@@ -591,9 +591,11 @@ endif
 "-------------------------------------------------------------------------------
 " Gista: "{{{2
 
-let g:gista#github_user = 'iyuuya'
-let g:gista#directory = g:vim_tmp_directory . '/gista/'
-let g:gista#update_on_write = 1
+if dein#tap('vim-gista')
+  let g:gista#github_user = 'iyuuya'
+  let g:gista#directory = g:vim_tmp_directory . '/gista/'
+  let g:gista#update_on_write = 1
+endif
 
 " }}}2
 "-------------------------------------------------------------------------------
