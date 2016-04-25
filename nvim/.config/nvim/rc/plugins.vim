@@ -45,13 +45,6 @@ if dein#tap('unite.vim')
   nnoremap [unite]uh :<C-u>Unite help<CR>
   " unite-snippet
   nnoremap [unite]pt :<C-u>Unite snippet<CR>
-  " neobundle.vim
-  nnoremap [unite]n  :<C-u>Unite neobundle<CR>
-  nnoremap [unite]ni :<C-u>Unite neobundle/install<CR>
-  nnoremap [unite]na :<C-u>Unite neobundle/lazy<CR>
-  nnoremap [unite]nl :<C-u>Unite neobundle/log<CR>
-  nnoremap [unite]ns :<C-u>Unite neobundle/search<CR>
-  nnoremap [unite]nu :<C-u>Unite neobundle/update<CR>
   " unite-outline
   if dein#tap('unite-outline')
     nnoremap [unite]o  :<C-u>Unite -vertical -winwidth=36 outline<CR>
