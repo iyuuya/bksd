@@ -89,9 +89,9 @@ pkg_config_path=({/usr/local,/usr}/lib/pkgconfig(N-/))
 case ${OSTYPE} in
   darwin*)
     export JAVA_HOME=$(/usr/libexec/java_home)
-    export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
-    export CLASSPATH=$CLASSPATH:$CATALINA_HOME/common/lib:$CATALINA_HOME/common/lib/servlet-api.jar
-    export CLASSPATH_PREFIX=$JAVA_HOME/jre/lib/mysql-connector-java-5.1.26-bin.jar
+    #export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
+    #export CLASSPATH=$CLASSPATH:$CATALINA_HOME/common/lib:$CATALINA_HOME/common/lib/servlet-api.jar
+    #export CLASSPATH_PREFIX=$JAVA_HOME/jre/lib/mysql-connector-java-5.1.26-bin.jar
     export GRAPHVIZ_DOT=`brew --prefix`/bin/dot
     ;;
 esac
