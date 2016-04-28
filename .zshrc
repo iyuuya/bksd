@@ -17,7 +17,6 @@ case ${OSTYPE} in
   darwin*)
     fpath=(
       /usr/local/share/zsh-completions(N-/)
-      $HOME/brew/share/zsh-completions(N-/)
       $HOME/.config/zsh/functions/*(N-/)
       $fpath
     )
