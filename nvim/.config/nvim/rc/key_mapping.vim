@@ -18,11 +18,12 @@ nnoremap <Tab>= ggvG=2<C-o>
 " Switch buffer.
 nnoremap <C-q> <C-^>
 
-" Switch wrap.
-nnoremap <silent><C-e>tw :<C-u>setlocal wrap! wrap?<CR>
 
 nnoremap [mybind] Nop
 nmap <C-e> [mybind]
+
+" Switch wrap.
+nnoremap <silent> [mybind]tw :<C-u>setlocal wrap! wrap?<CR>
 
 if exists('$MYVIMRC')
   nnoremap <silent> [mybind]v :<C-u>e $MYVIMRC<CR>
