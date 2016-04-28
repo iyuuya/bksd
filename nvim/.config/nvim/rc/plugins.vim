@@ -41,17 +41,17 @@ if dein#tap('unite.vim')
   nnoremap [unite]ut :<C-u>Unite tab<CR>
   nnoremap [unite]uu :<C-u>Unite undo<CR>
   nnoremap [unite]uw :<C-u>Unite window<CR>
+  " neosnippet
+  if dein#tap('neosnippet.vim')
+    nnoremap [unite]pt :<C-u>Unite neosnippet<CR>
+  endif
   " unite-help
-  nnoremap [unite]uh :<C-u>Unite help<CR>
-  " unite-snippet
-  nnoremap [unite]pt :<C-u>Unite snippet<CR>
+  if dein#tap('unite-help')
+    nnoremap [unite]uh :<C-u>Unite help<CR>
+  endif
   " unite-outline
   if dein#tap('unite-outline')
     nnoremap [unite]o  :<C-u>Unite -vertical -winwidth=36 outline<CR>
-  endif
-  " unite-rake
-  if dein#tap('unite-rake')
-    nnoremap [unite]rk :<C-u>Unite rake<CR>
   endif
   " unite-rails
   if dein#tap('unite-rails')
