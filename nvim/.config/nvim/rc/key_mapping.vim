@@ -34,10 +34,6 @@ if exists('$MYGVIMRC')
   nnoremap <silent> [mybind]gv :<C-u>e $MYGVIMRC<CR>
   nnoremap [mybind]gV :<C-u>source $MYGVIMRC<CR>
 endif
-if exists('$MYVIMFILES/Vimfile')
-  nnoremap <silent> [mybind]bv :<C-u>e $MYVIMFILES/Vimfile<CR>
-  nnoremap [mybind]bV :<C-u>source $MYVIMFILES/Vimfile<CR>
-endif
 
 " Change current window and size.
 nnoremap <silent> [mybind]h <c-w>h:call GoodWinWidth()<cr>
