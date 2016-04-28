@@ -4,14 +4,12 @@
 nnoremap <space> :
 vnoremap <space> :
 
-" inoremap <c-f> <esc>
+inoremap <c-f> <esc>
 
 cmap <c-h> <left>
 cmap <c-l> <right>
 cmap <c-e> <end>
 cmap <c-a> <home>
-
-nnoremap vv <c-v>
 
 nnoremap M `
 " Fix Current buffer indent.
