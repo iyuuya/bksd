@@ -55,3 +55,11 @@
   wm      = "!sh -c 'git commit -m \"[wip] $0\"'"
   gf      = grep --no-line-number --full-name --name-only
   cfu     = config --get-regexp "^user"
+
+  ff      = flow feauture
+  fr      = flow release
+  fh      = flow hotfix
+  fs      = flow support
+  hff     = hf feature
+  hfr     = hf release
+  hfh     = hf hotfix
