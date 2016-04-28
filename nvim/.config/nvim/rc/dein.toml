@@ -72,6 +72,9 @@ repo = 'basyura/unite-rails'
 [[plugins]]
 repo = 'iyuuya/unite-rails-fat'
 
+[[plugins]]
+repo = 'tsukkee/unite-help'
+
 #-------------------------------------------------------------------------------
 # ColorScheme
 #-------------------------------------------------------------------------------
