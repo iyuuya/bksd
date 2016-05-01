@@ -3,9 +3,9 @@ if [ $# -ne 1 ]; then
   return
 fi
 
-if [[ -s $HOME/.git.d/local.$1 ]]; then
-  rm $HOME/.git.d/local
-  ln -s $HOME/.git.d/local.$1 $HOME/.git.d/local
+if [[ -s $HOME/.config/git/local.$1 ]]; then
+  rm $HOME/.config/git/local
+  ln -s $HOME/.config/git/local.$1 $HOME/.config/git/local
   echo 'configure git'
 fi
 
