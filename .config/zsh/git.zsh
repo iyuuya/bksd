@@ -42,37 +42,6 @@ function success-snap() {
 }
 alias ss=success-snap
 
-function git-rewrite-author()
-{
-  if [ $# = 0 ]
-  then
-    echo 'usage: git-rewrite-author old_name new_name new_email range'
-    return
-  fi
-
-  local old_name=$1
-  local new_name=$2
-  local new_email=$3
-  local range=$4
-
-  git filter-branch --commit-filter "
-    if [ \"\$GIT_COMMITTER_NAME\" = \"$old_name\" ];
-    then
-      GIT_COMMITTER_NAME=\"$new_name\";
-      GIT_AUTHOR_NAME=\"$new_name\";
-      GIT_COMMITTER_EMAIL=\"$new_email\";
-      GIT_AUTHOR_EMAIL=\"$new_email\";
-      git commit-tree \"\$@\";
-    else
-      git commit-tree \"\$@\";
-    fi" $range
-}
-
-function git-rewrite-author2()
-{
-  git filter-branch -f --env-filter "GIT_AUTHOR_NAME='$1'; GIT_AUTHOR_EMAIL='$2'; GIT_COMMITTER_NAME='$1'; GIT_COMMITTER_EMAIL='$2';" $3
-}
-
 if type hub > /dev/null 2>&1; then
   alias git='hub'
 fi

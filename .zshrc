@@ -196,6 +196,8 @@ alias sw=switch-user
 autoload -Uz ghq-update
 autoload -Uz bundle-gemname-list
 autoload -Uz db_reset
+autoload -Uz git-rewrite-author
+autoload -Uz git-rewrite-author2
 
 # "}}}1
 #===============================================================================
