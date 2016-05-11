@@ -42,7 +42,6 @@ brew install reattach-to-user-namespace || true
 # brew install tmux                       || true
 brew install iyuuya/homebrew-custom/tmux-patched || true
 brew install pv                         || true
-brew install ranger                     || true
 brew install global                     || true
 brew install htop-osx                   || true
 brew install nmap                       || true
