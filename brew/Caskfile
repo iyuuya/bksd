@@ -23,6 +23,10 @@ brew cask install flip4mac      || true
 brew cask install linein        || true
 brew cask install vlc           || true
 brew cask install skitch        || true
+brew cask install gimp          || true
+brew cask install inkscape      || true
+brew cask install blender       || true
+brew cask install licecap       || true
 brew cask keycast               || true
 brew cask keycastr              || true
 
@@ -38,6 +42,7 @@ brew cask install slack         || true
 brew cask install hipchat       || true
 brew cask install gitter        || true
 brew cask install butter        || true
+brew cask install limechat      || true
 
 brew cask install https://raw.githubusercontent.com/iyuuya/brew-config/master/Casks/macvim-kaoriya.rb || true
 # brew cask install emacs       || true
