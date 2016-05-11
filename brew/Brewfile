@@ -129,5 +129,7 @@ brew install gobject-introspection || true
 brew install zeromq                || true
 brew install oniguruma             || true
 brew install svn                   || true
+brew install librsvg               || true
+brew install ffmpeg                || true
 
 brew cleanup || true
