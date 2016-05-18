@@ -7,6 +7,7 @@
 #===============================================================================
 
 [ -f ~/.anyenv/bin/anyenv ] && eval "$(anyenv init - zsh)"
+[ -f ~/.anyenv/envs/pyenv/plugins/pyenv-virtualenv/bin/pyenv-virtualenv ] && eval "$(pyenv virtualenv-init - zsh)"
 
 source ~/.config/zsh/options.zsh
 
