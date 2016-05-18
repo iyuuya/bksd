@@ -54,6 +54,19 @@ on_ft = 'ruby'
 repo = 'osyo-manga/vim-marching'
 on_ft = ['c', 'cpp']
 
+[[plugins]] # Align Them All!
+repo = 'h1mesuke/vim-alignta'
+on_cmd = ['Align', 'Alignta']
+
+[[plugins]] # eskk aims to provide powerful input method platform in Vim.
+repo = 'tyru/eskk.vim'
+on_i = 1
+
+[[plugins]] # Realtime preview by Vim. (Markdown, reStructuredText, textile)
+repo = 'kannokanno/previm'
+on_ft = 'markdown'
+on_cmd = 'PrevimOpen'
+
 #-------------------------------------------------------------------------------
 # FileType/Syntax
 #-------------------------------------------------------------------------------
