@@ -3,7 +3,7 @@ function gstps () {
 }
 gstps brew &
 gstps git &
-gstps mysql &
+#gstps mysql &
 gstps node &
 gstps nvim &
 gstps ruby &
