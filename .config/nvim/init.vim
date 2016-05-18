@@ -11,6 +11,10 @@ if exists('$SUDO_USER')
   finish
 endif
 
+if filereadable(expand('~/.config/nvim/rc/preinit.local.vim'))
+  source ~/.config/nvim/rc/preinit.local.vim
+endif
+
 source ~/.config/nvim/rc/initialize.vim
 source ~/.config/nvim/rc/encoding.vim
 source ~/.config/nvim/rc/search.vim
