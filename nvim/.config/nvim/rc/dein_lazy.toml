@@ -17,6 +17,11 @@ repo = 'Shougo/neocomplete.vim'
 on_i = 1
 if   = 'has("lua")'
 
+# Dark powered asynchronous completion framework for neovim
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_i = 1
+
 # neo-snippet plugin contains neocomplcache snippets source
 [[plugins]]
 repo  = 'Shougo/neosnippet.vim'
