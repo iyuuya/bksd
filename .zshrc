@@ -262,6 +262,8 @@ if type nvim > /dev/null 2>&1; then
 fi
 alias v='nvim'
 compdef v=nvim
+alias vv='/usr/local/bin/vim'
+compdef vv=vim
 
 if type /usr/local/Cellar/emacs/24.3/Emacs.app/Contents/MacOS/Emacs > /dev/null 2>&1; then
   alias emacs="/usr/local/Cellar/emacs/24.3/Emacs.app/Contents/MacOS/Emacs -nw"
