@@ -13,15 +13,9 @@ repo = 'Shougo/vimproc.vim'
   linux   = 'make'
   unix    = 'gmake'
 
-[[plugins]] # eskk aims to provide powerful input method platform in Vim.
-repo = 'tyru/eskk.vim'
-
 [[plugins]] # Powerful file explorer implemented by Vim script
 repo = 'Shougo/vimfiler.vim'
 depends = ['unite.vim']
-
-[[plugins]] # Align Them All!
-repo = 'h1mesuke/vim-alignta'
 
 [[plugins]] # fugitive.vim: a Git wrapper so awesome, it should be illegal
 repo = 'tpope/vim-fugitive'
@@ -78,20 +72,25 @@ repo = 'tsukkee/unite-help'
 #-------------------------------------------------------------------------------
 # ColorScheme
 #-------------------------------------------------------------------------------
-[[plugins]] # A dark colour scheme for Vim & gVim
-repo = 'w0ng/vim-hybrid'
+# [[plugins]] # A dark colour scheme for Vim & gVim
+# repo = 'w0ng/vim-hybrid'
+# on_cmd = 'colorscheme'
 
-[[plugins]] # A colorful, dark color scheme for Vim.
-repo = 'nanotech/jellybeans.vim'
+# [[plugins]] # A colorful, dark color scheme for Vim.
+# repo = 'nanotech/jellybeans.vim'
+# on_cmd = 'colorscheme'
 
-[[plugins]] # Molokai color scheme for Vim
-repo = 'tomasr/molokai'
+# [[plugins]] # Molokai color scheme for Vim
+# repo = 'tomasr/molokai'
+# on_cmd = 'colorscheme'
 
 [[plugins]] # Tomorrow Theme for Vim
 repo = 'chriskempson/vim-tomorrow-theme'
+on_cmd = 'colorscheme'
 
-[[plugins]] # Wombat for 256 color xterms
-repo = 'vim-scripts/wombat256.vim'
+# [[plugins]] # Wombat for 256 color xterms
+# repo = 'vim-scripts/wombat256.vim'
+# on_cmd = 'colorscheme'
 
 #-------------------------------------------------------------------------------
 # TODO: 整理すること
@@ -107,9 +106,6 @@ repo = 'tpope/vim-abolish'
 
 [[plugins]]
 repo = 'thinca/vim-template'
-
-[[plugins]] # Realtime preview by Vim. (Markdown, reStructuredText, textile)
-repo = 'kannokanno/previm'
 
 [[plugins]]
 repo = 'vim-scripts/dbext.vim'
@@ -166,15 +162,15 @@ repo = 'basyura/twibill.vim'
 [[plugins]]
 repo = 'basyura/bitly.vim'
 
-[[plugins]]
-repo = 'mattn/favstar-vim'
+# [[plugins]]
+# repo = 'mattn/favstar-vim'
 
-[[plugins]]
-repo = 'basyura/TweetVim'
-depends = ['open-browser.vim', 'twibill.vim', 'bitly.vim', 'webapi-vim', 'favstar-vim']
+# [[plugins]]
+# repo = 'basyura/TweetVim'
+# depends = ['open-browser.vim', 'twibill.vim', 'bitly.vim', 'webapi-vim', 'favstar-vim']
 
-[[plugins]]
-repo = 'basyura/J6uil.vim'
+# [[plugins]]
+# repo = 'basyura/J6uil.vim'
 
 [[plugins]]
 repo = 'vim-jp/vital.vim'
