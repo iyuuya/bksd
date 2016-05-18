@@ -256,12 +256,106 @@ endif
 
 " }}}2
 "-------------------------------------------------------------------------------
-"
+
+"-------------------------------------------------------------------------------
+" VimMonster: "{{{2
+
+if dein#tap('vim-monster')
+  let g:monster#completion#rcodetools#backend = "async_rct_complete"
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
 "-------------------------------------------------------------------------------
 " Deoplete: "{{{2
 
 if dein#tap('deoplete.nvim')
   let g:deoplete#enable_at_startup = 1
+  let g:deoplete#max_list = 100
+  let g:deoplete#max_keyword_width = 40
+  let g:deoplete#auto_completion_start_length = 2
+  let g:deoplete#manual_completion_start_length = 1
+  let g:deoplete#min_keyword_length = 3
+  let g:deoplete#enable_ignore_case = 1
+  let g:deoplete#enable_smart_case = 1
+  let g:deoplete#sources#syntax#min_keyword_length = 3
+  let g:deoplete#lock_buffer_name_pattern = '\*ku\*'
+  let g:deoplete#data_directory = g:vim_tmp_directory."/deoplete"
+
+  " Define keyword.
+  if !exists('g:deoplete#keyword_patterns')
+    let g:deoplete#keyword_patterns = {}
+  endif
+  let g:deoplete#keyword_patterns['default'] = '\h\w*'
+
+  " Recommended key-mappings.
+  " <CR>: close popup and save indent.
+  inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+  function! s:my_cr_function()
+    return deoplete#mappings#close_popup() . "\<CR>"
+    " For no inserting <CR> key.
+    "return pumvisible() ? deoplete#mappings#close_popup() : "\<CR>"
+  endfunction
+  " <TAB>: completion.
+  inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+  " <C-h>, <BS>: close popup and delete backword char.
+  inoremap <expr><C-h> deoplete#mappings#smart_close_popup()."\<C-h>"
+  inoremap <expr><BS>  deoplete#mappings#smart_close_popup()."\<C-h>"
+  inoremap <expr><C-y> deoplete#mappings#close_popup()
+  inoremap <expr><C-e> deoplete#mappings#cancel_popup()
+  " Close popup by <Space>.
+  "inoremap <expr><Space> pumvisible() ? deoplete#mappings#close_popup() : "\<Space>"
+
+  " For cursor moving in insert mode(Not recommended)
+  "inoremap <expr><Left>  deoplete#mappings#close_popup() . "\<Left>"
+  "inoremap <expr><Right> deoplete#mappings#close_popup() . "\<Right>"
+  "inoremap <expr><Up>    deoplete#mappings#close_popup() . "\<Up>"
+  "inoremap <expr><Down>  deoplete#mappings#close_popup() . "\<Down>"
+  " Or set this.
+  "let g:deoplete#enable_cursor_hold_i = 1
+  " Or set this.
+  "let g:deoplete#enable_insert_char_pre = 1
+
+  " AutoComplPop like behavior.
+  "let g:deoplete#enable_auto_select = 1
+
+  " Shell like behavior(not recommended).
+  "set completeopt+=longest
+  "let g:deoplete#enable_auto_select = 1
+  "let g:deoplete#disable_auto_complete = 1
+  "inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
+
+  " Enable omni completion.
+  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+  " Enable heavy omni completion.
+  if !exists('g:deoplete#sources#omni#input_patterns')
+    let g:deoplete#sources#omni#input_patterns = {}
+  endif
+  let g:deoplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+  let g:deoplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
+  let g:deoplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+
+  let g:deoplete#sources#include#paths = {
+        \   'cpp' : '.,C:/MinGW/lib/gcc/mingw32/4.8.1/include,C:/MinGW/lib/gcc/mingw32/4.8.1/include/c++,C:/Program\ Files\ (x86)/Microsoft\ DirectX\ SDK\ (June\ 2010)/Include,C:/Program\ Files\ (x86)/Microsoft\ SDKs/Windows/v7.1A/Include',
+        \   'c' : '.,C:/MinGW/lib/gcc/mingw32/4.8.1/include,C:/MinGW/lib/gcc/mingw32/4.8.1/include/c++,C:/Program\ Files\ (x86)/Microsoft\ DirectX\ SDK\ (June\ 2010)/Include,C:/Program\ Files\ (x86)/Microsoft\ SDKs/Windows/v7.1A/Include',
+        \ }
+
+  let g:deoplete#sources#include#patterns = {
+        \ 'cpp':  '^\s*#\s*include',
+        \ 'c':    '^\s*#\s*include',
+        \ 'ruby': '^\s*require',
+        \ 'perl': '^\s*use',
+        \ }
+  "インクルード先のファイル名の解析パターン
+  let g:deoplete#sources#include#exprs = {
+        \ 'ruby': substitute(v:fname,'::','/','g')
+        \ }
 endif
 
 " }}}2

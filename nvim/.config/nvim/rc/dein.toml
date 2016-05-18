@@ -36,6 +36,9 @@ repo = 'thoughtbot/vim-rspec'
 [[plugins]] # emmet for vim: http://emmet.io/
 repo = 'mattn/emmet-vim'
 
+[[plugins]]
+repo = 'osyo-manga/vim-monster'
+
 #-------------------------------------------------------------------------------
 # Unite
 #-------------------------------------------------------------------------------
