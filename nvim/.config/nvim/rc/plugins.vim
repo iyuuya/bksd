@@ -157,6 +157,16 @@ endif
 "-------------------------------------------------------------------------------
 
 "-------------------------------------------------------------------------------
+" VimMonster: "{{{2
+
+if dein#tap('vim-monster')
+  let g:monster#completion#rcodetools#backend = "async_rct_complete"
+endif
+
+" }}}2
+"-------------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
 " NeoComplete: "{{{2
 
 if dein#tap('neocomplete.vim')
@@ -236,6 +246,7 @@ if dein#tap('neocomplete.vim')
   endif
   let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
   let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
+  let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 
   let g:neocomplete#sources#include#paths = {
         \   'cpp' : '.,C:/MinGW/lib/gcc/mingw32/4.8.1/include,C:/MinGW/lib/gcc/mingw32/4.8.1/include/c++,C:/Program\ Files\ (x86)/Microsoft\ DirectX\ SDK\ (June\ 2010)/Include,C:/Program\ Files\ (x86)/Microsoft\ SDKs/Windows/v7.1A/Include',
@@ -252,16 +263,6 @@ if dein#tap('neocomplete.vim')
   let g:neocomplete#sources#include#exprs = {
         \ 'ruby': substitute(v:fname,'::','/','g')
         \ }
-endif
-
-" }}}2
-"-------------------------------------------------------------------------------
-
-"-------------------------------------------------------------------------------
-" VimMonster: "{{{2
-
-if dein#tap('vim-monster')
-  let g:monster#completion#rcodetools#backend = "async_rct_complete"
 endif
 
 " }}}2
