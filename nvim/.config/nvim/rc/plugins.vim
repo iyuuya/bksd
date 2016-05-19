@@ -683,7 +683,7 @@ if dein#tap('syntastic')
   let g:syntastic_cpp_checkers = ['cpplint', 'clang']
   let g:syntastic_cpp_compiler_options = '-std=c++1y -Wall -Wextra'
   let g:syntastic_cpp_cppcheck_args = '--enable=warning,performance,information,style'
-  let g:syntastic_cpp_cpplint_exec = 'cpplint'
+  let g:syntastic_cpp_cpplint_exec = expand('~/.anyenv/envs/pyenv/versions/cpplint/bin/cpplint')
   let g:syntastic_cpp_remove_include_errors = 1
 endif
 
