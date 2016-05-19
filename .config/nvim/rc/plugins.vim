@@ -727,7 +727,7 @@ if dein#tap('vim-marching')
 
   if my#ismac()
     let g:marching_include_paths = [
-          \ system("echo -n $(brew --prefix gcc)/include/c++/4.9.2"),
+          \ system("echo -n $(brew --prefix gcc)/include/c++/5.3.0"),
           \ system("echo -n $(brew --prefix boost)/include"),
           \ '/usr/include',
           \ system("echo -n $(brew --prefix)/include"),
