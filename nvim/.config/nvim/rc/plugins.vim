@@ -678,6 +678,13 @@ if dein#tap('syntastic')
   let g:syntastic_ruby_checkers = ['rubocop', 'mri']
   let g:syntastic_ruby_rubocop_exec = $HOME . "/.anyenv/envs/rbenv/shims/rubocop"
   let g:syntastic_ruby_mri_exec = $HOME . '.anyenv/env/rbenv/shims/ruby'
+
+  let g:syntastic_cpp_check_header = 1
+  let g:syntastic_cpp_checkers = ['cpplint', 'clang']
+  let g:syntastic_cpp_compiler_options = '-std=c++1y -Wall -Wextra'
+  let g:syntastic_cpp_cppcheck_args = '--enable=warning,performance,information,style'
+  let g:syntastic_cpp_cpplint_exec = 'cpplint'
+  let g:syntastic_cpp_remove_include_errors = 1
 endif
 
 " }}}2
