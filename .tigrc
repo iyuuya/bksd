@@ -1,2 +1,4 @@
 set main-view = date author id commit-title:graph=yes,refs=yes
 set diff-context = 5
+bind main R !git rebase -i %(commit)
+bind diff R !git rebase -i %(commit)
