@@ -1,4 +1,3 @@
-.config/nvim/rc/preinit.local.vim
 .config/nvim/rc/local.vim
 .config/nvim/rc/dein_local.toml
 .config/nvim/tmp
