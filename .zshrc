@@ -201,6 +201,8 @@ autoload -Uz git-rewrite-author
 autoload -Uz git-rewrite-author2
 autoload -Uz git-force-remove-file
 autoload -Uz git-force-remove-dir
+autoload -Uz git-force-remove-file-all
+autoload -Uz git-force-remove-dir-all
 autoload -Uz install-anyenv
 autoload -Uz install-anyenv-update
 autoload -Uz install-pyenv-plugins
