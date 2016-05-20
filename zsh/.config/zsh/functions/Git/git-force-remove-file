@@ -1,0 +1,1 @@
+git filter-branch -f --index-filter "git rm --ignore-unmatch $1" HEAD
