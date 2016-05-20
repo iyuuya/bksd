@@ -199,6 +199,8 @@ autoload -Uz bundle-gemname-list
 autoload -Uz db_reset
 autoload -Uz git-rewrite-author
 autoload -Uz git-rewrite-author2
+autoload -Uz git-force-remove-file
+autoload -Uz git-force-remove-dir
 autoload -Uz install-anyenv
 autoload -Uz install-anyenv-update
 autoload -Uz install-pyenv-plugins
