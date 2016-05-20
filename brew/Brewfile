@@ -32,6 +32,7 @@ brew install git --with-brewed-curl --with-brewed-openssl --with-gettext --with-
 brew install git-cal    || true
 brew install git-extras || true
 brew install git-flow   || true
+brew install git-now    || true
 brew install hub        || true
 brew install tig        || true
 brew install gibo       || true
