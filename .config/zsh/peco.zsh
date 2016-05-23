@@ -10,9 +10,9 @@ function _peco_insert_command_line() {
 
 function peco-ghq() {
   local selected
-  selected=$(ghq list | peco --query "$LBUFFER")
+  selected=$(ghq list -p | peco --query "$LBUFFER")
   if [ -n "$selected" ]; then
-    _peco_insert_command_line "cd $(ghq root)/$selected"
+    _peco_insert_command_line "cd $selected"
     zle accept-line
   fi
 }
