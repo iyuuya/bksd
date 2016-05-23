@@ -1,85 +1,80 @@
-alias -g P='| peco'
-
-function ghq-list-relative() {
-  local query
-  if [ $# = 1 ]; then
-    query=$1
+function _peco_insert_command_line() {
+  if zle; then
+    BUFFER=$1
+    CUSOR=$#BUFFER
+    zle clear-screen
   else
-    query=''
+    print -z $1
   fi
-  ghq list $query -p | sed -e "s/$(echo $HOME | sed -e 's/\//\\\//g')/~/g"
 }
 
-function peco-select-history() {
-  local tac
-  if which tac > /dev/null; then
-    tac='tac'
-  else
-    tac='tail -r'
-  fi
-  BUFFER=$(history -n 1 | \
-    eval $tac | \
-    peco --query "$LBUFFER")
-  CURSOR=$#BUFFER
-  zle clear-screen
-}
-zle -N peco-select-history
-bindkey '^r' peco-select-history
-
-function peco-src () {
-  local list
-  if [ $# = 1 ]; then
-    list=$(ghq-list-relative $1)
-  else
-    list=$(ghq-list-relative)
-  fi
-  local selected_dir=$(echo $list | peco --query "$LBUFFER")
-  if [ -n "$selected_dir" ]; then
-    BUFFER="cd ${selected_dir}"
+function peco-ghq() {
+  local selected
+  selected=$(ghq list | peco --query "$LBUFFER")
+  if [ -n "$selected" ]; then
+    _peco_insert_command_line "cd $(ghq root)/$selected"
     zle accept-line
   fi
-  zle clear-screen
 }
-zle -N peco-src
-bindkey '^gg' peco-src
 
-function peco-my-src () {
-  peco-src $USER
+function peco-ghq-my() {
+  LBUFFER=$USER
+  peco-ghq
 }
-zle -N peco-my-src
-bindkey '^gm' peco-my-src
 
-function peco-select-branch() {
-    local current_buffer=$BUFFER
+function peco-history() {
+  local selected tailr
+  if which "tac" > /dev/null 2>&1; then
+    tailr="tac"
+  else
+    tailr="tail -r"
+  fi
+  selected=$(fc -l -n 1 | eval $tailr | peco)
+  _peco_insert_command_line $selected
+  zle accept-line
+}
 
-    local selected_line="$(git for-each-ref --format='%(refname:short) | %(committerdate:relative) | %(committername) | %(subject)' --sort=-committerdate refs/heads refs/remotes \
-        | column -t -s '|' \
-        | peco \
-        | head -n 1 \
-        | awk '{print $1}')"
-    if [ -n "$selected_line" ]; then
-        BUFFER="${current_buffer} ${selected_line}"
-        CURSOR=$#BUFFER
-        # ↓そのまま実行の場合
-        #zle accept-line
+function peco-git-branch() {
+  local selected="$(git for-each-ref --format='%(refname:short) | %(committerdate:relative) | %(committername) | %(subject)' --sort=-committerdate refs/heads refs/remotes \
+      | column -t -s '|' \
+      | peco \
+      | head -n 1 \
+      | awk '{print $1}')"
+  _peco_insert_command_line $selected
+}
+
+function peco-git-checkout() {
+  local selected
+  local branch=$(git branch -a | peco | tr -d ' ')
+  if [ -n "$branch" ]; then
+    if [[ "$branch" =~ "remotes/" ]]; then
+      local b=$(echo $branch | awk -F'/' '{print $3}')
+      selected="git checkout -b '${b}' '${branch}'"
+    else
+      selected="git checkout '${branch}'"
     fi
-    zle clear-screen
+  fi
+  _peco_insert_command_line $selected
+  zle accept-line
 }
-zle -N peco-select-branch
-bindkey '^gb' peco-select-branch
 
 function peco-cd() {
-  local selected_line="$(ls -aF | grep / | peco)"
-  if [ -n "$selected_line" ]; then
-    cd $selected_line
-    # zle accept-line
+  local selected="$(ls -aF | grep / | peco)"
+  if [ -n "$selected" ]; then
+    cd $selected
     peco-cd
   fi
-  # zle clear-screen
 }
-alias pcd=peco-cd
 
-# peco-cd-vim-neomru
+function peco-git-log() {
+  local selected
+  selected=$(git log --oneline --decorate=full | peco | awk '{print $1}')
+  if [ -n  "$selected" ]; then
+    BUFFER=$selected
+    zle clear-screen
+  fi
+}
+
 function peco-vim-neomru() {
   local mru_path="~/.cache/neomru/directory"
   local SELECTED=$(eval more $mru_path | peco --query "$1")
@@ -87,7 +82,6 @@ function peco-vim-neomru() {
     eval cd $SELECTED
   fi
 }
-alias pvd=peco-vim-neomru
 
 function peco-xdg-config() {
   local selected_dir=$(ls -L ~/.config/ | peco --query "$LBUFFER")
@@ -97,5 +91,35 @@ function peco-xdg-config() {
   fi
   zle clear-screen
 }
+
+function peco-tmux-session() {
+  local selected
+  selected=$(tmux list-sessions | peco | awk -F':' '{print $1}')
+  if [ -n "$selected" ]; then
+    _peco_insert_command_line "tmux switch-client -t $selected"
+    zle accept-line
+    zle clear-screen
+  fi
+}
+
+alias -g P='| peco'
+alias pcd=peco-cd
+alias pvd=peco-vim-neomru
+
+zle -N peco-history
+zle -N peco-ghq
+zle -N peco-ghq-my
+zle -N peco-git-log
+zle -N peco-git-branch
+zle -N peco-git-checkout
+zle -N peco-tmux-session
 zle -N peco-xdg-config
+
+bindkey '^r' peco-history
+bindkey '^gg' peco-ghq
+bindkey '^gm' peco-ghq-my
+bindkey '^gl' peco-git-log
+bindkey '^gb' peco-git-branch
+bindkey '^gc' peco-git-checkout
 bindkey '^gf' peco-xdg-config
+bindkey '^ts' peco-tmux-session
