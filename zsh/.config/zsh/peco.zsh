@@ -96,7 +96,11 @@ function peco-tmux-session() {
   local selected
   selected=$(tmux list-sessions | peco | awk -F':' '{print $1}')
   if [ -n "$selected" ]; then
-    _peco_insert_command_line "tmux switch-client -t $selected"
+    if [ -n "$TMUX" ]; then
+      _peco_insert_command_line "tmux switch-client -t $selected"
+    else
+      _peco_insert_command_line "tmux attach -t $selected"
+    fi
     zle accept-line
     zle clear-screen
   fi
