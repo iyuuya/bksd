@@ -37,12 +37,13 @@ brew cask install pg-commander  || true
 brew cask install rdm           || true
 brew cask install robomongo     || true
 
-brew cask install skype         || true
-brew cask install slack         || true
-brew cask install hipchat       || true
-brew cask install gitter        || true
-brew cask install butter        || true
-brew cask install limechat      || true
+brew cask install franz     || true
+brew cask install slack     || true
+brew cask install butter    || true
+brew cask install limechat  || true
+# brew cask install skype   || true
+# brew cask install hipchat || true
+# brew cask install gitter  || true
 
 brew cask install https://raw.githubusercontent.com/iyuuya/brew-config/master/Casks/macvim-kaoriya.rb || true
 # brew cask install emacs       || true
