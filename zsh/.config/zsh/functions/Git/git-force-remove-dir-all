@@ -1,1 +1,5 @@
+if [ $# -ne 1 ]; then
+  echo 'usage: git-force-remove-dir-all DIRECTORY_PATH'
+  return
+fi
 git filter-branch -f --index-filter "git rm -rf --ignore-unmatch $1" HEAD --all
