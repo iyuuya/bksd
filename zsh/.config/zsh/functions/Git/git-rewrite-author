@@ -1,5 +1,5 @@
-if [ $# = 0 ]; then
-  echo 'usage: git-rewrite-author old_name new_name new_email range'
+if [ $# -ne 4 ]; then
+  echo 'usage: git-rewrite-author OLD_NAME NEW_NAME NEW_EMAIL RANGE'
   return
 fi
 
