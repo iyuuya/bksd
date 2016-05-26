@@ -1,13 +1,13 @@
 function gstpsf () {
   git push $1 `git subtree split --prefix $1 master`:master --force
 }
-gstps brew &
-gstps git &
-#gstps mysql &
-gstps node &
-gstps nvim &
-gstps ruby &
-gstps ssh &
-gstps tmux &
-gstps zsh &
+gstpsf brew &
+gstpsf git &
+#gstpsf mysql &
+gstpsf node &
+gstpsf nvim &
+gstpsf ruby &
+gstpsf ssh &
+gstpsf tmux &
+gstpsf zsh &
 wait
