@@ -13,7 +13,6 @@ brew cask install virtualbox    || true
 brew cask install vagrant       || true
 brew cask install dockertoolbox || true
 brew cask install github        || true
-brew cask install trailer       || true
 brew cask install shoes         || true
 
 brew cask install dropbox       || true
