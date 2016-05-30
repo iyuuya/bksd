@@ -9,6 +9,8 @@ hook_post_update = '''
     let cmd = 'tools\\update-dll-mingw'
   elseif dein#util#_is_cygwin()
     let cmd = 'make -f make_cygwin.mak'
+  elseif dein#util#_is_mac()
+    let cmd = 'make -f make_mac.mak'
   elseif executable('gmake')
     let cmd = 'gmake'
   else
