@@ -273,8 +273,9 @@ compdef v=nvim
 alias vv='/usr/local/bin/vim'
 compdef vv=vim
 
-if type /usr/local/Cellar/emacs/24.3/Emacs.app/Contents/MacOS/Emacs > /dev/null 2>&1; then
-  alias emacs="/usr/local/Cellar/emacs/24.3/Emacs.app/Contents/MacOS/Emacs -nw"
+if type /opt/homebrew-cask/Caskroom/emacs/24.5-1/Emacs.app/Contents/MacOS/Emacs > /dev/null 2>&1; then
+  alias emacs="/opt/homebrew-cask/Caskroom/emacs/24.5-1/Emacs.app/Contents/MacOS/Emacs -nw"
+  alias emg="open /opt/homebrew-cask/Caskroom/emacs/24.5-1/Emacs.app"
 fi
 alias em=emacs
 
