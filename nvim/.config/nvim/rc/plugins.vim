@@ -385,12 +385,12 @@ if dein#tap('neosnippet.vim')
   nnoremap <silent><Leader>nse :<C-u>NeoSnippetEdit -split<CR>
 
   augroup MyAutoCmd
-    autocmd BufEnter,BufRead,BufNew app/views/*          NeoSnippetSource ~/.vim/snippets/ruby.rails.view.snip
-    autocmd BufEnter,BufRead,BufNew app/controllers/*.rb NeoSnippetSource ~/.vim/snippets/ruby.rails.controller.snip
-    autocmd BufEnter,BufRead,BufNew app/models/*.rb      NeoSnippetSource ~/.vim/snippets/ruby.rails.model.snip
-    autocmd BufEnter,BufRead,BufNew app/db/migrate/*     NeoSnippetSource ~/.vim/snippets/ruby.rails.migrate.snip
-    autocmd BufEnter,BufRead,BufNew app/config/routes.rb NeoSnippetSource ~/.vim/snippets/ruby.rails.route.snip
-    autocmd BufEnter,BufRead,BufNew spec/**/*.rb         NeoSnippetSource ~/.vim/snippets/ruby.rails.rspec.snip
+    autocmd BufEnter,BufRead,BufNew app/views/*          NeoSnippetSource ~/.config/nvim/snippets/ruby.rails.view.snip
+    autocmd BufEnter,BufRead,BufNew app/controllers/*.rb NeoSnippetSource ~/.config/nvim/snippets/ruby.rails.controller.snip
+    autocmd BufEnter,BufRead,BufNew app/models/*.rb      NeoSnippetSource ~/.config/nvim/snippets/ruby.rails.model.snip
+    autocmd BufEnter,BufRead,BufNew app/db/migrate/*     NeoSnippetSource ~/.config/nvim/snippets/ruby.rails.migrate.snip
+    autocmd BufEnter,BufRead,BufNew app/config/routes.rb NeoSnippetSource ~/.config/nvim/snippets/ruby.rails.route.snip
+    autocmd BufEnter,BufRead,BufNew spec/**/*.rb         NeoSnippetSource ~/.config/nvim/snippets/ruby.rails.rspec.snip
     " autocmd BufEnter,BufRead,BufNew spec/**/*.rb    NeoSnippetSource ~/.vim/snippets/ruby.rspec.snip
   augroup END
 endif
