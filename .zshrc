@@ -337,6 +337,8 @@ src $HOME/.travis/travis.sh
 # "}}}1
 #===============================================================================
 
+source ~/.config/zsh/iterm2_shell_integration.zsh
+
 src $HOME/.zshrc.local
 
 if type zprof > /dev/null 2>&1; then
