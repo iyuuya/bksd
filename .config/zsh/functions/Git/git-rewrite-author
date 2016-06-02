@@ -8,7 +8,7 @@ local new_name=$2
 local new_email=$3
 local range=$4
 
-git filter-branch --commit-filter "
+git filter-branch -f --commit-filter "
 if [ \"\$GIT_COMMITTER_NAME\" = \"$old_name\" ];
 then
   GIT_COMMITTER_NAME=\"$new_name\";
