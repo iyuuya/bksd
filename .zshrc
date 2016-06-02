@@ -337,7 +337,7 @@ src $HOME/.travis/travis.sh
 # "}}}1
 #===============================================================================
 
-source ~/.config/zsh/iterm2_shell_integration.zsh
+# source ~/.config/zsh/iterm2_shell_integration.zsh
 
 src $HOME/.zshrc.local
 
