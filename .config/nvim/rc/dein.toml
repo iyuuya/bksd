@@ -204,3 +204,6 @@ repo = 'othree/es.next.syntax.vim'
 
 [[plugins]]
 repo = 'mxw/vim-jsx'
+
+[[plugins]]
+repo = 'mattn/httpstatus-vim'
