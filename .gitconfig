@@ -47,9 +47,17 @@
 [merge]
   tool = vimdiff
 
+[diff]
+  compactionHeuristic = true
+
 [diff "xlsx"]
   binary = true
   textconv = ~/.go/bin/git-xlsx-textconv
+
+[pager]
+  log = diff-highlight | less
+  show = diff-highlight | less
+  diff = diff-highlight | less
 
 [hub]
   protocol = https
