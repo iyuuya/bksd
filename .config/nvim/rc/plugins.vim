@@ -587,7 +587,7 @@ if dein#tap('vim-ref')
   let g:ref_open     = 'split'
   let g:ref_refe_cmd = 'refe'
 
-  nnoremap [unite]rr :<C-U>Unite ref/refe -default-action=split -input=
+  nnoremap [unite]rr :<C-U>Unite ref/refe -default-action=split
 
   aug MyAutoCmd
     au FileType ruby,eruby,haml,ruby.rspec,arb nnoremap <silent><buffer>K  :<C-U>Unite -no-start-insert ref/refe -default-action=split -input=<C-R><C-W><CR>
