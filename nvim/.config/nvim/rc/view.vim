@@ -103,6 +103,11 @@ augroup MyCursorColumnGrp
   autocmd FileType yaml setlocal cursorcolumn
 augroup END
 
+augroup CppColorColumnGrp
+  autocmd!
+  autocmd FileType cpp setlocal colorcolumn=120
+augroup END
+
 " Enable spell check.
 set nospell spelllang=en_us
 
