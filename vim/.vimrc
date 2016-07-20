@@ -33,4 +33,13 @@ xnoremap <LocalLeader> <Nop>
 nnoremap <leader> <Nop>
 xnoremap <leader> <Nop>
 
+" tmp directory.
+if !exists('g:vim_tmp_directory')
+  let g:vim_tmp_directory = $MYVIMFILES . "/tmp"
+endif
+
+" Create tmp directory.
+call my#mkdir_p(g:vim_tmp_directory)
+
+
 " vim: foldmethod=marker
