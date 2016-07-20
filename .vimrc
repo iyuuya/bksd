@@ -14,4 +14,7 @@ if has('vim_starting') && &compatible
   set nocompatible
 endif
 
+let $MYVIMFILES = expand('~/.config/vim')
+execute 'set runtimepath^=' . $MYVIMFILES
+
 " vim: foldmethod=marker
