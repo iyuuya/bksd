@@ -25,4 +25,12 @@ endif
 language ctype C
 language time C
 
+let mapleader = ','
+let maplocalleader = 'm'
+
+nnoremap <LocalLeader> <Nop>
+xnoremap <LocalLeader> <Nop>
+nnoremap <leader> <Nop>
+xnoremap <leader> <Nop>
+
 " vim: foldmethod=marker
