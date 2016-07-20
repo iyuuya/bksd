@@ -44,6 +44,12 @@ call my#mkdir_p(g:vim_tmp_directory)
 filetype indent plugin on
 syntax enable
 
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,euc-jp,cp932
+set fileformat=unix
+set fileformats=unix,dos,mac
+
 set number
 set ruler
 
