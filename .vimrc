@@ -57,6 +57,18 @@ set incsearch
 set hlsearch
 set wrapscan
 
+call my#mkdir_p(g:vim_tmp_directory.'/backup')
+call my#mkdir_p(g:vim_tmp_directory.'/swap')
+call my#mkdir_p(g:vim_tmp_directory.'/undo')
+
+set backup
+set nowritebackup
+let &backupdir=g:vim_tmp_directory.'/backup'
+set swapfile
+let &directory=g:vim_tmp_directory.'/swap'
+set undofile
+let &undodir=g:vim_tmp_directory.'/undo'
+
 set number
 set ruler
 
