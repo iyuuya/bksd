@@ -50,6 +50,13 @@ set fileencodings=utf-8,euc-jp,cp932
 set fileformat=unix
 set fileformats=unix,dos,mac
 
+set ignorecase
+set smartcase
+set infercase
+set incsearch
+set hlsearch
+set wrapscan
+
 set number
 set ruler
 
