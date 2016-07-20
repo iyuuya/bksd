@@ -44,4 +44,7 @@ call my#mkdir_p(g:vim_tmp_directory)
 filetype indent plugin on
 syntax enable
 
+set number
+set ruler
+
 " vim: foldmethod=marker
