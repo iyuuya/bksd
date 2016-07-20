@@ -6,6 +6,10 @@
 " }}}1
 "===============================================================================
 
+if exists('$SUDO_USER')
+  finish
+endif
+
 if has('vim_starting') && &compatible
   set nocompatible
 endif
