@@ -17,4 +17,12 @@ endif
 let $MYVIMFILES = expand('~/.config/vim')
 execute 'set runtimepath^=' . $MYVIMFILES
 
+if my#iswin()
+  language message en
+else
+  language message C
+endif
+language ctype C
+language time C
+
 " vim: foldmethod=marker
