@@ -72,4 +72,6 @@ let &undodir=g:vim_tmp_directory.'/undo'
 set number
 set ruler
 
+set clipboard=unnamed
+
 " vim: foldmethod=marker
