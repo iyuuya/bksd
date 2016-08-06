@@ -30,6 +30,7 @@
   pu      = push -u
   psf     = push -f
   re      = remote
+  remy    = "!sh -c 'git remote add origin git@github.com:iyuuya/$(basename `pwd`).git'"
   rb      = rebase
   ra      = rebase --abort
   rc      = rebase --continue
