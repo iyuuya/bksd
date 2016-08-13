@@ -32,6 +32,7 @@ alias rr='bin/rails'
 alias ra='bin/rake'
 alias rp='bin/rspec'
 alias rs='bin/spring'
+alias ru='bin/rubocop'
 
 # ctags:
 
