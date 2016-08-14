@@ -12,7 +12,6 @@ brew install pcre       || true
 
 brew install openssl         || true
 brew install curl --with-ssl || true
-brew install wget            || true
 brew install w3m             || true
 brew install ctags           || true
 brew install gnu-sed         || true
