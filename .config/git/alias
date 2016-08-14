@@ -65,3 +65,5 @@
   hff     = hf feature
   hfr     = hf release
   hfh     = hf hotfix
+
+  first-commit = "!sh -c 'git log --pretty=format:%H | tail -1'"
