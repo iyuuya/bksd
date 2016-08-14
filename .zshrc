@@ -232,6 +232,10 @@ if type gsed > /dev/null 2>&1; then
   alias sed=gsed
 fi
 
+if type hget > /dev/null 2>&1; then
+  alias wget=hget
+fi
+
 # global: "{{{2
 
 alias -g L='|& $PAGER -R'
