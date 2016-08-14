@@ -10,5 +10,5 @@ gstps ruby &
 gstps ssh &
 gstps tmux &
 gstps zsh &
-#gstps vim
+gstps vim
 wait
