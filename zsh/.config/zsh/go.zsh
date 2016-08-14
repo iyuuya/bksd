@@ -20,3 +20,8 @@ if [ ! -x "`which git-xlsx-textconv`" ]; then
   echo 'installing git-xlsx-textconv'
   go get github.com/tokuhirom/git-xlsx-textconv
 fi
+
+if [ ! -x "`which hget`" ]; then
+  echo 'installing hget'
+  go get github.com/huydx/hget
+fi
