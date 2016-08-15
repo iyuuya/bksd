@@ -74,4 +74,6 @@ set ruler
 
 set clipboard=unnamed
 
+nnoremap <Space> :
+
 " vim: foldmethod=marker
