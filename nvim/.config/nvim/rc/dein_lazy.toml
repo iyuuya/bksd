@@ -8,8 +8,8 @@ on_path = '.*'
 on_i    = 1
 
 # Powerful shell implemented by vim.
-[[plugins]]
-repo = 'Shougo/vimshell.vim'
+#[[plugins]]
+#repo = 'Shougo/vimshell.vim'
 
 # Next generation completion framework after neocomplcache
 [[plugins]]
@@ -35,9 +35,9 @@ on_i = 1
 depends = 'neosnippet.vim'
 
 # the world first vimshell plugin that you can run 'vim' command on ssh on vimshell
-[[plugins]]
-repo    = 'ujihisa/vimshell-ssh'
-depends = 'vimshell.vim'
+#[[plugins]]
+#repo    = 'ujihisa/vimshell-ssh'
+#depends = 'vimshell.vim'
 
 [[plugins]] # endwise.vim: wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
 repo = 'alpaca-tc/vim-endwise'
