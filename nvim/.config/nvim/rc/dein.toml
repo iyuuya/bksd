@@ -196,6 +196,9 @@ repo = 'editorconfig/editorconfig-vim'
 [[plugins]]
 repo = 'AndrewRadev/switch.vim'
 
+[[plguins]]
+repo = 'othree/javascript-libraries-syntax.vim'
+
 [[plugins]]
 repo = 'othree/yajs.vim'
 
