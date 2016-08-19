@@ -15,7 +15,7 @@ class HomebrewSetupTask < Rake::TaskLib
       desc "#{@name} install"
       task :install do
         unless open("| which brew 2>/dev/null") { |f| f.gets }
-          system "git clone https://github.com/Homebrew/homebrew.git ~/brew"
+          system "/usr/bin/ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\""
         else
           puts "brew command found!"
         end
