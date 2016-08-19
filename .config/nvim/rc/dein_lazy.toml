@@ -110,3 +110,7 @@ on_ft = ['yaml', 'ansible']
 [[plugins]]
 repo  = 'kylef/apiblueprint.vim'
 on_ft = 'apiblueprint'
+
+[[plugins]]
+repo  = 'leafgarland/typescript-vim'
+on_ft = 'typescript'
