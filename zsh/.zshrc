@@ -36,6 +36,7 @@ if type peco > /dev/null 2>&1; then
   source $HOME/.config/zsh/peco.zsh
 fi
 source $HOME/.config/zsh/ruby.zsh
+source $HOME/.config/zsh/mysql.zsh
 
 #===============================================================================
 # Prompting: "{{{1
