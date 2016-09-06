@@ -10,4 +10,5 @@ gstpsf ruby &
 gstpsf ssh &
 gstpsf tmux &
 gstpsf zsh &
+gstpsf vim &
 wait
