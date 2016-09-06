@@ -273,6 +273,7 @@ alias x='exit'
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
 fi
+alias nv='vim -u NONE'
 alias v='nvim'
 compdef v=nvim
 alias vv='/usr/local/bin/vim'
