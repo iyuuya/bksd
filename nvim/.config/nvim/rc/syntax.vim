@@ -7,9 +7,10 @@ set smartindent
 
 augroup MyArbGrp
   autocmd!
-  autocmd BufEnter,BufRead,BufNew *.arb setlocal filetype=ruby
-  autocmd BufEnter,BufRead,BufNew *.apib setlocal filetype=apiblueprint
-  autocmd BufEnter,BufRead,BufNEw *.ts setlocal filetype=typescript
+  autocmd BufRead,BufNew *.arb setlocal filetype=ruby
+  autocmd BufRead,BufNew *.apib setlocal filetype=apiblueprint
+  autocmd BufRead,BufNew *.ts setlocal filetype=typescript
+  autocmd BufRead,BufNew *.vue setlocal filetype=html
 augroup END
 
 " }}}1
