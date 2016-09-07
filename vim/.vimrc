@@ -163,8 +163,97 @@ set history=10000
 " }}}1
 "===============================================================================
 
+"===============================================================================
+" View: "{{{1
+
 set number
+set numberwidth=4
+set norelativenumber
 set ruler
+
+set wrap
+set whichwrap+=h,l,<,>,[,],b,s
+set textwidth=0
+set sidescroll=0
+set linebreak
+set showbreak=>\ 
+set breakat=\ \>;:,!
+
+set list
+set listchars=tab:>-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+
+set showmatch
+set matchpairs+=<:>
+set cpoptions-=m
+set matchtime=3
+set colorcolumn=0
+
+set laststatus=2
+set cmdheight=2
+set showcmd
+
+let &statusline="%<%f%=%m%r%w%y[%{(&fenc!=''?&fenc:&enc)}][%{&ff}][%04l:%03v/%p%%]"
+
+set title
+set titlelen=100
+if my#iswin()
+  set titlestring=%<%F\ -\ Vim " %{expand("%:p:.")} \ [%{getfperm(expand('$p'))}]\ %<\ -\ Vim
+else
+  let &titlestring="%{expand('%:p:.')}%(%m%r%w%) [%{getfperm(expand('%p'))}] %< - Vim"
+endif
+
+set showtabline=2
+set tabpagemax=10
+
+set previewheight=5
+set helpheight=15
+
+set showfulltag
+
+set wildmenu
+set wildmode=list:longest,list
+set wildoptions=tagfile
+
+set scrolloff=5
+
+set completeopt=menuone,preview
+set complete=.,t,i,w,b,u
+set pumheight=20
+
+set splitright
+set splitbelow
+set noequalalways
+
+set cmdwinheight=5
+
+set display=lastline
+
+set startofline
+
+set cursorline
+augroup MyCursorColumnGrp
+  autocmd!
+  autocmd FileType yaml setlocal cursorcolumn
+augroup END
+
+augroup CppColorColumnGrp
+  autocmd!
+  autocmd FileType cpp setlocal colorcolumn=120
+augroup END
+
+set nospell spelllang=en_us
+
+set visualbell
+set vb t_vb=
+
+set t_Co=256
+
+set report=0
+
+set lazyredraw
+
+" }}}1
+"===============================================================================
 
 nnoremap <Space> :
 
