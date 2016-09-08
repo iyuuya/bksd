@@ -214,8 +214,8 @@ repo = 'mattn/httpstatus-vim'
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 
-[[plugins]]
-repo = 'Shougo/context_filetype.vim'
-
-[[plugins]]
-repo = 'osyo-manga/vim-precious'
+# [[plugins]]
+# repo = 'Shougo/context_filetype.vim'
+# 
+# [[plugins]]
+# repo = 'osyo-manga/vim-precious'
