@@ -178,6 +178,7 @@ set sidescroll=0
 set linebreak
 set showbreak=>\ 
 set breakat=\ \>;:,!
+set breakindent
 
 set list
 set listchars=tab:>-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
