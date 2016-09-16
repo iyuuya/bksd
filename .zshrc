@@ -218,7 +218,7 @@ alias lv="$PAGER"
 alias less="$PAGER"
 
 if type ccat > /dev/null 2>&1; then
-  alias cat='ccat'
+  alias ca='ccat'
 fi
 
 if type colordiff > /dev/null 2>&1; then
@@ -294,7 +294,7 @@ alias dm='docker-machine'
 # }}}2
 
 alias nko='nkf --overwrite'
-alias tree='tree -N'
+alias tree='tree -N -F -C --dirsfirst'
 alias s='search'
 
 # Applicatioin alias
