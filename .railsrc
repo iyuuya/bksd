@@ -1,4 +1,3 @@
 --skip-test
---skip-turbolinks
 --no-skip-spring
 --database=mysql
