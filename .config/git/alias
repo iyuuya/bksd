@@ -66,6 +66,7 @@
   hfr     = hf release
   hfh     = hf hotfix
 
+  pr = pull-request
   first-commit = "!sh -c 'git log --pretty=format:%H | tail -1'"
   pull-requests = "!sh -c 'git log --merges --oneline --ancestry-path HEAD...`git first` | grep \"Merge pull request #\"'"
   pls = pull-requests
