@@ -18,6 +18,9 @@ nnoremap <Tab>= ggvG=2<C-o>
 " Switch buffer.
 nnoremap <C-q> <C-^>
 
+" Continuously increment/decrement
+vnoremap <C-a> <C-a>gv
+vnoremap <C-x> <C-x>gv
 
 nnoremap [mybind] Nop
 nmap <C-e> [mybind]
