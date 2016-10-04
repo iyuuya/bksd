@@ -275,6 +275,9 @@ nnoremap <Tab>= ggvG=2<C-o>
 
 nnoremap <C-q> <C-^>
 
+vnoremap <C-a> <C-a>gv
+vnoremap <C-x> <C-x>gv
+
 nnoremap [mybind] Nop
 nmap <C-e> [mybind]
 
