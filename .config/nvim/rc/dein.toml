@@ -41,12 +41,6 @@ repo = 'mattn/emmet-vim'
 [[plugins]]
 repo = 'osyo-manga/vim-monster'
 
-[[plugins]]
-repo = 'bronson/vim-trailing-whitespace'
-
-[[plugins]]
-repo = 'Yggdroot/indentLine'
-
 #-------------------------------------------------------------------------------
 # Unite
 #-------------------------------------------------------------------------------
