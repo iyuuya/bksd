@@ -257,7 +257,7 @@ set synmaxcol=200
 
 augroup vimrc-highlight
   autocmd!
-  autocmd Syntax * if 10000 < line('$') | syntax sync minlines=100 | endif
+  autocmd Syntax * if 10000 < line('$') | syntax sync minlines=100 | set foldmethod=indent | endif
 augroup END
 " }}}1
 "===============================================================================
