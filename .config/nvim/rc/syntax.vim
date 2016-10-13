@@ -5,6 +5,8 @@
 set autoindent
 set smartindent
 
+set synmaxcol=200
+
 augroup MyArbGrp
   autocmd!
   autocmd BufRead,BufNew *.arb setlocal filetype=ruby
