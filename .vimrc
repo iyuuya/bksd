@@ -254,6 +254,11 @@ set report=0
 set lazyredraw
 
 set synmaxcol=200
+
+augroup vimrc-highlight
+  autocmd!
+  autocmd Syntax * if 10000 < line('$') | syntax sync minlines=100 | endif
+augroup END
 " }}}1
 "===============================================================================
 
