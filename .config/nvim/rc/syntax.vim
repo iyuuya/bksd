@@ -6,6 +6,7 @@ set autoindent
 set smartindent
 
 set synmaxcol=200
+autocmd Syntax * if 10000 < line('$') | syntax sync minlines=100 | endif
 
 augroup MyArbGrp
   autocmd!
