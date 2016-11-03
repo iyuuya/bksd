@@ -297,6 +297,13 @@ alias nko='nkf --overwrite'
 alias tree='tree -N -F -C --dirsfirst'
 alias s='search'
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias -g F='| fzf --ansi --reverse'
+alias -g FR='| fzf --ansi --reverse --tac'
+alias -g FT='| fzf-tmux -d 10 --ansi --revsere'
+
+alias gb='git branch | fzf-tmux -d 10 --ansi --reverse'
+
 # Applicatioin alias
 function app_alias()
 {
