@@ -27,6 +27,9 @@ depends = ['unite.vim']
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
+repo = 'cohama/agit.vim'
+
+[[plugins]]
 repo = 'mattn/webapi-vim'
 
 [[plugins]] # rails.vim: Ruby on Rails power tools
