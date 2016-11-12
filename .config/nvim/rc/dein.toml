@@ -85,6 +85,9 @@ repo = 'iyuuya/unite-rails-fat'
 [[plugins]]
 repo = 'tsukkee/unite-help'
 
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
 #-------------------------------------------------------------------------------
 # ColorScheme
 #-------------------------------------------------------------------------------
