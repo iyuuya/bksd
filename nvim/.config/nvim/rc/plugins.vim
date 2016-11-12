@@ -125,6 +125,8 @@ if dein#tap('denite.nvim')
 
 	call denite#custom#map('insert', '<C-j>', 'move_to_next_line')
 	call denite#custom#map('insert', '<C-k>', 'move_to_prev_line')
+
+  nnoremap [unite]uf :<C-u>Denite buffer file_rec<CR>
 endif
 
 " }}}2
