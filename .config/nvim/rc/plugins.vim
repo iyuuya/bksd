@@ -122,6 +122,9 @@ if dein#tap('denite.nvim')
 
 	call denite#custom#var('file_rec/git', 'command',
 	      \ ['git', 'ls-files', '-co', '--exclude-standard'])
+
+	call denite#custom#map('insert', '<C-j>', 'move_to_next_line')
+	call denite#custom#map('insert', '<C-k>', 'move_to_prev_line')
 endif
 
 " }}}2
