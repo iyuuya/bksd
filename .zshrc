@@ -303,6 +303,7 @@ alias -g FR='| fzf --ansi --reverse --tac'
 alias -g FT='| fzf-tmux -d 10 --ansi --revsere'
 
 alias gb='git branch | fzf-tmux -d 10 --ansi --reverse'
+alias gco='git checkout `gb`'
 
 # Applicatioin alias
 function app_alias()
