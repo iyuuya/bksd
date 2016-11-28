@@ -83,6 +83,9 @@ repo = 'basyura/unite-rails'
 repo = 'iyuuya/unite-rails-fat'
 
 [[plugins]]
+repo = 'iyuuya/unite-rails-serializer'
+
+[[plugins]]
 repo = 'tsukkee/unite-help'
 
 [[plugins]]
