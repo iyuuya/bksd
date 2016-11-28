@@ -72,6 +72,7 @@ if dein#tap('unite.vim')
     nnoremap [unite]rvl :<C-u>Unite -start-insert rails/value<CR>
     nnoremap [unite]rva :<C-u>Unite -start-insert rails/validator<CR>
     nnoremap [unite]rsv :<C-u>Unite -start-insert rails/service<CR>
+    nnoremap [unite]rse :<C-u>Unite -start-insert rails/serializer<CR>
     nnoremap [unite]rpl :<C-u>Unite -start-insert rails/policy<CR>
     nnoremap [unite]rad :<C-u>Unite -start-insert file:app/admin<CR>
   endif
