@@ -74,6 +74,9 @@ if dein#tap('unite.vim')
     nnoremap [unite]rsv :<C-u>Unite -start-insert rails/service<CR>
     nnoremap [unite]rse :<C-u>Unite -start-insert rails/serializer<CR>
     nnoremap [unite]rpl :<C-u>Unite -start-insert rails/policy<CR>
+    nnoremap [unite]rab :<C-u>Unite -start-insert rails/ability<CR>
+    nnoremap [unite]rat :<C-u>Unite -start-insert rails/attribute<CR>
+    nnoremap [unite]rlo :<C-u>Unite -start-insert rails/loyalty<CR>
     nnoremap [unite]rad :<C-u>Unite -start-insert file:app/admin<CR>
   endif
   " Dictionaries
