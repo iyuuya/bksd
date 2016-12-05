@@ -51,10 +51,6 @@ on_cmd = 'Ag'
 repo   = 'thinca/vim-scouter'
 on_cmd = 'Scouter'
 
-[[plugins]] # A git repository for a vim plugin called matchit
-repo = 'edsono/vim-matchit'
-on_ft = 'ruby'
-
 [[plugins]] # Async clang code completion.
 repo = 'osyo-manga/vim-marching'
 on_ft = ['c', 'cpp']
