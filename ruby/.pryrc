@@ -48,7 +48,7 @@ if defined? Hirb
   Hirb.enable
 end
 
-Pry.commands.alias_command 'e',  'edit'
+Pry.commands.alias_command 'x',  'exit'
 Pry.commands.alias_command 'q',  'exit'
 Pry.commands.alias_command 'q!', 'exit-program'
 Pry.commands.alias_command 'h',  'help'
