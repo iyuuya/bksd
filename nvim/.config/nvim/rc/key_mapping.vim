@@ -5,6 +5,7 @@ nnoremap <space> :
 vnoremap <space> :
 
 inoremap <c-f> <esc>
+inoremap jj <esc>
 
 cmap <c-h> <left>
 cmap <c-l> <right>
