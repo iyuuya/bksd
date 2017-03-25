@@ -5,7 +5,7 @@ nnoremap <space> :
 vnoremap <space> :
 
 inoremap <c-f> <esc>
-inoremap jj <esc>
+inoremap <expr> j  getline('.')[col('.') - 2] ==# 'j' ? "\<BS>\<ESC>" : 'j'
 
 cmap <c-h> <left>
 cmap <c-l> <right>
