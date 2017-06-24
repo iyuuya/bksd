@@ -321,10 +321,6 @@ if type tmux > /dev/null 2>&1; then
   alias vs='tmux split-window -h'
 fi
 
-if type ~/Applications/Shoes.app/Contents/MacOS/shoes > /dev/null 2>&1; then
-  alias shoes='~/Applications/Shoes.app/Contents/MacOS/shoes "$@"'
-fi
-
 # added by travis gem
 src $HOME/.travis/travis.sh
 
