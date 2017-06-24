@@ -135,6 +135,10 @@ repo = 'vim-scripts/dbext.vim'
 [[plugins]]
 repo = 'tyru/open-browser.vim'
 
+[[plugins]] # Open GitHub URL of current file, etc. from Vim editor (supported GitHub Enterprise)
+repo = 'tyru/open-browser-github.vim'
+depends = 'open-browser.vim'
+
 [[plugins]] # Integrated reference viewer.
 repo = 'thinca/vim-ref'
 
