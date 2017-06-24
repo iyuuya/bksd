@@ -310,24 +310,6 @@ alias gb='git branch | fzf-tmux -d 10 --ansi --reverse'
 alias gco='git checkout `gb`'
 alias gr='git rebase `gb`'
 
-# Applicatioin alias
-function app_alias()
-{
-  local APP=$1
-  shift
-  for i in $@; do;
-    alias -s $i=${APP}
-  done;
-}
-
-app_alias nvim c cpp cc h cs cmake \
-  rb rake ru gemspec erb \
-  haml slim html svg xml php js jsx ts coffee \
-  json jade css scss sass markdown mkd md asciidoc adoc asc \
-  textile rdoc creole txt csv go \
-  py pl hs lhs sql conf toml yaml yml y \
-  vim vital el
-
 if type /Applications/Gyazo.app/Contents/MacOS/Gyazo> /dev/null 2>&1; then
   alias gyazo='/Applications/Gyazo.app/Contents/MacOS/Gyazo "$@"'
 fi
