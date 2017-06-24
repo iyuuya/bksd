@@ -310,13 +310,6 @@ alias gb='git branch | fzf-tmux -d 10 --ansi --reverse'
 alias gco='git checkout `gb`'
 alias gr='git rebase `gb`'
 
-if type /Applications/Gyazo.app/Contents/MacOS/Gyazo> /dev/null 2>&1; then
-  alias gyazo='/Applications/Gyazo.app/Contents/MacOS/Gyazo "$@"'
-fi
-if type ~/Applications/Gyazo.app/Contents/MacOS/Gyazo> /dev/null 2>&1; then
-  alias gyazo='~/Applications/Gyazo.app/Contents/MacOS/Gyazo "$@"'
-fi
-
 if type tmux > /dev/null 2>&1; then
   alias t='tmux'
   compdef t=tmux
