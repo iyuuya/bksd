@@ -77,15 +77,17 @@ if dein#tap('unite.vim')
     nnoremap [unite]rab :<C-u>Unite -start-insert rails/ability<CR>
     nnoremap [unite]rat :<C-u>Unite -start-insert rails/attribute<CR>
     nnoremap [unite]rlo :<C-u>Unite -start-insert rails/loyalty<CR>
+    nnoremap [unite]rfo :<C-u>Unite -start-insert rails/form<CR>
+    nnoremap [unite]rpo :<C-u>Unite -start-insert rails/policy<CR>
     nnoremap [unite]rad :<C-u>Unite -start-insert file:app/admin<CR>
   endif
   " Dictionaries
   nnoremap [unite]dw :<C-u>Unite webcolorname<CR>
   nnoremap [unite]dh :<C-u>Unite httpstatus<CR>
-  " unite-giti
-  if dein#tap('unite-giti')
+  " vim-unite-giti
+  if dein#tap('vim-unite-giti')
     nnoremap [unite]g  :<C-u>Unite giti<CR>
-    nnoremap [unite]gb :<C-u>Unite giti/branch_all<CR>
+    nnoremap [unite]gb :<C-u>Unite giti/branch<CR>
     nnoremap [unite]gl :<C-u>Unite giti/log<CR>
     nnoremap [unite]gr :<C-u>Unite giti/remote<CR>
     nnoremap [unite]gs :<C-u>Unite giti/status<CR>
