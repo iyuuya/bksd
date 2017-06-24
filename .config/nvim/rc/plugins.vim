@@ -55,18 +55,18 @@ if dein#tap('unite.vim')
   endif
   " unite-rails
   if dein#tap('unite-rails')
-    nnoremap [unite]r  :<C-u>Unite -start-insert source<CR>rails/
+    nnoremap [unite]r   :<C-u>Unite -start-insert source<CR>rails/
     nnoremap [unite]rcf :<C-u>Unite -start-insert rails/config<CR>
     nnoremap [unite]rcn :<C-u>Unite -start-insert rails/controller<CR>
     nnoremap [unite]rdb :<C-u>Unite -start-insert rails/db<CR>
-    nnoremap [unite]rh :<C-u>Unite -start-insert rails/helper<CR>
-    nnoremap [unite]ri :<C-u>Unite -start-insert rails/initializer<CR>
-    nnoremap [unite]rj :<C-u>Unite -start-insert rails/javascript<CR>
-    nnoremap [unite]rl :<C-u>Unite -start-insert rails/lib<CR>
-    nnoremap [unite]rm :<C-u>Unite -start-insert rails/model<CR>
-    nnoremap [unite]rp :<C-u>Unite -start-insert rails/spec<CR>
-    nnoremap [unite]rs :<C-u>Unite -start-insert rails/stylesheet<CR>
-    nnoremap [unite]rv :<C-u>Unite -start-insert rails/view<CR>
+    nnoremap [unite]rh  :<C-u>Unite -start-insert rails/helper<CR>
+    nnoremap [unite]ri  :<C-u>Unite -start-insert rails/initializer<CR>
+    nnoremap [unite]rj  :<C-u>Unite -start-insert rails/javascript<CR>
+    nnoremap [unite]rl  :<C-u>Unite -start-insert rails/lib<CR>
+    nnoremap [unite]rm  :<C-u>Unite -start-insert rails/model<CR>
+    nnoremap [unite]rp  :<C-u>Unite -start-insert rails/spec<CR>
+    nnoremap [unite]rst :<C-u>Unite -start-insert rails/stylesheet<CR>
+    nnoremap [unite]rv  :<C-u>Unite -start-insert rails/view<CR>
     nnoremap [unite]rde :<C-u>Unite -start-insert rails/decorator<CR>
     nnoremap [unite]rfm :<C-u>Unite -start-insert rails/form<CR>
     nnoremap [unite]rvl :<C-u>Unite -start-insert rails/value<CR>
