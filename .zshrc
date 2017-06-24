@@ -11,8 +11,12 @@
 
 source ~/.config/zsh/options.zsh
 
-autoload -U compinit
-compinit -C
+autoload -Uz compinit
+if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+  compinit
+else
+  compinit -C
+fi
 
 case ${OSTYPE} in
   darwin*)
