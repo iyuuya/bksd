@@ -53,9 +53,9 @@ case ${OSTYPE} in
     typeset -U path
     path=(
       $HOME/bin(N-/)
-      $HOME/.brew/bin(N-/)
       /usr/local/bin(N-/)
       /usr/local/share/git-core/contrib/diff-highlight(N-/)
+      /usr/local/opt/imagemagick@6/bin(N-/)
       /usr/bin(N-/)
       /bin(N-/)
       /usr/X11/bin(N-/)
