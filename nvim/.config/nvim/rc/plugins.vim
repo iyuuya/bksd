@@ -102,8 +102,18 @@ if dein#tap('denite.nvim')
 	call denite#custom#var('file_rec/git', 'command',
 	      \ ['git', 'ls-files', '-co', '--exclude-standard'])
 
-	call denite#custom#map('insert', '<C-j>', 'move_to_next_line')
-	call denite#custom#map('insert', '<C-k>', 'move_to_prev_line')
+	call denite#custom#map(
+	      \ 'insert',
+	      \ '<C-n>',
+	      \ '<denite:move_to_next_line>',
+	      \ 'noremap'
+	      \)
+	call denite#custom#map(
+	      \ 'insert',
+	      \ '<C-p>',
+	      \ '<denite:move_to_previous_line>',
+	      \ 'noremap'
+	      \)
 
   nnoremap [unite]uf :<C-u>Denite buffer file_rec<CR>
 
