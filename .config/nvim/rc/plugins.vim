@@ -53,34 +53,6 @@ if dein#tap('unite.vim')
   if dein#tap('unite-outline')
     nnoremap [unite]o  :<C-u>Unite -vertical -winwidth=36 outline<CR>
   endif
-  " unite-rails
-  if dein#tap('unite-rails')
-    nnoremap [unite]r   :<C-u>Unite -start-insert source<CR>rails/
-    nnoremap [unite]rcf :<C-u>Unite -start-insert rails/config<CR>
-    nnoremap [unite]rcn :<C-u>Unite -start-insert rails/controller<CR>
-    nnoremap [unite]rdb :<C-u>Unite -start-insert rails/db<CR>
-    nnoremap [unite]rh  :<C-u>Unite -start-insert rails/helper<CR>
-    nnoremap [unite]ri  :<C-u>Unite -start-insert rails/initializer<CR>
-    nnoremap [unite]rj  :<C-u>Unite -start-insert rails/javascript<CR>
-    nnoremap [unite]rl  :<C-u>Unite -start-insert rails/lib<CR>
-    nnoremap [unite]rm  :<C-u>Unite -start-insert rails/model<CR>
-    nnoremap [unite]rp  :<C-u>Unite -start-insert rails/spec<CR>
-    nnoremap [unite]rst :<C-u>Unite -start-insert rails/stylesheet<CR>
-    nnoremap [unite]rv  :<C-u>Unite -start-insert rails/view<CR>
-    nnoremap [unite]rde :<C-u>Unite -start-insert rails/decorator<CR>
-    nnoremap [unite]rfm :<C-u>Unite -start-insert rails/form<CR>
-    nnoremap [unite]rvl :<C-u>Unite -start-insert rails/value<CR>
-    nnoremap [unite]rva :<C-u>Unite -start-insert rails/validator<CR>
-    nnoremap [unite]rsv :<C-u>Unite -start-insert rails/service<CR>
-    nnoremap [unite]rse :<C-u>Unite -start-insert rails/serializer<CR>
-    nnoremap [unite]rpl :<C-u>Unite -start-insert rails/policy<CR>
-    nnoremap [unite]rab :<C-u>Unite -start-insert rails/ability<CR>
-    nnoremap [unite]rat :<C-u>Unite -start-insert rails/attribute<CR>
-    nnoremap [unite]rlo :<C-u>Unite -start-insert rails/loyalty<CR>
-    nnoremap [unite]rfo :<C-u>Unite -start-insert rails/form<CR>
-    nnoremap [unite]rpo :<C-u>Unite -start-insert rails/policy<CR>
-    nnoremap [unite]rad :<C-u>Unite -start-insert file:app/admin<CR>
-  endif
   " Dictionaries
   nnoremap [unite]dw :<C-u>Unite webcolorname<CR>
   nnoremap [unite]dh :<C-u>Unite httpstatus<CR>
@@ -123,6 +95,7 @@ endif
 "
 
 if dein#tap('denite.nvim')
+  call denite#custom#option('default', { 'reversed': 'true' })
   call denite#custom#var('file_rec', 'command',
         \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 
@@ -133,6 +106,34 @@ if dein#tap('denite.nvim')
 	call denite#custom#map('insert', '<C-k>', 'move_to_prev_line')
 
   nnoremap [unite]uf :<C-u>Denite buffer file_rec<CR>
+
+  " unite-rails
+  if dein#tap('unite-rails')
+    nnoremap [unite]rcf :<C-u>Denite unite:rails/config<CR>
+    nnoremap [unite]rcn :<C-u>Denite unite:rails/controller<CR>
+    nnoremap [unite]rdb :<C-u>Denite unite:rails/db<CR>
+    nnoremap [unite]rh  :<C-u>Denite unite:rails/helper<CR>
+    nnoremap [unite]ri  :<C-u>Denite unite:rails/initializer<CR>
+    nnoremap [unite]rj  :<C-u>Denite unite:rails/javascript<CR>
+    nnoremap [unite]rl  :<C-u>Denite unite:rails/lib<CR>
+    nnoremap [unite]rm  :<C-u>Denite unite:rails/model<CR>
+    nnoremap [unite]rp  :<C-u>Denite unite:rails/spec<CR>
+    nnoremap [unite]rst :<C-u>Denite unite:rails/stylesheet<CR>
+    nnoremap [unite]rv  :<C-u>Denite unite:rails/view<CR>
+    nnoremap [unite]rde :<C-u>Denite unite:rails/decorator<CR>
+    nnoremap [unite]rfm :<C-u>Denite unite:rails/form<CR>
+    nnoremap [unite]rvl :<C-u>Denite unite:rails/value<CR>
+    nnoremap [unite]rva :<C-u>Denite unite:rails/validator<CR>
+    nnoremap [unite]rsv :<C-u>Denite unite:rails/service<CR>
+    nnoremap [unite]rse :<C-u>Denite unite:rails/serializer<CR>
+    nnoremap [unite]rpl :<C-u>Denite unite:rails/policy<CR>
+    nnoremap [unite]rab :<C-u>Denite unite:rails/ability<CR>
+    nnoremap [unite]rat :<C-u>Denite unite:rails/attribute<CR>
+    nnoremap [unite]rlo :<C-u>Denite unite:rails/loyalty<CR>
+    nnoremap [unite]rfo :<C-u>Denite unite:rails/form<CR>
+    nnoremap [unite]rpo :<C-u>Denite unite:rails/policy<CR>
+    nnoremap [unite]rad :<C-u>Denite unite:file:app/admin<CR>
+  endif
 endif
 
 " }}}2
