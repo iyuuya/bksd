@@ -175,8 +175,6 @@ if dein#tap('vimshell.vim')
   " endfunction
 
   nnoremap ; :VimShellCurrentDir<CR>
-else
-  nnoremap ; :terminal<CR>
 endif
 
 " }}}2
