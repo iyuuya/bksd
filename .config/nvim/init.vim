@@ -20,6 +20,7 @@ source ~/.config/nvim/rc/syntax.vim
 source ~/.config/nvim/rc/plugins.vim
 source ~/.config/nvim/rc/key_mapping.vim
 source ~/.config/nvim/rc/function.vim
+source ~/.config/nvim/rc/command.vim
 source ~/.config/nvim/rc/platform.vim
 
 if filereadable(expand('~/.config/nvim/rc/local.vim'))
