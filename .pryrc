@@ -12,9 +12,17 @@ Pry.config.prompt = old_prompt.map { |prompt| proc { |*a| "#{version} #{prompt.c
 
 begin
   require 'hirb'
+rescue LoadError
+end
+
+begin
   require 'awesome_print'
 rescue LoadError
-  # Missing goodies, bummer
+end
+
+begin
+  require 'active_support/all'
+rescue LoadError
 end
 
 if defined? AwesomePrint
