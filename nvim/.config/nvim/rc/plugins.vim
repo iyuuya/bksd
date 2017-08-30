@@ -126,7 +126,8 @@ if dein#tap('denite.nvim')
     nnoremap [unite]ri  :<C-u>Denite unite:rails/initializer<CR>
     nnoremap [unite]rj  :<C-u>Denite unite:rails/javascript<CR>
     nnoremap [unite]rl  :<C-u>Denite unite:rails/lib<CR>
-    nnoremap [unite]rm  :<C-u>Denite unite:rails/model<CR>
+    nnoremap [unite]rmo :<C-u>Denite unite:rails/model<CR>
+    nnoremap [unite]rma :<C-u>Denite unite:rails/mailer<CR>
     nnoremap [unite]rp  :<C-u>Denite unite:rails/spec<CR>
     nnoremap [unite]rst :<C-u>Denite unite:rails/stylesheet<CR>
     nnoremap [unite]rv  :<C-u>Denite unite:rails/view<CR>
