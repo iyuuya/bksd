@@ -29,7 +29,6 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'cohama/agit.vim'
 
-
 [[plugins]]
 repo = 'lambdalisue/vim-gita'
 
@@ -245,3 +244,7 @@ merged = 0
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 depends = ['fzf']
+
+# The standard snippets repository for neosnippet
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'

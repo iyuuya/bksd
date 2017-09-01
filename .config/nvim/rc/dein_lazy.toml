@@ -25,14 +25,9 @@ on_i = 1
 # neo-snippet plugin contains neocomplcache snippets source
 [[plugins]]
 repo  = 'Shougo/neosnippet.vim'
+depends = 'neosnippet-snippets'
 on_i  = 1
-on_ft = 'snippet'
-
-# The standard snippets repository for neosnippet
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-on_i = 1
-depends = 'neosnippet.vim'
+on_ft = 'neosnippet'
 
 # the world first vimshell plugin that you can run 'vim' command on ssh on vimshell
 #[[plugins]]
