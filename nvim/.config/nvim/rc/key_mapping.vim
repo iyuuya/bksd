@@ -71,6 +71,8 @@ nnoremap <silent> [mybind]/  :vimgrep  %<left><left>
 nnoremap <silent> [mybind]n  :cnext<CR>
 nnoremap <silent> [mybind]N  :cprevious<CR>
 
+nnoremap <silent> gm :call GotoCenter()<CR>
+
 " }}}1
 "===============================================================================
 " vim: foldmethod=marker
