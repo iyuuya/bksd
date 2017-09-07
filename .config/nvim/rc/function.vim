@@ -35,6 +35,17 @@ function! Jimakun(subtitle)
 endfunction
 command! -nargs=1 Jimakun call Jimakun(<f-args>)
 
+" goto center(width)
+function! GotoCenter()
+  call cursor(0, strlen(getline('.')) / 2)
+endfunction
+
+function! GotoHalfLine()
+  let s:number = execute '%s/^//n'
+  let s:line_number = matchstr(s:number,'^[0-9][0-9][0-9]\|[0-9][0-9]\|[0-9]')
+  call line('$')
+endfunction
+
 " }}}1
 "===============================================================================
 " vim: foldmethod=marker
