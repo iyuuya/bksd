@@ -245,6 +245,11 @@ merged = 0
 repo = 'junegunn/fzf.vim'
 depends = ['fzf']
 
+# neo-snippet plugin contains neocomplcache snippets source
+[[plugins]]
+repo  = 'Shougo/neosnippet.vim'
+depends = 'neosnippet-snippets'
+
 # The standard snippets repository for neosnippet
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
