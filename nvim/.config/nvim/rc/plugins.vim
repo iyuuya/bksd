@@ -146,6 +146,28 @@ if dein#tap('denite.nvim')
     nnoremap [unite]rad :<C-u>Denite unite:file:app/admin<CR>
     nnoremap [unite]rdo :<C-u>Denite unite:rails/domain<CR>
   endif
+
+  if dein#tap('unite-rails')
+    nnoremap [unite]rcf :<C-u>Denite rails:config<CR>
+    nnoremap [unite]rcn :<C-u>Denite rails:controller<CR>
+    nnoremap [unite]rh  :<C-u>Denite rails:helper<CR>
+    nnoremap [unite]rmo :<C-u>Denite rails:model<CR>
+    nnoremap [unite]rma :<C-u>Denite rails:mailer<CR>
+    nnoremap [unite]rp  :<C-u>Denite rails:spec<CR>
+    nnoremap [unite]rv  :<C-u>Denite rails:view<CR>
+    nnoremap [unite]rde :<C-u>Denite rails:decorator<CR>
+    nnoremap [unite]rfm :<C-u>Denite rails:form<CR>
+    nnoremap [unite]rva :<C-u>Denite rails:validator<CR>
+    nnoremap [unite]rsv :<C-u>Denite rails:service<CR>
+    nnoremap [unite]rse :<C-u>Denite rails:serializer<CR>
+    nnoremap [unite]rpl :<C-u>Denite rails:policy<CR>
+    nnoremap [unite]rab :<C-u>Denite rails:ability<CR>
+    nnoremap [unite]rat :<C-u>Denite rails:attribute<CR>
+    nnoremap [unite]rlo :<C-u>Denite rails:loyalty<CR>
+    nnoremap [unite]rfo :<C-u>Denite rails:form<CR>
+    nnoremap [unite]rpo :<C-u>Denite rails:policy<CR>
+    nnoremap [unite]rdo :<C-u>Denite rails:domain<CR>
+  endif
 endif
 
 " }}}2
