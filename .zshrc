@@ -220,6 +220,7 @@ autoload -Uz install-pyenv-plugins
 
 alias lv="$PAGER"
 alias less="$PAGER"
+alias lr="$PAGER -R"
 
 if type ccat > /dev/null 2>&1; then
   alias ca='ccat'
