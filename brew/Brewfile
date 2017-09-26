@@ -1,6 +1,8 @@
 # taps
 brew tap homebrew/versions || true
 brew tap homebrew/binary   || true
+brew tap homebrew/services || true
+# brew tap homebrew/bundle   || true
 
 brew update  || true
 brew upgrade || true
@@ -63,9 +65,7 @@ brew install qt                                               || true
 brew install mysql      || true
 brew install mycli      || true
 brew install sqlite     || true
-brew install postgresql || true
 brew install redis      || true
-brew install mongodb    || true
 
 brew tap homebrew/science  || true
 brew install R || true
@@ -135,3 +135,5 @@ brew install librsvg               || true
 brew install ffmpeg                || true
 
 brew cleanup || true
+
+# vim: ft=conf

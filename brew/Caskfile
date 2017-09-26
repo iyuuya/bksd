@@ -50,3 +50,5 @@ brew cask install https://raw.githubusercontent.com/iyuuya/brew-config/master/Ca
 
 brew cask update  || true
 brew cask cleanup || true
+
+# vim: ft=conf
