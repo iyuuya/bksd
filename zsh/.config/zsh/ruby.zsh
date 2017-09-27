@@ -39,3 +39,9 @@ alias ru='bin/rubocop'
 alias rtags='ctags --langmap=RUBY:.rb --exclude="*.js" --exclude=".git*" -R'
 
 alias mux='tmuxinator'
+
+# Rubocop default options
+export RUBOCOP_OPTS='-D -S -E'
+# -D, --display-cop-names    Display cop names in offense messages.
+# -E, --extra-details        Display extra details in offense messages.
+# -S, --display-style-guide  Display style guide URLs in offense messages.
