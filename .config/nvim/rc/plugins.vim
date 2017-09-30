@@ -147,7 +147,7 @@ if dein#tap('denite.nvim')
     nnoremap [unite]rdo :<C-u>Denite unite:rails/domain<CR>
   endif
 
-  if dein#tap('unite-rails')
+  if dein#tap('denite-rails')
     nnoremap [unite]rcf :<C-u>Denite rails:config<CR>
     nnoremap [unite]rcn :<C-u>Denite rails:controller<CR>
     nnoremap [unite]rh  :<C-u>Denite rails:helper<CR>
