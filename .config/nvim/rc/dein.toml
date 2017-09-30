@@ -157,14 +157,17 @@ repo = 'osyo-manga/vim-watchdogs'
 [[plugins]]
 repo = 'osyo-manga/shabadou.vim'
 
-[[plugins]] # Syntax checking hacks for vim
-repo = 'scrooloose/syntastic'
+# [[plugins]] # Syntax checking hacks for vim
+# repo = 'scrooloose/syntastic'
 
 [[plugins]] # Highlight quickfix errors
 repo = 'jceb/vim-hier'
 
 [[plugins]] # See quickfix, location list and Syntastic lists errors and warnings as you move through a vim file.
 repo = 'dannyob/quickfixstatus'
+
+[[plugins]]
+repo = 'w0rp/ale'
 
 [[plugins]]
 repo = 'vim-scripts/AnsiEsc.vim'
