@@ -150,6 +150,7 @@ if dein#tap('denite.nvim')
   if dein#tap('denite-rails')
     nnoremap [unite]rcf :<C-u>Denite rails:config<CR>
     nnoremap [unite]rcn :<C-u>Denite rails:controller<CR>
+    nnoremap [unite]rdb :<C-u>Denite rails:db<CR>
     nnoremap [unite]rh  :<C-u>Denite rails:helper<CR>
     nnoremap [unite]rmo :<C-u>Denite rails:model<CR>
     nnoremap [unite]rma :<C-u>Denite rails:mailer<CR>
