@@ -51,7 +51,7 @@ if dein#tap('unite.vim')
   endif
   " unite-outline
   if dein#tap('unite-outline')
-    nnoremap [unite]o  :<C-u>Unite -vertical -winwidth=36 outline<CR>
+    nnoremap [unite]o  :<C-u>Unite -vertical -winwidth=36 -start-insert outline<CR>
   endif
   " Dictionaries
   nnoremap [unite]dw :<C-u>Unite webcolorname<CR>
