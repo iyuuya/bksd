@@ -1,0 +1,47 @@
+#!/usr/bin/ruby
+
+if ARGV.size == 0
+  STDERR.puts <<-EOS
+    usage: #{File.basename($PROGRAM_NAME)} PATH
+  EOS
+  exit
+end
+
+require 'pathname'
+
+def get_filenames
+  ARGV.map { |filepath| Dir[Pathname.new(filepath).join('**/*.rb')] }.flatten
+end
+
+def get_targets(filenames)
+  filenames.map do |filename|
+    open(filename) do |f|
+      lines = f.each_line.first(10)
+      unless lines.any? { |line| line =~ /frozen_string_literal/ }
+        next Hash[
+          filename: filename,
+          encoding: lines.index { |line| line =~ /encoding|coding/ },
+        ]
+      else
+        next nil
+      end
+    end
+  end.compact
+end
+
+def add_frozen_string_literal(filename, insert_index)
+  open(filename, 'r+') do |f|
+    lines = f.readlines
+    f.rewind
+
+    lines.insert(insert_index, "# frozen_string_literal: true\n")
+    lines.insert(insert_index + 1, "\n")
+
+    lines.each { |line| f.write line }
+  end
+  nil
+end
+
+get_targets(get_filenames).each do |target|
+  add_frozen_string_literal(target[:filename], target[:encoding] || 0)
+end
