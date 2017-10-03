@@ -41,6 +41,7 @@ if type peco > /dev/null 2>&1; then
 fi
 source $HOME/.config/zsh/ruby.zsh
 source $HOME/.config/zsh/mysql.zsh
+source $HOME/.config/zsh/fzf.zsh
 
 #===============================================================================
 # Prompting: "{{{1
@@ -286,6 +287,10 @@ alias vv='vim'
 compdef v=nvim
 compdef e=nvim
 compdef vv=vim
+
+if [ -x "`which nvim`" ] && [ -x "`which fzf`" ]; then
+  alias vf='nvim `fzf`'
+fi
 
 # docker: "{{{2
 
