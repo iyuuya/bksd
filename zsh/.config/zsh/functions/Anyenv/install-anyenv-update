@@ -1,3 +1,0 @@
-if [ ! -d $HOME/.anyenv/plugins/anyenv-update ]; then
-  git clone https://github.com/znz/anyenv-update $HOME/.anyenv/plugins/anyenv-update
-fi
