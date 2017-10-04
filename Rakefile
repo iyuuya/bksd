@@ -30,7 +30,9 @@ DotInstallTask.new :ruby do |t|
 end
 DotInstallTask.new :tmux
 DotInstallTask.new :nvim
-DotInstallTask.new :node
+DotInstallTask.new :node do |t|
+  t.add_link 'default-npms', 'default-npms', ENV['NDENV_ROOT'] || '~/.anyenv/envs/ndenv/'
+end
 DotInstallTask.new :mysql
 
 HomebrewSetupTask.new :brew
