@@ -1,4 +1,5 @@
 bundler
+awesome_print
 pry
 pry-coolline
 pry-doc
