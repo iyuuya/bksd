@@ -25,3 +25,8 @@ if [ ! -x "`which hget`" ]; then
   echo 'installing hget'
   go get github.com/huydx/hget
 fi
+
+if [ ! -x "`which emo`" ]; then
+  echo 'installing emo'
+  go get github.com/pocke/emo
+fi
