@@ -215,8 +215,9 @@ autoload history-search-end
 
 REPORTTIME=3
 
-watch="all"
-log
+# see also: http://zsh.sourceforge.net/Intro/intro_15.html
+# watch="all"
+# log
 
 WORDCHARS=${WORDCHARS:s,/,,}
 WORDCHARS="${WORDCHARS}|"
