@@ -90,6 +90,7 @@ fi
 source $HOME/.config/zsh/ruby.zsh
 source $HOME/.config/zsh/mysql.zsh
 source $HOME/.config/zsh/fzf.zsh
+source $HOME/.config/zsh/python.zsh
 
 #===============================================================================
 # Prompting: "{{{1
