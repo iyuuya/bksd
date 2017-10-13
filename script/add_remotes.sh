@@ -1,6 +1,5 @@
 git remote add brew github.com:iyuuya/brew-config.git
 git remote add git github.com:iyuuya/git-config.git
-git remote add mysql github.com:iyuuya/mysql-config.git
 git remote add node github.com:iyuuya/node-config.git
 git remote add nvim github.com:iyuuya/nvim-config.git
 git remote add ruby github.com:iyuuya/ruby-config.git
