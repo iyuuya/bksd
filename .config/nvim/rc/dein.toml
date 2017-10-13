@@ -47,6 +47,9 @@ repo = 'mattn/emmet-vim'
 [[plugins]]
 repo = 'osyo-manga/vim-monster'
 
+[[plugins]] # dispatch.vim: asynchronous build and test dispatcher
+repo = 'tpope/vim-dispatch'
+
 #-------------------------------------------------------------------------------
 # Unite
 #-------------------------------------------------------------------------------
