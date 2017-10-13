@@ -90,9 +90,9 @@ repo = 'iyuuya/unite-rails-serializer'
 [[plugins]]
 repo = 'tsukkee/unite-help'
 
-[[plugins]]
-repo = 'iyuuya/unite-ale'
-depends = ['unite.vim', 'ale']
+# [[plugins]]
+# repo = 'iyuuya/unite-ale'
+# depends = ['unite.vim', 'ale']
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
