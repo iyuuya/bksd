@@ -389,6 +389,14 @@ src $HOME/.travis/travis.sh
 
 src $HOME/.zshrc.local
 
+if [ ! -f ~/.zshrc.zwc ]; then
+  zcompile ~/.zshrc
+fi
+
+if [ ~/.zshrc -nt ~/.zshrc.zwc ]; then
+  zcompile ~/.zshrc
+fi
+
 if type zprof > /dev/null 2>&1; then
   zprof | less
 fi
