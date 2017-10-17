@@ -389,11 +389,7 @@ src $HOME/.travis/travis.sh
 
 src $HOME/.zshrc.local
 
-if [ ! -f ~/.zshrc.zwc ]; then
-  zcompile ~/.zshrc
-fi
-
-if [ ~/.zshrc -nt ~/.zshrc.zwc ]; then
+if [ ! -f ~/.zshrc.zwc -o ~/.zshrc -nt ~/.zshrc.zwc ]; then
   zcompile ~/.zshrc
 fi
 
