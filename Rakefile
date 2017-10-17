@@ -34,6 +34,9 @@ DotInstallTask.new :node do |t|
   t.add_link 'default-npms', 'default-npms', ENV['NDENV_ROOT'] || '~/.anyenv/envs/ndenv/'
 end
 DotInstallTask.new :mysql
+DotInstallTask.new :python do |t|
+  t.add_link 'default-packages', 'default-packages', ENV['PYENV_ROOT'] || '~/.anyenv/envs/pyenv/'
+end
 
 HomebrewSetupTask.new :brew
 

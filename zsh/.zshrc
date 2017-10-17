@@ -22,6 +22,10 @@ if [ ! -d $HOME/.anyenv/envs/pyenv ]; then
   anyenv install pyenv
 fi
 
+if [ ! -d $HOME/.anyenv/envs/pyenv/plugins/pyenv-default-packages ]; then
+  git clone https://github.com/jawshooah/pyenv-default-packages $HOME/.anyenv/envs/pyenv/plugins/pyenv-default-packages
+fi
+
 if [ ! -d $HOME/.anyenv/envs/pyenv/plugins/pyenv-doctor ]; then
   git clone https://github.com/yyuu/pyenv-doctor $HOME/.anyenv/envs/pyenv/plugins/pyenv-doctor
 fi
