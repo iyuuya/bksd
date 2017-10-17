@@ -38,8 +38,11 @@ repo = 'mattn/webapi-vim'
 [[plugins]] # rails.vim: Ruby on Rails power tools
 repo = 'tpope/vim-rails'
 
-[[plugins]] # Run Rspec specs from Vim
-repo = 'thoughtbot/vim-rspec'
+# [[plugins]] # Run Rspec specs from Vim
+# repo = 'thoughtbot/vim-rspec'
+
+[[plugins]] # This is a Rspec runner for Vim.
+repo = 'taichouchou2/neorspec.vim'
 
 [[plugins]] # emmet for vim: http://emmet.io/
 repo = 'mattn/emmet-vim'
