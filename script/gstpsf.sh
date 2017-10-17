@@ -3,7 +3,6 @@ function gstpsf () {
 }
 gstpsf brew &
 gstpsf git &
-#gstpsf mysql &
 gstpsf node &
 gstpsf nvim &
 gstpsf ruby &
