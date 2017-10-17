@@ -62,7 +62,7 @@ if [ -d $HOME/.anyenv/envs/phpenv ] && [ ! -d $HOME/.anyenv/envs/phpenv/plugins/
   git clone https://github.com/ngyuki/phpenv-composer.git $HOME/.anyenv/envs/phpenv/plugins/phpenv-composer
 fi
 
-[ -f ~/.anyenv/bin/anyenv ] && eval "$(anyenv init - zsh)"
+[ -f ~/.anyenv/bin/anyenv ] && eval "$(anyenv init - --no-rehash)"
 [ -f ~/.anyenv/envs/pyenv/plugins/pyenv-virtualenv/bin/pyenv-virtualenv ] && eval "$(pyenv virtualenv-init - zsh)"
 
 source ~/.config/zsh/options.zsh
