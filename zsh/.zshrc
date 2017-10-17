@@ -54,6 +54,10 @@ if [ ! -d $HOME/.anyenv/envs/ndenv/plugins/ndenv-default-npms ]; then
   git clone https://github.com/kaave/ndenv-default-npms $HOME/.anyenv/envs/ndenv/plugins/ndenv-default-npms
 fi
 
+if [ ! -d $HOME/.anyenv/envs/phpenv/plugins/phpenv-composer ]; then
+  git clone https://github.com/ngyuki/phpenv-composer.git $HOME/.anyenv/envs/phpenv/plugins/phpenv-composer
+fi
+
 [ -f ~/.anyenv/bin/anyenv ] && eval "$(anyenv init - zsh)"
 [ -f ~/.anyenv/envs/pyenv/plugins/pyenv-virtualenv/bin/pyenv-virtualenv ] && eval "$(pyenv virtualenv-init - zsh)"
 
