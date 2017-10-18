@@ -6,6 +6,9 @@
 # }}}1
 #===============================================================================
 
+#===============================================================================
+# Aynenv: "{{{1
+
 if [ ! -d $HOME/.anyenv ]; then
   git clone https://github.com/riywo/anyenv $HOME/.anyenv
 fi
@@ -64,6 +67,9 @@ fi
 
 [ -f ~/.anyenv/bin/anyenv ] && eval "$(anyenv init - --no-rehash)"
 [ -f ~/.anyenv/envs/pyenv/plugins/pyenv-virtualenv/bin/pyenv-virtualenv ] && eval "$(pyenv virtualenv-init - zsh)"
+
+# }}}1
+#===============================================================================
 
 source ~/.config/zsh/options.zsh
 
