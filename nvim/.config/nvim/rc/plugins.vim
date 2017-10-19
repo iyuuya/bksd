@@ -995,13 +995,10 @@ endif
 "-------------------------------------------------------------------------------
 " NeoRSpecAndDispatch: "{{{2
 
-if dein#tap('vim-rspec') && dein#tap('vim-dispatch')
-  let g:rspec_command = 'Dispatch rspec {spec}'
-
-  nnoremap <silent><Leader>p :call RunCurrentSpecFile()<CR>
-  nnoremap <silent><Leader>n :call RunNearestSpec()<CR>
-  " nnoremap <silent><Leader>l :call RunLastSpec()<CR>
-  " nnoremap <silent><Leader>a :call RunAllSpaces()<CR>
+if dein#tap('neorspec.vim') && dein#tap('vim-dispatch')
+  nnoremap <silent><Leader>p :<C-u>RSpecCurrent<CR>
+  nnoremap <silent><Leader>n :<C-u>RSpecNearest<CR>
+  " nnoremap <silent><Leader>a :<C-u>RSpecAll<CR>
 endif
 
 " }}}2
