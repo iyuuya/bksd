@@ -1,0 +1,126 @@
+#!/usr/bin/env ruby
+# frozen_string_litera: true
+
+# ファイル一覧をツリーっぽく表示してくれるやつ v0.1.0
+# Usage: ruby tree.rb filename [options]
+#     -c, --color                      Print directories in colored form.
+
+=begin
+# 入力
+hoge
+fuga
+doc/a
+doc/b
+doc/c ←この辺はディレクトリか判別できないのでファイルとして扱います
+doc/d/
+api/v1/x
+api/v1/y
+api/v1/z
+api/v2/x/
+api/v2/y/
+api/v2/z/
+
+# 出力
+.
+├─ hoge
+├─ fuga
+├─ doc/
+│  ├─ a
+│  ├─ b
+│  ├─ c
+│  └─ d/
+└─ api/
+   ├─ v1/
+   │  ├─ x
+   │  ├─ y
+   │  └─ z
+   └─ v2/
+      ├─ x/
+      ├─ y/
+      └─ z/
+=end
+
+# CHANGELOG
+# [v0.1.0]
+# - パイプでなくコマンドライン引数でファイル名を渡すようにした
+# - ディレクトリに色を付けるオプションを追加
+#
+# [v0.0.3]
+# - 明示的なディレクトリ名の場合、`/`を付けるようにした
+#
+# [v0.0.2]
+# - ディレクトリと確定している場合、`/`を付けるようにした
+#
+# [v0.0.1]
+# - ツリー表示対応
+
+require 'optparse'
+
+$opts = {}
+opt = OptionParser.new
+opt.on('-c', '--color', 'Print directories in colored form.') { |v| $opts[:color] = v }
+
+opt.parse!(ARGV)
+
+if ARGV.size != 1
+  puts opt.help
+  exit
+end
+
+files = File.read(ARGV[0]).lines.map(&:chomp)
+
+def tree(files)
+  cache = []
+  files.each do |file|
+    directories = file.split('/', -1)
+    filename = directories.pop
+    current_dir = cache
+    directories.each do |directory|
+      child_dir = current_dir.find { |dir| dir.is_a?(Hash) && dir[:dir] == directory }
+      current_dir = if child_dir
+                      child_dir[:child]
+                    else
+                      current_dir << { dir: directory, child: [] }
+                      current_dir.last[:child]
+                    end
+    end
+    next if filename == ''
+    current_dir << filename
+  end
+  cache
+end
+
+def format_tree(data, depth = '')
+  result = ''
+  last = data.last
+  data.each do |file_or_dir|
+    result += depth
+    result += if data.last == file_or_dir
+                '└─ '
+              else
+                '├─ '
+              end
+    if file_or_dir.is_a? Hash
+      result += "\e[34m" if $opts[:color]
+      result += file_or_dir[:dir]
+      result += "\e[0m" if $opts[:color]
+      result += '/'
+      result += "\n"
+      next_depth = if file_or_dir == last
+                     depth + '   '
+                   else
+                     depth + '│  '
+                   end
+      result += format_tree(file_or_dir[:child], next_depth)
+    else
+      result += file_or_dir
+      result += "\n"
+    end
+  end
+  result
+end
+
+file_tree = tree(files)
+
+puts '.'
+puts format_tree(file_tree)
