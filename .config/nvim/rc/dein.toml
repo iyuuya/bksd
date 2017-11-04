@@ -26,6 +26,10 @@ depends = ['unite.vim']
 [[plugins]] # fugitive.vim: a Git wrapper so awesome, it should be illegal
 repo = 'tpope/vim-fugitive'
 
+# Asynchronously control git repositories in Neovim/Vim 8
+[[plugins]]
+repo = 'lambdalisue/gina.vim'
+
 [[plugins]]
 repo = 'cohama/agit.vim'
 
