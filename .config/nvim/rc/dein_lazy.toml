@@ -96,3 +96,7 @@ on_ft = 'typescript'
 [[plugins]]
 repo  = 'lmeijvogel/vim-yaml-helper'
 on_ft = ['yaml', 'ansible']
+
+[[plugins]]
+repo  = 'fatih/vim-go'
+on_ft = 'go'
