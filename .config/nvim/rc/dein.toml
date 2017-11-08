@@ -297,3 +297,11 @@ depends = 'neosnippet-snippets'
 # The standard snippets repository for neosnippet
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
+
+# Vim plugin: Create your own text object
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+# Make text objects with various ruby block structures.
+[[plugins]]
+repo = 'rhysd/vim-textobj-ruby'
