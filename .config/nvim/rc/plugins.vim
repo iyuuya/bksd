@@ -272,7 +272,8 @@ endif
 " VimMonster: "{{{2
 
 if dein#tap('vim-monster')
-  let g:monster#completion#rcodetools#backend = "async_rct_complete"
+  " let g:monster#completion#rcodetools#backend = "async_rct_complete"
+  let g:monster#completion#rcodetools#backend = "rct_complete"
 endif
 
 " }}}2
