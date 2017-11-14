@@ -133,6 +133,10 @@ on_cmd = 'colorscheme'
 # repo = 'vim-scripts/wombat256.vim'
 # on_cmd = 'colorscheme'
 
+[[plugins]] # Dark blue color scheme for Vim
+repo = 'cocopon/iceberg.vim'
+on_cmd = 'colorscheme'
+
 #-------------------------------------------------------------------------------
 # TODO: 整理すること
 #-------------------------------------------------------------------------------
