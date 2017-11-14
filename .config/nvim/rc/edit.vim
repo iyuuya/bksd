@@ -26,7 +26,7 @@ endif
 set updatetime=200
 
 " Keymapping timeout.
-set timeout timeoutlen=750 ttimeoutlen=200
+set timeout timeoutlen=750 ttimeoutlen=0
 
 " Enable backspace delete indent and newline.
 set backspace=indent,eol,start
