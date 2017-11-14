@@ -227,29 +227,29 @@ endif
 "-------------------------------------------------------------------------------
 " VimShell: "{{{2
 
-if dein#tap('vimshell.vim')
-  let g:vimshell_interactive_update_time = 10
-  let g:vimshell_temporary_directory = g:vim_tmp_directory.'/vimshell'
-  let g:vimshell_max_command_history = 10000
-  " if my#ismac()
-  "   let g:vimshell_editor_command = system('readlink ~/Applications/MacVim.app') . '/Contents/MacOS/MacVim'
-  " endif
-
-  let g:vimshell_prompt = '% '
-  let g:vimshell_user_prompt = "$USER.'@'.hostname().'('.strftime('%Y/%m/%d %H:%M:%S').')>>'"
-  let g:vimshell_secondary_prompt = '> '
-  let g:vimshell_right_prompt = "'['.fnamemodify(getcwd(), ':~').']'"
-
-  " augroup MyVimShellGrp
-  "   autocmd FileType vimshell call vimshell#hook#add('chpwd', 'my_chpwd', 'g:my_chpwd')
-  " augroup END
-
-  " function! g:my_chpwd(args, context)
-  "   call vimshell#execute('ls')
-  " endfunction
-
-  nnoremap ; :VimShellCurrentDir<CR>
-endif
+" if dein#tap('vimshell.vim')
+"   let g:vimshell_interactive_update_time = 10
+"   let g:vimshell_temporary_directory = g:vim_tmp_directory.'/vimshell'
+"   let g:vimshell_max_command_history = 10000
+"   " if my#ismac()
+"   "   let g:vimshell_editor_command = system('readlink ~/Applications/MacVim.app') . '/Contents/MacOS/MacVim'
+"   " endif
+" 
+"   let g:vimshell_prompt = '% '
+"   let g:vimshell_user_prompt = "$USER.'@'.hostname().'('.strftime('%Y/%m/%d %H:%M:%S').')>>'"
+"   let g:vimshell_secondary_prompt = '> '
+"   let g:vimshell_right_prompt = "'['.fnamemodify(getcwd(), ':~').']'"
+" 
+"   " augroup MyVimShellGrp
+"   "   autocmd FileType vimshell call vimshell#hook#add('chpwd', 'my_chpwd', 'g:my_chpwd')
+"   " augroup END
+" 
+"   " function! g:my_chpwd(args, context)
+"   "   call vimshell#execute('ls')
+"   " endfunction
+" 
+"   nnoremap ; :VimShellCurrentDir<CR>
+" endif
 
 " }}}2
 "-------------------------------------------------------------------------------
@@ -658,13 +658,14 @@ endif
 "-------------------------------------------------------------------------------
 " Vim Splash: "{{{2
 
-if dein#tap('vim-splash')
-  let g:splash#path = g:vim_tmp_directory . '/vim_info.txt'
+" if dein#tap('vim-splash')
+"   let g:splash#path = g:vim_tmp_directory . '/vim_info.txt'
+" 
+"   if !filereadable(g:splash#path)
+"     call system('curl -o ' . g:splash#path . ' https://gist.github.com/OrgaChem/7630711/raw/c90299e0aaa0cea8cd05a6ceb2e70074186f8ce5/vim_intro.txt')
+"   endif
+" endif
 
-  if !filereadable(g:splash#path)
-    call system('curl -o ' . g:splash#path . ' https://gist.github.com/OrgaChem/7630711/raw/c90299e0aaa0cea8cd05a6ceb2e70074186f8ce5/vim_intro.txt')
-  endif
-endif
 " }}}2
 "-------------------------------------------------------------------------------
 
@@ -684,23 +685,23 @@ augroup END
 "-------------------------------------------------------------------------------
 " Syntastic: "{{{2
 
-if dein#tap('syntastic')
-  let g:syntastic_always_populate_loc_list = 1
-  let g:syntastic_mode_map = {
-        \ 'mode': 'active',
-        \ 'passive_filetypes': ['ruby']
-        \ }
-  let g:syntastic_ruby_checkers = ['rubocop', 'mri']
-  let g:syntastic_ruby_rubocop_exec = $HOME . '/.anyenv/envs/rbenv/shims/rubocop'
-  let g:syntastic_ruby_mri_exec = $HOME . '.anyenv/env/rbenv/shims/ruby'
-
-  let g:syntastic_cpp_check_header = 1
-  let g:syntastic_cpp_checkers = ['cpplint', 'clang']
-  let g:syntastic_cpp_compiler_options = '-std=c++1y -Wall -Wextra'
-  let g:syntastic_cpp_cppcheck_args = '--enable=warning,performance,information,style'
-  let g:syntastic_cpp_cpplint_exec = expand('~/.anyenv/envs/pyenv/versions/cpplint/bin/cpplint')
-  let g:syntastic_cpp_remove_include_errors = 1
-endif
+" if dein#tap('syntastic')
+"   let g:syntastic_always_populate_loc_list = 1
+"   let g:syntastic_mode_map = {
+"         \ 'mode': 'active',
+"         \ 'passive_filetypes': ['ruby']
+"         \ }
+"   let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+"   let g:syntastic_ruby_rubocop_exec = $HOME . '/.anyenv/envs/rbenv/shims/rubocop'
+"   let g:syntastic_ruby_mri_exec = $HOME . '.anyenv/env/rbenv/shims/ruby'
+" 
+"   let g:syntastic_cpp_check_header = 1
+"   let g:syntastic_cpp_checkers = ['cpplint', 'clang']
+"   let g:syntastic_cpp_compiler_options = '-std=c++1y -Wall -Wextra'
+"   let g:syntastic_cpp_cppcheck_args = '--enable=warning,performance,information,style'
+"   let g:syntastic_cpp_cpplint_exec = expand('~/.anyenv/envs/pyenv/versions/cpplint/bin/cpplint')
+"   let g:syntastic_cpp_remove_include_errors = 1
+" endif
 
 " }}}2
 "-------------------------------------------------------------------------------
@@ -930,14 +931,14 @@ endif
 "-------------------------------------------------------------------------------
 " RSpecAndDispatch: "{{{2
 
-if dein#tap('vim-rspec') && dein#tap('vim-dispatch')
-  let g:rspec_command = 'Dispatch rspec {spec}'
-
-  nnoremap <silent><Leader>p :call RunCurrentSpecFile()<CR>
-  nnoremap <silent><Leader>n :call RunNearestSpec()<CR>
-  " nnoremap <silent><Leader>l :call RunLastSpec()<CR>
-  " nnoremap <silent><Leader>a :call RunAllSpaces()<CR>
-endif
+" if dein#tap('vim-rspec') && dein#tap('vim-dispatch')
+"   let g:rspec_command = 'Dispatch rspec {spec}'
+" 
+"   nnoremap <silent><Leader>p :call RunCurrentSpecFile()<CR>
+"   nnoremap <silent><Leader>n :call RunNearestSpec()<CR>
+"   " nnoremap <silent><Leader>l :call RunLastSpec()<CR>
+"   " nnoremap <silent><Leader>a :call RunAllSpaces()<CR>
+" endif
 
 " }}}2
 "-------------------------------------------------------------------------------
