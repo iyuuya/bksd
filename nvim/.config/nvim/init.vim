@@ -18,11 +18,11 @@ source ~/.config/nvim/rc/edit.vim
 source ~/.config/nvim/rc/view.vim
 source ~/.config/nvim/rc/syntax.vim
 source ~/.config/nvim/rc/types.vim
-source ~/.config/nvim/rc/plugins.vim
-source ~/.config/nvim/rc/key_mapping.vim
 source ~/.config/nvim/rc/function.vim
 source ~/.config/nvim/rc/command.vim
+source ~/.config/nvim/rc/key_mapping.vim
 source ~/.config/nvim/rc/platform.vim
+source ~/.config/nvim/rc/plugins.vim
 
 if filereadable(expand('~/.config/nvim/rc/local.vim'))
   source ~/.config/nvim/rc/local.vim
