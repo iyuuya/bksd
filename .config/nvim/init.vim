@@ -17,6 +17,7 @@ source ~/.config/nvim/rc/search.vim
 source ~/.config/nvim/rc/edit.vim
 source ~/.config/nvim/rc/view.vim
 source ~/.config/nvim/rc/syntax.vim
+source ~/.config/nvim/rc/types.vim
 source ~/.config/nvim/rc/plugins.vim
 source ~/.config/nvim/rc/key_mapping.vim
 source ~/.config/nvim/rc/function.vim
