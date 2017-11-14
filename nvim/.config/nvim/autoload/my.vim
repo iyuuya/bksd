@@ -1,6 +1,6 @@
 scriptencoding utf-8
-let s:save_cpo = &cpo
-set cpo&vim
+let s:save_cpo = &cpoptions
+set cpoptions&vim
 
 let s:iswin = has('win32') || has('win64') || has('win95') || has('win16')
 let s:iscygwin = has('win32unix')
@@ -30,5 +30,5 @@ function! my#mkdir_p(path)
   endif
 endfunction
 
-let &cpo = s:save_cpo
+let &cpoptions = s:save_cpo
 unlet s:save_cpo
