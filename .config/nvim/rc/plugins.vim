@@ -886,6 +886,7 @@ endif
 
 if dein#tap('lightline.vim')
   let g:lightline = {
+        \ 'colorscheme': 'iceberg',
         \ 'component': {
         \   'readonly': '%{&readonly?"⭤":""}',
         \ },
