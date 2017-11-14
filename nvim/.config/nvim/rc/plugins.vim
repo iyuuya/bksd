@@ -9,27 +9,27 @@
 command! -bang DeinClean call s:dein_clean(<bang>0)
 
 function! s:dein_clean(force) abort "{{{
-  let del_all = a:force
-  for p in dein#check_clean()
-    if !del_all
-      let answer = s:input(printf('Delete %s ? [y/N/a]', fnamemodify(p, ':~')))
+  let l:del_all = a:force
+  for l:p in dein#check_clean()
+    if !l:del_all
+      let l:answer = s:input(printf('Delete %s ? [y/N/a]', fnamemodify(l:p, ':~')))
 
-      if type(answer) is type(0) && answer <= 0
+      if type(l:answer) is type(0) && l:answer <= 0
         " Cancel (Esc or <C-c>)
         break
       endif
 
-      if answer !~? '^\(y\%[es]\|a\%[ll]\)$'
+      if l:answer !~? '^\(y\%[es]\|a\%[ll]\)$'
         continue
       endif
 
-      if answer =~? '^a\%[ll]$'
-        let del_all = 1
+      if l:answer =~? '^a\%[ll]$'
+        let l:del_all = 1
       endif
     endif
 
     " Delete plugin dir
-    call dein#install#_rm(p)
+    call dein#install#_rm(l:p)
   endfor
 endfunction "}}}
 
@@ -37,13 +37,13 @@ function! s:input(...) abort "{{{
   new
   cnoremap <buffer> <Esc> __CANCELED__<CR>
   try
-    let input = call('input', a:000)
-    let input = input =~# '__CANCELED__$' ? 0 : input
+    let l:input = call('input', a:000)
+    let l:input = l:input =~# '__CANCELED__$' ? 0 : l:input
   catch /^Vim:Interrupt$/
-    let input = -1
+    let l:input = -1
   finally
     bwipeout!
-    return input
+    return l:input
   endtry
 endfunction "}}}
 
@@ -59,7 +59,7 @@ if dein#tap('unite.vim')
   let g:unite_source_history_yank_enable = 1
   let g:unite_matcher_fuzzy_max_input_length = 30
   let g:unite_source_find_max_candidates = 200
-  let g:unite_data_directory = g:vim_tmp_directory."/unite"
+  let g:unite_data_directory = g:vim_tmp_directory.'/unite'
 
   " unite grep に ag(The Silver Searcher) を使う
   if executable('ag')
@@ -229,7 +229,7 @@ endif
 
 if dein#tap('vimshell.vim')
   let g:vimshell_interactive_update_time = 10
-  let g:vimshell_temporary_directory = g:vim_tmp_directory."/vimshell"
+  let g:vimshell_temporary_directory = g:vim_tmp_directory.'/vimshell'
   let g:vimshell_max_command_history = 10000
   " if my#ismac()
   "   let g:vimshell_editor_command = system('readlink ~/Applications/MacVim.app') . '/Contents/MacOS/MacVim'
@@ -272,8 +272,8 @@ endif
 " VimMonster: "{{{2
 
 if dein#tap('vim-monster')
-  " let g:monster#completion#rcodetools#backend = "async_rct_complete"
-  let g:monster#completion#rcodetools#backend = "rct_complete"
+  " let g:monster#completion#rcodetools#backend = 'async_rct_complete'
+  let g:monster#completion#rcodetools#backend = 'rct_complete'
 endif
 
 " }}}2
@@ -293,7 +293,7 @@ if dein#tap('deoplete.nvim')
   let g:deoplete#enable_smart_case = 1
   let g:deoplete#sources#syntax#min_keyword_length = 3
   let g:deoplete#lock_buffer_name_pattern = '\*ku\*'
-  let g:deoplete#data_directory = g:vim_tmp_directory."/deoplete"
+  let g:deoplete#data_directory = g:vim_tmp_directory.'/deoplete'
 
   " Define keyword.
   if !exists('g:deoplete#keyword_patterns')
@@ -339,12 +339,12 @@ if dein#tap('deoplete.nvim')
   "inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
 
   " Enable omni completion.
-  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd MyAutoCmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd MyAutoCmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
   " autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType javascript setlocal omnifunc=tern#Complete
-  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+  autocmd MyAutoCmd FileType javascript setlocal omnifunc=tern#Complete
+  autocmd MyAutoCmd FileType python setlocal omnifunc=pythoncomplete#Complete
+  autocmd MyAutoCmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
   " Enable heavy omni completion.
   if !exists('g:deoplete#sources#omni#input_patterns')
@@ -381,7 +381,7 @@ endif
 " NeoSnippet: "{{{2
 
 if dein#tap('neosnippet.vim')
-  let g:neosnippet#snippets_directory = $MYVIMFILES."/snippets"
+  let g:neosnippet#snippets_directory = $MYVIMFILES.'/snippets'
   let g:neosnippet#enable_snipmate_compatibility = 1
 
   imap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -418,19 +418,19 @@ endif
 
 if dein#tap('switch.vim')
   function! s:separate_defenition_to_each_filetypes(ft_dictionary) "{{{
-    let result = {}
+    let l:result = {}
 
-    for [filetypes, value] in items(a:ft_dictionary)
-      for ft in split(filetypes, ",")
-        if !has_key(result, ft)
-          let result[ft] = []
+    for [l:filetypes, l:value] in items(a:ft_dictionary)
+      for l:ft in split(l:filetypes, ',')
+        if !has_key(l:result, l:ft)
+          let l:result[l:ft] = []
         endif
 
-        call extend(result[ft], copy(value))
+        call extend(l:result[l:ft], copy(l:value))
       endfor
     endfor
 
-    return result
+    return l:result
   endfunction "}}}
 
   nnoremap ! :Switch<CR>
@@ -538,26 +538,26 @@ if dein#tap('switch.vim')
       unlet b:switch_custom_definitions
     endif
 
-    let dictionary = []
-    for filetype in split(&ft, '\.')
-      if has_key(s:switch_definition, filetype)
-        let dictionary = extend(dictionary, s:switch_definition[filetype])
+    let l:dictionary = []
+    for l:filetype in split(&filetype, '\.')
+      if has_key(s:switch_definition, l:filetype)
+        let l:dictionary = extend(l:dictionary, s:switch_definition[l:filetype])
       endif
     endfor
 
     if exists('b:rails_root')
-      let dictionary = extend(dictionary, s:switch_definition['rails'])
+      let l:dictionary = extend(l:dictionary, s:switch_definition['rails'])
     endif
 
     if has_key(s:switch_definition, '*')
-      let dictionary = extend(dictionary, s:switch_definition['*'])
+      let l:dictionary = extend(l:dictionary, s:switch_definition['*'])
     endif
 
-    if !empty('dictionary')
-      let gvn = 'b:switch_custom_definitions'
-      if !exists(gvn)
-        let cmd = 'let ' . gvn . ' = ' . string(dictionary)
-        exe cmd
+    if !empty('l:dictionary')
+      let l:gvn = 'b:switch_custom_definitions'
+      if !exists(l:gvn)
+        let l:cmd = 'let ' . l:gvn . ' = ' . string(l:dictionary)
+        exe l:cmd
       endif
     endif
   endfunction"}}}
@@ -617,10 +617,10 @@ endif
 
 if dein#tap('vim-quickrun')
   let g:quickrun_config = get(g:, 'quickrun_config', {})
-  let g:quickrun_config["dot/plantuml"] = {
-        \   "command" : "plantuml",
-        \   "exec" : "%c %o %s:p",
-        \   "cmdopt"  : "-tutxt",
+  let g:quickrun_config['dot/plantuml'] = {
+        \   'command' : 'plantuml',
+        \   'exec' : '%c %o %s:p',
+        \   'cmdopt'  : '-tutxt',
         \ }
   let g:quickrun_config.cpp = {
         \   'command' : 'clang++',
@@ -634,10 +634,10 @@ if dein#tap('vim-quickrun')
 
   if dein#tap('vim-watchdogs')
     let g:watchdogs_check_BufWritePost_enable = 0
-    let g:quickrun_config['ruby/watchdogs_checker']    = { "type" : "watchdogs_checker/rubocop" }
-    let g:quickrun_config["cpp/watchdogs_checker"]     = { "type" : "watchdogs_checker/clang++" }
-    let g:quickrun_config["watchdogs_checker/g++"]     = { "cmdopt" : "-Wall" }
-    let g:quickrun_config["watchdogs_checker/clang++"] = { "cmdopt" : "-Wall" }
+    let g:quickrun_config['ruby/watchdogs_checker']    = { 'type' : 'watchdogs_checker/rubocop' }
+    let g:quickrun_config['cpp/watchdogs_checker']     = { 'type' : 'watchdogs_checker/clang++' }
+    let g:quickrun_config['watchdogs_checker/g++']     = { 'cmdopt' : '-Wall' }
+    let g:quickrun_config['watchdogs_checker/clang++'] = { 'cmdopt' : '-Wall' }
   endif
 endif
 
@@ -691,7 +691,7 @@ if dein#tap('syntastic')
         \ 'passive_filetypes': ['ruby']
         \ }
   let g:syntastic_ruby_checkers = ['rubocop', 'mri']
-  let g:syntastic_ruby_rubocop_exec = $HOME . "/.anyenv/envs/rbenv/shims/rubocop"
+  let g:syntastic_ruby_rubocop_exec = $HOME . '/.anyenv/envs/rbenv/shims/rubocop'
   let g:syntastic_ruby_mri_exec = $HOME . '.anyenv/env/rbenv/shims/ruby'
 
   let g:syntastic_cpp_check_header = 1
@@ -749,12 +749,12 @@ if dein#tap('vim-marching')
 
   if my#ismac()
     let g:marching_include_paths = [
-          \ system("echo -n $(brew --prefix gcc)/include/c++/5.3.0"),
-          \ system("echo -n $(brew --prefix boost)/include"),
+          \ system('echo -n $(brew --prefix gcc)/include/c++/5.3.0'),
+          \ system('echo -n $(brew --prefix boost)/include'),
           \ '/usr/include',
-          \ system("echo -n $(brew --prefix)/include"),
+          \ system('echo -n $(brew --prefix)/include'),
           \ ]
-  elseif s:iswin
+  elseif my#iswin()
     let g:marching_include_paths = [
           \ 'C:/MinGW/lib/gcc/mingw32/4.8.1/include',
           \ 'C:/MinGW/lib/gcc/mingw32/4.8.1/include/c++',
@@ -819,7 +819,7 @@ endif
 " Ag: "{{{2
 
 if dein#tap('ag.vim')
-  let g:ag_prg="ag --column"
+  let g:ag_prg='ag --column'
 endif
 
 " }}}2
@@ -830,8 +830,8 @@ endif
 
 if dein#tap('vim-tags')
   let g:vim_tags_auto_generate = 0
-  let g:vim_tags_project_tags_command = "ctags -f tags -R . 2>/dev/null"
-  let g:vim_tags_gems_tags_command = "ctags -R -f Gemfile.lock.tags `bundle show --paths` 2>/dev/null"
+  let g:vim_tags_project_tags_command = 'ctags -f tags -R . 2>/dev/null'
+  let g:vim_tags_gems_tags_command = 'ctags -R -f Gemfile.lock.tags `bundle show --paths` 2>/dev/null'
   set tags+=tags,Gemfile.lock.tags
 endif
 
@@ -847,7 +847,7 @@ if !exists('g:template_variables')
   let g:template_variables.organization = 'IYUUYA'
 endif
 
-autocmd User plugin-template-loaded call s:template_keywords()
+autocmd MyAutoCmd User plugin-template-loaded call s:template_keywords()
 function! s:template_keywords()
   silent %s/<+FILE_NAME+>/\=expand('%:t')/ge
   silent %s/<+FILE_BASENAME+>/\=expand('%:t:r')/ge

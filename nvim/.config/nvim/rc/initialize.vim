@@ -27,8 +27,8 @@ endif
 language ctype C
 language time C
 
-let mapleader = ','
-let maplocalleader = 'm'
+let g:mapleader = ','
+let g:maplocalleader = 'm'
 
 nnoremap <LocalLeader> <Nop>
 xnoremap <LocalLeader> <Nop>
@@ -37,14 +37,14 @@ xnoremap <leader> <Nop>
 
 " tmp directory.
 if !exists('g:vim_tmp_directory')
-  let g:vim_tmp_directory = $MYVIMFILES . "/tmp"
+  let g:vim_tmp_directory = $MYVIMFILES . '/tmp'
 endif
 
 " Create tmp directory.
 call my#mkdir_p(g:vim_tmp_directory)
 
 " environment variables.
-if !exists("$MYVIMRC")
+if !exists('$MYVIMRC')
   let $MYVIMRC = expand($MYVIMFILES . 'init.vm')
 endif
 
