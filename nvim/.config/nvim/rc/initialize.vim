@@ -69,8 +69,8 @@ if has('vim_starting')
   endif
 
   if dein#load_state(s:dein_dir)
-    let s:toml      = expand($MYVIMFILES . '/rc/dein.toml')
-    let s:lazy_toml = expand($MYVIMFILES . '/rc/dein_lazy.toml')
+    let s:toml      = expand($MYVIMFILES . '/toml/dein.toml')
+    let s:lazy_toml = expand($MYVIMFILES . '/toml/dein_lazy.toml')
     call dein#begin(s:dein_dir)
     call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
     call dein#load_toml(s:toml, {'lazy': 0})
