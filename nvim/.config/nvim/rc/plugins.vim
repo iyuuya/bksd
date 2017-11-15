@@ -194,6 +194,7 @@ if dein#tap('denite.nvim')
     nnoremap [unite]rpo :<C-u>Denite unite:rails/policy<CR>
     nnoremap [unite]rad :<C-u>Denite unite:file:app/admin<CR>
     nnoremap [unite]rdo :<C-u>Denite unite:rails/domain<CR>
+    nnoremap [unite]rno :<C-u>Denite unite:rails/notifier<CR>
   endif
 
   if dein#tap('denite-rails')
