@@ -227,6 +227,9 @@ case ${OSTYPE} in
   linux*)
     export LIBGL_ALWAYS_INDIRECT=1
     ;;
+  darwin*)
+    export COLORTERM=truecolor
+    ;;
 esac
 
 # "}}}1
