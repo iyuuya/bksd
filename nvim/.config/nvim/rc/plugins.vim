@@ -961,7 +961,7 @@ endif
 " WinResizer: "{{{2
 
 if dein#tap('winresizer')
-  let g:winresizer_start_key = '<C-M>'
+  let g:winresizer_start_key = '<C-K>'
 endif
 
 " }}}2
