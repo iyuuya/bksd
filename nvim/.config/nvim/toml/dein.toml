@@ -113,25 +113,25 @@ repo = 'iyuuya/denite-ale'
 #-------------------------------------------------------------------------------
 # ColorScheme
 #-------------------------------------------------------------------------------
-# [[plugins]] # A dark colour scheme for Vim & gVim
-# repo = 'w0ng/vim-hybrid'
-# on_cmd = 'colorscheme'
+[[plugins]] # A dark colour scheme for Vim & gVim
+repo = 'w0ng/vim-hybrid'
+on_cmd = 'colorscheme'
 
-# [[plugins]] # A colorful, dark color scheme for Vim.
-# repo = 'nanotech/jellybeans.vim'
-# on_cmd = 'colorscheme'
+[[plugins]] # A colorful, dark color scheme for Vim.
+repo = 'nanotech/jellybeans.vim'
+on_cmd = 'colorscheme'
 
-# [[plugins]] # Molokai color scheme for Vim
-# repo = 'tomasr/molokai'
-# on_cmd = 'colorscheme'
+[[plugins]] # Molokai color scheme for Vim
+repo = 'tomasr/molokai'
+on_cmd = 'colorscheme'
 
 [[plugins]] # Tomorrow Theme for Vim
 repo = 'chriskempson/vim-tomorrow-theme'
 on_cmd = 'colorscheme'
 
-# [[plugins]] # Wombat for 256 color xterms
-# repo = 'vim-scripts/wombat256.vim'
-# on_cmd = 'colorscheme'
+[[plugins]] # Wombat for 256 color xterms
+repo = 'vim-scripts/wombat256.vim'
+on_cmd = 'colorscheme'
 
 [[plugins]] # Dark blue color scheme for Vim
 repo = 'cocopon/iceberg.vim'
