@@ -309,3 +309,6 @@ repo = 'kana/vim-textobj-user'
 # Make text objects with various ruby block structures.
 [[plugins]]
 repo = 'rhysd/vim-textobj-ruby'
+
+[[plugins]] # very simple vim plugin for easy resizing of your vim windows
+repo = 'simeji/winresizer'
