@@ -38,6 +38,7 @@ set mouse=a
 " 真のVimmerはen
 set helplang& helplang=ja,en
 
+set termguicolors
 colorscheme iceberg
 
 set secure
