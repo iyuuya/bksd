@@ -24,10 +24,6 @@ source ~/.config/nvim/rc/key_mapping.vim
 source ~/.config/nvim/rc/platform.vim
 source ~/.config/nvim/rc/plugins.vim
 
-if filereadable(expand('~/.config/nvim/rc/local.vim'))
-  source ~/.config/nvim/rc/local.vim
-endif
-
 " Enable syntax color.
 syntax on
 
@@ -42,5 +38,17 @@ set termguicolors
 colorscheme iceberg
 
 set secure
+
+augroup vimrc-local
+  autocmd!
+  autocmd VimEnter * call s:vimrc_local(expand('<afile>:p:h'))
+augroup END
+
+function! s:vimrc_local(loc)
+  let l:files = findfile('.vimrc.local', escape(a:loc, ' ') . ';', -1)
+  for i in reverse(filter(l:files, 'filereadable(v:val)'))
+    source `=i`
+  endfor
+endfunction
 
 " vim: foldmethod=marker
