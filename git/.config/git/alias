@@ -8,6 +8,7 @@
   cm      = commit
   cmt     = commit --verbose
   cma     = commit --amend
+  cmc     = commit --cleanup=whitespace
   cnt     = shortlog -s -n
   co      = checkout
   d       = diff
