@@ -312,3 +312,6 @@ repo = 'rhysd/vim-textobj-ruby'
 
 [[plugins]] # very simple vim plugin for easy resizing of your vim windows
 repo = 'simeji/winresizer'
+
+[[plugins]] # Wrapper of some neovim's :terminal functions.
+repo = 'kassio/neoterm'
