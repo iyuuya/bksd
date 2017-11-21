@@ -41,6 +41,7 @@ brew install gibo       || true
 
 brew install tree                       || true
 brew install zsh --disable-etcdir       || true
+brew install fish                       || true
 brew install reattach-to-user-namespace || true
 # brew install tmux                       || true
 brew install iyuuya/homebrew-custom/tmux-patched || true
