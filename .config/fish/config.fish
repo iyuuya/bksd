@@ -28,4 +28,7 @@ else
   set -U EDITOR vi
 end
 
+# paths
+source ~/.config/fish/paths.fish
+
 # vim: ft=fish
