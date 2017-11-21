@@ -1,7 +1,7 @@
 "===============================================================================
 " Types: "{{{1
 
-function! EnableJavascript()
+function! <SID>EnableJavascript()
   let g:used_javascript_libs = 'jquery,underscore,react,flux,jasmine,d3'
   let b:javascript_lib_use_jquery = 1
   let b:javascript_lib_use_underscore = 1
@@ -11,7 +11,14 @@ function! EnableJavascript()
   let b:javascript_lib_use_d3 = 1
 endfunction
 
-augroup MyAutoCmd
+function! <SID>SetIndentForRuby()
+  " let g:ruby_indent_access_modifier_style = 'indent'
+  setlocal smartindent autoindent
+  setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+endfunction
+
+augroup MyFileTypes
+  autocmd!
   autocmd BufRead,BufNew *.arb setlocal filetype=ruby
   autocmd BufRead,BufNew *.apib setlocal filetype=apiblueprint
   autocmd BufRead,BufNew *.ts setlocal filetype=typescript
@@ -19,7 +26,8 @@ augroup MyAutoCmd
 
 	autocmd BufRead,BufNew *.go setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
 
-  autocmd FileType javascript,javascript.jsx call EnableJavascript()
+  autocmd FileType javascript,javascript.jsx call <SID>EnableJavascript()
+  autocmd FileType ruby call <SID>SetIndentForRuby()
 augroup END
 
 " }}}1
