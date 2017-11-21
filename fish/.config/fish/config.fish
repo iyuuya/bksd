@@ -31,4 +31,6 @@ end
 # paths
 source ~/.config/fish/paths.fish
 
+fish_vi_key_bindings
+
 # vim: ft=fish
