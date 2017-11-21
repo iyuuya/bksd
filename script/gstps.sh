@@ -10,4 +10,5 @@ gstps ssh &
 gstps tmux &
 gstps zsh &
 gstps vim &
+gspts fish &
 wait
