@@ -138,7 +138,7 @@ function update_prompt() # "{{{2
 {
   # user@host(2012/03/04 05:06)[1.9.3]>>-: "{{{3
   # user@host
-  bar_left_self="%{%F{green}%}%n%{%F{yellow}%}@%{%F{red}%}%m%{%f%}"
+  bar_left_self="%{%F{magenta}%}%n%{%F{cyan}%}@%{%F{blue}%}%m%{%f%}"
   # date: (2012/03/04 05:06)
   bar_left_date="(%D{%Y/%m/%d %H:%M:%S})"
   # rbenv : [1.9.3]
@@ -157,7 +157,7 @@ function update_prompt() # "{{{2
   #   prompt_bar_right="$(git_prompt):"
   # fi
   # -<master:project>
-  prompt_bar_right="[${prompt_bar_right}%{%F{yellow}%}%c%{%f%}]"
+  prompt_bar_right="[${prompt_bar_right}%{%F{blue}%}%c%{%f%}]"
 
   local bar_right_without_path="${prompt_bar_right:s/%d//}"
   local bar_right_without_path_length=$(count_prompt_characters "$bar_right_without_path")
@@ -170,7 +170,7 @@ function update_prompt() # "{{{2
   # user@host(2012/03/04 05:06)[1.9.3]>>-----<master:project>-<<
   # % 
   PROMPT="${bar_left}${bar_right}"$'\n'"${prompt_left}"
-  RPROMPT="[%{%B%F{magenta}%}%~%{%f%b%}]"
+  RPROMPT="[%{%F{blue}%}%~%{%f%}]"
   SPROMPT="%{[31m%}%r is correct? [n,y,a,e]:%{[m%} "
 }
 # "}}}2
