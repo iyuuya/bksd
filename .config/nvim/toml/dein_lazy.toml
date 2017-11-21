@@ -100,3 +100,7 @@ on_ft = ['yaml', 'ansible']
 [[plugins]]
 repo  = 'fatih/vim-go'
 on_ft = 'go'
+
+[[plugins]] # Vim support for editing fish scripts
+repo  = 'dag/vim-fish'
+on_ft = 'fish'

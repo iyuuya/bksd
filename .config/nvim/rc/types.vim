@@ -17,6 +17,12 @@ function! <SID>SetIndentForRuby()
   setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 endfunction
 
+function! <SID>EnableFish()
+  compiler fish
+  setlocal textwidth=79
+  setlocal foldmethod=expr
+endfunction
+
 augroup MyFileTypes
   autocmd!
   autocmd BufRead,BufNew *.arb setlocal filetype=ruby
@@ -25,9 +31,11 @@ augroup MyFileTypes
   autocmd BufRead,BufNew *.vue setlocal filetype=html
 
 	autocmd BufRead,BufNew *.go setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
+  autocmd BufRead,BufNew *.fish setlocal filetype=fish
 
   autocmd FileType javascript,javascript.jsx call <SID>EnableJavascript()
   autocmd FileType ruby call <SID>SetIndentForRuby()
+  autocmd FileType fish call <SID>EnableFish()
 augroup END
 
 " }}}1

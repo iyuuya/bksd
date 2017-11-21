@@ -4,7 +4,11 @@
 if my#iswin()
   set shell=bash
 else
-  set shell=zsh
+  if &shell =~# 'fish$'
+    set shell=sh
+  else
+    set shell=zsh
+  endif
 endif
 
 " }}}1
