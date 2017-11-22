@@ -1,3 +1,0 @@
-#!/bin/sh
-
-tail -q -n +3 ~/.ssh/config.d/* > ~/.ssh/config
