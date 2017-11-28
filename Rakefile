@@ -17,9 +17,7 @@ namespace :bksd do
   end
 end
 
-DotInstallTask.new :ssh do |t|
-  t.add_link 'bin/ssh-config', 'bin/ssh-config'
-end
+DotInstallTask.new :ssh
 DotInstallTask.new :git
 DotInstallTask.new :vim do |t|
   t.add_link 'bin/mvim', 'bin/mvim' if /darwin/ =~ RUBY_PLATFORM
