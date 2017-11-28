@@ -26,7 +26,10 @@ DotInstallTask.new :zsh
 DotInstallTask.new :ruby do |t|
   t.add_link 'default-gems', 'default-gems', ENV['RBENV_ROOT'] || '~/.anyenv/envs/rbenv/'
 end
-DotInstallTask.new :tmux
+DotInstallTask.new :tmux do |t|
+  t.add_link 'bin/loadaverage', 'bin/loadaverage'
+  t.add_link 'bin/used_mem', 'bin/used_mem'
+end
 DotInstallTask.new :nvim
 DotInstallTask.new :node do |t|
   t.add_link 'default-npms', 'default-npms', ENV['NDENV_ROOT'] || '~/.anyenv/envs/ndenv/'
