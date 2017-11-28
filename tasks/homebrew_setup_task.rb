@@ -14,16 +14,16 @@ class HomebrewSetupTask < Rake::TaskLib
     namespace @name do
       desc "#{@name} install"
       task :install do
-        unless open("| which brew 2>/dev/null") { |f| f.gets }
-          system "/usr/bin/ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\""
+        if open('| which brew 2>/dev/null', &:gets)
+          puts 'brew command found!'
         else
-          puts "brew command found!"
+          system '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
         end
       end
 
       desc "#{@name} bundle"
       task :bundle do
-        puts "brew bundle ..."
+        puts 'brew bundle ...'
         system "cd #{@@bksd_dir}/brew; sh Brewfile"
         system "cd #{@@bksd_dir}/brew; sh Caskfile"
       end

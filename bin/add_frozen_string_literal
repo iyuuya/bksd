@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 
-if ARGV.size == 0
+if ARGV.empty?
   STDERR.puts <<-EOS
     usage: #{File.basename($PROGRAM_NAME)} PATH
   EOS
@@ -17,13 +17,13 @@ def get_targets(filenames)
   filenames.map do |filename|
     open(filename) do |f|
       lines = f.each_line.first(10)
-      unless lines.any? { |line| line =~ /frozen_string_literal/ }
+      if lines.any? { |line| line =~ /frozen_string_literal/ }
+        next nil
+      else
         next Hash[
           filename: filename,
           encoding: lines.index { |line| line =~ /encoding|coding/ },
         ]
-      else
-        next nil
       end
     end
   end.compact

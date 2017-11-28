@@ -11,46 +11,46 @@ class DotInstallTask < Rake::TaskLib
     define
   end
 
-  def add_link(src, dst, path="~/")
-    @links[File.join(config_path,src)] = File.join(File.expand_path(path), dst)
+  def add_link(src, dst, path = '~/')
+    @links[File.join(config_path, src)] = File.join(File.expand_path(path), dst)
   end
 
   def config_path
-    File.join(@@bksd_dir,@name.to_s)
+    File.join(@@bksd_dir, @name.to_s)
   end
 
   private
 
   def make_list
-    list = Dir.glob("#{@@bksd_dir}/#{@name}/.*").map{|p|p.sub(config_path, '')}
-    list.delete("/.")
-    list.delete("/..")
-    list.delete("/.git")
-    list.delete("/.gitignore")
-    with_config = list.delete("/.config")
+    list = Dir.glob("#{@@bksd_dir}/#{@name}/.*").map { |p| p.sub(config_path, '') }
+    list.delete('/.')
+    list.delete('/..')
+    list.delete('/.git')
+    list.delete('/.gitignore')
+    with_config = list.delete('/.config')
 
     list.each do |path|
-      add_link path, File.basename(path, "")
+      add_link path, File.basename(path, '')
     end
 
     if with_config
-      list = Dir.glob("#{@@bksd_dir}/#{@name}/.config/*").map{|p| p.sub(config_path, '')}
+      list = Dir.glob("#{@@bksd_dir}/#{@name}/.config/*").map { |p| p.sub(config_path, '') }
       list.each do |path|
-        add_link path, File.basename(path, ""), "~/.config/"
+        add_link path, File.basename(path, ''), '~/.config/'
       end
     end
   end
 
   def force_ln_links
-    @links.each do |src, dst| rm_f dst ; ln_s src, dst end
+    @links.each { |src, dst| rm_f dst; ln_s src, dst }
   end
 
   def print_links
-    @links.each do |src, dst| puts "#{src} -> #{dst}" end
+    @links.each { |src, dst| puts "#{src} -> #{dst}" }
   end
 
   def remove_files
-    @links.each do |src, dst| rm_f dst ; rm_f src, dst end
+    @links.each { |src, dst| rm_f dst; rm_f src, dst }
   end
 
   def define

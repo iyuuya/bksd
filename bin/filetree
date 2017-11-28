@@ -5,40 +5,38 @@
 # Usage: ruby tree.rb filename [options]
 #     -c, --color                      Print directories in colored form.
 
-=begin
-# 入力
-hoge
-fuga
-doc/a
-doc/b
-doc/c ←この辺はディレクトリか判別できないのでファイルとして扱います
-doc/d/
-api/v1/x
-api/v1/y
-api/v1/z
-api/v2/x/
-api/v2/y/
-api/v2/z/
-
+# # 入力
+# hoge
+# fuga
+# doc/a
+# doc/b
+# doc/c ←この辺はディレクトリか判別できないのでファイルとして扱います
+# doc/d/
+# api/v1/x
+# api/v1/y
+# api/v1/z
+# api/v2/x/
+# api/v2/y/
+# api/v2/z/
+#
 # 出力
-.
-├─ hoge
-├─ fuga
-├─ doc/
-│  ├─ a
-│  ├─ b
-│  ├─ c
-│  └─ d/
-└─ api/
-   ├─ v1/
-   │  ├─ x
-   │  ├─ y
-   │  └─ z
-   └─ v2/
-      ├─ x/
-      ├─ y/
-      └─ z/
-=end
+# .
+# ├─ hoge
+# ├─ fuga
+# ├─ doc/
+# │  ├─ a
+# │  ├─ b
+# │  ├─ c
+# │  └─ d/
+# └─ api/
+#    ├─ v1/
+#    │  ├─ x
+#    │  ├─ y
+#    │  └─ z
+#    └─ v2/
+#       ├─ x/
+#       ├─ y/
+#       └─ z/
 
 # CHANGELOG
 # [v0.1.0]
