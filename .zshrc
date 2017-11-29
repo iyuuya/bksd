@@ -18,7 +18,7 @@ if [ ! -d $HOME/.anyenv/plugins/anyenv-update ]; then
 fi
 
 if [ ! -d $HOME/.anyenv/envs/rbenv ]; then
-  anyend install rbenv
+  anyenv install rbenv
 fi
 
 if [ ! -d $HOME/.anyenv/envs/pyenv ]; then
