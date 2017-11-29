@@ -1,7 +1,7 @@
 require 'rake/tasklib'
 
 class DotInstallTask < Rake::TaskLib
-  @@bksd_dir = File.expand_path(File.join(File.dirname(__FILE__), '..'))
+  @@bksd_dir = File.expand_path(File.join(__dir__, '..'))
 
   def initialize(name)
     @name = name
@@ -22,7 +22,7 @@ class DotInstallTask < Rake::TaskLib
   private
 
   def make_list
-    list = Dir.glob("#{@@bksd_dir}/#{@name}/.*").map { |p| p.sub(config_path, '') }
+    list = Dir["#{@@bksd_dir}/#{@name}/.*"].map { |p| p.sub(config_path, '') }
     list.delete('/.')
     list.delete('/..')
     list.delete('/.git')
@@ -34,7 +34,7 @@ class DotInstallTask < Rake::TaskLib
     end
 
     if with_config
-      list = Dir.glob("#{@@bksd_dir}/#{@name}/.config/*").map { |p| p.sub(config_path, '') }
+      list = Dir["#{@@bksd_dir}/#{@name}/.config/*"].map { |p| p.sub(config_path, '') }
       list.each do |path|
         add_link path, File.basename(path, ''), '~/.config/'
       end

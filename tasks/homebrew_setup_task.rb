@@ -1,7 +1,7 @@
 require 'rake/tasklib'
 
 class HomebrewSetupTask < Rake::TaskLib
-  @@bksd_dir = File.expand_path(File.join(File.dirname(__FILE__), '..'))
+  @@bksd_dir = File.expand_path(File.join(__dir__, '..'))
 
   def initialize(name)
     @name = name
