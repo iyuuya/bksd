@@ -9,62 +9,6 @@
 #===============================================================================
 # Aynenv: "{{{1
 
-if [ ! -d $HOME/.anyenv ]; then
-  git clone https://github.com/riywo/anyenv $HOME/.anyenv
-fi
-
-if [ ! -d $HOME/.anyenv/plugins/anyenv-update ]; then
-  git clone https://github.com/znz/anyenv-update $HOME/.anyenv/plugins/anyenv-update
-fi
-
-if [ ! -d $HOME/.anyenv/envs/rbenv ]; then
-  anyenv install rbenv
-fi
-
-if [ ! -d $HOME/.anyenv/envs/pyenv ]; then
-  anyenv install pyenv
-fi
-
-if [ ! -d $HOME/.anyenv/envs/pyenv/plugins/pyenv-default-packages ]; then
-  git clone https://github.com/jawshooah/pyenv-default-packages $HOME/.anyenv/envs/pyenv/plugins/pyenv-default-packages
-fi
-
-if [ ! -d $HOME/.anyenv/envs/pyenv/plugins/pyenv-doctor ]; then
-  git clone https://github.com/yyuu/pyenv-doctor $HOME/.anyenv/envs/pyenv/plugins/pyenv-doctor
-fi
-
-if [ ! -d $HOME/.anyenv/envs/pyenv/plugins/pyenv-update ]; then
-  git clone https://github.com/yyuu/pyenv-update $HOME/.anyenv/envs/pyenv/plugins/pyenv-update
-fi
-
-if [ ! -d $HOME/.anyenv/envs/pyenv/plugins/pyenv-which-ext ]; then
-  git clone https://github.com/yyuu/pyenv-which-ext $HOME/.anyenv/envs/pyenv/plugins/pyenv-which-ext
-fi
-
-if [ ! -d $HOME/.anyenv/envs/pyenv/plugins/pyenv-pip-rehash ]; then
-  git clone https://github.com/yyuu/pyenv-pip-rehash $HOME/.anyenv/envs/pyenv/plugins/pyenv-pip-rehash
-fi
-
-if [ ! -d $HOME/.anyenv/envs/pyenv/plugins/pyenv-virtualenv ]; then
-  git clone https://github.com/yyuu/pyenv-virtualenv $HOME/.anyenv/envs/pyenv/plugins/pyenv-virtualenv
-fi
-
-if [ ! -d $HOME/.anyenv/envs/rbenv/plugins/rbenv-default-gems ]; then
-  git clone https://github.com/rbenv/rbenv-default-gems $HOME/.anyenv/envs/rbenv/plugins/rbenv-default-gems
-fi
-
-if [ ! -d $HOME/.anyenv/envs/ndenv ]; then
-  anyenv install ndenv
-fi
-
-if [ ! -d $HOME/.anyenv/envs/ndenv/plugins/ndenv-default-npms ]; then
-  git clone https://github.com/kaave/ndenv-default-npms $HOME/.anyenv/envs/ndenv/plugins/ndenv-default-npms
-fi
-
-if [ -d $HOME/.anyenv/envs/phpenv ] && [ ! -d $HOME/.anyenv/envs/phpenv/plugins/phpenv-composer ]; then
-  git clone https://github.com/ngyuki/phpenv-composer.git $HOME/.anyenv/envs/phpenv/plugins/phpenv-composer
-fi
-
 [ -f ~/.anyenv/bin/anyenv ] && eval "$(anyenv init - --no-rehash)"
 [ -f ~/.anyenv/envs/pyenv/plugins/pyenv-virtualenv/bin/pyenv-virtualenv ] && eval "$(pyenv virtualenv-init - zsh)"
 
