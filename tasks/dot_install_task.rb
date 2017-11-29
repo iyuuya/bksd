@@ -50,7 +50,7 @@ class DotInstallTask < Rake::TaskLib
   end
 
   def remove_files
-    @links.each { |src, dst| rm_f dst }
+    @links.each_value { |dst| rm_f dst }
   end
 
   def define
