@@ -1,6 +1,7 @@
 require 'fileutils'
 require_relative 'tasks/dot_install_task'
 require_relative 'tasks/homebrew_setup_task'
+require_relative 'tasks/anyenv_setup_task.rb'
 
 namespace :bksd do
   desc 'make ~/bin'
@@ -40,6 +41,7 @@ DotInstallTask.new :python do |t|
 end
 DotInstallTask.new :fish
 
+AnyenvSetupTask.new :anyenv
 HomebrewSetupTask.new :brew
 
-task default: ['bksd:bin_mkdir', 'bksd:bin_link', :brew, :git, :vim, :zsh, :ruby, :tmux, :nvim, :node, :mysql, :fish]
+task default: ['bksd:bin_mkdir', 'bksd:bin_link', :anyenv, :brew, :git, :vim, :zsh, :ruby, :tmux, :nvim, :node, :mysql, :fish]
