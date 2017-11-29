@@ -1,7 +1,7 @@
 require 'fileutils'
 require_relative 'tasks/dot_install_task'
 require_relative 'tasks/homebrew_setup_task'
-require_relative 'tasks/anyenv_setup_task.rb'
+require_relative 'tasks/anyenv_setup_task'
 
 namespace :bksd do
   desc 'make ~/bin'
