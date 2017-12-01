@@ -435,10 +435,12 @@ if dein#tap('switch.vim')
   endfunction "}}}
 
   nnoremap ! :Switch<CR>
+  let g:switch_custom_definitions = [
+        \   ['is', 'are'],
+        \   ['（∩`･ω･）', '（⊃`･ω･）ﾞ'],
+        \   ['( ；´。 ｀；)', '( ；´ワ ｀；)'],
+        \ ]
   let s:switch_definition = {
-        \ '*': [
-        \   ['is', 'are']
-        \ ],
         \ 'ruby,eruby,haml,arb' : [
         \   ['if', 'unless'],
         \   ['while', 'until'],
