@@ -1,1 +1,3 @@
 bundle list | sed -e '1d' | tr -d '*().' | sed -e 's/   \(.*\) [0-9]*/\1/g'
+
+# vim: ft=zsh

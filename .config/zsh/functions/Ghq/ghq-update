@@ -4,3 +4,5 @@ for dir in `ghq list -p`; do
   git pull &
 done
 wait
+
+# vim: ft=zsh

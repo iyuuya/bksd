@@ -9,3 +9,5 @@ if [ $# = 2 ]; then
   w=$2
 fi
 find "$d" -print0 | xargs -0 grep -nE "$w"
+
+# vim: ft=zsh

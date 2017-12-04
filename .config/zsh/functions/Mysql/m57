@@ -4,3 +4,5 @@ brew link mysql
 rm /usr/local/var/mysql
 ln -s /usr/local/var/mysql57 /usr/local/var/mysql
 brew services start mysql
+
+# vim: ft=zsh
