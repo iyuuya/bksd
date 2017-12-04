@@ -1,0 +1,7 @@
+git rev-list --no-merges "${1:-HEAD}" | \
+  while read rev; do
+    echo "$(git show -s --format='%b' $rev | wc -w) words: $rev"
+  done | \
+    sort -rn | head -5
+
+# vim: ft=zsh
