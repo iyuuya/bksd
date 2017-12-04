@@ -3,3 +3,5 @@ if [ $# -ne 1 ]; then
   return
 fi
 git filter-branch -f --index-filter "git rm --ignore-unmatch $1" HEAD
+
+# vim: ft=zsh

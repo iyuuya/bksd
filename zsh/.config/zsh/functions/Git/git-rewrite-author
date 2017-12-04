@@ -19,3 +19,5 @@ then
 else
   git commit-tree \"\$@\";
 fi" $range
+
+# vim: ft=zsh

@@ -14,3 +14,5 @@ File.open('benchmark.tmp.log'){|f|f.each_line{|line|ks.zip(line.split.map(&:to_f
 ss.each{|k,v|puts"#{k.to_s.ljust(7)}: #{v/i}"}
 EOS
 rm benchmark.tmp.log
+
+# vim: ft=zsh
