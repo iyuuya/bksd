@@ -1,52 +1,48 @@
-brew install caskroom/cask/brew-cask || true
+tap "caskroom/cask"
 
-brew cask install xquartz       || true
-brew cask install karabiner     || true
+cask "xquartz"
+# cask "atom"
+# cask "emacs"
+# cask install https://raw.githubusercontent.com/iyuuya/brew-config/master/Casks/macvim-kaoriya.rb || true
+cask "iterm2"
+cask "blender"
+cask "butter"
+cask "evernote"
+cask "firefox"
+cask "google-chrome"
+cask "flip4mac"
+cask "franz"
+cask "gimp"
+cask "inkscape"
+cask "karabiner"
+cask "keycastr"
+cask "licecap"
+cask "limechat"
+cask "linein"
+cask "macvim-kaoriya"
+cask "pg-commander"
+cask "rdm"
+cask "sequel-pro"
+cask "shoes"
+cask "skitch"
+cask "vagrant"
+cask "virtualbox"
+cask "vlc"
+cask "wireshark"
+cask "dropbox"
+# cask "github"
 
-brew cask install alfred        || true
-brew cask install iterm2        || true
+# cask "butter"
+# cask "gitter"
+# cask "hipchat"
+# cask "skype"
+# cask "slack"
 
-brew cask install firefox       || true
-brew cask install google-chrome || true
-
-brew cask install virtualbox    || true
-brew cask install vagrant       || true
-brew cask install dockertoolbox || true
-brew cask install github        || true
-brew cask install shoes         || true
-
-brew cask install dropbox       || true
-brew cask install evernote      || true
-
-brew cask install flip4mac      || true
-brew cask install linein        || true
-brew cask install vlc           || true
-brew cask install skitch        || true
-brew cask install gimp          || true
-brew cask install inkscape      || true
-brew cask install blender       || true
-brew cask install licecap       || true
-brew cask keycast               || true
-brew cask keycastr              || true
-
-brew cask install sequel-pro    || true
-# brew cask install navicat-for-sqlite     || true
-# brew cask install navicat-for-postgresql || true
-brew cask install pg-commander  || true
-brew cask install rdm           || true
-brew cask install robomongo     || true
-
-brew cask install franz     || true
-brew cask install slack     || true
-brew cask install butter    || true
-brew cask install limechat  || true
-# brew cask install skype   || true
-# brew cask install hipchat || true
-# brew cask install gitter  || true
-
-brew cask install https://raw.githubusercontent.com/iyuuya/brew-config/master/Casks/macvim-kaoriya.rb || true
-# brew cask install emacs       || true
-# brew cask install atom        || true
+# brew cask install dockertoolbox || true
+# brew cask install navicat-for-postgresql || true #
+# brew cask install navicat-for-sqlite     || true #
+# brew cask install pg-commander  || true
+# brew cask install robomongo     || true
 
 brew cask update  || true
 brew cask cleanup || true
