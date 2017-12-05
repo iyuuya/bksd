@@ -1,13 +1,16 @@
 # tap
 tap "heroku/brew"
-tap "homebrew/science"
 tap "homebrew/core"
 tap "homebrew/versions"
 tap "homebrew/binary"
 tap "homebrew/bundle"
 tap "homebrew/services"
+tap "homebrew/science"
+tap "caskroom/cask"
 tap "sanemat/font"
 tap "neovim/neovim"
+
+cask "xquartz"
 
 brew "readline"
 brew "libffi"
@@ -140,5 +143,48 @@ brew "unoconv"
 brew "watchman"
 brew "yarn"
 brew "sanemat/font/ricty"
+
+# cask "atom"
+# cask "emacs"
+# cask install https://raw.githubusercontent.com/iyuuya/brew-config/master/Casks/macvim-kaoriya.rb || true
+cask "iterm2"
+cask "blender"
+cask "butter"
+cask "evernote"
+cask "firefox"
+cask "google-chrome"
+cask "flip4mac"
+cask "franz"
+cask "gimp"
+cask "inkscape"
+cask "karabiner"
+cask "keycastr"
+cask "licecap"
+cask "limechat"
+cask "linein"
+cask "macvim-kaoriya"
+cask "pg-commander"
+cask "rdm"
+cask "sequel-pro"
+cask "shoes"
+cask "skitch"
+cask "vagrant"
+cask "virtualbox"
+cask "vlc"
+cask "wireshark"
+cask "dropbox"
+# cask "github"
+
+# cask "butter"
+# cask "gitter"
+# cask "hipchat"
+# cask "skype"
+# cask "slack"
+
+# brew cask install dockertoolbox || true
+# brew cask install navicat-for-postgresql || true #
+# brew cask install navicat-for-sqlite     || true #
+# brew cask install pg-commander  || true
+# brew cask install robomongo     || true
 
 # vim: ft=conf
