@@ -1,140 +1,144 @@
-# taps
-brew tap homebrew/versions || true
-brew tap homebrew/binary   || true
-brew tap homebrew/services || true
-# brew tap homebrew/bundle   || true
+# tap
+tap "heroku/brew"
+tap "homebrew/science"
+tap "homebrew/core"
+tap "homebrew/versions"
+tap "homebrew/binary"
+tap "homebrew/bundle"
+tap "homebrew/services"
+tap "sanemat/font"
+tap "neovim/neovim"
 
-brew update  || true
-brew upgrade || true
+brew "readline"
+brew "libffi"
+brew "pkg-config"
+brew "pcre"
+brew "automake"
+brew "libtool"
+brew "autoconf"
 
-brew install readline   || true
-brew install libffi     || true
-brew install pkg-config || true
-brew install pcre       || true
-
-brew install openssl         || true
-brew install curl --with-ssl || true
-brew install w3m             || true
-brew install ctags           || true
-brew install gnu-sed         || true
+brew "openssl"
+brew "curl", args: ["with-openssl"]
+brew "boost"
+brew "w3m"
+brew "ctags"
+brew "gnu-sed"
 
 # for PHP
-brew install libevent || true
-brew install libjpeg  || true
-brew install libpng   || true
-brew install mcrypt   || true
-brew install libtool  || true
-brew install autoconf || true
-brew install libxml2  || true
-brew install lemon    || true
-brew install re2c     || true
+brew "libevent"
+brew "jpeg"
+brew "openjpeg"
+brew "libpng"
+brew "mcrypt"
+brew "libxml2"
+brew "lemon"
+brew "re2c"
 
-brew install git --with-brewed-curl --with-brewed-openssl --with-gettext --with-pcre || true
-brew install git-cal    || true
-brew install git-extras || true
-brew install git-flow   || true
-brew install git-now    || true
-brew install git-lfs    || true
-brew install hub        || true
-brew install tig        || true
-brew install gibo       || true
+brew "git", args: ["with-curl", "with-gettext", "with-openssl", "with-pcre2"]
+brew "git-cal"
+brew "git-extras"
+brew "git-flow"
+brew "git-lfs"
+brew "git-now"
+brew "hub"
+brew "tig"
+brew "gibo"
 
-brew install tree                       || true
-brew install zsh --disable-etcdir       || true
-brew install fish                       || true
-brew install reattach-to-user-namespace || true
-# brew install tmux                       || true
-brew install iyuuya/homebrew-custom/tmux-patched || true
-brew install pv                         || true
-brew install global                     || true
-brew install htop-osx                   || true
-brew install nmap                       || true
-brew install jq                         || true
-brew install ag                         || true
-brew install fzf                        || true
-brew install asciidoc                   || true
-brwe install source-highlight           || true
-brew install ccat                       || true
-brew install colordiff                  || true
-brew install dfc                        || true
+brew "tree"
+brew "zsh", args: ["without-etcdir"]
+brew "bash"
+brew "fish"
+brew "reattach-to-user-namespace"
+brew "tmux"
+brew "pv"
+brew "global"
+brew "htop"
+brew "nmap"
+brew "jq"
+brew "the_silver_searcher"
+brew "fzf"
+brew "asciidoc"
+brew "source-highlight"
+brew "ccat"
+brew "colordiff"
+brew "dfc"
 
-brew install fontforge --with-cairo --with-python             || true
-brew install graphviz --with-freetype                         || true
-brew install imagemagick --with-fontconfig --with-ghostscript || true
-brew install qt                                               || true
+brew "cairo"
+brew "pango"
+brew "freetype"
+brew "fontforge"
+brew "graphviz", args: ["with-freetype"]
+brew "ghostscript"
+brew "imagemagick@6", link: true, args: ["with-fontconfig", "with-ghostscript", "with-librsvg", "with-little-cms2", "with-openjpeg", "with-pango", "with-webp"]
+brew "qt"
+brew "qt@5.5", link: true
 
-brew install mysql      || true
-brew install mycli      || true
-brew install sqlite     || true
-brew install redis      || true
+brew "mycli"
+brew "mysql", restart_service: true
+brew "mysql@5.6"
+brew "postgresql", restart_service: true
+brew "sqlite"
+brew "redis", restart_service: true
 
-brew tap homebrew/science  || true
-brew install R || true
+brew "neovim"
 
-brew install packer || true
+# science
+brew "r"
 
-brew install cmatrix || true
+brew "packer"
+brew "cmatrix"
 
-# 未整理
-brew install boost                 || true
-brew install ansible               || true
-brew install harfbuzz              || true
-brew install openjpeg              || true
-brew install automake              || true
-brew install icu4c                 || true
-brew install pango                 || true
-brew install bdw-gc                || true
-brew install isl                   || true
-brew install pdf2svg               || true
-brew install jbig2dec              || true
-brew install pixman                || true
-brew install cairo                 || true
-brew install jpeg                  || true
-brew install plantuml              || true
-brew install cmake                 || true
-brew install poppler               || true
-brew install libgit2               || true
-brew install libiconv              || true
-brew install czmq                  || true
-brew install libmpc                || true
-brew install docbook               || true
-brew install libsodium             || true
-brew install elixir                || true
-brew install libsvg                || true
-brew install libsvg-cairo          || true
-brew install erlang                || true
-brew install fontconfig            || true
-brew install libtiff               || true
-brew install ricty                 || true
-brew install scons                 || true
-brew install freetype              || true
-brew install gcc                   || true
-brew install libxslt               || true
-brew install gdbm                  || true
-brew install libyaml               || true
-brew install terminal-notifier     || true
-brew install gettext               || true
-brew install little-cms2           || true
-brew install the_silver_searcher   || true
-brew install ghostscript           || true
-brew install mhash                 || true
-brew install mono                  || true
-brew install mpfr                  || true
-brew install unixodbc              || true
-brew install unoconv               || true
-brew install glib                  || true
-brew install ncurses               || true
-brew install neovim/neovim/neovim  || true
-brew install wxmac                 || true
-brew install nkf                   || true
-brew install xz                    || true
-brew install gobject-introspection || true
-brew install zeromq                || true
-brew install oniguruma             || true
-brew install svn                   || true
-brew install librsvg               || true
-brew install ffmpeg                || true
+brew "ansible"
 
-brew cleanup || true
+brew "libyaml"
+brew "gdbm"
+brew "docbook"
+brew "bdw-gc"
+brew "gettext"
+brew "pixman"
+brew "chromedriver"
+brew "cmake"
+brew "zeromq"
+brew "czmq"
+brew "wxmac"
+brew "erlang"
+brew "elixir"
+brew "ffmpeg"
+brew "gobject-introspection"
+brew "icu4c"
+brew "isl"
+brew "mpfr"
+brew "libmpc"
+brew "gcc"
+brew "geckodriver"
+brew "global"
+brew "heroku"
+brew "xz"
+brew "jbig2dec"
+brew "oniguruma"
+brew "libgit2"
+brew "libiconv"
+brew "libmagic"
+brew "librsvg"
+brew "libsodium"
+brew "libsvg"
+brew "libsvg-cairo"
+brew "libxslt"
+brew "mhash"
+brew "mono"
+brew "ncurses"
+brew "nkf"
+brew "poppler"
+brew "pdf2svg"
+brew "scons"
+brew "shellcheck"
+brew "subversion"
+brew "terminal-notifier"
+brew "unar"
+brew "unixodbc"
+brew "unoconv"
+brew "watchman"
+brew "yarn"
+brew "sanemat/font/ricty"
 
 # vim: ft=conf
