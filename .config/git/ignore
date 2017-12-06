@@ -126,3 +126,7 @@ cscope.po.out
 
 # Rubocop
 .rubocop_todo.yml
+
+
+# JetBrains
+.idea
