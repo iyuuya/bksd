@@ -201,21 +201,34 @@ zle -N history-beginning-search-forward-end history-search-end
 #===============================================================================
 # Function: "{{{1
 
-autoload -Uz reload
-autoload -Uz search
-autoload -Uz benchmark
+# Benchmark
 autoload -Uz b100
-autoload -Uz switch-user
-alias sw=switch-user
+autoload -Uz benchmark
+# Ghq
 autoload -Uz ghq-update
-autoload -Uz bundle-gemname-list
-autoload -Uz db_reset
+# Git
+autoload -Uz git-force-remove-dir
+autoload -Uz git-force-remove-dir-all
+autoload -Uz git-force-remove-file
+autoload -Uz git-force-remove-file-all
+autoload -Uz git-longest-message
 autoload -Uz git-rewrite-author
 autoload -Uz git-rewrite-author2
-autoload -Uz git-force-remove-file
-autoload -Uz git-force-remove-dir
-autoload -Uz git-force-remove-file-all
-autoload -Uz git-force-remove-dir-all
+# Mysql
+autoload -Uz m56
+autoload -Uz m57
+# Postgresql
+autoload -Uz psql_resetdb
+# Reload
+autoload -Uz reload
+# Ruby
+autoload -Uz bundle-gemname-list
+autoload -Uz db_reset
+# Search
+autoload -Uz search
+# SwitchUser
+autoload -Uz switch-user
+alias sw=switch-user
 
 # "}}}1
 #===============================================================================
