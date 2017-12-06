@@ -1,0 +1,9 @@
+# ~/.tmuxinator/cigalog.yml
+
+name: cigalog
+root: ~/.ghq/github.com/iyuuya/cigalog
+
+windows:
+  - nvim: nvim
+  - console:
+  - server: bin/rails s
