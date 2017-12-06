@@ -1,6 +1,6 @@
 brew services stop mysql
 brew unlink mysql
-brew link mysql@5.6
+brew link --force mysql@5.6
 rm /usr/local/var/mysql
 ln -s /usr/local/var/mysql56 /usr/local/var/mysql
 brew services start mysql@5.6
