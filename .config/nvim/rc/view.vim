@@ -124,6 +124,9 @@ set report=0
 " Don't redraw while macro executing.
 set lazyredraw
 
+set conceallevel=0
+set concealcursor=
+
 " }}}1
 "===============================================================================
 " vim: foldmethod=marker
