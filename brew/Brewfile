@@ -143,6 +143,7 @@ brew "unoconv"
 brew "watchman"
 brew "yarn"
 brew "sanemat/font/ricty"
+brew "octave"
 
 # cask "atom"
 # cask "emacs"
