@@ -49,6 +49,7 @@ brew "gibo"
 
 brew "tree"
 brew "zsh", args: ["without-etcdir"]
+brew "zsh-completions"
 brew "bash"
 brew "fish"
 brew "reattach-to-user-namespace"
