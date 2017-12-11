@@ -17,22 +17,23 @@
 
 source ~/.config/zsh/options.zsh
 
+case ${OSTYPE} in
+  darwin*)
+    fpath=(
+      /usr/local/share/zsh-completions(N-/)
+      $HOME/.config/zsh/completions(N-/)
+      $HOME/.config/zsh/functions/*(N-/)
+      $fpath
+    )
+    ;;
+esac
+
 autoload -Uz compinit
 if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
   compinit
 else
   compinit -C
 fi
-
-case ${OSTYPE} in
-  darwin*)
-    fpath=(
-      /usr/local/share/zsh-completions(N-/)
-      $HOME/.config/zsh/functions/*(N-/)
-      $fpath
-    )
-    ;;
-esac
 
 cdpath=($HOME)
 chpwd_functions=($chpwd_functions dirs)
