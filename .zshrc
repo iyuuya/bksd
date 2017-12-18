@@ -20,7 +20,6 @@ source ~/.config/zsh/options.zsh
 case ${OSTYPE} in
   darwin*)
     fpath=(
-      /usr/local/share/zsh-completions(N-/)
       $HOME/.config/zsh/completions(N-/)
       $HOME/.config/zsh/functions/*(N-/)
       $fpath
