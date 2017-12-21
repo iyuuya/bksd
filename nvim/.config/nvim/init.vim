@@ -27,8 +27,8 @@ source ~/.config/nvim/rc/plugins.vim
 " Enable syntax color.
 syntax on
 
-" Enable mouse support.
-set mouse=a
+" Disable mouse support.
+set mouse=
 
 " Use Japanese or English help.
 " 真のVimmerはen
