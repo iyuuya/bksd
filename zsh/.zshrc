@@ -226,6 +226,9 @@ autoload -Uz bundle-gemname-list
 autoload -Uz db_reset
 # Search
 autoload -Uz search
+# Ssh
+autoload -Uz peco-ssh
+alias pssh=peco-ssh
 # SwitchUser
 autoload -Uz switch-user
 alias sw=switch-user
