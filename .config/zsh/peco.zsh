@@ -106,6 +106,16 @@ function peco-tmux-session() {
   fi
 }
 
+function peco-rbenv-shell() {
+  local selected
+  selected=$(rbenv versions --bare | peco)
+  if [ -n "$selected" ];then
+    BUFFER="rbenv shell ${selected}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+
 alias -g P='| peco'
 alias pcd=peco-cd
 alias pvd=peco-vim-neomru
@@ -118,8 +128,9 @@ zle -N peco-git-branch
 zle -N peco-git-checkout
 zle -N peco-tmux-session
 zle -N peco-xdg-config
+zle -N peco-rbenv-shell
 
-bindkey '^r' peco-history
+bindkey '^r'  peco-history
 bindkey '^gg' peco-ghq
 bindkey '^gm' peco-ghq-my
 bindkey '^gl' peco-git-log
@@ -127,3 +138,4 @@ bindkey '^gb' peco-git-branch
 bindkey '^gc' peco-git-checkout
 bindkey '^gf' peco-xdg-config
 bindkey '^ts' peco-tmux-session
+bindkey '^rs' peco-rbenv-shell
