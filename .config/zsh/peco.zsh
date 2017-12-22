@@ -116,6 +116,16 @@ function peco-rbenv-shell() {
   zle clear-screen
 }
 
+function peco-rbenv-install() {
+  local selected
+  selected=$(rbenv install -l -s | sed -e '1d' | peco)
+  if [ -n "$selected" ]; then
+    BUFFER="rbenv install ${selected}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+
 alias -g P='| peco'
 alias pcd=peco-cd
 alias pvd=peco-vim-neomru
@@ -129,6 +139,7 @@ zle -N peco-git-checkout
 zle -N peco-tmux-session
 zle -N peco-xdg-config
 zle -N peco-rbenv-shell
+zle -N peco-rbenv-install
 
 bindkey '^r'  peco-history
 bindkey '^gg' peco-ghq
@@ -139,3 +150,4 @@ bindkey '^gc' peco-git-checkout
 bindkey '^gf' peco-xdg-config
 bindkey '^ts' peco-tmux-session
 bindkey '^rs' peco-rbenv-shell
+bindkey '^ri' peco-rbenv-install
