@@ -1,0 +1,8 @@
+local selected
+selected=$(cat ~/.ssh/config ~/.ssh/conf.d/* | grep '^Host \w\+' | sed -e 's/Host//' -e 's/ /\n/g' | sort -u | sed -e '1d' | peco)
+if [ -n "$selected" ]; then
+  echo "ssh $selected"
+  eval "ssh $selected"
+fi
+
+# vim: ft=zsh
