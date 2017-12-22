@@ -126,6 +126,26 @@ function peco-rbenv-install() {
   zle clear-screen
 }
 
+function peco-ndenv-shell() {
+  local selected
+  selected=$(ndenv versions --bare | peco)
+  if [ -n "$selected" ];then
+    BUFFER="ndenv shell ${selected}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+
+function peco-ndenv-install() {
+  local selected
+  selected=$(ndenv install -l | grep -v 'iojs' | sed -e '1d' -e 's/v//' | peco)
+  if [ -n "$selected" ]; then
+    BUFFER="ndenv install ${selected}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+
 alias -g P='| peco'
 alias pcd=peco-cd
 alias pvd=peco-vim-neomru
@@ -140,6 +160,8 @@ zle -N peco-tmux-session
 zle -N peco-xdg-config
 zle -N peco-rbenv-shell
 zle -N peco-rbenv-install
+zle -N peco-ndenv-shell
+zle -N peco-ndenv-install
 
 bindkey '^r'  peco-history
 bindkey '^gg' peco-ghq
@@ -151,6 +173,8 @@ bindkey '^gf' peco-xdg-config
 bindkey '^ts' peco-tmux-session
 bindkey '^rs' peco-rbenv-shell
 bindkey '^ri' peco-rbenv-install
+bindkey '^ns' peco-ndenv-shell
+bindkey '^ni' peco-ndenv-install
 
 function peco-bindkeys() {
   echo '^r  peco-history'
@@ -163,4 +187,6 @@ function peco-bindkeys() {
   echo '^ts peco-tmux-session'
   echo '^rs peco-rbenv-shell'
   echo '^ri peco-rbenv-install'
+  echo '^rs peco-ndenv-shell'
+  echo '^ri peco-ndenv-install'
 }
