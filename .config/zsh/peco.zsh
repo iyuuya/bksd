@@ -151,3 +151,16 @@ bindkey '^gf' peco-xdg-config
 bindkey '^ts' peco-tmux-session
 bindkey '^rs' peco-rbenv-shell
 bindkey '^ri' peco-rbenv-install
+
+function peco-bindkeys() {
+  echo '^r  peco-history'
+  echo '^gg peco-ghq'
+  echo '^gm peco-ghq-my'
+  echo '^gl peco-git-log'
+  echo '^gb peco-git-branch'
+  echo '^gc peco-git-checkout'
+  echo '^gf peco-xdg-config'
+  echo '^ts peco-tmux-session'
+  echo '^rs peco-rbenv-shell'
+  echo '^ri peco-rbenv-install'
+}
