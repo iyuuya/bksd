@@ -187,6 +187,6 @@ function peco-bindkeys() {
   echo '^ts peco-tmux-session'
   echo '^rs peco-rbenv-shell'
   echo '^ri peco-rbenv-install'
-  echo '^rs peco-ndenv-shell'
-  echo '^ri peco-ndenv-install'
+  echo '^ns peco-ndenv-shell'
+  echo '^ni peco-ndenv-install'
 }
