@@ -350,9 +350,7 @@ src $HOME/.travis/travis.sh
 # "}}}1
 #===============================================================================
 
-# source ~/.config/zsh/iterm2_shell_integration.zsh
-
-src $HOME/.zshrc.local
+src $HOME/.iterm2_shell_integration.zsh
 
 if [ ! -f ~/.zshrc.zwc -o ~/.zshrc -nt ~/.zshrc.zwc ]; then
   zcompile ~/.zshrc
