@@ -39,9 +39,11 @@ class AnyenvSetupTask < Rake::TaskLib
         goenv: []
       }.each do |xxenv, plugins|
         define_install_xxenv(xxenv)
-        plugins.each do |plugin|
+        plugin_tasks = plugins.map do |plugin|
           define_install_xxenv_plugin(xxenv, plugin[:name], plugin[:repository])
         end
+        desc "install #{xxenv} plugins"
+        task "install_#{xxenv}_plugins" => plugin_tasks
       end
     end
 
@@ -85,6 +87,7 @@ class AnyenvSetupTask < Rake::TaskLib
       end
     end
     @anyenv_tasks << "anyenv:#{task_name}"
+    task_name
   end
 
   def define_install_xxenv_plugin(xxenv, name, repository)
@@ -99,5 +102,6 @@ class AnyenvSetupTask < Rake::TaskLib
       end
     end
     @anyenv_tasks << "anyenv:#{task_name}"
+    task_name
   end
 end
