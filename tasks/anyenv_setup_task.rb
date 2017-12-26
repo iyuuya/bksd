@@ -19,22 +19,22 @@ class AnyenvSetupTask < Rake::TaskLib
 
       {
         rbenv: [
-          { name: 'rbenv-default-gems', repository: 'https://github.com/rbenv/rbenv-default-gems' },
-          { name: 'rbenv-each', repository: 'https://github.com/rbenv/rbenv-each' }
+          { name: 'rbenv-default-gems', repository: 'rbenv/rbenv-default-gems' },
+          { name: 'rbenv-each', repository: 'rbenv/rbenv-each' }
         ],
         pyenv: [
-          { name: 'pyenv-default-packages', repository: 'https://github.com/jawshooah/pyenv-default-packages' },
-          { name: 'pyenv-doctor', repository: 'https://github.com/yyuu/pyenv-doctor' },
-          { name: 'pyenv-update', repository: 'https://github.com/yyuu/pyenv-update' },
-          { name: 'pyenv-which-ext', repository: 'https://github.com/yyuu/pyenv-which-ext' },
-          { name: 'pyenv-pip-rehash', repository: 'https://github.com/yyuu/pyenv-pip-rehash' },
-          { name: 'pyenv-virtualenv', repository: 'https://github.com/yyuu/pyenv-virtualenv' }
+          { name: 'pyenv-default-packages', repository: 'jawshooah/pyenv-default-packages' },
+          { name: 'pyenv-doctor', repository: 'yyuu/pyenv-doctor' },
+          { name: 'pyenv-update', repository: 'yyuu/pyenv-update' },
+          { name: 'pyenv-which-ext', repository: 'yyuu/pyenv-which-ext' },
+          { name: 'pyenv-pip-rehash', repository: 'yyuu/pyenv-pip-rehash' },
+          { name: 'pyenv-virtualenv', repository: 'yyuu/pyenv-virtualenv' }
         ],
         ndenv: [
-          { name: 'ndenv-default-npms', repository: 'https://github.com/kaave/ndenv-default-npms' }
+          { name: 'ndenv-default-npms', repository: 'kaave/ndenv-default-npms' }
         ],
         phpenv: [
-          { name: 'phpenv-composer', repository: 'https://github.com/ngyuki/phpenv-composer' }
+          { name: 'phpenv-composer', repository: 'ngyuki/phpenv-composer' }
         ],
         goenv: []
       }.each do |xxenv, plugins|
@@ -53,11 +53,7 @@ class AnyenvSetupTask < Rake::TaskLib
   def define_install_anyenv
     desc 'install anyenv'
     task :install do
-      if Dir.exist?(@anyenv_home)
-        puts 'anyenv exist'
-      else
-        system "git clone https://github.com/riywo/anyenv #{@anyenv_home}"
-      end
+      github 'riywo/anyenv', @anyenv_home
     end
     @anyenv_tasks << 'anyenv:install'
   end
@@ -66,11 +62,7 @@ class AnyenvSetupTask < Rake::TaskLib
     desc 'install anyenv plugins'
     task :install_plugins do
       path = @anyenv_home.join('plugins/anyenv-update')
-      if Dir.exist?(path)
-        puts 'anyenv-update exist'
-      else
-        system "git clone https://github.com/znz/anyenv-update #{path}"
-      end
+      github 'znz/anyenv-update', path
     end
     @anyenv_tasks << 'anyenv:install_plugins'
   end
@@ -80,7 +72,7 @@ class AnyenvSetupTask < Rake::TaskLib
     desc "install #{xxenv} on anyenv"
     task task_name do
       path = @anyenv_home.join("envs/#{xxenv}")
-      if Dir.exist?(path)
+      if path.exist?
         puts "#{xxenv} exist"
       else
         system "PATH=~/.anyenv/bin:$PATH eval \"$(anyenv init - --no-rehash)\"; anyenv install #{xxenv}"
@@ -95,13 +87,17 @@ class AnyenvSetupTask < Rake::TaskLib
     desc "install #{name} (#{xxenv} plugin)"
     task task_name do
       path = @anyenv_home.join("envs/#{xxenv}/plugins/#{name}")
-      if Dir.exist?(path)
-        puts "#{name} exist"
-      else
-        system "git clone #{repository} #{path}"
-      end
+      github repository, path
     end
     @anyenv_tasks << "anyenv:#{task_name}"
     task_name
+  end
+
+  def github(repo, path, check = true)
+    if check && path.exist?
+      puts "#{repo} exist"
+      return
+    end
+    system "git clone https://github.com/#{repo} #{path}"
   end
 end
