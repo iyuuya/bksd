@@ -24,8 +24,7 @@ class HomebrewSetupTask < Rake::TaskLib
       desc "#{@name} bundle"
       task :bundle do
         puts 'brew bundle ...'
-        system "cd #{@@bksd_dir}/brew; sh Brewfile"
-        system "cd #{@@bksd_dir}/brew; sh Caskfile"
+        system "cd #{@@bksd_dir}/brew; brew bundle"
       end
     end
   end
