@@ -19,7 +19,8 @@ class AnyenvSetupTask < Rake::TaskLib
 
       {
         rbenv: [
-          { name: 'rbenv-default-gems', repository: 'https://github.com/rbenv/rbenv-default-gems' }
+          { name: 'rbenv-default-gems', repository: 'https://github.com/rbenv/rbenv-default-gems' },
+          { name: 'rbenv-each', repository: 'https://github.com/rbenv/rbenv-each' }
         ],
         pyenv: [
           { name: 'pyenv-default-packages', repository: 'https://github.com/jawshooah/pyenv-default-packages' },
