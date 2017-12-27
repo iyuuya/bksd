@@ -61,8 +61,7 @@ class AnyenvSetupTask < Rake::TaskLib
   def define_install_anyenv_plugins
     desc 'install anyenv plugins'
     task :install_plugins do
-      path = @anyenv_home.join('plugins/anyenv-update')
-      github 'znz/anyenv-update', path
+      github 'znz/anyenv-update', @anyenv_home.join('plugins/anyenv-update')
     end
     @anyenv_tasks << 'anyenv:install_plugins'
   end
@@ -71,8 +70,7 @@ class AnyenvSetupTask < Rake::TaskLib
     task_name = "install_#{xxenv}"
     desc "install #{xxenv} on anyenv"
     task task_name do
-      path = @anyenv_home.join("envs/#{xxenv}")
-      if path.exist?
+      if @anyenv_home.join("envs/#{xxenv}").exist?
         puts "#{xxenv} exist"
       else
         system "PATH=~/.anyenv/bin:$PATH eval \"$(anyenv init - --no-rehash)\"; anyenv install #{xxenv}"
@@ -86,8 +84,7 @@ class AnyenvSetupTask < Rake::TaskLib
     task_name = "install_#{xxenv}_plugin_#{name}"
     desc "install #{name} (#{xxenv} plugin)"
     task task_name do
-      path = @anyenv_home.join("envs/#{xxenv}/plugins/#{name}")
-      github repository, path
+      github repository, @anyenv_home.join("envs/#{xxenv}/plugins/#{name}")
     end
     @anyenv_tasks << "anyenv:#{task_name}"
     task_name
