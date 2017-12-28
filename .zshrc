@@ -81,7 +81,7 @@ function update_prompt() # "{{{2
 {
   # user@host(2012/03/04 05:06)[1.9.3]>>-: "{{{3
   # user@host
-  bar_left_self="%{%F{magenta}%}%n%{%F{cyan}%}@%{%F{blue}%}%m%{%f%}"
+  bar_left_self="%{%F{magenta}%}$USER%{%F{cyan}%}@%{%F{blue}%}%m%{%f%}"
   # date: (2012/03/04 05:06)
   bar_left_date="(%D{%Y/%m/%d %H:%M:%S})"
   # rbenv : [1.9.3]
