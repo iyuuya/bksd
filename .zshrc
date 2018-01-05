@@ -356,7 +356,10 @@ if [ ! -f ~/.zshrc.zwc -o ~/.zshrc -nt ~/.zshrc.zwc ]; then
   zcompile ~/.zshrc
 fi
 
+src $HOME/.zshrc.local
+
 if type zprof > /dev/null 2>&1; then
   zprof | less
 fi
+
 # vim: ft=zsh fdm=marker et sw=2 sts=2 ts=2
