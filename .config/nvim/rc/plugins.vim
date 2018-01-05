@@ -7,6 +7,7 @@
 " http://tti.matrix.jp/blog/2016-04-19/dein-vim%E3%81%A7%E6%9C%AA%E4%BD%BF%E7%94%A8%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%82%92%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9A%E7%BE%A9/
 " DeinClean command
 command! -bang DeinClean call s:dein_clean(<bang>0)
+command! DeinUpdate call dein#update()
 
 function! s:dein_clean(force) abort "{{{
   let l:del_all = a:force
