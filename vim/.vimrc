@@ -54,7 +54,10 @@ call my#mkdir_p(g:vim_tmp_directory)
 
 " environment variables.
 if !exists('$MYVIMRC')
-  let $MYVIMRC = expand($MYVIMFILES . 'init.vm')
+  let $MYVIMRC = expand($HOME . '/.vimrc')
+endif
+if !exists('$MYGVIMRC')
+  let $MYGVIMRC = expand($HOME . '/.gvimrc')
 endif
 
 augroup MyAutoCmd
