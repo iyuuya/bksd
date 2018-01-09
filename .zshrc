@@ -302,8 +302,11 @@ fi
 alias nv='vim -u NONE'
 alias v='nvim'
 alias e='nvim'
-#alias vv='/usr/local/bin/vim'
-alias vv='vim'
+if type /usr/local/bin/vim > /dev/null 2>&1; then
+  alias vv='/usr/local/bin/vim'
+else
+  alias vv='vim'
+fi
 compdef v=nvim
 compdef e=nvim
 compdef vv=vim
