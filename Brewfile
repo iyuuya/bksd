@@ -84,6 +84,7 @@ brew "sqlite"
 brew "redis", restart_service: true
 
 brew "neovim"
+brew "emacs", args: ["with-cocoa", "with-imagemagick@6", "with-librsvg"]
 
 # science
 brew "r"
@@ -146,7 +147,6 @@ brew "sanemat/font/ricty"
 brew "octave"
 
 # cask "atom"
-# cask "emacs"
 # cask install https://raw.githubusercontent.com/iyuuya/brew-config/master/Casks/macvim-kaoriya.rb || true
 cask "iterm2"
 cask "blender"
