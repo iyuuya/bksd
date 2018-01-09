@@ -4,10 +4,6 @@
 "-------------------------------------------------------------------------------
 " Initialize Options: "{{{2
 
-if exists('$SUDO_USER')
-  finish
-endif
-
 " Enable no Vi compatible commands.
 if &compatible && has('vim_starting')
   set nocompatible
