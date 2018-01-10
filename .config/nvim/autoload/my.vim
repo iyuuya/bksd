@@ -26,7 +26,7 @@ endfunction
 
 function! my#mkdir_p(path)
   if !isdirectory(a:path)
-    call mkdir(a:path)
+    call mkdir(a:path, 'p')
   endif
 endfunction
 
