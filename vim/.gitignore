@@ -1,1 +1,3 @@
-.config/vim/tmp
+.vim/vimrc
+.vim/gvimrc
+.vim/pack
