@@ -1,24 +1,24 @@
 "===============================================================================
 " Edit: "{{{1
 
-" call my#mkdir_p(g:vim_tmp_directory.'/backup')
-" call my#mkdir_p(g:vim_tmp_directory.'/swap')
-" call my#mkdir_p(g:vim_tmp_directory.'/undo')
+call my#mkdir_p(expand('~/.local/share/vim/backup'))
+call my#mkdir_p(expand('~/.local/share/vim/swap'))
+call my#mkdir_p(expand('~/.local/share/vim/undo'))
 
 " Create backup files.
 set backup
 set nowritebackup
-let &backupdir=expand('~/.cache/vim/backup')
+let &backupdir=expand('~/.local/share/vim/backup')
 
 " Create swap files.
 set swapfile
 " Set swapfile save directory.
-let &directory=expand('~/.cache/vim/swap')
+let &directory=expand('~/.local/share/vim/swap')
 
 if v:version >= 703
   " Set undo file.
   set undofile
-  let &undodir=expand('~/.cache/vim/undo')
+  let &undodir=expand('~/.local/share/vim/undo')
 endif
 
 " CursorHold time.
