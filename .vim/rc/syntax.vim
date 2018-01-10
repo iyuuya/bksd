@@ -7,8 +7,11 @@ set smartindent
 
 set synmaxcol=200
 
-autocmd MyAutoCmd Syntax * if 10000 < line('$') | syntax sync minlines=100 | set foldmethod=indent | endif
-autocmd MyAutoCmd VimEnter,ColorScheme * call <SID>AfterColors()
+augroup MySyntaxCmd
+  autocmd!
+  autocmd Syntax * if 10000 < line('$') | syntax sync minlines=100 | set foldmethod=indent | endif
+  autocmd VimEnter,ColorScheme * call <SID>AfterColors()
+augroup END
 
 function! <SID>AfterColors()
   if exists('g:colors_name') && strlen(g:colors_name)
