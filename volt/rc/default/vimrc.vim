@@ -57,4 +57,6 @@ source ~/.vim/rc/command.vim
 source ~/.vim/rc/key_mapping.vim
 source ~/.vim/rc/platform.vim
 
+colorscheme iceberg
+
 " vim: ts=2 sts=2 sw=2 et fdm=marker
