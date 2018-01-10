@@ -47,4 +47,14 @@ endif
 " }}}2
 "=======================================================================================================================
 
+source ~/.vim/rc/search.vim
+source ~/.vim/rc/edit.vim
+source ~/.vim/rc/view.vim
+source ~/.vim/rc/syntax.vim
+source ~/.vim/rc/types.vim
+source ~/.vim/rc/function.vim
+source ~/.vim/rc/command.vim
+source ~/.vim/rc/key_mapping.vim
+source ~/.vim/rc/platform.vim
+
 " vim: ts=2 sts=2 sw=2 et fdm=marker
