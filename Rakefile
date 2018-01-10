@@ -21,6 +21,12 @@ end
 DotInstallTask.new :ssh
 DotInstallTask.new :git
 DotInstallTask.new :vim do |t|
+  volt_path = ENV.fetch('VOLTPATH', File.expand_path('~/volt'))
+  FileUtils.mkdir(volt_path) unless Dir.exist?(volt_path)
+
+  t.add_link 'volt/lock.json', 'volt/lock.json'
+  t.add_link 'volt/plugconf', 'volt/plugconf'
+  t.add_link 'volt/rc', 'volt/rc'
   t.add_link 'bin/mvim', 'bin/mvim' if /darwin/ =~ RUBY_PLATFORM
 end
 DotInstallTask.new :zsh

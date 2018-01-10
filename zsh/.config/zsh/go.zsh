@@ -30,3 +30,8 @@ if [ ! -x "`which emo`" ]; then
   echo 'installing emo'
   go get github.com/pocke/emo
 fi
+
+if [ ! -x "`which volt`" ]; then
+  echo 'installing volt'
+  go get github.com/vim-volt/volt
+fi
