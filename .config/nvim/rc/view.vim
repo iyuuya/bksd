@@ -97,7 +97,7 @@ set display=lastline
 " Put cursor on non-whitespace in case of moved line.
 set startofline
 
-set cursorline
+set nocursorline
 augroup MyCursorColumnGrp
   autocmd!
   autocmd FileType yaml setlocal cursorcolumn
