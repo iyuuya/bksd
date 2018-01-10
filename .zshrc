@@ -315,6 +315,10 @@ if [ -x "`which nvim`" ] && [ -x "`which fzf`" ]; then
   alias vf='nvim `fzf`'
 fi
 
+if type /Applications/MacVim.app/Contents/bin/mvim > /dev/null 2>&1; then
+  alias mvim=/Applications/MacVim.app/Contents/bin/mvim
+fi
+
 # docker: "{{{2
 
 # alias d='docker'
