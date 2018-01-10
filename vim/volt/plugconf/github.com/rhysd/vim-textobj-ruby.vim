@@ -25,5 +25,5 @@ function! s:depends()
   " (the argument of :return must be list literal, and the elements are string)
   " e.g. return ['github.com/tyru/open-browser.vim']
 
-  return ['github.com/kana/vim-textobj-user.vim']
+  return ['github.com/kana/vim-textobj-user']
 endfunction
