@@ -3,7 +3,7 @@ function! s:config()
 endfunction
 
 function! s:loaded_on()
-  return 'start'
+  return 'excmd=Unite'
 endfunction
 
 function! s:depends()
