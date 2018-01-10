@@ -29,14 +29,10 @@ nmap <C-e> [mybind]
 " Switch wrap.
 nnoremap <silent> [mybind]tw :<C-u>setlocal wrap! wrap?<CR>
 
-if exists('$MYVIMRC')
-  nnoremap <silent> [mybind]v :<C-u>e $MYVIMRC<CR>
-  nnoremap [mybind]V :<C-u>source $MYVIMRC<CR>
-endif
-if exists('$MYGVIMRC')
-  nnoremap <silent> [mybind]gv :<C-u>e $MYGVIMRC<CR>
-  nnoremap [mybind]gV :<C-u>source $MYGVIMRC<CR>
-endif
+nnoremap <silent> [mybind]v :<C-u>e ~/volt/rc/default/vimrc.vim<CR>
+nnoremap [mybind]V :<C-u>source ~/volt/rc/default/vimrc.vim<CR>
+nnoremap <silent> [mybind]gv :<C-u>e ~/volt/rc/default/gvimrc.vim<CR>
+nnoremap [mybind]gV :<C-u>source ~/volt/rc/default/gvimrc.vim<CR>
 
 " Change current window and size.
 nnoremap <silent> [mybind]h <c-w>h:call GoodWinWidth()<cr>
