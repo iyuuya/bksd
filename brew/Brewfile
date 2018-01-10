@@ -84,7 +84,21 @@ brew "sqlite"
 brew "redis", restart_service: true
 
 brew "neovim"
-brew "emacs", args: ["with-cocoa", "with-imagemagick@6", "with-librsvg"]
+brew "macvim", args: [
+  "with-lua",
+  "with-luajit",
+  "with-python3"
+]
+brew "emacs", args: [
+  "with-cocoa",
+  "with-ctags",
+  "with-dbus",
+  "with-gnutls",
+  "with-imagemagick@6",
+  "with-librsvg",
+  "with-mailutils",
+  "with-modules"
+]
 
 # science
 brew "r"
@@ -147,7 +161,6 @@ brew "sanemat/font/ricty"
 brew "octave"
 
 # cask "atom"
-# cask install https://raw.githubusercontent.com/iyuuya/brew-config/master/Casks/macvim-kaoriya.rb || true
 cask "iterm2"
 cask "blender"
 cask "butter"
@@ -163,7 +176,6 @@ cask "keycastr"
 cask "licecap"
 cask "limechat"
 cask "linein"
-cask "macvim-kaoriya"
 cask "pg-commander"
 cask "rdm"
 cask "sequel-pro"
