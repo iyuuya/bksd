@@ -301,14 +301,12 @@ if type nvim > /dev/null 2>&1; then
 fi
 alias nv='vim -u NONE'
 alias v='nvim'
-alias e='nvim'
 if type /usr/local/bin/vim > /dev/null 2>&1; then
   alias vv='/usr/local/bin/vim'
 else
   alias vv='vim'
 fi
 compdef v=nvim
-compdef e=nvim
 compdef vv=vim
 
 if [ -x "`which nvim`" ] && [ -x "`which fzf`" ]; then
@@ -318,6 +316,8 @@ fi
 if type /Applications/MacVim.app/Contents/bin/mvim > /dev/null 2>&1; then
   alias mvim=/Applications/MacVim.app/Contents/bin/mvim
 fi
+
+alias e='emacs'
 
 # docker: "{{{2
 
