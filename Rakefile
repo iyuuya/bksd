@@ -46,8 +46,9 @@ DotInstallTask.new :python do |t|
   t.add_link 'default-packages', 'default-packages', ENV['PYENV_ROOT'] || '~/.anyenv/envs/pyenv/'
 end
 DotInstallTask.new :fish
+DotInstallTask.new :emacs
 
 AnyenvSetupTask.new :anyenv
 HomebrewSetupTask.new :brew
 
-task default: ['bksd:bin_mkdir', 'bksd:bin_link', :anyenv, :brew, :git, :vim, :zsh, :ruby, :tmux, :nvim, :node, :mysql, :fish]
+task default: ['bksd:bin_mkdir', 'bksd:bin_link', :anyenv, :brew, :git, :vim, :zsh, :ruby, :tmux, :nvim, :node, :mysql, :fish, :emacs]
