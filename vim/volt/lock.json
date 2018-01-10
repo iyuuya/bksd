@@ -1,12 +1,28 @@
 {
   "version": 2,
-  "trx_id": 1,
+  "trx_id": 3,
   "current_profile_name": "default",
-  "repos": [],
+  "repos": [
+    {
+      "type": "git",
+      "trx_id": 2,
+      "path": "github.com/Shougo/vimfiler.vim",
+      "version": "9deb9b4fbae6b17feb8b5da5ca1fe37391d760f3"
+    },
+    {
+      "type": "git",
+      "trx_id": 3,
+      "path": "github.com/Shougo/unite.vim",
+      "version": "84624872acbd3158621858b00ce79dd9e08e88d1"
+    }
+  ],
   "profiles": [
     {
       "name": "default",
-      "repos_path": [],
+      "repos_path": [
+        "github.com/Shougo/vimfiler.vim",
+        "github.com/Shougo/unite.vim"
+      ],
       "use_vimrc": true,
       "use_gvimrc": true
     }
