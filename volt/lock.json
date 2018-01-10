@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "trx_id": 1,
+  "current_profile_name": "default",
+  "repos": [],
+  "profiles": [
+    {
+      "name": "default",
+      "repos_path": [],
+      "use_vimrc": true,
+      "use_gvimrc": true
+    }
+  ]
+}
