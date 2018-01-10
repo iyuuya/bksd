@@ -38,7 +38,7 @@ function! s:config()
 endfunction
 
 function! s:loaded_on()
-  return 'excmd=Unite'
+  return 'start'
 endfunction
 
 function! s:depends()
