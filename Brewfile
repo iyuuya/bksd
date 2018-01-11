@@ -163,7 +163,6 @@ brew "octave"
 # cask "atom"
 cask "iterm2"
 cask "blender"
-cask "butter"
 cask "evernote"
 cask "firefox"
 cask "google-chrome"
@@ -175,7 +174,7 @@ cask "keycastr"
 cask "licecap"
 cask "limechat"
 cask "linein"
-cask "pg-commander"
+# cask "pg-commander"
 cask "rdm"
 cask "sequel-pro"
 cask "shoes"
@@ -192,11 +191,5 @@ cask "dropbox"
 # cask "hipchat"
 # cask "skype"
 # cask "slack"
-
-# brew cask install dockertoolbox || true
-# brew cask install navicat-for-postgresql || true #
-# brew cask install navicat-for-sqlite     || true #
-# brew cask install pg-commander  || true
-# brew cask install robomongo     || true
 
 # vim: ft=conf
