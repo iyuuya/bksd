@@ -1,0 +1,226 @@
+#compdef volt
+# ------------------------------------------------------------------------------
+# License
+# -------
+#  MIT
+#
+# Description
+# -----------
+#  Completion script for volt (https://github.com/vim-volt/volt)
+#
+# Authors
+# -------
+#  * iyuuya
+# ------------------------------------------------------------------------------
+
+typeset -A opt_args
+
+_volt() {
+  local -a commands
+  commands=(
+  'get:Install or upgrade given {repository} list, or add local {repository} list as plugins'
+  'rm:Uninstall vim plugin and plugconf files'
+  'enable:This is shortcut of: volt profile add -current {repository} \[{repository2} ...\]'
+  'list:This is shortcut of: volt profile show -current'
+  'disable:This is shortcut of: volt profile rm -current {repository} \[{repository2} ...\]'
+  'profile:Management profile'
+  'build:Build ~/.vim/pack/volt/ directory'
+  'migrate:Convert old version $VOLTPATH/lock.json structure into the latest version'
+  'self-upgrade:Upgrade to the latest volt command, or if -check was given, it only checks the newer version is available'
+  'version:Show volt command version'
+  )
+
+  _arguments "1: :{_describe 'command' commands}" '*:: :->args'
+
+  case $state in
+    args)
+      local volt_path=${VOLTPATH:-$HOME/volt}
+
+      __volt_get_all_repositories() {
+        integer ret=1
+
+        if type jq > /dev/null 2>&1; then
+          jq --raw-output '.repos[].path' $volt_path/lock.json
+          ret=0
+        fi
+
+        return ret
+      }
+
+      __volt_get_profile_repositories() {
+        local profile=$1
+        integer ret=1
+
+        if type jq > /dev/null 2>&1; then
+          jq --raw-output ".profiles[] | select(.name == \"$profile\") | .repos_path[]" $volt_path/lock.json
+          ret=0
+        fi
+
+        return ret
+      }
+
+      __volt_get_current_profile() {
+        if type jq > /dev/null 2>&1; then
+          jq --raw-output '.current_profile_name' $volt_path/lock.json
+        else
+          volt list | head -n 1 | awk '/name: (.+)/ { print $2 }'
+        fi
+      }
+
+      __volt_get_profile_names() {
+        if type jq > /dev/null 2>&1; then
+          jq --raw-output '.profiles[].name' $volt_path/lock.json
+        else
+          volt profile list | sed 's/[* ]//g'
+        fi
+      }
+
+      case $words[1] in
+        get)
+          _arguments \
+            -l'[Works like all installed plugins are specified]' \
+            -u'[Updates specified plugins]' \
+            -v'[Verbose]'
+          local -a repos=($(__volt_get_all_repositories))
+          _describe 'installed repositories' repos
+          ;;
+
+        rm)
+          local -a repos=($(__volt_get_all_repositories))
+          _describe 'installed repositories' repos
+          ;;
+
+        enable)
+          local -a repos=($(__volt_get_all_repositories))
+          _describe 'installed repositories' repos
+          ;;
+
+        list)
+          _nothing
+          ;;
+
+        disable)
+          local -a repos=($(__volt_get_profile_repositories $(__volt_get_current_profile)))
+          _describe 'enabled repositories' repos
+          ;;
+
+        profile)
+          local -a profile_commands
+          profile_commands=(
+          'set:Set profile name'
+          'show:Show profile info'
+          'list:List all profiles'
+          'new:Create new profile'
+          'destroy:Delete profile'
+          'rename:Rename profile {old} to {new}'
+          'add:Add one ore more repositories to profile'
+          'rm:Remove one or more repositories to profile'
+          'use:Set vimrc / gvimrc flag to true or false'
+          )
+
+          _arguments "1: :{_describe 'profile command' profile_commands}" '*:: :->args'
+
+          case $state in
+            args)
+              local -a repos
+              case $words[1] in
+                set)
+                  profile_names=($(__volt_get_profile_names))
+                  _arguments "1: :{_describe 'profile' profile_names}"
+                  ;;
+
+                show)
+                  profile_names=($(__volt_get_profile_names))
+                  _arguments "1: :{_describe 'profile' profile_names}"
+                  ;;
+
+                list)
+                  _nothing
+                  ;;
+
+                new)
+                  _nothing
+                  ;;
+
+                destroy)
+                  profile_names=($(__volt_get_profile_names))
+                  _arguments "1: :{_describe 'profile' profile_names}"
+                  ;;
+
+                rename)
+                  profile_names=($(__volt_get_profile_names))
+                  _arguments "1: :{_describe 'profile' profile_names}"
+                  ;;
+
+                add)
+                  profile_names=($(__volt_get_profile_names))
+                  _arguments "1: :{_describe 'profile' profile_names}" '*:: :->repositories'
+                  case $state in
+                    repositories)
+                      local -a all_repos=($(__volt_get_all_repositories)) enabled_repos=($(__volt_get_profile_repositories $words[1]))
+                      local -a repos=()
+                      for i in "${all_repos[@]}"; do
+                        skip=
+                        for j in "${enabled_repos[@]}"; do
+                          [[ $i == $j ]] && { skip=1; break; }
+                        done
+                        [[ -n $skip ]] || repos=($repos "$i")
+                      done
+                      _describe 'disabled repositories' repos
+                  esac
+                  ;;
+
+                rm)
+                  profile_names=($(__volt_get_profile_names))
+                  _arguments "1: :{_describe 'profile' profile_names}" '*:: :->repositories'
+                  case $state in
+                    repositories)
+                      local -a repos=($(__volt_get_profile_repositories $words[1]))
+                      _describe 'enabled repositories' repos
+                      ;;
+                  esac
+                  ;;
+
+                use)
+                  profile_names=($(__volt_get_profile_names))
+                  _arguments "1: :{_describe 'profile' profile_names}" '*:: :->vimrc'
+                  case $state in
+                    vimrc)
+                      local -a rcs=(vimrc gvimrc)
+                      _arguments "1: :{_describe 'vimrc' rcs}" '*:: :->flag'
+                      case $state in
+                        flag)
+                          local -a flags=(true false)
+                          _arguments "1: :{_describe 'flag' flags}"
+                          ;;
+                      esac
+                      ;;
+                  esac
+                  ;;
+              esac
+          esac
+          ;;
+
+        build)
+          _arguments '-full[Ignore the previous cache]'
+          ;;
+
+        migrate)
+          _nothing
+          ;;
+
+        self-upgrade)
+          _arguments '-check[Checks the newer version is available]'
+          ;;
+
+        version)
+          _nothing
+          ;;
+      esac
+      ;;
+  esac
+}
+
+_volt
+
+# vim: ft=zsh sw=2 ts=2 et
