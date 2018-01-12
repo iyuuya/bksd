@@ -110,5 +110,22 @@ repo  = 'jvirtanen/vim-octave'
 on_ft = 'octave'
 
 [[plugins]]
-repo = 'elixir-lang/vim-elixir'
+repo  = 'elixir-lang/vim-elixir'
+on_ft = 'elixir'
+
+[[plugins]]
+repo  = 'mattreduce/vim-mix'
+on_ft = 'elixir'
+
+[[plugins]]
+repo  = 'BjRo/vim-extest'
+on_ft = 'elixir'
+
+[[plugins]]
+repo  = 'kbrw/elixir.nvim'
+on_ft = 'elixir'
+build = './install.sh'
+
+[[plugins]]
+repo  = 'avdgaag/vim-phoenix'
 on_ft = 'elixir'
