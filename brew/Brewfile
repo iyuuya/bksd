@@ -192,4 +192,6 @@ cask "dropbox"
 # cask "skype"
 # cask "slack"
 
+cask "macpass"
+
 # vim: ft=conf
