@@ -1,5 +1,3 @@
-npm
-
 scsslint
 csslint
 eslint
@@ -7,4 +5,4 @@ hint
 htmlhint
 gulp-cli
 grunt-cli
-tern
+term
