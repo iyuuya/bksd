@@ -3,6 +3,6 @@
 #===============================================================================
 
 Host gitlab.com
-  User git
+  Include conf.d/commons/git
 
 # vim: ft=sshconfig
