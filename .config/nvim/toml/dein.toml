@@ -275,8 +275,8 @@ on_ft = ['javascript', 'javascript.jsx']
 [[plugins]]
 repo = 'mattn/httpstatus-vim'
 
-[[plugins]]
-repo = 'itchyny/lightline.vim'
+# [[plugins]]
+# repo = 'itchyny/lightline.vim'
 
 # [[plugins]]
 # repo = 'Shougo/context_filetype.vim'

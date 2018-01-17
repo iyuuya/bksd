@@ -883,16 +883,16 @@ endif
 "-------------------------------------------------------------------------------
 " Lightline: "{{{2
 
-if dein#tap('lightline.vim')
-  let g:lightline = {
-        \ 'colorscheme': 'iceberg',
-        \ 'component': {
-        \   'readonly': '%{&readonly?"⭤":""}',
-        \ },
-        \ 'separator': { 'left': '⮀', 'right': '⮂' },
-        \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
-        \ }
-endif
+" if dein#tap('lightline.vim')
+"   let g:lightline = {
+"         \ 'colorscheme': 'iceberg',
+"         \ 'component': {
+"         \   'readonly': '%{&readonly?"⭤":""}',
+"         \ },
+"         \ 'separator': { 'left': '⮀', 'right': '⮂' },
+"         \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+"         \ }
+" endif
 
 " }}}2
 "-------------------------------------------------------------------------------
