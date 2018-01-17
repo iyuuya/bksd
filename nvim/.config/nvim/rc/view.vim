@@ -40,6 +40,7 @@ set cmdheight=2
 " Show command on statusline.
 set showcmd
 
+" filename [+][ft][fenc][ff][line:col/percent]
 let &statusline="%<%f%=%m%r%w%y[%{(&fenc!=''?&fenc:&enc)}][%{&ff}][%04l:%03v/%p%%]"
 
 " Show title.
