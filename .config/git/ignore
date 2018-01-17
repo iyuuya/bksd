@@ -130,3 +130,6 @@ cscope.po.out
 
 # JetBrains
 .idea
+
+
+.vimrc.local
