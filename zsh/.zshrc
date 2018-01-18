@@ -315,6 +315,7 @@ fi
 
 if type /Applications/MacVim.app/Contents/bin/mvim > /dev/null 2>&1; then
   alias mvim=/Applications/MacVim.app/Contents/bin/mvim
+  alias memo="mvim --cmd \"let g:gui_size = 'memo'\""
 fi
 
 alias e='emacs'
