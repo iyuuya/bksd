@@ -352,6 +352,10 @@ if type tmux > /dev/null 2>&1; then
   alias vs='tmux split-window -h'
 fi
 
+if type terminal-notifier > /dev/null 2>&1; then
+  alias tndone='terminal-notifier -message done'
+fi
+
 # added by travis gem
 src $HOME/.travis/travis.sh
 
