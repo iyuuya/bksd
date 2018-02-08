@@ -193,5 +193,6 @@ cask "dropbox"
 # cask "slack"
 
 cask "macpass"
+cask "gitify"
 
 # vim: ft=conf
