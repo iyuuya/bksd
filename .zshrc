@@ -204,6 +204,8 @@ zle -N history-beginning-search-forward-end history-search-end
 # Benchmark
 autoload -Uz b100
 autoload -Uz benchmark
+# Docker
+autoload -Uz docker-rm-exited
 # Ghq
 autoload -Uz ghq-update
 # Git
