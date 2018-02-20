@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+
+all_branches = {}
+remotes = `git remote`.split
+
+# get local branches
+all_branches['local'] = `git branch`.split.tap { |branches| branches.delete('*') }
+
+# get each remotes branches
+`git branch -r`.split.tap { |branches| branches.delete('->') }.each do |remote_with_branch|
+  remote = remotes.find { |remote_name| remote_with_branch =~ %r{^#{remote_name}/} }
+  all_branches[remote] ||= []
+  branch = remote_with_branch.sub(%r{^#{remote}/}, '')
+  all_branches[remote] << branch if branch != 'HEAD'
+end
+all_branches.each_value(&:sort!).each_value(&:uniq!)
+
+branch_names = all_branches.values.flatten.sort.uniq
+branch_max = branch_names.map(&:size).max
+names = all_branches.keys
+
+# print names
+print '| '
+print names.map { |name| name.ljust(branch_max) }.join(' | ')
+puts ' |'
+
+# print line
+print '|-'
+print names.map { |_| '-' * branch_max }.join('-|-')
+puts '-|'
+
+# print branches
+branch_names.each do |branch_name|
+  print '| '
+  print names.map { |name| all_branches[name].include?(branch_name) ? branch_name : '' }
+             .map { |bn| bn.ljust(branch_max) }
+             .join(' | ')
+  puts ' |'
+end
