@@ -159,6 +159,7 @@ brew "watchman"
 brew "yarn"
 brew "sanemat/font/ricty"
 brew "octave"
+brew "sourcekitten"
 
 # cask "atom"
 cask "iterm2"
