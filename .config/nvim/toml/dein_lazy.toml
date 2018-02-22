@@ -16,6 +16,11 @@ on_i    = 1
 repo = 'Shougo/deoplete.nvim'
 on_i = 1
 
+[[plugins]]
+repo    = 'landaire/deoplete-swift'
+on_ft   = 'swift'
+depends = 'deoplete.nvim'
+
 # the world first vimshell plugin that you can run 'vim' command on ssh on vimshell
 #[[plugins]]
 #repo    = 'ujihisa/vimshell-ssh'
@@ -129,3 +134,11 @@ build = './install.sh'
 [[plugins]]
 repo  = 'avdgaag/vim-phoenix'
 on_ft = 'elixir'
+
+[[plugins]]
+repo  = 'kballard/vim-swift'
+on_ft = 'swift'
+
+[[plugins]]
+repo  = 'keith/swift.vim'
+on_ft = 'swift'
