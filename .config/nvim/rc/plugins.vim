@@ -404,6 +404,7 @@ if dein#tap('neosnippet.vim')
     autocmd BufEnter,BufRead,BufNew app/config/routes.rb NeoSnippetSource ~/.config/nvim/snippets/ruby.rails.route.snip
     autocmd BufEnter,BufRead,BufNew spec/**/*.rb         NeoSnippetSource ~/.config/nvim/snippets/ruby.rails.rspec.snip
     " autocmd BufEnter,BufRead,BufNew spec/**/*.rb    NeoSnippetSource ~/.vim/snippets/ruby.rspec.snip
+    autocmd BufEnter,BufRead,BufNew spec/**/*.spec.js    NeoSnippetSource ~/.config/nvim/snippets/javascript.mocha.snip
   augroup END
 endif
 
