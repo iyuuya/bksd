@@ -47,6 +47,7 @@ DotInstallTask.new :python do |t|
 end
 DotInstallTask.new :fish
 DotInstallTask.new :emacs
+DotInstallTask.new :hammerspoon
 
 AnyenvSetupTask.new :anyenv
 HomebrewSetupTask.new :brew
