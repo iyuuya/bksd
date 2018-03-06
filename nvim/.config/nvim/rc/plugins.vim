@@ -869,7 +869,7 @@ endfunction
 " VimJSX: "{{{2
 
 if dein#tap('vim-jsx')
-  let g:jsx_ext_required = 1
+  let g:jsx_ext_required = 0
   let g:jsx_pragma_required = 0
 
   augroup MyVimJSX
