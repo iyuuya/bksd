@@ -142,3 +142,38 @@ on_ft = 'swift'
 [[plugins]]
 repo  = 'keith/swift.vim'
 on_ft = 'swift'
+
+# Vastly improved Javascript indentation and syntax support in Vim.
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = ['javascript', 'javascript.jsx']
+
+# YAJS.vim: Yet Another JavaScript Syntax for Vim
+# [[plugins]]
+# repo = 'othree/yajs.vim'
+# on_ft = ['javascript', 'javascript.jsx']
+
+# Syntax for JavaScript libraries
+[[plguins]]
+repo = 'othree/javascript-libraries-syntax.vim'
+on_ft = ['javascript', 'javascript.jsx']
+
+# ES.Next syntax for Vim
+[[plugins]]
+repo = 'othree/es.next.syntax.vim'
+on_ft = ['javascript', 'javascript.jsx']
+
+# [[plugins]]
+repo = 'mxw/vim-jsx'
+on_ft = ['javascript', 'javascript.jsx']
+
+# [Vim script] React JSX syntax pretty highlighting for vim.
+# [[plugins]]
+# repo = 'maxmellon/vim-jsx-pretty'
+# on_ft = ['javascript', 'javascript.jsx']
+
+# Tern plugin for Vim
+[[plugins]]
+repo = 'ternjs/tern_for_vim'
+build = 'npm install'
+on_ft = ['javascript', 'javascript.jsx']
