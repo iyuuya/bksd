@@ -226,6 +226,7 @@ autoload -Uz reload
 # Ruby
 autoload -Uz bundle-gemname-list
 autoload -Uz db_reset
+autoload -Uz gem-uninstall-all
 # Search
 autoload -Uz search
 # Ssh
