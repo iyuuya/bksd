@@ -1,3 +1,8 @@
---skip-test
---no-skip-spring
+# for rails 5.1.5
 --database=mysql
+--no-skip-spring
+--skip-coffee
+--skip-javascript
+--skip-turbolinks
+--skip-test
+--webpack=react
