@@ -1,6 +1,6 @@
 -- vim: fdm=marker fdl=0
 
-local hyper = {'ctrl', 'alt', 'cmd'}
+local hyper = {'ctrl', 'alt'}
 
 -------------------------------------------------------------------------------
 -- Functions: "{{{
