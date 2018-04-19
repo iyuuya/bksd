@@ -65,6 +65,7 @@ brew "source-highlight"
 brew "ccat"
 brew "colordiff"
 brew "dfc"
+brew "direnv"
 
 brew "cairo"
 brew "pango"
