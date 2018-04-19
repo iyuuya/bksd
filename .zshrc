@@ -365,6 +365,10 @@ src $HOME/.travis/travis.sh
 # "}}}1
 #===============================================================================
 
+if type direnv > /dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+fi
+
 src $HOME/.iterm2_shell_integration.zsh
 
 if [ ! -f ~/.zshrc.zwc -o ~/.zshrc -nt ~/.zshrc.zwc ]; then
