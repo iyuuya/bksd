@@ -263,6 +263,19 @@ if dein#tap('vimfiler.vim')
   let g:vimfiler_as_default_explorer = 1
   let g:vimfiler_safe_mode_by_default = 0
   let g:vimfiler_data_directory = g:vim_tmp_directory . '/vimfiler'
+  let g:vimfiler_ignore_pattern = [
+        \ '^\..*cache.*$',
+        \ '^\..*hist\(ory\)\?.*$',
+        \ '^\.Trash$',
+        \ '^\.DS_Store$',
+        \ '^\.localize$',
+        \ '^\.dropbox$',
+        \ '^Icon$',
+        \ '^\.zcompdump$',
+        \ '^tmp$',
+        \ '\.\(pdf\|pptx\|xlsx\|docx\|png\|jpg\|jpeg\|gif\|psd\|ai\|xd\|sesx\|mp3\|ogg\|wav\|mp4\|mov\|flv\|zwc\|gem\|zip\|gz\|tar\|obj\|o\|gypi\|pem\|cer\|p12\|certSigningRequest\|mobileprovision\|ipa\|apt\|pid\)$',
+        \ '^node_modules$',
+        \ ]
   nnoremap : :VimFilerBufferDir -split -simple -no-quit -winwidth=32<CR>
   nnoremap ,vf :VimFilerDouble<CR>
 endif
