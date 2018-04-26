@@ -4,6 +4,8 @@
   b       = branch
   bd      = branch -D
   ba      = branch -a
+  current-branch = rev-parse --abbrev-ref HEAD
+  backup  = "!sh -c 'git branch backup/$(git current-branch)'"
   cl      = clone
   cm      = commit
   cmt     = commit --verbose
