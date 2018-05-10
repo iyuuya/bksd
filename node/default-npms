@@ -1,8 +1,8 @@
-scsslint
-csslint
 eslint
-hint
-htmlhint
-gulp-cli
-grunt-cli
+esdoc
+stylelint
+# node-sass
 term
+# typescript
+# tslint
+# typedoc
