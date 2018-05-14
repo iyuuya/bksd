@@ -185,3 +185,7 @@ on_ft = 'ejs'
 [[plugins]]
 repo  = 'chr4/nginx.vim'
 on_ft = 'nginx'
+
+[[plugins]]
+repo  = 'lumiliet/vim-twig'
+on_ft = 'twig'
