@@ -29,6 +29,7 @@ augroup MyFileTypes
   autocmd BufRead,BufNew *.apib setlocal filetype=apiblueprint
   autocmd BufRead,BufNew *.ts setlocal filetype=typescript
   autocmd BufRead,BufNew *.vue setlocal filetype=html
+  autocmd BufRead,BufNew *.ejs setlocal filetype=ejs.html
 
 	autocmd BufRead,BufNew *.go setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
   autocmd BufRead,BufNew *.fish setlocal filetype=fish

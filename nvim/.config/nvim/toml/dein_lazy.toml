@@ -164,8 +164,8 @@ repo = 'othree/es.next.syntax.vim'
 on_ft = ['javascript', 'javascript.jsx']
 
 # [[plugins]]
-repo = 'mxw/vim-jsx'
-on_ft = ['javascript', 'javascript.jsx']
+# repo = 'mxw/vim-jsx'
+# on_ft = ['javascript', 'javascript.jsx']
 
 # [Vim script] React JSX syntax pretty highlighting for vim.
 # [[plugins]]
@@ -177,6 +177,10 @@ on_ft = ['javascript', 'javascript.jsx']
 repo = 'ternjs/tern_for_vim'
 build = 'npm install'
 on_ft = ['javascript', 'javascript.jsx']
+
+[[plguins]]
+repo  = 'nikvdp/ejs-syntax'
+on_ft = 'ejs'
 
 [[plugins]]
 repo  = 'chr4/nginx.vim'
