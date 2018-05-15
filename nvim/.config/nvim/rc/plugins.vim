@@ -273,6 +273,8 @@ if dein#tap('vimfiler.vim')
         \ '^Icon$',
         \ '^\.zcompdump$',
         \ '^tmp$',
+        \ '^coverage$',
+        \ '^.nyc_output$',
         \ '\.\(pdf\|pptx\|xlsx\|docx\|png\|jpg\|jpeg\|gif\|psd\|ai\|xd\|sesx\|mp3\|ogg\|wav\|mp4\|mov\|flv\|zwc\|gem\|zip\|gz\|tar\|obj\|o\|gypi\|pem\|cer\|p12\|certSigningRequest\|mobileprovision\|ipa\|apt\|pid\)$',
         \ '^node_modules$',
         \ ]
