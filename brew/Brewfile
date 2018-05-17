@@ -46,6 +46,7 @@ brew "git-now"
 brew "hub"
 brew "tig"
 brew "gibo"
+brew "gpg"
 
 brew "tree"
 brew "zsh", args: ["without-etcdir"]
