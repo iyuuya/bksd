@@ -7,10 +7,10 @@
   current-branch = rev-parse --abbrev-ref HEAD
   backup  = "!sh -c 'git branch backup/$(git current-branch)'"
   cl      = clone
-  cm      = commit
-  cmt     = commit --verbose
-  cma     = commit --amend
-  cmc     = commit --cleanup=whitespace
+  cm      = commit -S
+  cmt     = commit -S --verbose
+  cma     = commit -S --amend
+  cmc     = commit -S --cleanup=whitespace
   cnt     = shortlog -s -n
   co      = checkout
   d       = diff
