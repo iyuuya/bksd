@@ -50,8 +50,8 @@ alias g='git'
 compdef g=git
 
 alias gl="g log --graph --pretty=format:'%Cblue%h%Creset%d %Cgreen%an%Creset: %s %Cblue%ar%Creset'"
-alias gc='g commit'
-alias gcm='g commit -m'
+alias gc='g commit -S'
+alias gcm='g commit -S -m'
 alias gco='g checkout'
 alias grs='g reset'
 alias gd='g diff'
