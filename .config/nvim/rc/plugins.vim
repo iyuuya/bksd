@@ -934,13 +934,17 @@ if dein#tap('ale')
   if !exists('g:ale_fixers')
     let g:ale_fixers = {}
   endif
+
+  if !exists('g:ale_fixers.ruby')
+    let g:ale_fixers.ruby = []
+  end
+  call add(g:ale_fixers.ruby, 'rubocop')
+
   if !exists('g:ale_fixers.javascript')
     let g:ale_fixers.javascript = []
   end
-
   " call add(g:ale_fixers.javascript, 'prettier')
   " let g:ale_javascript_prettier_use_local_config = 1
-
   call add(g:ale_fixers.javascript, 'eslint')
   let g:ale_javascript_eslint_use_global = 1
 endif
