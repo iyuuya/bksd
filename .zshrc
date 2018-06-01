@@ -42,9 +42,9 @@ source $HOME/.config/zsh/git.zsh
 if type go > /dev/null 2>&1; then
   source $HOME/.config/zsh/go.zsh
 fi
-if type peco > /dev/null 2>&1; then
-  source $HOME/.config/zsh/peco.zsh
-fi
+# if type peco > /dev/null 2>&1; then
+#   source $HOME/.config/zsh/peco.zsh
+# fi
 source $HOME/.config/zsh/ruby.zsh
 source $HOME/.config/zsh/fzf.zsh
 source $HOME/.config/zsh/python.zsh
