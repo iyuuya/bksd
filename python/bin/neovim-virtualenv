@@ -1,0 +1,24 @@
+#!/bin/sh
+
+if [ $# != 1 ]; then
+  python_version="$(pyenv install --list | fzf)"
+else
+  python_version=$1
+fi
+
+venv="neovim$(echo $python_version | cut -c 1)"
+
+echo "== install python: $python_version"
+pyenv install $python_version || exit
+
+if pyenv versions | grep "$venv"; then
+  echo "== uninstall old $venv"
+  pyenv uninstall $venv || exit
+fi
+
+echo "== create virtualenv: $venv"
+pyenv virtualenv $python_version $venv || exit
+
+echo "== install neovim"
+pyenv shell $venv || exit
+pip install neovim || exit
