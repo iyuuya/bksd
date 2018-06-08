@@ -1,5 +1,6 @@
 if [ -x "`which fzf`" ] && [ -x "`which ag`" ]; then
   export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+  export FZF_DEFAULT_OPTS='--height 60% --reverse --border --ansi --select-1 --extended --cycle'
 fi
 
 function _fzf_insert_command_line() {
@@ -14,7 +15,7 @@ function _fzf_insert_command_line() {
 
 function fzf-ghq() {
   local selected
-  selected=$(ghq list -p | fzf --query "$LBUFFER")
+  selected=$(ghq list -p | fzf --preview 'ls {}' --query "$LBUFFER")
   if [ -n "$selected" ]; then
     _fzf_insert_command_line "cd $selected"
     zle accept-line
