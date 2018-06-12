@@ -1,8 +1,9 @@
 eslint
 esdoc
 stylelint
-# node-sass
+node-sass
 tern
-# typescript
-# tslint
-# typedoc
+tern-jsx
+typescript
+tslint
+typedoc
