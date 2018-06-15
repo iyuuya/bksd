@@ -6,6 +6,7 @@
   quotepath      = false
   excludesfile   = ~/.config/git/ignore
   attributesFile = ~/.config/git/attributes
+  commentChar    = ";"
 
 [color]
   branch      = true
