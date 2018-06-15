@@ -110,6 +110,12 @@ repo = 'iyuuya/denite-rails'
 [[plugins]]
 repo = 'iyuuya/denite-ale'
 
+[[plugins]]
+repo = 'iyuuya/denite-yarn'
+
+[[plugins]]
+repo = 'Jagua/vim-denite-ghq'
+
 #-------------------------------------------------------------------------------
 # ColorScheme
 #-------------------------------------------------------------------------------
