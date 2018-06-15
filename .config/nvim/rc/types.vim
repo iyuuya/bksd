@@ -34,7 +34,7 @@ augroup MyFileTypes
 	autocmd BufRead,BufNew *.go setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
   autocmd BufRead,BufNew *.fish setlocal filetype=fish
 
-  autocmd FileType javascript,javascript.jsx call <SID>EnableJavascript()
+  autocmd FileType javascript,javascript.jsx,javascript.mocha call <SID>EnableJavascript()
   autocmd FileType ruby call <SID>SetIndentForRuby()
   autocmd FileType fish call <SID>EnableFish()
 augroup END

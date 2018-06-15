@@ -893,6 +893,7 @@ if dein#tap('vim-jsx')
   augroup MyVimJSX
     autocmd!
     autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+    autocmd BufNewFile,BufRead *.test.js,*.spec.js filetype=javascript.mocha
   augroup END
 endif
 
