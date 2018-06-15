@@ -1,6 +1,6 @@
 "===============================================================================
 " Note: "{{{1
-" .config/nvim/init.im
+" .config/nvim/init.vim
 "
 " Author: iyuuya <i.yuuya@gmail.com>
 " }}}1
