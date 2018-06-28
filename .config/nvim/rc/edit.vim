@@ -63,7 +63,7 @@ set foldenable
 " Always start editing with all no folds closed.
 set foldlevelstart=99
 " Show folding level.
-set foldcolumn=1
+set foldcolumn=2
 " Syntax highlighting items specify folds.
 set foldmethod=syntax
 augroup FoldAutoGroup
