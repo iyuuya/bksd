@@ -1,0 +1,10 @@
+if [ $# -ne 2 ]; then
+  echo 'usage: ghq-create [owner] [reponame]'
+  return
+fi
+
+local repopath="$(ghq root)/github.com/$1/$2"
+mkdir -p "$repopath"
+git init "$repopath"
+
+# vim: ft=zsh
