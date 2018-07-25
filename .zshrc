@@ -208,6 +208,7 @@ autoload -Uz benchmark
 autoload -Uz docker-rm-exited
 # Ghq
 autoload -Uz ghq-update
+autoload -Uz ghq-create
 # Git
 autoload -Uz git-force-remove-dir
 autoload -Uz git-force-remove-dir-all
