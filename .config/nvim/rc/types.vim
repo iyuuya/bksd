@@ -17,6 +17,11 @@ function! <SID>SetIndentForRuby()
   setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 endfunction
 
+function! <SID>SetIndentForPHP()
+  setlocal smartindent autoindent
+  setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4
+endfunction
+
 function! <SID>EnableFish()
   compiler fish
   setlocal textwidth=79
@@ -37,6 +42,7 @@ augroup MyFileTypes
   autocmd FileType javascript,javascript.jsx,javascript.mocha call <SID>EnableJavascript()
   autocmd FileType ruby call <SID>SetIndentForRuby()
   autocmd FileType fish call <SID>EnableFish()
+  autocmd FileType php call <SID>SetIndentForPHP()
 augroup END
 
 " }}}1
