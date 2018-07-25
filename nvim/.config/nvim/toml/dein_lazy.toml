@@ -187,5 +187,13 @@ repo  = 'chr4/nginx.vim'
 on_ft = 'nginx'
 
 [[plugins]]
+repo  = 'StanAngeloff/php.vim'
+on_ft = 'php'
+
+[[plugins]]
+repo  = 'vim-scripts/phpfolding.vim'
+on_ft = 'php'
+
+[[plugins]]
 repo  = 'lumiliet/vim-twig'
 on_ft = 'twig'
