@@ -34,8 +34,12 @@ else
   compinit -C
 fi
 
+function load_pwd_local_config() {
+  src "$(pwd)/.zshrc.local"
+}
+
 cdpath=($HOME)
-chpwd_functions=($chpwd_functions dirs)
+chpwd_functions=(load_pwd_local_config $chpwd_functions)
 
 source $HOME/.config/zsh/git.zsh
 
@@ -377,6 +381,7 @@ if [ ! -f ~/.zshrc.zwc -o ~/.zshrc -nt ~/.zshrc.zwc ]; then
 fi
 
 src $HOME/.zshrc.local
+load_pwd_local_config
 
 if type zprof > /dev/null 2>&1; then
   zprof | less
