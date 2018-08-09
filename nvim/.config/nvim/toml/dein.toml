@@ -288,3 +288,8 @@ repo = 'simeji/winresizer'
 
 [[plugins]] # Wrapper of some neovim's :terminal functions.
 repo = 'kassio/neoterm'
+
+# [[plugins]]
+# repo = 'gorodinskiy/vim-coloresque'
+[[plugins]]
+repo = 'ap/vim-css-color'
