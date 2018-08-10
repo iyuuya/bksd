@@ -235,8 +235,8 @@ autoload -Uz gem-uninstall-all
 # Search
 autoload -Uz search
 # Ssh
-autoload -Uz peco-ssh
-alias pssh=peco-ssh
+autoload -Uz fzf-ssh
+alias pssh=fzf-ssh
 # SwitchUser
 autoload -Uz switch-user
 alias sw=switch-user
@@ -311,6 +311,7 @@ alias nv='vim -u NONE'
 alias v='nvim'
 if type /usr/local/bin/vim > /dev/null 2>&1; then
   alias vv='/usr/local/bin/vim'
+  alias cv='/usr/local/bin/vim --clean'
 else
   alias vv='vim'
 fi
