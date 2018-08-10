@@ -1,8 +1,0 @@
-local selected
-selected=$(cat $(find -L ~/.ssh/* -type f) | grep '^Host \w\+' | sed -e 's/Host//' -e 's/ /\n/g' | sort -u | sed -e '1d' | peco)
-if [ -n "$selected" ]; then
-  echo "ssh $selected"
-  eval "ssh $selected"
-fi
-
-# vim: ft=zsh
