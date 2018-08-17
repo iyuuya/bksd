@@ -7,3 +7,5 @@ tern-jsx
 typescript
 tslint
 typedoc
+prettier
+parcel-bundler
