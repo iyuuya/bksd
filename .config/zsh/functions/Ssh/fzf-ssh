@@ -1,5 +1,5 @@
 local selected
-selected=$(cat $(file ~/.ssh/**/* | awk -F: '/ASCII text/ {print $1}') | grep '^Host \w\+' | sed -e 's/Host//' -e 's/ /\n/g' | sort -u | sed -e '1d' | fzf)
+selected=$(cat $(file ~/.ssh/**/* | awk -F: '/text/ {print $1}') | grep '^Host \w\+' | sed -e 's/Host//' -e 's/ /\n/g' | sort -u | sed -e '1d' | fzf)
 if [ -n "$selected" ]; then
   echo "ssh $selected"
   eval "ssh $selected"
