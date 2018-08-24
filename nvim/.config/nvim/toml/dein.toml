@@ -171,6 +171,9 @@ depends = 'open-browser.vim'
 [[plugins]] # Integrated reference viewer.
 repo = 'thinca/vim-ref'
 
+[[plugins]] # A vim-ref and Unite.vim source for ri.
+repo = 'yuku/vim-ref-ri'
+
 [[plugins]]
 repo = 'lambdalisue/vim-gista'
 
