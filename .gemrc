@@ -7,5 +7,5 @@
 :backtrace: false
 :benchmark: false
 :bulk_threshold: 1000
-install: --no-document
-update: --no-document
+# install: --no-document
+# update: --no-document
