@@ -1,7 +1,18 @@
-# for rails 5.1.5
+# for rails 5.2.1
 --database=mysql
 --skip-coffee
 --skip-javascript
 --skip-turbolinks
 --skip-test
+--skip-system-test
 --webpack=react
+
+# for master(edge)
+# --database=mysql
+# --skip-coffee
+# --skip-javascript
+# --skip-turbolinks
+# --skip-test
+# --skip-system-test
+# --webpack=react
+# --edge
