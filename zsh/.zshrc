@@ -224,6 +224,8 @@ autoload -Uz git-rewrite-author2
 # Mysql
 autoload -Uz m56
 autoload -Uz m57
+# Network
+autoload -Uz listen_list
 # Postgresql
 autoload -Uz psql_resetdb
 # Reload
