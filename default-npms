@@ -9,3 +9,6 @@ tslint
 typedoc
 prettier
 parcel-bundler
+
+commitizen
+cz-conventional-changelog
