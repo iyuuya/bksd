@@ -1,0 +1,21 @@
+local log_dir="/usr/local/var/log/httpd"
+
+__httpd_log_help() {
+  echo "usage: httpd_log [-h|--help] [SERVICE] [access|error]"
+}
+
+if [ $# = 0 ]; then
+  tail -f "$log_dir"/*.log
+elif [ $# = 1 ]; then
+  if [ $1 = "-h" ] || [ $1 = "--help" ]; then
+    __httpd_log_help
+  else
+    tail -f "$log_dir/$1".*.log
+  fi
+elif [ $# = 2 ]; then
+  tail -f "$log_dir/$1.$2.log"
+else
+  __httpd_log_help
+fi
+
+# vim: ft=zsh

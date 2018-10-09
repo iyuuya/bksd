@@ -1,0 +1,20 @@
+local log_dir="/usr/local/var/log/nginx"
+
+__nginx_log_help() {
+  echo "usage: nginx_log [-h|--help] [SERVICE] [access|error]"
+  return
+}
+
+if [ $# = 0 ]; then
+  tail -f "$log_dir"/*.log
+elif [ $# = 1 ]; then
+  if [ $1 = "-h" ] || [ $1 = "--help" ]; then
+    __nginx_log_help
+  else
+    tail -f "$log_dir/$1".*.log
+  fi
+elif [ $# = 2 ]; then
+  tail -f "$log_dir/$1.$2.log"
+else
+  __nginx_log_help
+fi

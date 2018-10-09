@@ -1,0 +1,15 @@
+#compdef httpd_log
+
+function _httpd_log() {
+  services=($(ls -1 /usr/local/var/log/httpd | awk -F "\." '{ print $1 }' | grep -v -E 'access|error' | sort -u))
+  patterns=(access error)
+
+  _arguments \
+    '(- *)'{-h,--help}'[show help]' \
+    "1: :{_describe 'service' services}" \
+    "2: :{_describe 'pattern' patterns}"
+}
+
+_httpd_log
+
+# vim: ft=zsh

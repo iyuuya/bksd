@@ -221,6 +221,13 @@ autoload -Uz git-force-remove-file-all
 autoload -Uz git-longest-message
 autoload -Uz git-rewrite-author
 autoload -Uz git-rewrite-author2
+# Log
+autoload -Uz httpd_log
+autoload -Uz _httpd_log
+compdef _httpd_log httpd_log
+autoload -Uz nginx_log
+autoload -Uz _nginx_log
+compdef _nginx_log nginx_log
 # Mysql
 autoload -Uz m56
 autoload -Uz m57
