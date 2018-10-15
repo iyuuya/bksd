@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 all_branches = {}
 remotes = `git remote`.split
@@ -19,6 +20,11 @@ branch_names = all_branches.values.flatten.sort.uniq
 branch_max = branch_names.map(&:size).max
 names = all_branches.keys
 
+authors = {}
+all_branches['local'].each do |branch|
+  authors[branch] = `git log -r --oneline --pretty="format:%cn" -1 #{branch}`
+end
+
 # print names
 print '| '
 print names.map { |name| name.ljust(branch_max) }.join(' | ')
@@ -35,5 +41,9 @@ branch_names.each do |branch_name|
   print names.map { |name| all_branches[name].include?(branch_name) ? branch_name : '' }
              .map { |bn| bn.ljust(branch_max) }
              .join(' | ')
-  puts ' |'
+  if authors.key? branch_name
+    puts " | #{authors[branch_name]}"
+  else
+    puts ' |'
+  end
 end
