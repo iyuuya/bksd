@@ -220,6 +220,7 @@ if dein#tap('denite.nvim')
     nnoremap [unite]rpo :<C-u>Denite rails:policy<CR>
     nnoremap [unite]rdo :<C-u>Denite rails:domain<CR>
     nnoremap [unite]rup :<C-u>Denite rails:uploader<CR>
+    nnoremap [unite]rda :<C-u>Denite rails:dashboard<CR>
   endif
 endif
 
