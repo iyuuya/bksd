@@ -2,8 +2,8 @@
 
 FROM iyuuya/git:latest as git
 FROM iyuuya/tig:latest as tig
-FROM iyuuya/nvim:0.3.1-squash as neovim
-FROM iyuuya/tmux:2.8-squash as tmux
+FROM iyuuya/nvim:0.3.1 as neovim
+FROM iyuuya/tmux:2.8 as tmux
 FROM iyuuya/gotoolpack as gotoolpack
 FROM iyuuya/ag:latest as ag
 
