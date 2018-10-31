@@ -11,12 +11,6 @@ function! <SID>EnableJavascript()
   let b:javascript_lib_use_d3 = 1
 endfunction
 
-function! <SID>SetIndentForRuby()
-  " let g:ruby_indent_access_modifier_style = 'indent'
-  setlocal smartindent autoindent
-  setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
-endfunction
-
 function! <SID>SetIndentForPHP()
   setlocal smartindent autoindent
   setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4
@@ -30,7 +24,6 @@ endfunction
 
 augroup MyFileTypes
   autocmd!
-  autocmd BufRead,BufNew *.arb setlocal filetype=ruby
   autocmd BufRead,BufNew *.apib setlocal filetype=apiblueprint
   autocmd BufRead,BufNew *.ts setlocal filetype=typescript
   autocmd BufRead,BufNew *.vue setlocal filetype=html
@@ -40,7 +33,6 @@ augroup MyFileTypes
   autocmd BufRead,BufNew *.fish setlocal filetype=fish
 
   autocmd FileType javascript,javascript.jsx,javascript.mocha call <SID>EnableJavascript()
-  autocmd FileType ruby call <SID>SetIndentForRuby()
   autocmd FileType fish call <SID>EnableFish()
   autocmd FileType php call <SID>SetIndentForPHP()
 augroup END
