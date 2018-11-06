@@ -1,4 +1,5 @@
 bundler
+bundler-audit
 awesome_print
 pry
 pry-coolline
