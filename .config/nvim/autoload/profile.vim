@@ -17,6 +17,7 @@ endfunction
 
 function! profile#load_profiles(...)
   for name in a:000
+    execute 'set rtp^=' . profile#path(name)
     call profile#source_profile_file(name, 'init.vim')
   endfor
 endfunction
