@@ -1,3 +1,9 @@
 [submodule "nvim/.config/nvim/profiles/default/pack/cocopon/start/iceberg.vim"]
 	path = nvim/.config/nvim/profiles/default/pack/cocopon/start/iceberg.vim
 	url = https://github.com/cocopon/iceberg.vim
+[submodule "nvim/.config/nvim/profiles/default/pack/junegunn/start/fzf"]
+	path = nvim/.config/nvim/profiles/default/pack/junegunn/start/fzf
+	url = https://github.com/junegunn/fzf.git
+[submodule "nvim/.config/nvim/profiles/default/pack/junegunn/start/fzf.vim"]
+	path = nvim/.config/nvim/profiles/default/pack/junegunn/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
