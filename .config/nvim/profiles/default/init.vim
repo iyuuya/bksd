@@ -37,4 +37,8 @@ let &directory=g:nvim_data_path . '/swap'
 set undofile
 let &undodir=g:nvim_data_path . '/undo'
 
+call profile#source_profile_file('default', 'rc/encoding.vim')
+
 colorscheme iceberg
+
+" vim: foldmethod=marker
