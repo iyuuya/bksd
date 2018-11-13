@@ -2,6 +2,8 @@ scriptencoding utf-8
 let s:save_cpo = &cpoptions
 set cpoptions&vim
 
+let g:loaded_profiles = []
+
 function! profile#path(name)
   return g:profile_directory . '/' . a:name
 endfunction
@@ -17,8 +19,12 @@ endfunction
 
 function! profile#load_profiles(...)
   for name in a:000
-    execute 'set rtp^=' . profile#path(name)
-    call profile#source_profile_file(name, 'init.vim')
+    if index(g:loaded_profiles, name) < 0
+      execute 'set runtimepath^=' . profile#path(name)
+      execute 'set packpath^=' . profile#path(name)
+      call profile#source_profile_file(name, 'init.vim')
+      call add(g:loaded_profiles, name)
+    endif
   endfor
 endfunction
 
