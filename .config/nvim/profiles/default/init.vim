@@ -39,6 +39,11 @@ let &undodir=g:nvim_data_path . '/undo'
 
 call profile#source_profile_file('default', 'rc/encoding.vim')
 
+augroup vim-local
+  autocmd!
+  autocmd VimEnter * call vim#local#load(expand('<afile>:p:h'))
+augroup END
+
 colorscheme iceberg
 
 " vim: foldmethod=marker
