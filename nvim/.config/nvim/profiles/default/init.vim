@@ -39,6 +39,7 @@ let &directory=g:nvim_data_path . '/swap'
 set undofile
 let &undodir=g:nvim_data_path . '/undo'
 
+call profile#source_profile_file('default', 'rc/1_important.vim')
 call profile#source_profile_file('default', 'rc/encoding.vim')
 
 augroup vim-local
