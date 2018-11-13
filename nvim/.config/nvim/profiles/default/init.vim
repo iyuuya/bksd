@@ -19,6 +19,8 @@ let $MYVIMFILES = expand($XDG_CONFIG_HOME . '/nvim')
 execute 'set runtimepath^=' . $MYVIMFILES
 let $MYVIMRC = expand($MYVIMFILES . '/init.vm')
 
+language C
+
 let g:nvim_config_path = expand($XDG_CONFIG_HOME . '/nvim')
 let g:nvim_cache_path = expand($XDG_CACHE_HOME . '/nvim')
 let g:nvim_data_path = expand($XDG_DATA_HOME . '/nvim')
