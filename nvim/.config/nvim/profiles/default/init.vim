@@ -25,6 +25,10 @@ let g:nvim_config_path = expand($XDG_CONFIG_HOME . '/nvim')
 let g:nvim_cache_path = expand($XDG_CACHE_HOME . '/nvim')
 let g:nvim_data_path = expand($XDG_DATA_HOME . '/nvim')
 
+augroup MyAutoCmd
+  autocmd!
+augroup END
+
 call profile#source_profile_file('default', 'rc/1_important.vim')
 call profile#source_profile_file('default', 'rc/2_moving_around_searching_and_patterns.vim')
 call profile#source_profile_file('default', 'rc/3_tags.vim')
@@ -50,6 +54,28 @@ call profile#source_profile_file('default', 'rc/22_running_make_and_jumping_to_e
 call profile#source_profile_file('default', 'rc/23_language_specific.vim')
 call profile#source_profile_file('default', 'rc/24_multi_byte_characters.vim')
 call profile#source_profile_file('default', 'rc/25_various.vim')
+
+" Leader/LocalLeader
+let g:mapleader = ','
+let g:maplocalleader = 'm'
+nnoremap <LocalLeader> <Nop>
+xnoremap <LocalLeader> <Nop>
+nnoremap <leader> <Nop>
+xnoremap <leader> <Nop>
+" remote plugin prog
+let g:python_host_prog = expand('~/.anyenv/envs/pyenv/versions/neovim2/bin/python')
+let g:python3_host_prog = expand('~/.anyenv/envs/pyenv/versions/neovim3/bin/python')
+let g:ruby_host_prog = 'ruby'
+let g:node_host_prog = 'node'
+
+filetype indent plugin on
+syntax on
+
+" terminal key-bind
+tnoremap <c-w>h <C-\><C-N><C-w>h
+tnoremap <c-w>j <C-\><C-N><C-w>j
+tnoremap <c-w>k <C-\><C-N><C-w>k
+tnoremap <c-w>l <C-\><C-N><C-w>l
 
 augroup vim-local
   autocmd!
