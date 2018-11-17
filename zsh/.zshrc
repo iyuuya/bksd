@@ -288,9 +288,9 @@ alias -g JQ="| jq '.'"
 alias ls='ls -GF'
 alias l='ls'
 alias ll='l -lh'
-alias la='l -a'
+alias la='l -A'
 alias lf='l | grep /'
-alias dir='l -al'
+alias dir='l -Al'
 
 alias lns='ln -s'
 alias rmr='rm -rf'
