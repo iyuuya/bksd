@@ -83,27 +83,15 @@ function count_prompt_characters()
 
 function update_prompt() # "{{{2
 {
-  # user@host(2012/03/04 05:06)[1.9.3]>>-: "{{{3
-  # user@host
-  bar_left_self="%{%F{magenta}%}$USER%{%F{cyan}%}@%{%F{blue}%}%m%{%f%}"
-  # date: (2012/03/04 05:06)
-  bar_left_date="(%D{%Y/%m/%d %H:%M:%S})"
-  # rbenv : [1.9.3]
+  # (2012/03/04 05:06)[1.9.3]: "{{{3
+  bar_left_date="(%{%F{magenta}%}%D{%Y/%m/%d %H:%M:%S}%{%f%})"
   if [ -n "$(rbenv_prompt)" ]; then
     bar_left_ruby="[%{%F{red}%}$(rbenv_prompt)%{%f%}]"
   fi
+  local bar_left="${bar_left_date}${bar_left_ruby}"
 
-  # local bar_left="${bar_left_self}${bar_left_date}${bar_left_ruby}${bar_left_node}${bar_left_python}${bar_left_go}${bar_left_scala}>>-"
-  local bar_left="${bar_left_self}${bar_left_date}${bar_left_ruby}"
-  # "}}}3
-
-  # ----<master:project>-<<: "{{{3
+  # [master:project] "{{{3
   prompt_bar_right='${vcs_info_msg_0_}'
-  # LANG=C vcs_info >&/dev/null
-  # if [ -n "$(git_prompt)" ]; then
-  #   prompt_bar_right="$(git_prompt):"
-  # fi
-  # -<master:project>
   prompt_bar_right="[${prompt_bar_right}%{%F{blue}%}%c%{%f%}]"
 
   local bar_right_without_path="${prompt_bar_right:s/%d//}"
@@ -114,7 +102,7 @@ function update_prompt() # "{{{2
 
   local prompt_left="%#%{%b%} "
 
-  # user@host(2012/03/04 05:06)[1.9.3]>>-----<master:project>-<<
+  # (2012/03/04 05:06:07)[2.5.3][master:project]
   # % 
   PROMPT="${bar_left}${bar_right}"$'\n'"${prompt_left}"
   RPROMPT="[%{%F{blue}%}%~%{%f%}]"
