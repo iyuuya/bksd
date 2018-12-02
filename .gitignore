@@ -1,3 +1,5 @@
 .vim/vimrc
 .vim/gvimrc
 .vim/pack
+volt/repos
+volt/trx.lock

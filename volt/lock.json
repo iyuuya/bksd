@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "current_profile_name": "default",
+  "repos": [],
+  "profiles": [
+    {
+      "name": "default",
+      "repos_path": []
+    }
+  ]
+}
