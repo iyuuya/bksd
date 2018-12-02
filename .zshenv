@@ -115,8 +115,8 @@ esac
 
 case ${OSTYPE} in
   darwin*)
-    export LANG=ja_JP.UTF-8
-    export SECOND_LANG=C
+    export LANG=en_US.UTF-8
+    export SECOND_LANG=ja_JP.UTF-8
     ;;
   linux*)
     export LANG=C
