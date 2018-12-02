@@ -6,13 +6,25 @@
       "type": "git",
       "path": "github.com/cocopon/iceberg.vim",
       "version": "0a18b0fbfdcdace35ee7ff4397ab6932d6dae1da"
+    },
+    {
+      "type": "git",
+      "path": "github.com/junegunn/fzf",
+      "version": "d4ed955aee08a1c2ceb64e562ab4a88bdc9af8f0"
+    },
+    {
+      "type": "git",
+      "path": "github.com/junegunn/fzf.vim",
+      "version": "95f025ef2dbc8fedf124521904a80c1879acd359"
     }
   ],
   "profiles": [
     {
       "name": "default",
       "repos_path": [
-        "github.com/cocopon/iceberg.vim"
+        "github.com/cocopon/iceberg.vim",
+        "github.com/junegunn/fzf",
+        "github.com/junegunn/fzf.vim"
       ]
     }
   ]
