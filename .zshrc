@@ -302,11 +302,11 @@ alias where='command -v'
 
 alias x='exit'
 
-if type nvim > /dev/null 2>&1; then
-  alias vim='nvim'
-fi
+# if type nvim > /dev/null 2>&1; then
+#   alias vim='nvim'
+# fi
 alias nv='vim -u NONE'
-alias v='nvim'
+alias v='vim'
 if type /usr/local/bin/vim > /dev/null 2>&1; then
   alias vv='/usr/local/bin/vim'
   alias cv='/usr/local/bin/vim --clean'
