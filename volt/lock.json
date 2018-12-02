@@ -1,11 +1,19 @@
 {
   "version": 2,
   "current_profile_name": "default",
-  "repos": [],
+  "repos": [
+    {
+      "type": "git",
+      "path": "github.com/cocopon/iceberg.vim",
+      "version": "0a18b0fbfdcdace35ee7ff4397ab6932d6dae1da"
+    }
+  ],
   "profiles": [
     {
       "name": "default",
-      "repos_path": []
+      "repos_path": [
+        "github.com/cocopon/iceberg.vim"
+      ]
     }
   ]
 }
