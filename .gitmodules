@@ -7,3 +7,9 @@
 [submodule "nvim/.config/nvim/profiles/default/pack/junegunn/start/fzf.vim"]
 	path = nvim/.config/nvim/profiles/default/pack/junegunn/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
+[submodule "nvim/.config/nvim/profiles/default/pack/autozimu/LanguageClient-neovim"]
+	path = nvim/.config/nvim/profiles/default/pack/autozimu/LanguageClient-neovim
+	url = https://github.com/autozimu/LanguageClient-neovim.git
+[submodule "nvim/.config/nvim/profiles/default/pack/Shougo/deoplete.nvim"]
+	path = nvim/.config/nvim/profiles/default/pack/Shougo/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim.git
