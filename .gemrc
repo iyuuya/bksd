@@ -1,11 +1,10 @@
 ---
+:backtrace: false
+:bulk_threshold: 1000
 :sources:
 - https://rubygems.org
 - http://gems.github.com
-:verbose: true
 :update_sources: true
-:backtrace: false
-:benchmark: false
-:bulk_threshold: 1000
-# install: --no-document
-# update: --no-document
+:verbose: true
+benchmark: false
+gem: "--document=yri"
