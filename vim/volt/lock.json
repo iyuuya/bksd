@@ -16,6 +16,86 @@
       "type": "git",
       "path": "github.com/junegunn/fzf.vim",
       "version": "95f025ef2dbc8fedf124521904a80c1879acd359"
+    },
+    {
+      "type": "git",
+      "path": "github.com/airblade/vim-gitgutter",
+      "version": "c2651aefbd92dca05de1943619df965b848f9b4f"
+    },
+    {
+      "type": "git",
+      "path": "github.com/w0rp/ale",
+      "version": "1d4f98553852499e0f8ebd951db6ada2b1d973e3"
+    },
+    {
+      "type": "git",
+      "path": "github.com/editorconfig/editorconfig-vim",
+      "version": "68f8136d2b018bfa9b23403e87d3d65bc942cbc3"
+    },
+    {
+      "type": "git",
+      "path": "github.com/kana/vim-textobj-user",
+      "version": "074ce2575543f790290b189860597a3dcac1f79d"
+    },
+    {
+      "type": "git",
+      "path": "github.com/rhysd/vim-textobj-ruby",
+      "version": "7a3034b66f3aa36f1a0a30a5ea814ac136a455d0"
+    },
+    {
+      "type": "git",
+      "path": "github.com/alpaca-tc/vim-endwise",
+      "version": "f2b664d4d492e649558dae1c3fce68a11196d7cc"
+    },
+    {
+      "type": "git",
+      "path": "github.com/asciidoc/vim-asciidoc",
+      "version": "e010f74e9b7b3c0ed624647a5c3bd9561b842984"
+    },
+    {
+      "type": "git",
+      "path": "github.com/aklt/plantuml-syntax",
+      "version": "41eeca5a548c7d3bcc7b86758a1f10b7d96aa0b9"
+    },
+    {
+      "type": "git",
+      "path": "github.com/vim-jp/cpp-vim",
+      "version": "1ddd7e39567d847526b806bd28fede509a505e6c"
+    },
+    {
+      "type": "git",
+      "path": "github.com/chase/vim-ansible-yaml",
+      "version": "a6f92d17ff01b2e63d6c9fdbb7f7e13c7fd41d14"
+    },
+    {
+      "type": "git",
+      "path": "github.com/leafgarland/typescript-vim",
+      "version": "0e9d92eead2df21abe342c4341c55536dd36b0af"
+    },
+    {
+      "type": "git",
+      "path": "github.com/fatih/vim-go",
+      "version": "3577e475ac6f1089e0a32d2921989a4279e9867b"
+    },
+    {
+      "type": "git",
+      "path": "github.com/lmeijvogel/vim-yaml-helper",
+      "version": "db031682d339f361e2f8ed213cdb2c505cd0e011"
+    },
+    {
+      "type": "git",
+      "path": "github.com/pangloss/vim-javascript",
+      "version": "dd84369d731bcb8feee0901cbb9b63a2b219bf28"
+    },
+    {
+      "type": "git",
+      "path": "github.com/othree/javascript-libraries-syntax.vim",
+      "version": "5ef435d8c28ebc3c9b52fb865f4c06db629857f7"
+    },
+    {
+      "type": "git",
+      "path": "github.com/mxw/vim-jsx",
+      "version": "ffc0bfd9da15d0fce02d117b843f718160f7ad27"
     }
   ],
   "profiles": [
@@ -24,7 +104,23 @@
       "repos_path": [
         "github.com/cocopon/iceberg.vim",
         "github.com/junegunn/fzf",
-        "github.com/junegunn/fzf.vim"
+        "github.com/junegunn/fzf.vim",
+        "github.com/airblade/vim-gitgutter",
+        "github.com/w0rp/ale",
+        "github.com/editorconfig/editorconfig-vim",
+        "github.com/kana/vim-textobj-user",
+        "github.com/rhysd/vim-textobj-ruby",
+        "github.com/alpaca-tc/vim-endwise",
+        "github.com/asciidoc/vim-asciidoc",
+        "github.com/aklt/plantuml-syntax",
+        "github.com/vim-jp/cpp-vim",
+        "github.com/chase/vim-ansible-yaml",
+        "github.com/leafgarland/typescript-vim",
+        "github.com/fatih/vim-go",
+        "github.com/lmeijvogel/vim-yaml-helper",
+        "github.com/pangloss/vim-javascript",
+        "github.com/othree/javascript-libraries-syntax.vim",
+        "github.com/mxw/vim-jsx"
       ]
     }
   ]
