@@ -5,6 +5,8 @@
 " Author: iyuuya <i.yuuya@gmail.com>
 " }}}1
 "===============================================================================
+scriptencoding utf-8
+
 set cpoptions-=m
 
 let g:vim_data_path = expand('~/.local/share/vim')
