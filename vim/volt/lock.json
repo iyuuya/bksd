@@ -96,6 +96,11 @@
       "type": "git",
       "path": "github.com/mxw/vim-jsx",
       "version": "ffc0bfd9da15d0fce02d117b843f718160f7ad27"
+    },
+    {
+      "type": "git",
+      "path": "github.com/francoiscabrol/ranger.vim",
+      "version": "118afa234620bea927235e4bdbe2064fd7e15775"
     }
   ],
   "profiles": [
@@ -120,7 +125,8 @@
         "github.com/lmeijvogel/vim-yaml-helper",
         "github.com/pangloss/vim-javascript",
         "github.com/othree/javascript-libraries-syntax.vim",
-        "github.com/mxw/vim-jsx"
+        "github.com/mxw/vim-jsx",
+        "github.com/francoiscabrol/ranger.vim"
       ]
     }
   ]
