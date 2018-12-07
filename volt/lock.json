@@ -101,6 +101,11 @@
       "type": "git",
       "path": "github.com/francoiscabrol/ranger.vim",
       "version": "118afa234620bea927235e4bdbe2064fd7e15775"
+    },
+    {
+      "type": "git",
+      "path": "github.com/rbgrouleff/bclose.vim",
+      "version": "99018b4a2dd18aea1cbd3aa23565b01a0f8c5b73"
     }
   ],
   "profiles": [
@@ -126,7 +131,8 @@
         "github.com/pangloss/vim-javascript",
         "github.com/othree/javascript-libraries-syntax.vim",
         "github.com/mxw/vim-jsx",
-        "github.com/francoiscabrol/ranger.vim"
+        "github.com/francoiscabrol/ranger.vim",
+        "github.com/rbgrouleff/bclose.vim"
       ]
     }
   ]
