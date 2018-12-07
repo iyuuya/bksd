@@ -48,6 +48,7 @@ end
 DotInstallTask.new :fish
 DotInstallTask.new :emacs
 DotInstallTask.new :hammerspoon
+DotInstallTask.new :ranger
 
 AnyenvSetupTask.new :anyenv
 HomebrewSetupTask.new :brew
