@@ -10,7 +10,7 @@
     {
       "type": "git",
       "path": "github.com/junegunn/fzf",
-      "version": "d4ed955aee08a1c2ceb64e562ab4a88bdc9af8f0"
+      "version": "61feee690c25487aab7613771cd75166d404273a"
     },
     {
       "type": "git",
@@ -25,7 +25,7 @@
     {
       "type": "git",
       "path": "github.com/w0rp/ale",
-      "version": "1d4f98553852499e0f8ebd951db6ada2b1d973e3"
+      "version": "9226e13b31474ac17d0c25cd27aa55bff21d55c2"
     },
     {
       "type": "git",
@@ -75,7 +75,7 @@
     {
       "type": "git",
       "path": "github.com/fatih/vim-go",
-      "version": "3577e475ac6f1089e0a32d2921989a4279e9867b"
+      "version": "2e1eb6ff7a0cf67f93d4cd2210702d933565c022"
     },
     {
       "type": "git",
