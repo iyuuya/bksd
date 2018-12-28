@@ -10,22 +10,22 @@
     {
       "type": "git",
       "path": "github.com/junegunn/fzf",
-      "version": "61feee690c25487aab7613771cd75166d404273a"
+      "version": "5d16b288698ecec96080a5d576521d92550e78fd"
     },
     {
       "type": "git",
       "path": "github.com/junegunn/fzf.vim",
-      "version": "95f025ef2dbc8fedf124521904a80c1879acd359"
+      "version": "f0acabf7e837e626c7102c30af890bccf79e33b7"
     },
     {
       "type": "git",
       "path": "github.com/airblade/vim-gitgutter",
-      "version": "c2651aefbd92dca05de1943619df965b848f9b4f"
+      "version": "1d422b9f98194e38bc56e54192c9bc66d95c21f1"
     },
     {
       "type": "git",
       "path": "github.com/w0rp/ale",
-      "version": "9226e13b31474ac17d0c25cd27aa55bff21d55c2"
+      "version": "73ca1e71918a0b50b7bbcbed91857c3618ad93cc"
     },
     {
       "type": "git",
@@ -75,7 +75,7 @@
     {
       "type": "git",
       "path": "github.com/fatih/vim-go",
-      "version": "2e1eb6ff7a0cf67f93d4cd2210702d933565c022"
+      "version": "23409acfa8b6e4a324730108d01826f0910a8973"
     },
     {
       "type": "git",
@@ -85,7 +85,7 @@
     {
       "type": "git",
       "path": "github.com/pangloss/vim-javascript",
-      "version": "dd84369d731bcb8feee0901cbb9b63a2b219bf28"
+      "version": "50c135735611946707d04757fdc0cde5537659ae"
     },
     {
       "type": "git",
@@ -100,7 +100,7 @@
     {
       "type": "git",
       "path": "github.com/francoiscabrol/ranger.vim",
-      "version": "118afa234620bea927235e4bdbe2064fd7e15775"
+      "version": "e8963d5b1ea0d42f1706bc5442290d68b0f731bd"
     },
     {
       "type": "git",
