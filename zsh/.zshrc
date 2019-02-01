@@ -289,7 +289,7 @@ alias ls='ls -GF'
 alias l='ls'
 alias ll='l -lh'
 alias la='l -A'
-alias lf='l | grep /'
+# alias lf='l | grep /'
 alias dir='l -Al'
 
 alias lns='ln -s'
