@@ -5,12 +5,12 @@
     {
       "type": "git",
       "path": "github.com/cocopon/iceberg.vim",
-      "version": "0a18b0fbfdcdace35ee7ff4397ab6932d6dae1da"
+      "version": "8b5ca0059c0f5f0bf0f78d7c5fbd3e83b7a5d5b6"
     },
     {
       "type": "git",
       "path": "github.com/junegunn/fzf",
-      "version": "5d16b288698ecec96080a5d576521d92550e78fd"
+      "version": "315e568de006e80138f79c77d5508c7e4853e6b2"
     },
     {
       "type": "git",
@@ -20,12 +20,12 @@
     {
       "type": "git",
       "path": "github.com/airblade/vim-gitgutter",
-      "version": "1d422b9f98194e38bc56e54192c9bc66d95c21f1"
+      "version": "afa4f2ddf0fecb37914ec37357636abb18013422"
     },
     {
       "type": "git",
       "path": "github.com/w0rp/ale",
-      "version": "73ca1e71918a0b50b7bbcbed91857c3618ad93cc"
+      "version": "067601e9db7e0c2ab6c8394c9be74769463c6da9"
     },
     {
       "type": "git",
@@ -75,7 +75,7 @@
     {
       "type": "git",
       "path": "github.com/fatih/vim-go",
-      "version": "23409acfa8b6e4a324730108d01826f0910a8973"
+      "version": "a61545f09cad6df2e7a4918cbd6981811f612ae9"
     },
     {
       "type": "git",
