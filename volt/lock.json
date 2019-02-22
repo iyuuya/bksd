@@ -15,17 +15,17 @@
     {
       "type": "git",
       "path": "github.com/junegunn/fzf.vim",
-      "version": "f0acabf7e837e626c7102c30af890bccf79e33b7"
+      "version": "9b50e2fd5f7beab1cac8269cfc386c86d266df38"
     },
     {
       "type": "git",
       "path": "github.com/airblade/vim-gitgutter",
-      "version": "fd834e48eed21cc3c3ab66779a2296a16f41cbca"
+      "version": "3ce2a4be25429e8f1e8f699601ec5f1c8879c574"
     },
     {
       "type": "git",
       "path": "github.com/w0rp/ale",
-      "version": "c3d4e0983b4b08e61692cdd88990a79525a78707"
+      "version": "f8aeb5c5a45b57a35d1572176e345173c6e4de61"
     },
     {
       "type": "git",
@@ -75,7 +75,7 @@
     {
       "type": "git",
       "path": "github.com/fatih/vim-go",
-      "version": "c6537a3fd3dfe26e32ea154d74b7a16c2a63b79f"
+      "version": "c860f7c3ae0e0287f143a5b3e58873fc0a9fbda9"
     },
     {
       "type": "git",
@@ -106,6 +106,31 @@
       "type": "git",
       "path": "github.com/rbgrouleff/bclose.vim",
       "version": "99018b4a2dd18aea1cbd3aa23565b01a0f8c5b73"
+    },
+    {
+      "type": "git",
+      "path": "github.com/prabirshrestha/vim-lsp",
+      "version": "28ba60120556c4be71368d1fafe10c216a1c59cf"
+    },
+    {
+      "type": "git",
+      "path": "github.com/prabirshrestha/async.vim",
+      "version": "f3014550d7a799097e56b094104dd2cd66cf2612"
+    },
+    {
+      "type": "git",
+      "path": "github.com/Shougo/deoplete.nvim",
+      "version": "98686f0c89ba39f5050f0fc66a91334dae38a208"
+    },
+    {
+      "type": "git",
+      "path": "github.com/roxma/nvim-yarp",
+      "version": "1524cf7988d1e1ed7475ead3654987f64943a1f0"
+    },
+    {
+      "type": "git",
+      "path": "github.com/roxma/vim-hug-neovim-rpc",
+      "version": "411b3f293cb41614e1bec154b8440226e0759ca6"
     }
   ],
   "profiles": [
@@ -132,7 +157,12 @@
         "github.com/othree/javascript-libraries-syntax.vim",
         "github.com/mxw/vim-jsx",
         "github.com/francoiscabrol/ranger.vim",
-        "github.com/rbgrouleff/bclose.vim"
+        "github.com/rbgrouleff/bclose.vim",
+        "github.com/prabirshrestha/vim-lsp",
+        "github.com/prabirshrestha/async.vim",
+        "github.com/Shougo/deoplete.nvim",
+        "github.com/roxma/nvim-yarp",
+        "github.com/roxma/vim-hug-neovim-rpc"
       ]
     }
   ]
