@@ -8,7 +8,6 @@ endfunction
 function! s:on_load_post()
   " Plugin configuration like the code written in vimrc.
   " This configuration is executed *after* a plugin is loaded.
-  nnoremap <C-e>f :FZF<CR>
 endfunction
 
 function! s:loaded_on()
@@ -28,7 +27,7 @@ endfunction
 
 function! s:depends()
   " Dependencies of this plugin.
-  " The specified dependencies are loaded after this plugin is loaded.
+  " The specified dependencies are loaded before this plugin is loaded.
   "
   " This function must contain 'return [<repos>, ...]' code.
   " (the argument of :return must be list literal, and the elements are string)

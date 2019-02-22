@@ -3,13 +3,13 @@
 function! s:on_load_pre()
   " Plugin configuration like the code written in vimrc.
   " This configuration is executed *before* a plugin is loaded.
-  set termguicolors
-  colorscheme iceberg
 endfunction
 
 function! s:on_load_post()
   " Plugin configuration like the code written in vimrc.
   " This configuration is executed *after* a plugin is loaded.
+  set termguicolors
+  colorscheme iceberg
 endfunction
 
 function! s:loaded_on()
