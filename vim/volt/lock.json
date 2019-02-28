@@ -15,17 +15,17 @@
     {
       "type": "git",
       "path": "github.com/junegunn/fzf.vim",
-      "version": "9b50e2fd5f7beab1cac8269cfc386c86d266df38"
+      "version": "b31512e2a2d062ee4b6eb38864594c83f1ad2c2f"
     },
     {
       "type": "git",
       "path": "github.com/airblade/vim-gitgutter",
-      "version": "3ce2a4be25429e8f1e8f699601ec5f1c8879c574"
+      "version": "78db200b12d5322f43ac518adc8da0d90864a552"
     },
     {
       "type": "git",
       "path": "github.com/w0rp/ale",
-      "version": "f8aeb5c5a45b57a35d1572176e345173c6e4de61"
+      "version": "c4328f2a31a8acac96ca8d7615231812bad700bf"
     },
     {
       "type": "git",
@@ -75,7 +75,7 @@
     {
       "type": "git",
       "path": "github.com/fatih/vim-go",
-      "version": "c860f7c3ae0e0287f143a5b3e58873fc0a9fbda9"
+      "version": "66d06f380ef3cbced060b4d514413762a4438fb4"
     },
     {
       "type": "git",
@@ -85,7 +85,7 @@
     {
       "type": "git",
       "path": "github.com/pangloss/vim-javascript",
-      "version": "7b978de215d864cf6138275e237a5c1d055556a1"
+      "version": "8450f06ec2c22bf33934728953b722a3847bbc18"
     },
     {
       "type": "git",
@@ -110,7 +110,7 @@
     {
       "type": "git",
       "path": "github.com/prabirshrestha/vim-lsp",
-      "version": "28ba60120556c4be71368d1fafe10c216a1c59cf"
+      "version": "6a12c01dbedb6dd1877e8c6dc7bf5ec5f4ed1067"
     },
     {
       "type": "git",
@@ -131,6 +131,11 @@
       "type": "git",
       "path": "github.com/roxma/vim-hug-neovim-rpc",
       "version": "411b3f293cb41614e1bec154b8440226e0759ca6"
+    },
+    {
+      "type": "git",
+      "path": "github.com/ryanolsonx/vim-lsp-javascript",
+      "version": "6007e99735295dc1bad788d73f712705f41742ae"
     }
   ],
   "profiles": [
@@ -162,7 +167,8 @@
         "github.com/prabirshrestha/async.vim",
         "github.com/Shougo/deoplete.nvim",
         "github.com/roxma/nvim-yarp",
-        "github.com/roxma/vim-hug-neovim-rpc"
+        "github.com/roxma/vim-hug-neovim-rpc",
+        "github.com/ryanolsonx/vim-lsp-javascript"
       ]
     }
   ]
