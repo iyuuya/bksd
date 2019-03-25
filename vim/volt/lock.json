@@ -75,7 +75,7 @@
     {
       "type": "git",
       "path": "github.com/fatih/vim-go",
-      "version": "71bb6c7394f24423d9ca05f9f19dfdfb4be604de"
+      "version": "40fa2df43c662fe9c7a5475d5ad5f1605e0a4199"
     },
     {
       "type": "git",
@@ -110,7 +110,7 @@
     {
       "type": "git",
       "path": "github.com/prabirshrestha/vim-lsp",
-      "version": "e3f69339efbf9582be1859766e2b2ed353bedfbc"
+      "version": "b20f79c8e08aefae40aa66b1d4cd082a6b4a86a7"
     },
     {
       "type": "git",
@@ -120,7 +120,7 @@
     {
       "type": "git",
       "path": "github.com/Shougo/deoplete.nvim",
-      "version": "bf8f6734e0e41ca7655702e6f683c5f342d82639"
+      "version": "d7ad459921937c8ded77e0e9c641ba7f7934ce18"
     },
     {
       "type": "git",
@@ -195,12 +195,12 @@
     {
       "type": "git",
       "path": "github.com/thinca/vim-quickrun",
-      "version": "a2bb7be01815dab286735928001a009bcdb0d946"
+      "version": "ed236e0e3fa9d4c5c286581ee68b6fa7d976674b"
     },
     {
       "type": "git",
       "path": "github.com/lambdalisue/gina.vim",
-      "version": "0e12978d661f1c00170e6ad74b89f7ef3ca14cd9"
+      "version": "c4b333ef3ee66b66a3439e55e756e08c24b3c131"
     },
     {
       "type": "git",
@@ -220,7 +220,7 @@
     {
       "type": "git",
       "path": "github.com/tpope/vim-rails",
-      "version": "cb188c6b73d490d3e9b2e3ada044e208aabdc647"
+      "version": "b7ab419f4f9b5716eb92721f75fc98f0e2a15c19"
     },
     {
       "type": "git",
