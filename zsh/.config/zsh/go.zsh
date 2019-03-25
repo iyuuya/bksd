@@ -6,10 +6,10 @@ if [ ! -d $GOPATH ]; then
   mkdir $GOPATH
 fi
 
-if [ ! -x "`which peco`" ]; then
-  echo 'installing peco...'
-  go get github.com/peco/peco/cmd/peco
-fi
+# if [ ! -x "`which peco`" ]; then
+#   echo 'installing peco...'
+#   go get github.com/peco/peco/cmd/peco
+# fi
 
 if [ ! -x "`which ghq`" ]; then
   echo 'installing ghq...'
