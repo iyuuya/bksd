@@ -241,6 +241,11 @@
       "type": "git",
       "path": "github.com/iberianpig/tig-explorer.vim",
       "version": "706ab380aff17ffcf3f5734dfe19000c05b8f57e"
+    },
+    {
+      "type": "git",
+      "path": "github.com/iberianpig/ranger-explorer.vim",
+      "version": "11c25ade4182cf02d1da8fa7c08a70b6a2922336"
     }
   ],
   "profiles": [
@@ -265,7 +270,6 @@
         "github.com/pangloss/vim-javascript",
         "github.com/othree/javascript-libraries-syntax.vim",
         "github.com/mxw/vim-jsx",
-        "github.com/francoiscabrol/ranger.vim",
         "github.com/rbgrouleff/bclose.vim",
         "github.com/prabirshrestha/vim-lsp",
         "github.com/prabirshrestha/async.vim",
@@ -294,7 +298,8 @@
         "github.com/h1mesuke/vim-alignta",
         "github.com/lumiliet/vim-twig",
         "github.com/StanAngeloff/php.vim",
-        "github.com/iberianpig/tig-explorer.vim"
+        "github.com/iberianpig/tig-explorer.vim",
+        "github.com/iberianpig/ranger-explorer.vim"
       ]
     }
   ]
