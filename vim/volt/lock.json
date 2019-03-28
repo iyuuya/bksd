@@ -25,7 +25,7 @@
     {
       "type": "git",
       "path": "github.com/w0rp/ale",
-      "version": "80ef7ea2d0b22f0d8de7387a3d5bf6e9e5b72e9d"
+      "version": "32c8bd1fa4629d52df27103fcf18d59c5d16b343"
     },
     {
       "type": "git",
@@ -75,7 +75,7 @@
     {
       "type": "git",
       "path": "github.com/fatih/vim-go",
-      "version": "40fa2df43c662fe9c7a5475d5ad5f1605e0a4199"
+      "version": "ce3d69ef9f37e7be6dcda8c685019b737181fe74"
     },
     {
       "type": "git",
@@ -85,7 +85,7 @@
     {
       "type": "git",
       "path": "github.com/pangloss/vim-javascript",
-      "version": "8450f06ec2c22bf33934728953b722a3847bbc18"
+      "version": "24c896e13d9241024bdb79f48e811748654d7ba2"
     },
     {
       "type": "git",
@@ -110,7 +110,7 @@
     {
       "type": "git",
       "path": "github.com/prabirshrestha/vim-lsp",
-      "version": "b20f79c8e08aefae40aa66b1d4cd082a6b4a86a7"
+      "version": "5c3dcc952bcd50987526ae58694afea8a9052f35"
     },
     {
       "type": "git",
@@ -220,7 +220,7 @@
     {
       "type": "git",
       "path": "github.com/tpope/vim-rails",
-      "version": "b7ab419f4f9b5716eb92721f75fc98f0e2a15c19"
+      "version": "c1e7c74cba5788aa55cb836dadb624825c95ea23"
     },
     {
       "type": "git",
@@ -235,7 +235,7 @@
     {
       "type": "git",
       "path": "github.com/StanAngeloff/php.vim",
-      "version": "7671a5aa05e2a8a614551365b7c385ed5b953721"
+      "version": "bbad8f62ccbb02980636eebf5dd9986af746aae4"
     },
     {
       "type": "git",
