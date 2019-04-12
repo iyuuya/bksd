@@ -222,6 +222,7 @@ autoload -Uz m57
 # Network
 autoload -Uz listen_list
 autoload -Uz dns_cache_clear
+autoload -Uz check_ssl
 # Postgresql
 autoload -Uz psql_resetdb
 # Reload
