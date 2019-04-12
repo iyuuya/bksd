@@ -10,7 +10,7 @@
     {
       "type": "git",
       "path": "github.com/junegunn/fzf",
-      "version": "315e568de006e80138f79c77d5508c7e4853e6b2"
+      "version": "ff951341c993ed84ad65344e496e122ee3dddf67"
     },
     {
       "type": "git",
@@ -25,7 +25,7 @@
     {
       "type": "git",
       "path": "github.com/w0rp/ale",
-      "version": "32c8bd1fa4629d52df27103fcf18d59c5d16b343"
+      "version": "d7395906ba0f9aca2fb1a6c32df236bfd4ab32f6"
     },
     {
       "type": "git",
@@ -70,12 +70,12 @@
     {
       "type": "git",
       "path": "github.com/leafgarland/typescript-vim",
-      "version": "0e9d92eead2df21abe342c4341c55536dd36b0af"
+      "version": "f50fed442f8e75e714efeaf015225af9eaf67cf4"
     },
     {
       "type": "git",
       "path": "github.com/fatih/vim-go",
-      "version": "ce3d69ef9f37e7be6dcda8c685019b737181fe74"
+      "version": "9a7cf4a68adcc9327af33cd1449e7859c0e32af8"
     },
     {
       "type": "git",
@@ -110,7 +110,7 @@
     {
       "type": "git",
       "path": "github.com/prabirshrestha/vim-lsp",
-      "version": "5c3dcc952bcd50987526ae58694afea8a9052f35"
+      "version": "a79fb04d36e89261e356c16e638bbee284e42d4a"
     },
     {
       "type": "git",
@@ -120,7 +120,7 @@
     {
       "type": "git",
       "path": "github.com/Shougo/deoplete.nvim",
-      "version": "d7ad459921937c8ded77e0e9c641ba7f7934ce18"
+      "version": "5c50f254175ee1e815a47761c50abec861afcc61"
     },
     {
       "type": "git",
@@ -130,7 +130,7 @@
     {
       "type": "git",
       "path": "github.com/roxma/vim-hug-neovim-rpc",
-      "version": "411b3f293cb41614e1bec154b8440226e0759ca6"
+      "version": "55db7affbc9527464a88fb2d5f133f4994415f10"
     },
     {
       "type": "git",
@@ -180,7 +180,7 @@
     {
       "type": "git",
       "path": "github.com/AndrewRadev/switch.vim",
-      "version": "ad4fe10ee54973d1f984ef3366e3c370c6caf43d"
+      "version": "8f76655de1e3f3a0d45da4d779c54d30c4c5c0c1"
     },
     {
       "type": "git",
@@ -200,7 +200,7 @@
     {
       "type": "git",
       "path": "github.com/lambdalisue/gina.vim",
-      "version": "c4b333ef3ee66b66a3439e55e756e08c24b3c131"
+      "version": "c55faa238e0a0ca4b2cc0cfab9dbfd13db545837"
     },
     {
       "type": "git",
@@ -215,7 +215,7 @@
     {
       "type": "git",
       "path": "github.com/tpope/vim-fugitive",
-      "version": "bd0b87d36ad80e8acd94f22028d15ebb441b1c28"
+      "version": "60eac8c97457af5a96eb06ad4b564e4c813d806e"
     },
     {
       "type": "git",
