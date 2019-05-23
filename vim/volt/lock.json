@@ -246,6 +246,21 @@
       "type": "git",
       "path": "github.com/iberianpig/ranger-explorer.vim",
       "version": "11c25ade4182cf02d1da8fa7c08a70b6a2922336"
+    },
+    {
+      "type": "git",
+      "path": "github.com/kkvh/vim-docker-tools",
+      "version": "9b63e841f646e9810162b70c3fc0576079219a9e"
+    },
+    {
+      "type": "git",
+      "path": "github.com/digitaltoad/vim-pug",
+      "version": "efed0c8680d22bd16b9dc7e08f5373269b67c45f"
+    },
+    {
+      "type": "git",
+      "path": "github.com/dNitro/vim-pug-complete",
+      "version": "06d433b8f0df6e106b2d7d757fe5d9e628fa265f"
     }
   ],
   "profiles": [
@@ -299,7 +314,10 @@
         "github.com/lumiliet/vim-twig",
         "github.com/StanAngeloff/php.vim",
         "github.com/iberianpig/tig-explorer.vim",
-        "github.com/iberianpig/ranger-explorer.vim"
+        "github.com/iberianpig/ranger-explorer.vim",
+        "github.com/kkvh/vim-docker-tools",
+        "github.com/digitaltoad/vim-pug",
+        "github.com/dNitro/vim-pug-complete"
       ]
     }
   ]
