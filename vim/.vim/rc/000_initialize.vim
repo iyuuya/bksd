@@ -64,7 +64,7 @@ augroup END
 
 
 set laststatus=2
-let &statusline="%<%f%=%m%r%w%y[%{(&fenc!=''?&fenc:&enc)}][%{&ff}][%04l:%03v/%p%%]"
+let &statusline="%<%f%=%m%r%w%y[%{(&fenc!=''?&fenc:&enc)}][%{&ff}][%04l:%03v/%p%%][%{fnamemodify(getcwd(),':~:.')}]"
 set noequalalways
 set helpheight=15
 set previewheight=5
