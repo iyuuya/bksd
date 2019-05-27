@@ -4,53 +4,28 @@
   "repos": [
     {
       "type": "git",
-      "path": "github.com/cocopon/iceberg.vim",
-      "version": "24fd10b301e406ea2e6fb77c649688a3b34dc8c8"
+      "path": "github.com/5t111111/alt-gtags.vim",
+      "version": "cf534be573e7a55aee4eaec1103f160aa0dec4c9"
     },
     {
       "type": "git",
-      "path": "github.com/junegunn/fzf",
-      "version": "03e8ed4d8813684b1a3dd0831f0eab63b44e1499"
+      "path": "github.com/AndrewRadev/switch.vim",
+      "version": "bc765bd6cb861752d39ab792965d96657caf8ef0"
     },
     {
       "type": "git",
-      "path": "github.com/junegunn/fzf.vim",
-      "version": "ac4e7bfb36c88d27799c080218cea3bb833bdbd9"
+      "path": "github.com/Shougo/deoplete.nvim",
+      "version": "94b33d6a5f9e6bae8ac2abc0bddc89b5ddf02b02"
+    },
+    {
+      "type": "git",
+      "path": "github.com/StanAngeloff/php.vim",
+      "version": "bbad8f62ccbb02980636eebf5dd9986af746aae4"
     },
     {
       "type": "git",
       "path": "github.com/airblade/vim-gitgutter",
-      "version": "7eeea63e62b1cc088a75c7a7c244fc774d82e5bb"
-    },
-    {
-      "type": "git",
-      "path": "github.com/w0rp/ale",
-      "version": "7f0954b89ef7c43e5fb7b6490665e9814c8205b2"
-    },
-    {
-      "type": "git",
-      "path": "github.com/editorconfig/editorconfig-vim",
-      "version": "68f8136d2b018bfa9b23403e87d3d65bc942cbc3"
-    },
-    {
-      "type": "git",
-      "path": "github.com/kana/vim-textobj-user",
-      "version": "074ce2575543f790290b189860597a3dcac1f79d"
-    },
-    {
-      "type": "git",
-      "path": "github.com/rhysd/vim-textobj-ruby",
-      "version": "fb99d918273a65010b3ac4084371a19c34260c66"
-    },
-    {
-      "type": "git",
-      "path": "github.com/alpaca-tc/vim-endwise",
-      "version": "f2b664d4d492e649558dae1c3fce68a11196d7cc"
-    },
-    {
-      "type": "git",
-      "path": "github.com/asciidoc/vim-asciidoc",
-      "version": "e010f74e9b7b3c0ed624647a5c3bd9561b842984"
+      "version": "e5936a22cfd2e25893e2ac34af4b0afdec1e36f5"
     },
     {
       "type": "git",
@@ -59,8 +34,18 @@
     },
     {
       "type": "git",
-      "path": "github.com/vim-jp/cpp-vim",
-      "version": "1ddd7e39567d847526b806bd28fede509a505e6c"
+      "path": "github.com/alpaca-tc/vim-endwise",
+      "version": "f2b664d4d492e649558dae1c3fce68a11196d7cc"
+    },
+    {
+      "type": "git",
+      "path": "github.com/ap/vim-css-color",
+      "version": "8a84356d5319cad3da2835bd5fbc6318500f31ce"
+    },
+    {
+      "type": "git",
+      "path": "github.com/asciidoc/vim-asciidoc",
+      "version": "e010f74e9b7b3c0ed624647a5c3bd9561b842984"
     },
     {
       "type": "git",
@@ -69,33 +54,33 @@
     },
     {
       "type": "git",
-      "path": "github.com/leafgarland/typescript-vim",
-      "version": "7704fac2c765aaf975ad4034933bf63113dd4a64"
+      "path": "github.com/cocopon/iceberg.vim",
+      "version": "24fd10b301e406ea2e6fb77c649688a3b34dc8c8"
+    },
+    {
+      "type": "git",
+      "path": "github.com/dNitro/vim-pug-complete",
+      "version": "06d433b8f0df6e106b2d7d757fe5d9e628fa265f"
+    },
+    {
+      "type": "git",
+      "path": "github.com/dannyob/quickfixstatus",
+      "version": "fd3875b914fc51bbefefa8c4995588c088163053"
+    },
+    {
+      "type": "git",
+      "path": "github.com/digitaltoad/vim-pug",
+      "version": "efed0c8680d22bd16b9dc7e08f5373269b67c45f"
+    },
+    {
+      "type": "git",
+      "path": "github.com/editorconfig/editorconfig-vim",
+      "version": "37bedf88cabb61d4580295b6e347058df7e7f1b4"
     },
     {
       "type": "git",
       "path": "github.com/fatih/vim-go",
-      "version": "8c32f9f205a72b1b71d0ec61fb25a325392cb4b5"
-    },
-    {
-      "type": "git",
-      "path": "github.com/lmeijvogel/vim-yaml-helper",
-      "version": "db031682d339f361e2f8ed213cdb2c505cd0e011"
-    },
-    {
-      "type": "git",
-      "path": "github.com/pangloss/vim-javascript",
-      "version": "ee445807a71ee6933cd6cbcd74940bc288815793"
-    },
-    {
-      "type": "git",
-      "path": "github.com/othree/javascript-libraries-syntax.vim",
-      "version": "5ef435d8c28ebc3c9b52fb865f4c06db629857f7"
-    },
-    {
-      "type": "git",
-      "path": "github.com/mxw/vim-jsx",
-      "version": "ffc0bfd9da15d0fce02d117b843f718160f7ad27"
+      "version": "9d6d5cc0aac44f9a64d1822ac6f1e9e1f1e8fba7"
     },
     {
       "type": "git",
@@ -104,13 +89,88 @@
     },
     {
       "type": "git",
-      "path": "github.com/rbgrouleff/bclose.vim",
-      "version": "99018b4a2dd18aea1cbd3aa23565b01a0f8c5b73"
+      "path": "github.com/h1mesuke/vim-alignta",
+      "version": "cb3d593c48d7d3aef829b5aff49ddade24417a9f"
     },
     {
       "type": "git",
-      "path": "github.com/prabirshrestha/vim-lsp",
-      "version": "fe5057641cadba27caa26df74efa896e4255308e"
+      "path": "github.com/iberianpig/ranger-explorer.vim",
+      "version": "11c25ade4182cf02d1da8fa7c08a70b6a2922336"
+    },
+    {
+      "type": "git",
+      "path": "github.com/iberianpig/tig-explorer.vim",
+      "version": "706ab380aff17ffcf3f5734dfe19000c05b8f57e"
+    },
+    {
+      "type": "git",
+      "path": "github.com/jceb/vim-hier",
+      "version": "0b8c365263551a67404ebd7e528c55e17c1d3de7"
+    },
+    {
+      "type": "git",
+      "path": "github.com/junegunn/fzf",
+      "version": "0030d184481686384676537857614977e1fd2f94"
+    },
+    {
+      "type": "git",
+      "path": "github.com/junegunn/fzf.vim",
+      "version": "5c87ab86c0e7b0ec8a5edd39a4ce5500bb9e9333"
+    },
+    {
+      "type": "git",
+      "path": "github.com/kana/vim-textobj-user",
+      "version": "074ce2575543f790290b189860597a3dcac1f79d"
+    },
+    {
+      "type": "git",
+      "path": "github.com/kkvh/vim-docker-tools",
+      "version": "9b63e841f646e9810162b70c3fc0576079219a9e"
+    },
+    {
+      "type": "git",
+      "path": "github.com/lambdalisue/gina.vim",
+      "version": "a5d2dc19c40322212a614a88588bde22bf715961"
+    },
+    {
+      "type": "git",
+      "path": "github.com/leafgarland/typescript-vim",
+      "version": "7704fac2c765aaf975ad4034933bf63113dd4a64"
+    },
+    {
+      "type": "git",
+      "path": "github.com/lmeijvogel/vim-yaml-helper",
+      "version": "db031682d339f361e2f8ed213cdb2c505cd0e011"
+    },
+    {
+      "type": "git",
+      "path": "github.com/lumiliet/vim-twig",
+      "version": "ad115512725bcc156f7f89b72ff563b9fa44933b"
+    },
+    {
+      "type": "git",
+      "path": "github.com/mattn/emmet-vim",
+      "version": "0414b53a23c1da180370bf1228b8553fc5022e3f"
+    },
+    {
+      "type": "git",
+      "path": "github.com/mattn/httpstatus-vim",
+      "version": "e53ba547617cab371e9642f853fef05f9ff7835c"
+    },
+    {
+      "type": "git",
+      "path": "github.com/mxw/vim-jsx",
+      "version": "ffc0bfd9da15d0fce02d117b843f718160f7ad27"
+    },
+    {
+      "type": "git",
+      "path": "github.com/othree/javascript-libraries-syntax.vim",
+      "version": "5ef435d8c28ebc3c9b52fb865f4c06db629857f7"
+    },
+    {
+      "type": "git",
+      "path": "github.com/pangloss/vim-javascript",
+      "version": "ee445807a71ee6933cd6cbcd74940bc288815793"
     },
     {
       "type": "git",
@@ -119,13 +179,23 @@
     },
     {
       "type": "git",
-      "path": "github.com/Shougo/deoplete.nvim",
-      "version": "9d4e88f6cce63ed1b52ca2401d809c55ab443b25"
+      "path": "github.com/prabirshrestha/vim-lsp",
+      "version": "21d51ffb832aead80d3ba54274db9524d882dd6a"
+    },
+    {
+      "type": "git",
+      "path": "github.com/rbgrouleff/bclose.vim",
+      "version": "99018b4a2dd18aea1cbd3aa23565b01a0f8c5b73"
+    },
+    {
+      "type": "git",
+      "path": "github.com/rhysd/vim-textobj-ruby",
+      "version": "fb99d918273a65010b3ac4084371a19c34260c66"
     },
     {
       "type": "git",
       "path": "github.com/roxma/nvim-yarp",
-      "version": "1524cf7988d1e1ed7475ead3654987f64943a1f0"
+      "version": "8fcb1af27772174df5446d49de29052cac47e46f"
     },
     {
       "type": "git",
@@ -139,58 +209,8 @@
     },
     {
       "type": "git",
-      "path": "github.com/tpope/vim-repeat",
-      "version": "0b9b5e742f67bc81ae4a1f79318549d3afc90b13"
-    },
-    {
-      "type": "git",
-      "path": "github.com/dannyob/quickfixstatus",
-      "version": "fd3875b914fc51bbefefa8c4995588c088163053"
-    },
-    {
-      "type": "git",
-      "path": "github.com/yuku/vim-ref-ri",
-      "version": "be7057de4a039969738108234463fc2ad6dae1a0"
-    },
-    {
-      "type": "git",
       "path": "github.com/szw/vim-tags",
       "version": "e75dea76e488d9208ed73c53c46a4abee2695115"
-    },
-    {
-      "type": "git",
-      "path": "github.com/jceb/vim-hier",
-      "version": "0b8c365263551a67404ebd7e528c55e17c1d3de7"
-    },
-    {
-      "type": "git",
-      "path": "github.com/mattn/httpstatus-vim",
-      "version": "e53ba547617cab371e9642f853fef05f9ff7835c"
-    },
-    {
-      "type": "git",
-      "path": "github.com/tpope/vim-abolish",
-      "version": "b95463a1cffd8fc9aff2a1ff0ae9327944948699"
-    },
-    {
-      "type": "git",
-      "path": "github.com/5t111111/alt-gtags.vim",
-      "version": "cf534be573e7a55aee4eaec1103f160aa0dec4c9"
-    },
-    {
-      "type": "git",
-      "path": "github.com/AndrewRadev/switch.vim",
-      "version": "3a3e4ead5dc3663a7c47b4f308c1229587c2bca0"
-    },
-    {
-      "type": "git",
-      "path": "github.com/ap/vim-css-color",
-      "version": "10eae530889331457b738b28eafcfa3789481fcd"
-    },
-    {
-      "type": "git",
-      "path": "github.com/thinca/vim-ref",
-      "version": "b45d10f6d0c82e3afd17774626e952fde03274a1"
     },
     {
       "type": "git",
@@ -199,13 +219,28 @@
     },
     {
       "type": "git",
-      "path": "github.com/lambdalisue/gina.vim",
-      "version": "e5a6cc83acb59fbea3ec5683f4b43d3436673229"
+      "path": "github.com/thinca/vim-ref",
+      "version": "b45d10f6d0c82e3afd17774626e952fde03274a1"
     },
     {
       "type": "git",
-      "path": "github.com/mattn/emmet-vim",
-      "version": "ae7d31f29080ad18073dda3530582dacb18475e6"
+      "path": "github.com/tpope/vim-abolish",
+      "version": "b95463a1cffd8fc9aff2a1ff0ae9327944948699"
+    },
+    {
+      "type": "git",
+      "path": "github.com/tpope/vim-fugitive",
+      "version": "0f9db6af704f6fcf5cd06de964deb8223e47db4c"
+    },
+    {
+      "type": "git",
+      "path": "github.com/tpope/vim-rails",
+      "version": "8407484a329b6722ee088a096a8d879a5c32ac67"
+    },
+    {
+      "type": "git",
+      "path": "github.com/tpope/vim-repeat",
+      "version": "0b9b5e742f67bc81ae4a1f79318549d3afc90b13"
     },
     {
       "type": "git",
@@ -214,110 +249,75 @@
     },
     {
       "type": "git",
-      "path": "github.com/tpope/vim-fugitive",
-      "version": "5d99841b22928f1597d447c68de844989bf9a804"
+      "path": "github.com/vim-jp/cpp-vim",
+      "version": "1ddd7e39567d847526b806bd28fede509a505e6c"
     },
     {
       "type": "git",
-      "path": "github.com/tpope/vim-rails",
-      "version": "c9f34e53daba0a751218fde33be472da4962c15d"
+      "path": "github.com/w0rp/ale",
+      "version": "bb08b81bf719d4c55669c583c65fbe4bbd795501"
     },
     {
       "type": "git",
-      "path": "github.com/h1mesuke/vim-alignta",
-      "version": "cb3d593c48d7d3aef829b5aff49ddade24417a9f"
-    },
-    {
-      "type": "git",
-      "path": "github.com/lumiliet/vim-twig",
-      "version": "ad115512725bcc156f7f89b72ff563b9fa44933b"
-    },
-    {
-      "type": "git",
-      "path": "github.com/StanAngeloff/php.vim",
-      "version": "bbad8f62ccbb02980636eebf5dd9986af746aae4"
-    },
-    {
-      "type": "git",
-      "path": "github.com/iberianpig/tig-explorer.vim",
-      "version": "706ab380aff17ffcf3f5734dfe19000c05b8f57e"
-    },
-    {
-      "type": "git",
-      "path": "github.com/iberianpig/ranger-explorer.vim",
-      "version": "11c25ade4182cf02d1da8fa7c08a70b6a2922336"
-    },
-    {
-      "type": "git",
-      "path": "github.com/kkvh/vim-docker-tools",
-      "version": "9b63e841f646e9810162b70c3fc0576079219a9e"
-    },
-    {
-      "type": "git",
-      "path": "github.com/digitaltoad/vim-pug",
-      "version": "efed0c8680d22bd16b9dc7e08f5373269b67c45f"
-    },
-    {
-      "type": "git",
-      "path": "github.com/dNitro/vim-pug-complete",
-      "version": "06d433b8f0df6e106b2d7d757fe5d9e628fa265f"
+      "path": "github.com/yuku/vim-ref-ri",
+      "version": "be7057de4a039969738108234463fc2ad6dae1a0"
     }
   ],
   "profiles": [
     {
       "name": "default",
       "repos_path": [
+        "github.com/5t111111/alt-gtags.vim",
+        "github.com/AndrewRadev/switch.vim",
+        "github.com/Shougo/deoplete.nvim",
+        "github.com/StanAngeloff/php.vim",
+        "github.com/airblade/vim-gitgutter",
+        "github.com/aklt/plantuml-syntax",
+        "github.com/alpaca-tc/vim-endwise",
+        "github.com/ap/vim-css-color",
+        "github.com/asciidoc/vim-asciidoc",
+        "github.com/chase/vim-ansible-yaml",
         "github.com/cocopon/iceberg.vim",
+        "github.com/dNitro/vim-pug-complete",
+        "github.com/dannyob/quickfixstatus",
+        "github.com/digitaltoad/vim-pug",
+        "github.com/editorconfig/editorconfig-vim",
+        "github.com/fatih/vim-go",
+        "github.com/h1mesuke/vim-alignta",
+        "github.com/iberianpig/ranger-explorer.vim",
+        "github.com/iberianpig/tig-explorer.vim",
+        "github.com/jceb/vim-hier",
         "github.com/junegunn/fzf",
         "github.com/junegunn/fzf.vim",
-        "github.com/w0rp/ale",
-        "github.com/editorconfig/editorconfig-vim",
         "github.com/kana/vim-textobj-user",
-        "github.com/rhysd/vim-textobj-ruby",
-        "github.com/alpaca-tc/vim-endwise",
-        "github.com/asciidoc/vim-asciidoc",
-        "github.com/aklt/plantuml-syntax",
-        "github.com/vim-jp/cpp-vim",
-        "github.com/chase/vim-ansible-yaml",
+        "github.com/kkvh/vim-docker-tools",
+        "github.com/lambdalisue/gina.vim",
         "github.com/leafgarland/typescript-vim",
-        "github.com/fatih/vim-go",
         "github.com/lmeijvogel/vim-yaml-helper",
-        "github.com/pangloss/vim-javascript",
-        "github.com/othree/javascript-libraries-syntax.vim",
+        "github.com/lumiliet/vim-twig",
+        "github.com/mattn/emmet-vim",
+        "github.com/mattn/httpstatus-vim",
         "github.com/mxw/vim-jsx",
-        "github.com/rbgrouleff/bclose.vim",
-        "github.com/prabirshrestha/vim-lsp",
+        "github.com/othree/javascript-libraries-syntax.vim",
+        "github.com/pangloss/vim-javascript",
         "github.com/prabirshrestha/async.vim",
-        "github.com/Shougo/deoplete.nvim",
+        "github.com/prabirshrestha/vim-lsp",
+        "github.com/rbgrouleff/bclose.vim",
+        "github.com/rhysd/vim-textobj-ruby",
         "github.com/roxma/nvim-yarp",
         "github.com/roxma/vim-hug-neovim-rpc",
         "github.com/ryanolsonx/vim-lsp-javascript",
-        "github.com/airblade/vim-gitgutter",
-        "github.com/tpope/vim-repeat",
-        "github.com/dannyob/quickfixstatus",
-        "github.com/yuku/vim-ref-ri",
         "github.com/szw/vim-tags",
-        "github.com/jceb/vim-hier",
-        "github.com/mattn/httpstatus-vim",
-        "github.com/tpope/vim-abolish",
-        "github.com/5t111111/alt-gtags.vim",
-        "github.com/AndrewRadev/switch.vim",
-        "github.com/ap/vim-css-color",
-        "github.com/thinca/vim-ref",
         "github.com/thinca/vim-quickrun",
-        "github.com/lambdalisue/gina.vim",
-        "github.com/mattn/emmet-vim",
-        "github.com/tyru/caw.vim",
+        "github.com/thinca/vim-ref",
+        "github.com/tpope/vim-abolish",
         "github.com/tpope/vim-fugitive",
         "github.com/tpope/vim-rails",
-        "github.com/h1mesuke/vim-alignta",
-        "github.com/lumiliet/vim-twig",
-        "github.com/StanAngeloff/php.vim",
-        "github.com/iberianpig/tig-explorer.vim",
-        "github.com/iberianpig/ranger-explorer.vim",
-        "github.com/kkvh/vim-docker-tools",
-        "github.com/digitaltoad/vim-pug",
-        "github.com/dNitro/vim-pug-complete"
+        "github.com/tpope/vim-repeat",
+        "github.com/tyru/caw.vim",
+        "github.com/vim-jp/cpp-vim",
+        "github.com/w0rp/ale",
+        "github.com/yuku/vim-ref-ri"
       ]
     }
   ]
