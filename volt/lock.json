@@ -25,7 +25,7 @@
     {
       "type": "git",
       "path": "github.com/airblade/vim-gitgutter",
-      "version": "e5936a22cfd2e25893e2ac34af4b0afdec1e36f5"
+      "version": "6affbc96f1bf417d5bdd2c333525068c73eff3f0"
     },
     {
       "type": "git",
@@ -80,7 +80,7 @@
     {
       "type": "git",
       "path": "github.com/fatih/vim-go",
-      "version": "9d6d5cc0aac44f9a64d1822ac6f1e9e1f1e8fba7"
+      "version": "2e07f0afd7c071c5f732ba57b0c727016f0083a9"
     },
     {
       "type": "git",
@@ -215,7 +215,7 @@
     {
       "type": "git",
       "path": "github.com/thinca/vim-quickrun",
-      "version": "ed236e0e3fa9d4c5c286581ee68b6fa7d976674b"
+      "version": "09953abf07a4428dbec36c0747a4043ca9644da4"
     },
     {
       "type": "git",
@@ -255,7 +255,7 @@
     {
       "type": "git",
       "path": "github.com/w0rp/ale",
-      "version": "bb08b81bf719d4c55669c583c65fbe4bbd795501"
+      "version": "90b1ea230db9132d7ef455ea3b395733c12206e1"
     },
     {
       "type": "git",
