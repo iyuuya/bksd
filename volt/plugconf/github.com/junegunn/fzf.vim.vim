@@ -9,6 +9,11 @@ function! s:on_load_post()
   " Plugin configuration like the code written in vimrc.
   " This configuration is executed *after* a plugin is loaded.
   nnoremap <C-e>f :FZF<CR>
+  inoremap <expr> <c-x><c-l> fzf#vim#complete(fzf#wrap({
+        \ 'prefix': '^.*$',
+        \ 'source': 'rg -n ^ --color always',
+        \ 'options': '--ansi --delimiter : --nth 3..',
+        \ 'reducer': { lines -> join(split(lines[0], ':\zs')[2:], '') }}))
 endfunction
 
 function! s:loaded_on()
