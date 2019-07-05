@@ -223,6 +223,7 @@ autoload -Uz m57
 # Network
 autoload -Uz listen_list
 autoload -Uz dns_cache_clear
+autoload -Uz check_ssl
 # Postgresql
 autoload -Uz psql_resetdb
 # Reload
@@ -290,7 +291,7 @@ alias ls='ls -GF'
 alias l='ls'
 alias ll='l -lh'
 alias la='l -A'
-alias lf='l | grep /'
+# alias lf='l | grep /'
 alias dir='l -Al'
 
 alias lns='ln -s'

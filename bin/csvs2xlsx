@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+require 'csv'
+require 'axlsx'
+
+output = nil
+opt = OptionParser.new
+opt.on('-o OUTPUT') { |v| output = v }
+opt.parse!(ARGV)
+inputs = ARGV
+
+if output.nil? || inputs.empty?
+  puts opt.help
+  exit 1
+end
+
+Axlsx::Package.new do |package|
+  header_style = package.workbook.styles.add_style fg_color: 'FFFFFFFF', bg_color: 'FF002266', b: true
+
+  inputs.each do |filename|
+    package.workbook.add_worksheet(name: File.basename(filename, '.csv')) do |sheet|
+      count = 0
+      col_size = 0
+      CSV.foreach(filename) do |row|
+        col_size = row.size if col_size < row.size
+        style = if count.zero?
+                  header_style
+                else
+                  nil
+                end
+        sheet.add_row row.to_a, style: style
+        count += 1
+      end
+      filter_range = "A1:#{('A'...'Z').to_a[col_size - 1]}#{count}"
+      sheet.auto_filter = filter_range
+    end
+  end
+  package.serialize(output)
+end
