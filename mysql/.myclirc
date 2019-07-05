@@ -85,3 +85,8 @@ Token.Toolbar.Arg.Text = 'nobold'
 
 # Favorite queries.
 [favorite_queries]
+
+[alias_dsn]
+d56 = mysql://root@127.0.0.1:3356/
+d57 = mysql://root@127.0.0.1:3357/
+d57s = mysql://root@127.0.0.1:13357/
