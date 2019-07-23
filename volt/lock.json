@@ -39,6 +39,11 @@
     },
     {
       "type": "git",
+      "path": "github.com/alpertuna/vim-header",
+      "version": "059f33aac406d54a90f13f9451148ceedf7c3617"
+    },
+    {
+      "type": "git",
       "path": "github.com/ap/vim-css-color",
       "version": "5a31c72cc51cb11118e44fb50ff77fc596348f77"
     },
@@ -289,6 +294,7 @@
         "github.com/airblade/vim-gitgutter",
         "github.com/aklt/plantuml-syntax",
         "github.com/alpaca-tc/vim-endwise",
+        "github.com/alpertuna/vim-header",
         "github.com/ap/vim-css-color",
         "github.com/asciidoc/vim-asciidoc",
         "github.com/chase/vim-ansible-yaml",
