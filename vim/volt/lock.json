@@ -15,7 +15,7 @@
     {
       "type": "git",
       "path": "github.com/Shougo/deoplete.nvim",
-      "version": "2ac0da55367db0b9d8920bb7bcbc051f9b07b90c"
+      "version": "53ad762d357f74c02c04403325f8f9122ba3bade"
     },
     {
       "type": "git",
@@ -30,7 +30,7 @@
     {
       "type": "git",
       "path": "github.com/aklt/plantuml-syntax",
-      "version": "8992348e9e66315e76594910d57be55049a60db2"
+      "version": "0024021f01c349c2828aeb50a1e131997adea066"
     },
     {
       "type": "git",
@@ -55,7 +55,7 @@
     {
       "type": "git",
       "path": "github.com/cocopon/iceberg.vim",
-      "version": "e8316001e1130a042f8b4c8f49d78ed87b624f53"
+      "version": "c94e82ab8c62c2b6f09c00752199692e4af1c836"
     },
     {
       "type": "git",
@@ -75,12 +75,12 @@
     {
       "type": "git",
       "path": "github.com/editorconfig/editorconfig-vim",
-      "version": "37bedf88cabb61d4580295b6e347058df7e7f1b4"
+      "version": "c718cefc51ccdaf7bd27c4c1ae2de55103434241"
     },
     {
       "type": "git",
       "path": "github.com/fatih/vim-go",
-      "version": "3ab5d6c5448258d6ec3939d900f6ad431c3bad86"
+      "version": "043984a5117262c74f8b9c85f1e15dc1a7e51872"
     },
     {
       "type": "git",
@@ -110,7 +110,7 @@
     {
       "type": "git",
       "path": "github.com/junegunn/fzf",
-      "version": "951746297e26159cd45501030c56eca4bea4e277"
+      "version": "65773882505b06970c47285b4ace6208ac5e6145"
     },
     {
       "type": "git",
@@ -170,17 +170,22 @@
     {
       "type": "git",
       "path": "github.com/pangloss/vim-javascript",
-      "version": "8a599c5e84bb064e2345867332ecbcc252e3b04a"
+      "version": "7cc6baebaf0065fd8c31cc9216c87bfa543eb71a"
+    },
+    {
+      "type": "git",
+      "path": "github.com/posva/vim-vue",
+      "version": "c7b133a66ec9dcf2200d1d2a4a7ad38909c5f539"
     },
     {
       "type": "git",
       "path": "github.com/prabirshrestha/async.vim",
-      "version": "f3014550d7a799097e56b094104dd2cd66cf2612"
+      "version": "627a8c4092df24260d3dc2104bc1d944c78f91ca"
     },
     {
       "type": "git",
       "path": "github.com/prabirshrestha/vim-lsp",
-      "version": "d542bbc5a3b0b2d78552a11f4edfee1c55fc3796"
+      "version": "55e6cd174980c69062683d110ee1f0dffd6c7730"
     },
     {
       "type": "git",
@@ -200,7 +205,7 @@
     {
       "type": "git",
       "path": "github.com/roxma/vim-hug-neovim-rpc",
-      "version": "55db7affbc9527464a88fb2d5f133f4994415f10"
+      "version": "6a773197fb23fab1c375223c1b95de03bb3ef084"
     },
     {
       "type": "git",
@@ -230,7 +235,7 @@
     {
       "type": "git",
       "path": "github.com/tpope/vim-fugitive",
-      "version": "a0e8f59b683d22a0e422726c9d47469da63eb156"
+      "version": "1fe6202848cd279c986b3fd43631e1538d96005d"
     },
     {
       "type": "git",
@@ -245,7 +250,12 @@
     {
       "type": "git",
       "path": "github.com/tyru/caw.vim",
-      "version": "05c6b113dd82d2ad4d424b696b14a2b89a337541"
+      "version": "59d1bbdec7d82740811806c4d4da1963089064a8"
+    },
+    {
+      "type": "git",
+      "path": "github.com/tyru/open-browser.vim",
+      "version": "b900ff9d39bb36891704bd0fe76737ee3a7ac2b9"
     },
     {
       "type": "git",
@@ -255,7 +265,12 @@
     {
       "type": "git",
       "path": "github.com/w0rp/ale",
-      "version": "a5240009ba5ff22daad95c306f7dec372d46bda0"
+      "version": "aae6d30b1ec135e37ec3bea1885d161c6174572b"
+    },
+    {
+      "type": "git",
+      "path": "github.com/weirongxu/plantuml-previewer.vim",
+      "version": "93b7cf8ba8c11f9d13fb7b531d059a10d5a0ec52"
     },
     {
       "type": "git",
@@ -300,6 +315,7 @@
         "github.com/mxw/vim-jsx",
         "github.com/othree/javascript-libraries-syntax.vim",
         "github.com/pangloss/vim-javascript",
+        "github.com/posva/vim-vue",
         "github.com/prabirshrestha/async.vim",
         "github.com/prabirshrestha/vim-lsp",
         "github.com/rbgrouleff/bclose.vim",
@@ -315,8 +331,10 @@
         "github.com/tpope/vim-rails",
         "github.com/tpope/vim-repeat",
         "github.com/tyru/caw.vim",
+        "github.com/tyru/open-browser.vim",
         "github.com/vim-jp/cpp-vim",
         "github.com/w0rp/ale",
+        "github.com/weirongxu/plantuml-previewer.vim",
         "github.com/yuku/vim-ref-ri"
       ]
     }
