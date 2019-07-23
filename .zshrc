@@ -224,6 +224,7 @@ autoload -Uz m57
 autoload -Uz listen_list
 autoload -Uz dns_cache_clear
 autoload -Uz check_ssl
+autoload -Uz urlencode
 # Postgresql
 autoload -Uz psql_resetdb
 # Reload
