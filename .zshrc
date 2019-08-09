@@ -197,6 +197,8 @@ zle -N history-beginning-search-forward-end history-search-end
 # Benchmark
 autoload -Uz b100
 autoload -Uz benchmark
+# Dev
+autoload -Uz spacevim
 # Docker
 autoload -Uz docker-rm-exited
 # Ghq
