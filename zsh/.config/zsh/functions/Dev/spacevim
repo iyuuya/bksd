@@ -1,0 +1,5 @@
+docker run -it \
+  -v "$PWD":/home/spacevim/src \
+  -v ~/.SpaceVim.mnt/.SpaceVim.d:/home/spacevim/.SpaceVim.d \
+  -v ~/.SpaceVim.mnt/.cache:/home/spacevim/.cache \
+  --rm spacevim/spacevim nvim $*
