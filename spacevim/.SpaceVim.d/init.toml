@@ -45,4 +45,13 @@ name = 'denite'
 name = 'fzf'
 
 [[layers]]
+name = 'format'
+
+[[layers]]
 name = 'lang#ruby'
+
+[[layers]]
+name = 'lang#javascript'
+
+[[layers]]
+name = 'lang#go'
