@@ -7,7 +7,6 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 tap "homebrew/science"
 tap "caskroom/cask"
-tap "sanemat/font"
 tap "neovim/neovim"
 
 cask "xquartz"
@@ -160,7 +159,8 @@ brew "unixodbc"
 brew "unoconv"
 brew "watchman"
 brew "yarn"
-brew "sanemat/font/ricty"
+# tap "sanemat/font"
+# brew "sanemat/font/ricty"
 brew "octave"
 brew "sourcekitten"
 
@@ -198,5 +198,9 @@ cask "dropbox"
 
 cask "macpass"
 # cask "gitify"
+
+tap "homebrew/cask-fonts"
+cask "font-sourcecodepro-nerd-font"
+cask "font-sourcecodepro-nerd-font-mono"
 
 # vim: ft=conf
