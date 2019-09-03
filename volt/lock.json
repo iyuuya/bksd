@@ -219,6 +219,11 @@
     },
     {
       "type": "git",
+      "path": "github.com/slim-template/vim-slim",
+      "version": "6673e404370e6f3d44be342cf03ea8c26ab02c66"
+    },
+    {
+      "type": "git",
       "path": "github.com/szw/vim-tags",
       "version": "e75dea76e488d9208ed73c53c46a4abee2695115"
     },
@@ -329,6 +334,7 @@
         "github.com/roxma/nvim-yarp",
         "github.com/roxma/vim-hug-neovim-rpc",
         "github.com/ryanolsonx/vim-lsp-javascript",
+        "github.com/slim-template/vim-slim",
         "github.com/szw/vim-tags",
         "github.com/thinca/vim-quickrun",
         "github.com/thinca/vim-ref",
