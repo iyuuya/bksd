@@ -15,7 +15,7 @@
     {
       "type": "git",
       "path": "github.com/Shougo/deoplete.nvim",
-      "version": "93722cc5d0a1877fdad0845330b3a41c5e392a34"
+      "version": "48b1643509e4ef3a4af6cf57df35e6c6ac1275ce"
     },
     {
       "type": "git",
@@ -25,7 +25,7 @@
     {
       "type": "git",
       "path": "github.com/airblade/vim-gitgutter",
-      "version": "88d396f1b49747fadbbde5c038a85067d94954e5"
+      "version": "b71ab64dc16a4665c3214f109000a11d30708079"
     },
     {
       "type": "git",
@@ -40,7 +40,7 @@
     {
       "type": "git",
       "path": "github.com/alpertuna/vim-header",
-      "version": "059f33aac406d54a90f13f9451148ceedf7c3617"
+      "version": "19533000fa8e97cb0c84f1dbbc30ebb3fbc4bf70"
     },
     {
       "type": "git",
@@ -85,7 +85,7 @@
     {
       "type": "git",
       "path": "github.com/fatih/vim-go",
-      "version": "c6273c5ca6a67f02bd6afdba657194253a0e5d85"
+      "version": "13128e5f303b1445ecac1539261b91763f2135ea"
     },
     {
       "type": "git",
@@ -115,7 +115,7 @@
     {
       "type": "git",
       "path": "github.com/junegunn/fzf",
-      "version": "5c7dcaffe892dad764d0130ee49198646cd8fd73"
+      "version": "80b5bc1b682898e3089f6caf1120919fc0933562"
     },
     {
       "type": "git",
@@ -135,7 +135,7 @@
     {
       "type": "git",
       "path": "github.com/lambdalisue/gina.vim",
-      "version": "51a77c00db544b016878e292dba0368a69d69d88"
+      "version": "2e9de27914c3765c87dc28626af772ef6207375e"
     },
     {
       "type": "git",
@@ -190,7 +190,7 @@
     {
       "type": "git",
       "path": "github.com/prabirshrestha/vim-lsp",
-      "version": "96579bd0b39def9d3a939713bb1e6a58ceb5ccb4"
+      "version": "da078b1096944d149a0593dc8e49ae097d7b4ed3"
     },
     {
       "type": "git",
@@ -245,12 +245,12 @@
     {
       "type": "git",
       "path": "github.com/tpope/vim-fugitive",
-      "version": "a45e2c6d577ca3ec6c10ed82465aa9650316f70c"
+      "version": "26f6037de68254376cd062286aeeaa7db804a973"
     },
     {
       "type": "git",
       "path": "github.com/tpope/vim-rails",
-      "version": "e191b246e2475b26e07e7b18928a80735c31ffa9"
+      "version": "a6dcabf3b1254c409bb08f0b6976369369ce2657"
     },
     {
       "type": "git",
@@ -275,7 +275,7 @@
     {
       "type": "git",
       "path": "github.com/w0rp/ale",
-      "version": "6e18c03d80c323e740f87103fc05955b5c61b54e"
+      "version": "cda46636f475d6571fba2c3e4f01ff5541d2ef7a"
     },
     {
       "type": "git",
