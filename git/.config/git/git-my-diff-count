@@ -1,0 +1,2 @@
+git log --numstat --pretty="%H" --author='vim.ito' --author='iyuuya' --since=$1 --until=$2 $3 | \
+  awk 'NF==3 {plus+=$1; minus+=$2} END {printf("%d (+%d, -%d)\n", plus+minus, plus, minus)}'
