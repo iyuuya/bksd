@@ -239,8 +239,18 @@
     },
     {
       "type": "git",
+      "path": "github.com/thoughtbot/vim-rspec",
+      "version": "52a72592b6128f4ef1557bc6e2e3eb014d8b2d38"
+    },
+    {
+      "type": "git",
       "path": "github.com/tpope/vim-abolish",
       "version": "b95463a1cffd8fc9aff2a1ff0ae9327944948699"
+    },
+    {
+      "type": "git",
+      "path": "github.com/tpope/vim-dispatch",
+      "version": "a76bec9196fe27e195d167a5c2ee1da763d31b96"
     },
     {
       "type": "git",
@@ -338,7 +348,9 @@
         "github.com/szw/vim-tags",
         "github.com/thinca/vim-quickrun",
         "github.com/thinca/vim-ref",
+        "github.com/thoughtbot/vim-rspec",
         "github.com/tpope/vim-abolish",
+        "github.com/tpope/vim-dispatch",
         "github.com/tpope/vim-fugitive",
         "github.com/tpope/vim-rails",
         "github.com/tpope/vim-repeat",
