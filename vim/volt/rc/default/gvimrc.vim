@@ -7,4 +7,4 @@
 "===============================================================================
 
 set guioptions=
-set guifont=SauceCodePowerline-Regular:h11
+set guifont=SFMonoSquare-Regular:h12
