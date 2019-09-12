@@ -75,3 +75,5 @@
   pls = pull-requests
   showpr = "!f() { git log --merges --oneline --reverse --ancestry-path $1...HEAD | grep 'Merge pull request #' | head -n 1; }; f"
   openpr = "!f() { hub browse -- `git showpr $1 | cut -f5 -d' ' | sed -e 's|#|pull/|'`; }; f"
+
+  my-diff-count = "!~/.config/git/git-my-diff-count"
