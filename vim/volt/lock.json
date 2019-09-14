@@ -15,7 +15,7 @@
     {
       "type": "git",
       "path": "github.com/Shougo/deoplete.nvim",
-      "version": "48b1643509e4ef3a4af6cf57df35e6c6ac1275ce"
+      "version": "8df5ca1a9db11d919f3426f4d05b281be8913c89"
     },
     {
       "type": "git",
@@ -85,7 +85,7 @@
     {
       "type": "git",
       "path": "github.com/fatih/vim-go",
-      "version": "13128e5f303b1445ecac1539261b91763f2135ea"
+      "version": "041ca9669bbbe4a50b382d8972a7191edf873f55"
     },
     {
       "type": "git",
@@ -285,7 +285,7 @@
     {
       "type": "git",
       "path": "github.com/w0rp/ale",
-      "version": "cda46636f475d6571fba2c3e4f01ff5541d2ef7a"
+      "version": "61cfb3fefb0ebd8654be452046bd2ba24025311f"
     },
     {
       "type": "git",
