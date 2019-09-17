@@ -214,6 +214,11 @@
     },
     {
       "type": "git",
+      "path": "github.com/rust-lang/rust.vim",
+      "version": "e99f3f5bc60e15c488989f6208769a271ccf0e9f"
+    },
+    {
+      "type": "git",
       "path": "github.com/ryanolsonx/vim-lsp-javascript",
       "version": "b448b0b5260b1b1cebf0382f43c720000a616174"
     },
@@ -343,6 +348,7 @@
         "github.com/rhysd/vim-textobj-ruby",
         "github.com/roxma/nvim-yarp",
         "github.com/roxma/vim-hug-neovim-rpc",
+        "github.com/rust-lang/rust.vim",
         "github.com/ryanolsonx/vim-lsp-javascript",
         "github.com/slim-template/vim-slim",
         "github.com/szw/vim-tags",
