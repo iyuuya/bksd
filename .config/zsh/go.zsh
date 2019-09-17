@@ -1,10 +1,6 @@
 export GOROOT=`go env GOROOT`
-export GOPATH=$HOME/.go
+export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-
-if [ ! -d $GOPATH ]; then
-  mkdir $GOPATH
-fi
 
 # if [ ! -x "`which peco`" ]; then
 #   echo 'installing peco...'
