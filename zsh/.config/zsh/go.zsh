@@ -31,3 +31,8 @@ if [ ! -x "`which choise`" ]; then
   echo 'installing choise'
   go get github.com/iyuuya/choise
 fi
+
+if [ ! -x "`which dep`" ]; then
+  echo 'installing dep'
+  go get -u github.com/golang/dep/cmd/dep
+fi
