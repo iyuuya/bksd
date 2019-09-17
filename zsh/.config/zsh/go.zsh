@@ -1,5 +1,5 @@
 export GOROOT=`go env GOROOT`
-export GOPATH=$HOME/go
+export GOPATH=`go env GOPATH`
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # if [ ! -x "`which peco`" ]; then
