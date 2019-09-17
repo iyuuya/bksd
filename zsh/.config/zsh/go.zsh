@@ -2,11 +2,6 @@ export GOROOT=`go env GOROOT`
 export GOPATH=`go env GOPATH`
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
-# if [ ! -x "`which peco`" ]; then
-#   echo 'installing peco...'
-#   go get github.com/peco/peco/cmd/peco
-# fi
-
 if [ ! -x "`which ghq`" ]; then
   echo 'installing ghq...'
   go get github.com/motemen/ghq
@@ -30,4 +25,9 @@ fi
 if [ ! -x "`which volt`" ]; then
   echo 'installing volt'
   go get github.com/vim-volt/volt
+fi
+
+if [ ! -x "`which choise`" ]; then
+  echo 'installing choise'
+  go get github.com/iyuuya/choise
 fi
