@@ -1,0 +1,55 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+# outdatedなgemリストをmajor, minor, tiny以下でグルーピングして出力するスクリプト
+# usage: bundle outdated | ruby hoge.rb
+#
+# NOTE: なぐり書き
+
+def collect_geminfo_from_bundle_outdated_text(str)
+  str.lines.map do |line|
+    matched = line =~ /\s*\* ([\w\-]+) \((.+)\).*/
+    next unless matched
+    name = Regexp.last_match(1)
+    versions = Regexp.last_match(2)
+      .split(',')
+      .select { |str| str =~ /newest|installed/ }
+      .inject({}) do |res, str|
+      key = case str
+            when /newest/
+              :newest
+            when /installed/
+              :installed
+            end
+      m = str.match(Gem::Version::VERSION_PATTERN)
+      res[key] = m[0].split('.').map(&:to_i)
+      res
+    end
+    {
+      name: name,
+      versions: versions
+    }
+  end.compact
+end
+
+def grouping_version(collected_geminfo)
+  collected_geminfo.group_by do |geminfo|
+    if geminfo[:versions][:newest][0] > geminfo[:versions][:installed][0]
+      :major
+    elsif geminfo[:versions][:newest][1] > geminfo[:versions][:installed][1]
+      :minor
+    else
+      :tiny
+    end
+  end
+end
+
+str = STDIN.read
+a = collect_geminfo_from_bundle_outdated_text(str)
+grouped = grouping_version(a)
+grouped.each do |key, geminfos|
+  puts "## #{key}"
+  geminfos.each do |geminfo|
+    puts "- [ ] #{geminfo[:name]} : #{geminfo[:versions][:newest].join('.')} <- #{geminfo[:versions][:installed].join('.')}"
+  end
+  puts
+end
