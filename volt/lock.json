@@ -154,6 +154,11 @@
     },
     {
       "type": "git",
+      "path": "github.com/majutsushi/tagbar",
+      "version": "387bbadda98e1376ff3871aa461b1f0abd4ece70"
+    },
+    {
+      "type": "git",
       "path": "github.com/mattn/emmet-vim",
       "version": "10b3746ecb52064d44bbcb1fdf6b21cca551f30c"
     },
@@ -336,6 +341,7 @@
         "github.com/leafgarland/typescript-vim",
         "github.com/lmeijvogel/vim-yaml-helper",
         "github.com/lumiliet/vim-twig",
+        "github.com/majutsushi/tagbar",
         "github.com/mattn/emmet-vim",
         "github.com/mattn/httpstatus-vim",
         "github.com/mxw/vim-jsx",
