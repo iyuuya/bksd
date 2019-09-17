@@ -255,7 +255,7 @@
     {
       "type": "git",
       "path": "github.com/tpope/vim-fugitive",
-      "version": "26f6037de68254376cd062286aeeaa7db804a973"
+      "version": "f5a94cbc811aee12ad99cc82ee8092406aa94faf"
     },
     {
       "type": "git",
