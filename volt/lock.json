@@ -15,7 +15,7 @@
     {
       "type": "git",
       "path": "github.com/Shougo/deoplete.nvim",
-      "version": "8df5ca1a9db11d919f3426f4d05b281be8913c89"
+      "version": "5176768cdd81cb2e1b9348d8091077edb7ab7176"
     },
     {
       "type": "git",
@@ -85,7 +85,7 @@
     {
       "type": "git",
       "path": "github.com/fatih/vim-go",
-      "version": "041ca9669bbbe4a50b382d8972a7191edf873f55"
+      "version": "194613112bbe7dccbd71ac8f86c89e02c7717893"
     },
     {
       "type": "git",
@@ -220,7 +220,7 @@
     {
       "type": "git",
       "path": "github.com/rust-lang/rust.vim",
-      "version": "e99f3f5bc60e15c488989f6208769a271ccf0e9f"
+      "version": "7f37877cf43895d0f92fe5b9be9a82ff06c33e8e"
     },
     {
       "type": "git",
@@ -260,7 +260,7 @@
     {
       "type": "git",
       "path": "github.com/tpope/vim-dispatch",
-      "version": "a76bec9196fe27e195d167a5c2ee1da763d31b96"
+      "version": "ccc9856ce8f3cd96b2c83b55f5b1cff3de694e25"
     },
     {
       "type": "git",
