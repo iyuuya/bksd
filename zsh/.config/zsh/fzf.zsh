@@ -15,9 +15,10 @@ function _fzf_insert_command_line() {
 
 function fzf-ghq() {
   local selected
-  selected=$(ghq list -p | fzf --preview 'ls {}' --query "$LBUFFER")
+  selected=$(ghq list -p | sed "s/$(echo $HOME | sed 's/\//\\\//g')\/.ghq\///" | fzf --preview "ls $HOME/.ghq/{}" --query "$LBUFFER")
   if [ -n "$selected" ]; then
-    _fzf_insert_command_line "cd $selected"
+    _fzf_insert_command_line "cd $HOME/.ghq/$selected"
+find $(go env GOPATH)/src -type d -depth 3 | grep github
     zle accept-line
   fi
 }
@@ -153,9 +154,9 @@ function fzf-nodenv-install() {
 
 function fzf-go-src() {
   local selected
-  selected=$(find $(go env GOPATH)/src -type d -depth 3 | grep github | fzf --preview 'ls {}' --query "$LBUFFER")
+  selected=$(find $(go env GOPATH)/src -type d -depth 3 | grep github | sed "s/$(go env GOPATH | sed 's/\//\\\//g')\/src\///g" | fzf --preview "ls $(go env GOPATH)/src/{}" --query "$LBUFFER")
   if [ -n "$selected" ]; then
-    _fzf_insert_command_line "cd $selected"
+    _fzf_insert_command_line "cd $(go env GOPATH)/src/$selected"
     zle accept-line
   fi
 }
