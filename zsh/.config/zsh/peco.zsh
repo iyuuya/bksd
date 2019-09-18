@@ -126,21 +126,21 @@ function peco-rbenv-install() {
   zle clear-screen
 }
 
-function peco-ndenv-shell() {
+function peco-nodenv-shell() {
   local selected
-  selected=$(ndenv versions --bare | peco)
+  selected=$(nodenv versions --bare | peco)
   if [ -n "$selected" ];then
-    BUFFER="ndenv shell ${selected}"
+    BUFFER="nodenv shell ${selected}"
     zle accept-line
   fi
   zle clear-screen
 }
 
-function peco-ndenv-install() {
+function peco-nodenv-install() {
   local selected
-  selected=$(ndenv install -l | grep -v 'iojs' | sed -e '1d' -e 's/v//' | peco)
+  selected=$(nodenv install -l | grep -v 'iojs' | sed -e '1d' -e 's/v//' | peco)
   if [ -n "$selected" ]; then
-    BUFFER="ndenv install ${selected}"
+    BUFFER="nodenv install ${selected}"
     zle accept-line
   fi
   zle clear-screen
@@ -160,8 +160,8 @@ zle -N peco-tmux-session
 zle -N peco-xdg-config
 zle -N peco-rbenv-shell
 zle -N peco-rbenv-install
-zle -N peco-ndenv-shell
-zle -N peco-ndenv-install
+zle -N peco-nodenv-shell
+zle -N peco-nodenv-install
 
 bindkey '^r'  peco-history
 bindkey '^gg' peco-ghq
@@ -173,8 +173,8 @@ bindkey '^gf' peco-xdg-config
 bindkey '^ts' peco-tmux-session
 bindkey '^rs' peco-rbenv-shell
 bindkey '^ri' peco-rbenv-install
-bindkey '^ns' peco-ndenv-shell
-bindkey '^ni' peco-ndenv-install
+bindkey '^ns' peco-nodenv-shell
+bindkey '^ni' peco-nodenv-install
 
 function peco-bindkeys() {
   echo '^r  peco-history'
@@ -187,6 +187,6 @@ function peco-bindkeys() {
   echo '^ts peco-tmux-session'
   echo '^rs peco-rbenv-shell'
   echo '^ri peco-rbenv-install'
-  echo '^ns peco-ndenv-shell'
-  echo '^ni peco-ndenv-install'
+  echo '^ns peco-nodenv-shell'
+  echo '^ni peco-nodenv-install'
 }

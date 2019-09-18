@@ -131,21 +131,21 @@ function fzf-rbenv-install() {
   zle clear-screen
 }
 
-function fzf-ndenv-shell() {
+function fzf-nodenv-shell() {
   local selected
-  selected=$(ndenv versions --bare | fzf)
+  selected=$(nodenv versions --bare | fzf)
   if [ -n "$selected" ];then
-    BUFFER="ndenv shell ${selected}"
+    BUFFER="nodenv shell ${selected}"
     zle accept-line
   fi
   zle clear-screen
 }
 
-function fzf-ndenv-install() {
+function fzf-nodenv-install() {
   local selected
-  selected=$(ndenv install -l | grep -v 'iojs' | sed -e '1d' -e 's/v//' | fzf)
+  selected=$(nodenv install -l | grep -v 'iojs' | sed -e '1d' -e 's/v//' | fzf)
   if [ -n "$selected" ]; then
-    BUFFER="ndenv install ${selected}"
+    BUFFER="nodenv install ${selected}"
     zle accept-line
   fi
   zle clear-screen
@@ -165,8 +165,8 @@ zle -N fzf-tmux-session
 zle -N fzf-xdg-config
 zle -N fzf-rbenv-shell
 zle -N fzf-rbenv-install
-zle -N fzf-ndenv-shell
-zle -N fzf-ndenv-install
+zle -N fzf-nodenv-shell
+zle -N fzf-nodenv-install
 
 bindkey '^r'  fzf-history
 bindkey '^gg' fzf-ghq
@@ -178,8 +178,8 @@ bindkey '^gf' fzf-xdg-config
 bindkey '^ts' fzf-tmux-session
 bindkey '^rs' fzf-rbenv-shell
 bindkey '^ri' fzf-rbenv-install
-bindkey '^ns' fzf-ndenv-shell
-bindkey '^ni' fzf-ndenv-install
+bindkey '^ns' fzf-nodenv-shell
+bindkey '^ni' fzf-nodenv-install
 
 function fzf-bindkeys() {
   echo '^r  fzf-history'
@@ -192,6 +192,6 @@ function fzf-bindkeys() {
   echo '^ts fzf-tmux-session'
   echo '^rs fzf-rbenv-shell'
   echo '^ri fzf-rbenv-install'
-  echo '^ns fzf-ndenv-shell'
-  echo '^ni fzf-ndenv-install'
+  echo '^ns fzf-nodenv-shell'
+  echo '^ni fzf-nodenv-install'
 }
