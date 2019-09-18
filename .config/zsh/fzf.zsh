@@ -151,6 +151,15 @@ function fzf-nodenv-install() {
   zle clear-screen
 }
 
+function fzf-go-src() {
+  local selected
+  selected=$(find $(go env GOPATH)/src -type d -depth 3 | grep github | fzf --preview 'ls {}' --query "$LBUFFER")
+  if [ -n "$selected" ]; then
+    _fzf_insert_command_line "cd $selected"
+    zle accept-line
+  fi
+}
+
 alias -g P='| fzf'
 alias pcd=fzf-cd
 alias pvd=fzf-vim-neomru
@@ -158,6 +167,7 @@ alias pvd=fzf-vim-neomru
 zle -N fzf-history
 zle -N fzf-ghq
 zle -N fzf-ghq-my
+zle -N fzf-go-src
 zle -N fzf-git-log
 zle -N fzf-git-branch
 zle -N fzf-git-checkout
@@ -171,6 +181,7 @@ zle -N fzf-nodenv-install
 bindkey '^r'  fzf-history
 bindkey '^gg' fzf-ghq
 bindkey '^gm' fzf-ghq-my
+bindkey '^go' fzf-go-src
 bindkey '^gl' fzf-git-log
 bindkey '^gb' fzf-git-branch
 bindkey '^gc' fzf-git-checkout
@@ -185,6 +196,7 @@ function fzf-bindkeys() {
   echo '^r  fzf-history'
   echo '^gg fzf-ghq'
   echo '^gm fzf-ghq-my'
+  echo '^go fzf-go-src'
   echo '^gl fzf-git-log'
   echo '^gb fzf-git-branch'
   echo '^gc fzf-git-checkout'
