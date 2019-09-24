@@ -15,7 +15,7 @@
     {
       "type": "git",
       "path": "github.com/Shougo/deoplete.nvim",
-      "version": "5176768cdd81cb2e1b9348d8091077edb7ab7176"
+      "version": "93e22ff6c461d3fcf2bf0485885295f01d455a03"
     },
     {
       "type": "git",
@@ -25,7 +25,7 @@
     {
       "type": "git",
       "path": "github.com/airblade/vim-gitgutter",
-      "version": "b71ab64dc16a4665c3214f109000a11d30708079"
+      "version": "68e735b92c8801c30208586ab34c52f1767fdafb"
     },
     {
       "type": "git",
@@ -75,7 +75,7 @@
     {
       "type": "git",
       "path": "github.com/digitaltoad/vim-pug",
-      "version": "efed0c8680d22bd16b9dc7e08f5373269b67c45f"
+      "version": "ea39cd942cf3194230cf72bfb838901a5344d3b3"
     },
     {
       "type": "git",
@@ -85,7 +85,7 @@
     {
       "type": "git",
       "path": "github.com/fatih/vim-go",
-      "version": "194613112bbe7dccbd71ac8f86c89e02c7717893"
+      "version": "8ced9edbbf22cb08ad31b3e343608b8775112e0c"
     },
     {
       "type": "git",
@@ -135,7 +135,7 @@
     {
       "type": "git",
       "path": "github.com/lambdalisue/gina.vim",
-      "version": "2e9de27914c3765c87dc28626af772ef6207375e"
+      "version": "666852d4c3ce95f50da4062189031e93c6b9211c"
     },
     {
       "type": "git",
@@ -195,7 +195,7 @@
     {
       "type": "git",
       "path": "github.com/prabirshrestha/vim-lsp",
-      "version": "da078b1096944d149a0593dc8e49ae097d7b4ed3"
+      "version": "e23a00e12d3dded5590e7f4c37ea897071c5be2c"
     },
     {
       "type": "git",
@@ -220,7 +220,7 @@
     {
       "type": "git",
       "path": "github.com/rust-lang/rust.vim",
-      "version": "7f37877cf43895d0f92fe5b9be9a82ff06c33e8e"
+      "version": "d0456774a8a9616fea9df66e5131d6428450ebed"
     },
     {
       "type": "git",
@@ -260,12 +260,12 @@
     {
       "type": "git",
       "path": "github.com/tpope/vim-dispatch",
-      "version": "ccc9856ce8f3cd96b2c83b55f5b1cff3de694e25"
+      "version": "1f39fa150fc9275ff264e1f8807fc6fcbbdae012"
     },
     {
       "type": "git",
       "path": "github.com/tpope/vim-fugitive",
-      "version": "f5a94cbc811aee12ad99cc82ee8092406aa94faf"
+      "version": "417b3bb818f86d2a92dbb0ee3857af7de1ade8c8"
     },
     {
       "type": "git",
@@ -295,12 +295,12 @@
     {
       "type": "git",
       "path": "github.com/w0rp/ale",
-      "version": "61cfb3fefb0ebd8654be452046bd2ba24025311f"
+      "version": "6746eaeaa0a02fbd101c7ae367aaa2fb62378368"
     },
     {
       "type": "git",
       "path": "github.com/weirongxu/plantuml-previewer.vim",
-      "version": "93b7cf8ba8c11f9d13fb7b531d059a10d5a0ec52"
+      "version": "db6297b740718d7c39bd7c7ed565eea439473787"
     },
     {
       "type": "git",
