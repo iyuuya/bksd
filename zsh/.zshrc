@@ -237,6 +237,8 @@ autoload -Uz db_reset
 autoload -Uz gem-uninstall-all
 # Search
 autoload -Uz search
+# Splash
+autoload -Uz octcat
 # Ssh
 autoload -Uz fzf-ssh
 alias pssh=fzf-ssh
