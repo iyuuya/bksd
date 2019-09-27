@@ -15,7 +15,7 @@
     {
       "type": "git",
       "path": "github.com/Shougo/deoplete.nvim",
-      "version": "93e22ff6c461d3fcf2bf0485885295f01d455a03"
+      "version": "503c42d17deb812ee5363e271cca0e68856a289d"
     },
     {
       "type": "git",
@@ -25,7 +25,7 @@
     {
       "type": "git",
       "path": "github.com/airblade/vim-gitgutter",
-      "version": "68e735b92c8801c30208586ab34c52f1767fdafb"
+      "version": "6b08e1425b806842996168b76ebe6627a322fccc"
     },
     {
       "type": "git",
@@ -85,7 +85,7 @@
     {
       "type": "git",
       "path": "github.com/fatih/vim-go",
-      "version": "8ced9edbbf22cb08ad31b3e343608b8775112e0c"
+      "version": "a7b5edc1872b76e6c0cc18b89fcda3aa98422961"
     },
     {
       "type": "git",
@@ -265,7 +265,7 @@
     {
       "type": "git",
       "path": "github.com/tpope/vim-fugitive",
-      "version": "417b3bb818f86d2a92dbb0ee3857af7de1ade8c8"
+      "version": "6eb5d8e4b2120fa795bc98888ba5dd2bde874ccd"
     },
     {
       "type": "git",
@@ -295,7 +295,7 @@
     {
       "type": "git",
       "path": "github.com/w0rp/ale",
-      "version": "6746eaeaa0a02fbd101c7ae367aaa2fb62378368"
+      "version": "41ff80dc9ec2cc834cc8c4aaa753e308223d48b8"
     },
     {
       "type": "git",
