@@ -15,11 +15,6 @@ call my#ft#vim#init()
 call my#ft#ruby#init()
 call my#ft#javascript#init()
 
-augroup MyAutoCmd
-  autocmd!
-  autocmd VimEnter,DirChanged * call my#rc#local()
-augroup END
-
 set wildmenu
 set wildmode=list:longest,list:full
 
