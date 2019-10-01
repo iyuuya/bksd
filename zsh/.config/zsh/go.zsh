@@ -36,3 +36,8 @@ if [ ! -x "`which dep`" ]; then
   echo 'installing dep'
   go get -u github.com/golang/dep/cmd/dep
 fi
+
+if [ ! -x "`which license`"]; then
+  echo 'installing license'
+  go get -u github.com/nishanths/license
+fi
