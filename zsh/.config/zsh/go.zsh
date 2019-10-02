@@ -41,3 +41,8 @@ if [ ! -x "`which license`" ]; then
   echo 'installing license'
   go get -u github.com/nishanths/license
 fi
+
+if [ ! -x "`which pet`" ]; then
+  echo 'installing pet'
+  go get -u github.com/knqyf263/pet
+fi
