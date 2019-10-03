@@ -90,7 +90,7 @@
     {
       "type": "git",
       "path": "github.com/fatih/vim-go",
-      "version": "e50c57536be5e545663549f87b9f0ec92dbf2e20"
+      "version": "1df81617fbda56bf3cb2dfc289fe1f3713bdfddb"
     },
     {
       "type": "git",
@@ -270,7 +270,7 @@
     {
       "type": "git",
       "path": "github.com/tpope/vim-fugitive",
-      "version": "5eeb7625df75a0da931d81a84e8730aca8b8c8a1"
+      "version": "80aa8a9aea72f2054fb2ad8582461f60b0db9757"
     },
     {
       "type": "git",
