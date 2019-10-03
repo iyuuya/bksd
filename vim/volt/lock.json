@@ -59,6 +59,11 @@
     },
     {
       "type": "git",
+      "path": "github.com/chr4/nginx.vim",
+      "version": "a3def0ecd201de5ea7294cf92e4aba62775c9f5c"
+    },
+    {
+      "type": "git",
       "path": "github.com/cocopon/iceberg.vim",
       "version": "ddc3e4ea485771e4f0b939fd8259f3152eb1bd29"
     },
@@ -323,6 +328,7 @@
         "github.com/ap/vim-css-color",
         "github.com/asciidoc/vim-asciidoc",
         "github.com/chase/vim-ansible-yaml",
+        "github.com/chr4/nginx.vim",
         "github.com/cocopon/iceberg.vim",
         "github.com/dNitro/vim-pug-complete",
         "github.com/dannyob/quickfixstatus",
