@@ -200,7 +200,7 @@
     {
       "type": "git",
       "path": "github.com/prabirshrestha/vim-lsp",
-      "version": "db2b6753979d9186b4c2c38ce8338d6f42e47266"
+      "version": "cc6074a62436aa0c5c352277f91573066996a089"
     },
     {
       "type": "git",
@@ -225,7 +225,7 @@
     {
       "type": "git",
       "path": "github.com/rust-lang/rust.vim",
-      "version": "0dabf6a2ecfe671e0cab945ba980ad19bbcfa8ca"
+      "version": "4539a9ad35fa0c19f1e20671bd1ee08452519079"
     },
     {
       "type": "git",
@@ -270,7 +270,7 @@
     {
       "type": "git",
       "path": "github.com/tpope/vim-fugitive",
-      "version": "80aa8a9aea72f2054fb2ad8582461f60b0db9757"
+      "version": "a3ba0ca67f8d3991ff7d2678246acd0494a053d8"
     },
     {
       "type": "git",
@@ -300,7 +300,7 @@
     {
       "type": "git",
       "path": "github.com/w0rp/ale",
-      "version": "41ff80dc9ec2cc834cc8c4aaa753e308223d48b8"
+      "version": "a486aa1d24294c5b14c8b2763a3b5ffdc39d0739"
     },
     {
       "type": "git",
