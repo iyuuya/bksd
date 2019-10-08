@@ -49,3 +49,4 @@ File.open(scripts_dir.join("#{id}.sh"), 'w') do |f|
 end
 
 redis.lpush(key, id)
+puts id
