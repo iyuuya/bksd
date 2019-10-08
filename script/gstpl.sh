@@ -6,8 +6,6 @@ gstpl git
 gstpl node
 gstpl nvim
 gstpl ruby
-gstpl ssh
 gstpl tmux
 gstpl zsh
 gstpl vim
-gstpl fish
