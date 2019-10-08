@@ -42,8 +42,10 @@ loop do
   id = redis.rpop(key)
   if id
     puts "running #{key} - #{id}"
-    `#{scripts_dir.join(id)}.sh >& #{results_dir.join("#{id}.log")}`
-    puts "done #{key} - #{id}"
+    result = system("#{scripts_dir.join(id)}.sh >& #{results_dir.join("#{id}.log")}")
+    puts "done #{key} - #{id} : #{result ? 'OK' : 'NG'}"
+  else
+    puts 'none'
   end
   sleep 1
 end
