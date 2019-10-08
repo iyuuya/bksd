@@ -45,8 +45,10 @@ loop do
     result = system("#{scripts_dir.join(id)}.sh >& #{results_dir.join("#{id}.log")}")
     if result
       puts "[OK] #{key} - #{id}"
+      system "terminal-notifier -t mycmd -subtitle '[#{key}] ✅' -message '✅ #{id} success!'"
     else
       puts "[NG] result #{queue_name} #{id}"
+      system "terminal-notifier -t mycmd -subtitle '[#{key}] ❌' -message '❌ #{id} failed!'"
     end
     puts '--------------------------------------------'
   end
