@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+if ARGV.size < 1
+  puts 'usage: runner name'
+  exit 1
+end
+
+def ask?(message)
+  print message
+  puts " (Y/n)"
+  !!(gets.chop =~ /^y/i)
+end
+
+unless require 'xdg'
+  if ask? 'install xdg gem?'
+    system('gem install xdg')
+  else
+    exit
+  end
+end
+require 'xdg'
+
+cache_dir = XDG['CACHE_HOME'].to_path.join('queue').join(ARGV.shift)
+cache_dir.mkpath unless cache_dir.exist?
+
+targets = []
+
+loop do
+  puts 'searching...'
+  targets += cache_dir.glob('*')
+  targets.flatten!
+  targets.uniq!
+  targets.sort!
+  target = targets.shift
+  if target
+    puts "running #{target} ..."
+    result = system(target.to_s)
+    unless result
+      STDERR.puts "failed #{target}"
+    end
+    target.delete
+  end
+  sleep 1
+end
