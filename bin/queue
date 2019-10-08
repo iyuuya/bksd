@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+if ARGV.size < 2
+  puts 'usage: queue name CMD'
+  exit 1
+end
+
+def ask?(message)
+  print message
+  puts " (Y/n)"
+  !!(gets.chop =~ /^y/i)
+end
+
+unless require 'xdg'
+  if ask? 'install xdg gem?'
+    system('gem install xdg')
+  else
+    exit
+  end
+end
+require 'xdg'
+
+queue_name = ARGV.shift
+cache_dir = XDG['CACHE_HOME'].to_path.join('queue').join(queue_name)
+cache_dir.mkpath unless cache_dir.exist?
+shell = ENV.fetch('SHELL', '/bin/sh')
+
+File.open(cache_dir.join("#{Time.now.to_i}.sh"), 'w') do |f|
+  f.puts '#!' + shell
+  f.puts "cd #{ENV['PWD']}"
+  f.puts ARGV.join(' ')
+  f.chmod 0755
+end
