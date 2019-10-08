@@ -18,7 +18,6 @@ namespace :bksd do
   end
 end
 
-DotInstallTask.new :ssh
 DotInstallTask.new :git
 DotInstallTask.new :vim do |t|
   volt_path = ENV.fetch('VOLTPATH', File.expand_path('~/volt'))
@@ -45,8 +44,6 @@ DotInstallTask.new :mysql
 DotInstallTask.new :python do |t|
   t.add_link 'default-packages', 'default-packages', ENV['PYENV_ROOT'] || '~/.anyenv/envs/pyenv/'
 end
-DotInstallTask.new :fish
-DotInstallTask.new :emacs
 DotInstallTask.new :hammerspoon
 DotInstallTask.new :ranger
 DotInstallTask.new :lf
@@ -54,4 +51,4 @@ DotInstallTask.new :lf
 AnyenvSetupTask.new :anyenv
 HomebrewSetupTask.new :brew
 
-task default: ['bksd:bin_mkdir', 'bksd:bin_link', :anyenv, :brew, :git, :vim, :zsh, :ruby, :tmux, :nvim, :node, :mysql, :fish, :emacs]
+task default: ['bksd:bin_mkdir', 'bksd:bin_link', :anyenv, :brew, :git, :vim, :zsh, :ruby, :tmux, :nvim, :node, :mysql]
