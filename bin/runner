@@ -43,9 +43,12 @@ loop do
   if id
     puts "running #{key} - #{id}"
     result = system("#{scripts_dir.join(id)}.sh >& #{results_dir.join("#{id}.log")}")
-    puts "done #{key} - #{id} : #{result ? 'OK' : 'NG'}"
-  else
-    puts 'none'
+    if result
+      puts "[OK] #{key} - #{id}"
+    else
+      puts "[NG] result #{queue_name} #{id}"
+    end
+    puts '--------------------------------------------'
   end
   sleep 1
 end
