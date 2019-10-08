@@ -12,34 +12,38 @@ def ask?(message)
   !!(gets.chop =~ /^y/i)
 end
 
-unless require 'xdg'
-  if ask? 'install xdg gem?'
-    system('gem install xdg')
-  else
-    exit
+def require_with_install(name)
+  unless require name
+    if ask? "install #{name} gem?"
+      system("gem install #{name}")
+    else
+      exit
+    end
   end
+  require name
 end
-require 'xdg'
 
-cache_dir = XDG['CACHE_HOME'].to_path.join('queue').join(ARGV.shift)
-cache_dir.mkpath unless cache_dir.exist?
+require_with_install 'xdg'
+require_with_install 'redis'
 
-targets = []
+queue_name = ARGV.shift
+cache_dir = XDG['CACHE_HOME'].to_path.join('mycmd', queue_name)
+scripts_dir = cache_dir.join('scripts')
+scripts_dir.mkpath unless scripts_dir.exist?
+results_dir = cache_dir.join('results')
+results_dir.mkpath unless results_dir.exist?
+
+redis_url = ENV.fetch('REDIS_URL', 'redis://localhost:6379/0')
+redis = Redis.new(url: redis_url)
+redis_namespace = 'mycmd'
+key = [redis_namespace, queue_name].join(':')
 
 loop do
-  puts 'searching...'
-  targets += cache_dir.glob('*')
-  targets.flatten!
-  targets.uniq!
-  targets.sort!
-  target = targets.shift
-  if target
-    puts "running #{target} ..."
-    result = system(target.to_s)
-    unless result
-      STDERR.puts "failed #{target}"
-    end
-    target.delete
+  id = redis.rpop(key)
+  if id
+    puts "running #{key} - #{id}"
+    `#{scripts_dir.join(id)}.sh >& #{results_dir.join("#{id}.log")}`
+    puts "done #{key} - #{id}"
   end
   sleep 1
 end
