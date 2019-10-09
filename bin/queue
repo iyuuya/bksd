@@ -27,7 +27,7 @@ require_with_install 'xdg'
 require_with_install 'redis'
 
 queue_name = ARGV.shift
-cache_dir = XDG['CACHE_HOME'].to_path.join('mycmd', queue_name)
+cache_dir = XDG::Cache.new.home.join('mycmd', queue_name)
 scripts_dir = cache_dir.join('scripts')
 scripts_dir.mkpath unless scripts_dir.exist?
 results_dir = cache_dir.join('results')
