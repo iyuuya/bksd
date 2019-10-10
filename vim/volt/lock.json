@@ -209,6 +209,11 @@
     },
     {
       "type": "git",
+      "path": "github.com/rhysd/git-messenger.vim",
+      "version": "a5c9a98bf04430a072d028475c6c44392e716acf"
+    },
+    {
+      "type": "git",
       "path": "github.com/rhysd/vim-textobj-ruby",
       "version": "fb99d918273a65010b3ac4084371a19c34260c66"
     },
@@ -357,6 +362,7 @@
         "github.com/prabirshrestha/async.vim",
         "github.com/prabirshrestha/vim-lsp",
         "github.com/rbgrouleff/bclose.vim",
+        "github.com/rhysd/git-messenger.vim",
         "github.com/rhysd/vim-textobj-ruby",
         "github.com/roxma/nvim-yarp",
         "github.com/roxma/vim-hug-neovim-rpc",
