@@ -15,7 +15,7 @@
     {
       "type": "git",
       "path": "github.com/Shougo/deoplete.nvim",
-      "version": "503c42d17deb812ee5363e271cca0e68856a289d"
+      "version": "70a11ee67f3c4353e48aad69812c34b5c8489f07"
     },
     {
       "type": "git",
@@ -120,7 +120,7 @@
     {
       "type": "git",
       "path": "github.com/junegunn/fzf",
-      "version": "ab11b74be4b0c9fac88d95f0f563d0dc0cb06ed3"
+      "version": "3089880f18b2a0b5663554876468de6c8f17eb8c"
     },
     {
       "type": "git",
@@ -165,7 +165,7 @@
     {
       "type": "git",
       "path": "github.com/mattn/emmet-vim",
-      "version": "10b3746ecb52064d44bbcb1fdf6b21cca551f30c"
+      "version": "5f559fae12a8babf414376906197dbd751e11380"
     },
     {
       "type": "git",
@@ -230,7 +230,7 @@
     {
       "type": "git",
       "path": "github.com/rust-lang/rust.vim",
-      "version": "4539a9ad35fa0c19f1e20671bd1ee08452519079"
+      "version": "7959279612914eeaa584f5ce719fc71cd967e384"
     },
     {
       "type": "git",
@@ -275,12 +275,12 @@
     {
       "type": "git",
       "path": "github.com/tpope/vim-fugitive",
-      "version": "a3ba0ca67f8d3991ff7d2678246acd0494a053d8"
+      "version": "ea818f1fabce967bc754dfbeb7782d6322064538"
     },
     {
       "type": "git",
       "path": "github.com/tpope/vim-rails",
-      "version": "a6dcabf3b1254c409bb08f0b6976369369ce2657"
+      "version": "6e0a002ada9ef098a584e3eb1a8049acae109092"
     },
     {
       "type": "git",
@@ -305,7 +305,7 @@
     {
       "type": "git",
       "path": "github.com/w0rp/ale",
-      "version": "a486aa1d24294c5b14c8b2763a3b5ffdc39d0739"
+      "version": "3fe2223a48465c58c48a5a6a30ecf13ab92f7b97"
     },
     {
       "type": "git",
