@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+if [ ! -e $HOME/.config/alacritty ]; then
+  ln -s $PWD/.config/alacritty $HOME/.config/alacritty
+fi
+
+if [ ! -e /Applications/Alacritty.app ]; then
+  brew cask install alacritty
+fi
