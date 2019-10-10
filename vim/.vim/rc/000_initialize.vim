@@ -11,6 +11,9 @@ set cpoptions-=m
 
 let g:vim_data_path = expand('~/.local/share/vim')
 
+let g:mapleader = ','
+let g:maplocalleader = ','
+
 filetype plugin indent on
 
 augroup MyAutoCmd
