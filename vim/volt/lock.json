@@ -134,6 +134,11 @@
     },
     {
       "type": "git",
+      "path": "github.com/kannokanno/previm",
+      "version": "5775e97de90d7fbcf8a231a08afbb400d9b64af1"
+    },
+    {
+      "type": "git",
       "path": "github.com/kkvh/vim-docker-tools",
       "version": "3b3eb60d97c43130f476ae6a2bbd12add9dfbf58"
     },
@@ -201,6 +206,11 @@
       "type": "git",
       "path": "github.com/prabirshrestha/vim-lsp",
       "version": "cc6074a62436aa0c5c352277f91573066996a089"
+    },
+    {
+      "type": "git",
+      "path": "github.com/previm/previm",
+      "version": "5775e97de90d7fbcf8a231a08afbb400d9b64af1"
     },
     {
       "type": "git",
@@ -276,6 +286,11 @@
       "type": "git",
       "path": "github.com/tpope/vim-fugitive",
       "version": "ea818f1fabce967bc754dfbeb7782d6322064538"
+    },
+    {
+      "type": "git",
+      "path": "github.com/tpope/vim-markdown",
+      "version": "64689dfeae1ffa77dfa0f82e2e1f409ecac3d5ad"
     },
     {
       "type": "git",
@@ -361,6 +376,7 @@
         "github.com/posva/vim-vue",
         "github.com/prabirshrestha/async.vim",
         "github.com/prabirshrestha/vim-lsp",
+        "github.com/previm/previm",
         "github.com/rbgrouleff/bclose.vim",
         "github.com/rhysd/git-messenger.vim",
         "github.com/rhysd/vim-textobj-ruby",
@@ -376,6 +392,7 @@
         "github.com/tpope/vim-abolish",
         "github.com/tpope/vim-dispatch",
         "github.com/tpope/vim-fugitive",
+        "github.com/tpope/vim-markdown",
         "github.com/tpope/vim-rails",
         "github.com/tpope/vim-repeat",
         "github.com/tyru/caw.vim",
