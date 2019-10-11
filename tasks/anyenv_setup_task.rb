@@ -62,6 +62,8 @@ class AnyenvSetupTask < Rake::TaskLib
     desc 'install anyenv plugins'
     task :install_plugins do
       github 'znz/anyenv-update', @anyenv_home.join('plugins/anyenv-update')
+      github 'amashigeseiji/anyenv-lazyload', @anyenv_home.join('plugins/anyenv-lazyload')
+      github 'iyuuya/anyenv-git-log', @anyenv_home.join('plugins/anyenv-git-log')
     end
     @anyenv_tasks << 'anyenv:install_plugins'
   end

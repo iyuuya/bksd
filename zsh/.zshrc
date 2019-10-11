@@ -10,7 +10,7 @@
 # Aynenv: "{{{1
 
 # [ -f ~/.anyenv/bin/anyenv ] && eval "$(anyenv init - --no-rehash)"
-[ -f ~/.anyenv/bin/anyenv ] && eval "$(anyenv init -)"
+[ -f ~/.anyenv/bin/anyenv ] && eval "$(anyenv lazyload)"
 [ -f ~/.anyenv/envs/pyenv/plugins/pyenv-virtualenv/bin/pyenv-virtualenv ] && eval "$(pyenv virtualenv-init - zsh)"
 
 # }}}1
