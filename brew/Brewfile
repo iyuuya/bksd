@@ -24,6 +24,8 @@ cask "xquartz"
 
 brew "mas"
 
+mas 'Xcode', id: 497799835
+
 brew "readline"
 brew "libffi"
 brew "pkg-config"
@@ -177,7 +179,7 @@ brew "sourcekitten"
 # cask "evernote"
 # cask "firefox"
 cask "google-chrome"
-cask "keycastr"
+# cask "keycastr"
 # cask "licecap"
 # cask "linein"
 # cask "sequel-pro"
@@ -191,12 +193,11 @@ cask "dropbox"
 
 cask "slack"
 
-# cask "macpass"
+brew "kpcli"
+cask "macpass"
 
 # cask "font-sourcecodepro-nerd-font"
 # cask "font-sourcecodepro-nerd-font-mono"
-
-
 
 # brew "act"
 # brew "adns"
