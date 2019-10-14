@@ -33,7 +33,7 @@ brew "automake"
 brew "libtool"
 
 brew "openssl"
-brew "curl", args: ["with-openssl"]
+brew "curl"
 brew "boost"
 brew "w3m"
 brew "universal-ctags"
@@ -49,7 +49,7 @@ brew "libxml2"
 brew "lemon"
 brew "re2c"
 
-brew "git", args: ["with-curl", "with-gettext", "with-openssl", "with-pcre2"]
+brew "git"
 brew "git-cal"
 brew "git-extras"
 brew "git-flow"
@@ -61,7 +61,7 @@ brew "gibo"
 brew "gpg"
 
 brew "tree"
-brew "zsh", args: ["without-etcdir"]
+brew "zsh"
 brew "zsh-completions"
 brew "reattach-to-user-namespace"
 brew "tmux"
