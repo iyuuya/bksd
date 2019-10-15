@@ -30,7 +30,7 @@
     {
       "type": "git",
       "path": "github.com/aklt/plantuml-syntax",
-      "version": "ea0d44c725b3bed5dc37ab88d62279c6066add06"
+      "version": "0024021f01c349c2828aeb50a1e131997adea066"
     },
     {
       "type": "git",
@@ -90,7 +90,7 @@
     {
       "type": "git",
       "path": "github.com/fatih/vim-go",
-      "version": "17c53d38f17b0978323868ac12573f33a6fb8100"
+      "version": "1df81617fbda56bf3cb2dfc289fe1f3713bdfddb"
     },
     {
       "type": "git",
@@ -120,7 +120,7 @@
     {
       "type": "git",
       "path": "github.com/junegunn/fzf",
-      "version": "f1520bdde6c268cf3c77a70574b35019de3bcdd0"
+      "version": "3089880f18b2a0b5663554876468de6c8f17eb8c"
     },
     {
       "type": "git",
@@ -220,7 +220,7 @@
     {
       "type": "git",
       "path": "github.com/rhysd/git-messenger.vim",
-      "version": "c7d836d058613c3d4e797925d223b03c53553b63"
+      "version": "a5c9a98bf04430a072d028475c6c44392e716acf"
     },
     {
       "type": "git",
@@ -230,7 +230,7 @@
     {
       "type": "git",
       "path": "github.com/roxma/nvim-yarp",
-      "version": "81caad80107abb9c2f5159e02e2cd95876370bec"
+      "version": "8fcb1af27772174df5446d49de29052cac47e46f"
     },
     {
       "type": "git",
@@ -240,7 +240,7 @@
     {
       "type": "git",
       "path": "github.com/rust-lang/rust.vim",
-      "version": "8293adcd9c5645379133bea4d77de30b1476528c"
+      "version": "7959279612914eeaa584f5ce719fc71cd967e384"
     },
     {
       "type": "git",
@@ -285,7 +285,7 @@
     {
       "type": "git",
       "path": "github.com/tpope/vim-fugitive",
-      "version": "06e34204af04643d96d30132de6ba9066368de15"
+      "version": "ea818f1fabce967bc754dfbeb7782d6322064538"
     },
     {
       "type": "git",
@@ -306,6 +306,11 @@
       "type": "git",
       "path": "github.com/tyru/caw.vim",
       "version": "59d1bbdec7d82740811806c4d4da1963089064a8"
+    },
+    {
+      "type": "git",
+      "path": "github.com/tyru/eskk.vim",
+      "version": "207d05cd50d126a84271aca7f02b3f839dab27c3"
     },
     {
       "type": "git",
@@ -396,6 +401,7 @@
         "github.com/tpope/vim-rails",
         "github.com/tpope/vim-repeat",
         "github.com/tyru/caw.vim",
+        "github.com/tyru/eskk.vim",
         "github.com/tyru/open-browser.vim",
         "github.com/vim-jp/cpp-vim",
         "github.com/w0rp/ale",
