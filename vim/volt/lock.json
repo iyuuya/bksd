@@ -324,6 +324,11 @@
     },
     {
       "type": "git",
+      "path": "github.com/vim-scripts/dbext.vim",
+      "version": "14f3d530b6189dc3f97edfa70b7a36006e21148c"
+    },
+    {
+      "type": "git",
       "path": "github.com/w0rp/ale",
       "version": "3fe2223a48465c58c48a5a6a30ecf13ab92f7b97"
     },
@@ -404,6 +409,7 @@
         "github.com/tyru/eskk.vim",
         "github.com/tyru/open-browser.vim",
         "github.com/vim-jp/cpp-vim",
+        "github.com/vim-scripts/dbext.vim",
         "github.com/w0rp/ale",
         "github.com/weirongxu/plantuml-previewer.vim",
         "github.com/yuku/vim-ref-ri"

@@ -8,16 +8,6 @@ endfunction
 " Plugin configuration like the code written in vimrc.
 " This configuration is executed *after* a plugin is loaded.
 function! s:on_load_post()
-  set imdisable
-  imap <C-j> <Plug>(eskk:enable)
-  imap <C-;> <Plug>(eskk:enable)
-  let g:eskk#server = {
-        \	'host': '127.0.0.1',
-        \	'port': 1178,
-        \	'encoding': 'euc-jp',
-        \	'timeout': 1000,
-        \	'type': 'dictionary',
-        \}
 endfunction
 
 " This function determines when a plugin is loaded.
