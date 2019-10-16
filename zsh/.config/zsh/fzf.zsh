@@ -18,7 +18,6 @@ function fzf-ghq() {
   selected=$(ghq list -p | sed "s/$(echo $HOME | sed 's/\//\\\//g')\/.ghq\///" | fzf --preview "ls $HOME/.ghq/{}" --query "$LBUFFER")
   if [ -n "$selected" ]; then
     _fzf_insert_command_line "cd $HOME/.ghq/$selected"
-find $(go env GOPATH)/src -type d -depth 3 | grep github
     zle accept-line
   fi
 }
@@ -26,6 +25,15 @@ find $(go env GOPATH)/src -type d -depth 3 | grep github
 function fzf-ghq-my() {
   LBUFFER=$USER
   fzf-ghq
+}
+
+function fzf-ghq-tmux() {
+  local selected
+  selected=$(ghq list -p | sed "s/$(echo $HOME | sed 's/\//\\\//g')\/.ghq\///" | fzf --preview "ls $HOME/.ghq/{}" --query "$LBUFFER")
+  if [ -n "$selected" ]; then
+    _fzf_insert_command_line "tmux new -c $HOME/.ghq/$selected -s $(basename $selected)"
+    zle accept-line
+  fi
 }
 
 function fzf-history() {
@@ -168,6 +176,7 @@ alias pvd=fzf-vim-neomru
 zle -N fzf-history
 zle -N fzf-ghq
 zle -N fzf-ghq-my
+zle -N fzf-ghq-tmux
 zle -N fzf-go-src
 zle -N fzf-git-log
 zle -N fzf-git-branch
@@ -182,6 +191,7 @@ zle -N fzf-nodenv-install
 bindkey '^r'  fzf-history
 bindkey '^gg' fzf-ghq
 bindkey '^gm' fzf-ghq-my
+bindkey '^gt' fzf-ghq-tmux
 bindkey '^go' fzf-go-src
 bindkey '^gl' fzf-git-log
 bindkey '^gb' fzf-git-branch
@@ -197,6 +207,7 @@ function fzf-bindkeys() {
   echo '^r  fzf-history'
   echo '^gg fzf-ghq'
   echo '^gm fzf-ghq-my'
+  echo '^gt fzf-ghq-tmux'
   echo '^go fzf-go-src'
   echo '^gl fzf-git-log'
   echo '^gb fzf-git-branch'
