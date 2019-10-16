@@ -1,4 +1,5 @@
-source $HOME/.zshenv
-source $HOME/.zshrc
+exec $SHELL -l
+# source $HOME/.zshenv
+# source $HOME/.zshrc
 
 # vim: ft=zsh
