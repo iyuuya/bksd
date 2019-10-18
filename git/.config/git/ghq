@@ -1,5 +1,0 @@
-# vim: ft=gitconfig
-[ghq]
-  root = ~/.ghq
-  root = ~/.vim/bundle
-  root = ~/.go
