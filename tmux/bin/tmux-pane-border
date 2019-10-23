@@ -1,0 +1,33 @@
+#!/bin/zsh
+
+# user@host
+user_host="#[fg=colour33]$USER#[fg=colour135]@#[fg=colour169]$HOST#[default]"
+
+# rbenv_version
+eval "$(anyenv init -)"
+rbenv_version="#[fg=red]$(cd $1 && rbenv version-name)#[default]"
+
+# directory
+directory="#[bg=black,fg=blue]#[underscore]$1#[default]"
+
+# git_info
+git_info="-"
+if git_status=$(cd $1 && git status 2>/dev/null ); then
+  git_branch="$(echo $git_status| awk 'NR==1 {print $3}')"
+  case $git_status in
+    *Changes\ not\ staged* ) git_info_state="#[fg=colour013] ±#[fg=default]" ;;
+    *Changes\ to\ be\ committed* ) git_info_state="#[fg=blue] +#[default]" ;;
+    * ) git_info_state="#[fg=green] ✔ #[default]" ;;
+  esac
+
+  git_info="#[bg=black,fg=colour014]${git_branch}#[default]${git_info_state}"
+fi
+
+pane_status_line="[$user_host][$rbenv_version][$directory][$git_info]"
+
+active=$2
+if [ $active -eq 1 ]; then
+  echo $pane_status_line
+else
+  echo $pane_status_line | sed -E -e 's/(fg|bg)=[a-z0-9]+,?//g' -e 's/#\[\]//g'
+fi
