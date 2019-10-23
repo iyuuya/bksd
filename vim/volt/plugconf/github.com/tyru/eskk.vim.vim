@@ -9,8 +9,7 @@ endfunction
 " This configuration is executed *after* a plugin is loaded.
 function! s:on_load_post()
   set imdisable
-  imap <C-j> <Plug>(eskk:enable)
-  imap <C-;> <Plug>(eskk:enable)
+  imap <C-e> <Plug>(eskk:enable)
   let g:eskk#server = {
         \	'host': '127.0.0.1',
         \	'port': 1178,
