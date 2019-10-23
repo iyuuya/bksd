@@ -59,18 +59,18 @@ source $HOME/.config/zsh/python.zsh
 
 #-------------------------------------------------------------------------------
 # rbenv-prompt: "{{{2
-function rbenv_prompt {
-  if type rbenv > /dev/null 2>&1; then
-    result=`rbenv version-name`
-    if [ "$result" ] ; then
-      echo "$result"
-    else
-      echo "rbenv"
-    fi
-  else
-    echo ""
-  fi
-}
+# function rbenv_prompt {
+#   if type rbenv > /dev/null 2>&1; then
+#     result=`rbenv version-name`
+#     if [ "$result" ] ; then
+#       echo "$result"
+#     else
+#       echo "rbenv"
+#     fi
+#   else
+#     echo ""
+#   fi
+# }
 # }}}2
 #-------------------------------------------------------------------------------
 
@@ -82,33 +82,41 @@ function count_prompt_characters()
 
 #-------------------------------------------------------------------------------
 
-function update_prompt() # "{{{2
+# function update_prompt() # "{{{2
+# {
+#   # (2012/03/04 05:06)[1.9.3]: "{{{3
+#   bar_left_date="(%{%F{magenta}%}%D{%Y/%m/%d %H:%M:%S}%{%f%})"
+#   # if [ -n "$(rbenv_prompt)" ]; then
+#   #   bar_left_ruby="[%{%F{red}%}$(rbenv_prompt)%{%f%}]"
+#   # fi
+#   local bar_left="${bar_left_date}${bar_left_ruby}"
+# 
+#   # [master:project] "{{{3
+#   prompt_bar_right='${vcs_info_msg_0_}'
+#   prompt_bar_right="[${prompt_bar_right}%{%F{blue}%}%c%{%f%}]"
+# 
+#   local bar_right_without_path="${prompt_bar_right:s/%d//}"
+#   local bar_right_without_path_length=$(count_prompt_characters "$bar_right_without_path")
+#   bar_right=${prompt_bar_right:s/%d/%(C,%<...<%d%<<,)/}
+# 
+#   # "}}}3
+# 
+#   local prompt_left="%#%{%b%} "
+# 
+#   # (2012/03/04 05:06:07)[2.5.3][master:project]
+#   # % 
+#   PROMPT="${bar_left}${bar_right}"$'\n'"${prompt_left}"
+#   RPROMPT="[%{%F{blue}%}%~%{%f%}]"
+#   SPROMPT="%{[31m%}%r is correct? [n,y,a,e]:%{[m%} "
+# }
+function update_prompt()
 {
-  # (2012/03/04 05:06)[1.9.3]: "{{{3
-  bar_left_date="(%{%F{magenta}%}%D{%Y/%m/%d %H:%M:%S}%{%f%})"
-  if [ -n "$(rbenv_prompt)" ]; then
-    bar_left_ruby="[%{%F{red}%}$(rbenv_prompt)%{%f%}]"
-  fi
-  local bar_left="${bar_left_date}${bar_left_ruby}"
-
-  # [master:project] "{{{3
-  prompt_bar_right='${vcs_info_msg_0_}'
-  prompt_bar_right="[${prompt_bar_right}%{%F{blue}%}%c%{%f%}]"
-
-  local bar_right_without_path="${prompt_bar_right:s/%d//}"
-  local bar_right_without_path_length=$(count_prompt_characters "$bar_right_without_path")
-  bar_right=${prompt_bar_right:s/%d/%(C,%<...<%d%<<,)/}
-
-  # "}}}3
-
-  local prompt_left="%#%{%b%} "
-
-  # (2012/03/04 05:06:07)[2.5.3][master:project]
-  # % 
-  PROMPT="${bar_left}${bar_right}"$'\n'"${prompt_left}"
-  RPROMPT="[%{%F{blue}%}%~%{%f%}]"
-  SPROMPT="%{[31m%}%r is correct? [n,y,a,e]:%{[m%} "
+  PROMPT="(%{%F{magenta}%}%D{%Y/%m/%d %H:%M:%S}%{%f%}) $ "
 }
+
+RPROMPT="[%{%F{blue}%}%~%{%f%}]"
+SPROMPT="%{[31m%}%r is correct? [n,y,a,e]:%{[m%} "
+
 # "}}}2
 #-------------------------------------------------------------------------------
 
